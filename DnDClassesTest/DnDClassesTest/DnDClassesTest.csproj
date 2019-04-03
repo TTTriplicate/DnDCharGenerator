@@ -47,35 +47,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Background\Background Class.cs" />
-    <Compile Include="Barbarian.cs" />
-    <Compile Include="Bard.cs" />
+    <Compile Include="Professions\Barbarian.cs" />
+    <Compile Include="Professions\Bard.cs" />
     <Compile Include="Character.cs" />
-    <Compile Include="Cleric.cs" />
-    <Compile Include="Druid.cs" />
-    <Compile Include="Fighter.cs" />
+    <Compile Include="Professions\Cleric.cs" />
+    <Compile Include="Professions\Druid.cs" />
+    <Compile Include="Professions\Fighter.cs" />
     <Compile Include="Gear\Armor.cs" />
     <Compile Include="Gear\CharGear.cs" />
     <Compile Include="Gear\Equipment.cs" />
     <Compile Include="Gear\Gear.cs" />
     <Compile Include="Gear\StartingGear.cs" />
     <Compile Include="Gear\Weapon.cs" />
-    <Compile Include="Monk.cs" />
-    <Compile Include="Paladin.cs" />
-    <Compile Include="Profession.cs" />
+    <Compile Include="Professions\Monk.cs" />
+    <Compile Include="Professions\Paladin.cs" />
+    <Compile Include="Professions\Profession.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Professions\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Races\Race.cs" />
-    <Compile Include="Ranger.cs" />
-    <Compile Include="Rogue.cs" />
-    <Compile Include="Sorcerer.cs" />
-    <Compile Include="Warlock.cs" />
-    <Compile Include="Wizard.cs" />
+    <Compile Include="Professions\Ranger.cs" />
+    <Compile Include="Professions\Rogue.cs" />
+    <Compile Include="Professions\Sorcerer.cs" />
+    <Compile Include="Professions\Warlock.cs" />
+    <Compile Include="Professions\Wizard.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,9 +115,9 @@
     <Content Include="Background\Sailor.txt" />
     <Content Include="Background\Soldier.txt" />
     <Content Include="Background\Urchin.txt" />
-    <Content Include="ClassFeatures\BarbarianClassFeatures.txt" />
-    <Content Include="ClassFeatures\BardFeatures.txt" />
-    <Content Include="ClassFeatures\ClericClassFeatures.txt" />
+    <Content Include="Professions\ClassFeatures\BarbarianClassFeatures.txt" />
+    <Content Include="Professions\ClassFeatures\BardFeatures.txt" />
+    <Content Include="Professions\ClassFeatures\ClericClassFeatures.txt" />
     <Content Include="Races\Dragonborn.txt" />
     <Content Include="Races\Dwarf.txt" />
     <Content Include="Races\Elf.txt" />
