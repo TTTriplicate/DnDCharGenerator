@@ -1,6 +1,6 @@
-﻿using DNDGear;
 using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace DnDClassesTest
 {
@@ -39,12 +39,23 @@ namespace DnDClassesTest
         //get and set(RNG and point buy system in user interface)
         //default to all 8s for point buy start
         protected Profession CharClass { get; set; }
+        public Profession _class
+        {
+            get
+            {
+                return CharClass;
+            }
+            set
+            {
+                CharClass = value;
+            }
+        }
         //get and set(Profession library, Chris)
-        protected Race Race { get; set; }
+  //      protected Race Race { get; set; }
         //get and set(Race library, Dylan)
-        protected Background_Class Background { get; set; }
+ //       protected Background_Class Background { get; set; }
         //get and set(Background libraries, Jack)
-        protected List<Gear> Inventory;
+ //       protected List<Gear> Inventory;
         //add and remove methods? (Item library, Catherine)
         //equiped vs. carried?
         //        protected List<string> SkillList;
@@ -61,12 +72,11 @@ namespace DnDClassesTest
         //mark which saves get proficiency bonus, get from CharClass
         public DnDCharacter()
         {
-            
-            /*will need a parameterized constructor
-             * may call parameterized component constructors inside?
-             * this might be a bit of a mess later on*/
+            this.CharClass = Profession.InteractiveChoice();
+            //needs the remaining interactive constructor pieces
+            //and I forgot to set the ability scores off that form....Chris
         }
-        public DnDCharacter(int level, int p, int proPath)
+     /*   public DnDCharacter(int level, int p, int proPath)
         {
             switch (p)
             {
@@ -102,13 +112,13 @@ namespace DnDClassesTest
                     break;
                 case 10:
                     break;
-            }
+            }*/
            /* this.CharClass = new ;
             this.CharClass._level = level;
             this.CharClass._proPath = proPath;
             this code would break badly*/
             //unnecessary this.SavingThrows = this.CharClass.SavingThrows();
-        }
+        //}
         public int ProficiencyBonus()
         {//passes the proficiency bonus to main function
             return 2 + (Level / 5);
@@ -131,5 +141,51 @@ namespace DnDClassesTest
             }
             return modifiers;
         }
-    }
+     /*   public bool SetProfession(int c, int s, int level = 1)
+        {
+            try
+            {
+                switch (c)
+                {
+                    case 0:
+                        this.CharClass = new Barbarian(level, s);
+                        break;
+                    case 1:
+                        this.CharClass = new Bard(level, s);
+                        break;
+                    case 2:
+                        this.CharClass = new Cleric(level, s);
+                        break;
+                    case 3:
+                        this.CharClass = new Druid(level, s);
+                        break;
+                    case 4:
+                        this.CharClass = new Fighter(level, s);
+                        break;
+                    case 5:
+                        this.CharClass = new Monk(level, s);
+                        break;
+                    case 6:
+                        this.CharClass = new Paladin(level, s);
+                        break;
+                    case 7:
+                        this.CharClass = new Ranger(level, s);
+                        break;
+                    case 8:
+                        this.CharClass = new Rogue(level, s);
+                        break;
+                    case 9:
+                        this.CharClass = new Sorcerer(level, s);
+                        break;
+                    case 10:
+                        break;
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+    }*/
 }
