@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -85,7 +85,7 @@ namespace DnDClassesTest
         public override List<string> ClassFeatures()
         {
             List<string> features = new List<string>();
-            string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\ClassFeatures\BarbarianClassFeatures.txt";
+            string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
             string[] temp = new string[28];
             temp = File.ReadAllLines(path);
             foreach(string i in temp)
