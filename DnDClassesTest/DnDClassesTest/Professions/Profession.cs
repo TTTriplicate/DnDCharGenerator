@@ -92,19 +92,21 @@ namespace DnDClassesTest
 
         public abstract List<string> ClassFeatures();
 
-        public static Profession InteractiveChoice()
+        public static Profession InteractiveChoice(out int[] abilities)
         {
             int p = 1, proPath = 9, level = 12;
             Profession CharClass = new Bard();
 
             using (var first = new StatsAndProfession())
             {
+                abilities = new int[6];
                 var result = first.ShowDialog();
                 if (result == DialogResult.OK)
                 {
                     p = first.p;
                     proPath = first.proPath;
                     level = first.level;
+                    abilities = first.Abilities;
                 }
                 switch (p)
                 {
