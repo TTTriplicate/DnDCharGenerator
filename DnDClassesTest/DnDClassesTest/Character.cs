@@ -72,7 +72,12 @@ namespace DnDClassesTest
         //mark which saves get proficiency bonus, get from CharClass
         public DnDCharacter()
         {
-            this.CharClass = Profession.InteractiveChoice();
+            int[] a = new int[6];
+            this.CharClass = Profession.InteractiveChoice(out a);
+            this._abilities = a;
+            this._level = this.CharClass._level;
+            foreach (int i in this._abilities)
+                Console.WriteLine(i);
             //needs the remaining interactive constructor pieces
             //and I forgot to set the ability scores off that form....Chris
         }
@@ -186,6 +191,6 @@ namespace DnDClassesTest
             {
                 return false;
             }
-        }
-    }*/
+        }*/
+    }
 }
