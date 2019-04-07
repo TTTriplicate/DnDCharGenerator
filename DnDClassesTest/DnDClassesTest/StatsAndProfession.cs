@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -13,6 +13,7 @@ namespace DnDClassesTest
         public int p { get; set; }
         public int proPath { get; set; }
         public int level { get; set; }
+        public int[] Abilities { get; set; }
 
         private void comboClass_SelectedIndexChanged(object sender, System.EventArgs e)
         {
@@ -32,6 +33,7 @@ namespace DnDClassesTest
             p = comboClass.SelectedIndex;
             proPath = comboSubClass.SelectedIndex;
             level = (int)numLevel.Value;
+            Abilities = new int[6] { (int)numSTR.Value, (int)numDEX.Value, (int)numCON.Value, (int)numINT.Value, (int)numWIS.Value, (int)numCHA.Value };
             DialogResult = DialogResult.OK;
             this.Close();
         }
