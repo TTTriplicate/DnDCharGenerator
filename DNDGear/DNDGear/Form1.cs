@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DNDGear
 {
-    public partial class Form1 : Form 
+    public partial class GearForm : Form 
     {
         public CharGear gear = new CharGear();
         public List<List<Gear>> items = new List<List<Gear>>();
@@ -18,12 +18,12 @@ namespace DNDGear
         public List<Gear> inventory = new List<Gear>();
         public List<string> inventoryString = new List<string>();
 
-        public Form1()
+        public GearForm()
         { 
             InitializeComponent();
         }
 
-        public Form1(CharGear passedGear)
+        public GearForm(CharGear passedGear)
         {
             gear = passedGear;
             

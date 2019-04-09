@@ -12,8 +12,8 @@ C:\Users\catherine.gallaher\OneDrive - SNHU\DNDGear\DNDGear\bin\Debug\DNDGear.ex
 C:\Users\catherine.gallaher\OneDrive - SNHU\DNDGear\DNDGear\bin\Debug\DNDGear.exe
 C:\Users\catherine.gallaher\OneDrive - SNHU\DNDGear\DNDGear\bin\Debug\DNDGear.pdb
 C:\Users\catherine.gallaher\OneDrive - SNHU\DNDGear\DNDGear\obj\Debug\DNDGear.csprojResolveAssemblyReference.cache
-C:\Users\catherine.gallaher\OneDrive - SNHU\DNDGear\DNDGear\obj\Debug\DNDGear.Form1.resources
 C:\Users\catherine.gallaher\OneDrive - SNHU\DNDGear\DNDGear\obj\Debug\DNDGear.Properties.Resources.resources
 C:\Users\catherine.gallaher\OneDrive - SNHU\DNDGear\DNDGear\obj\Debug\DNDGear.csproj.GenerateResource.Cache
 C:\Users\catherine.gallaher\OneDrive - SNHU\DNDGear\DNDGear\obj\Debug\DNDGear.exe
 C:\Users\catherine.gallaher\OneDrive - SNHU\DNDGear\DNDGear\obj\Debug\DNDGear.pdb
+C:\Users\catherine.gallaher\OneDrive - SNHU\DNDGear\DNDGear\obj\Debug\DNDGear.GearForm.resources

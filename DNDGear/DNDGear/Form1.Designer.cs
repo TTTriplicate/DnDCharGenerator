@@ -1,6 +1,6 @@
 ﻿namespace DNDGear
 {
-    partial class Form1
+    partial class GearForm
     {
         /// <summary>
         /// Required designer variable.

@@ -42,14 +42,14 @@ namespace DNDGear
 
         public CharGear(string classType, string backgroundType, int dexMod)
         {
-            Console.WriteLine("Alpha");
+            Console.WriteLine("Beta");
             this.classType = classType;
             this.backgroundType = backgroundType;
             this.dexMod = dexMod;
             populateGear();
             popOptions();
 
-            Form1 f = new Form1();
+            GearForm f = new GearForm();
         }
         
         /**
