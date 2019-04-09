@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace DnDClassesTest
+namespace DnDClassesTest.Background
 {
     public class Background_Class
     {
@@ -13,22 +13,26 @@ namespace DnDClassesTest
         public String[] ToolProf = { };
         public String[] BACKGROUNDS = { "Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin" };
         public string[] lines;
+        public string background;
+        //public String[] SkillProfs = { "Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Preformance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival" };
 
-        public Background_Class()
+        public Background_Class()//string background)
         {
+            BackgroundForm form = new BackgroundForm();
+            //setBackground(background);
             //string[] lines;
             //lines = File.ReadAllLines(path);
             //this.test = lines[0].Split()[1];
         }
 
-        public String loadFile(string background)
+        public void loadFile(string background)
         {
             string choice = "";
-            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\" + background +".txt");
+            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\" + background + ".txt");
             lines = File.ReadAllLines(path);
-            choice = background;
+            //choice = background;
 
-            return choice;
+
         }
 
         public int RanNumGen(int sides)
@@ -42,35 +46,7 @@ namespace DnDClassesTest
             return randNum;
         }
 
-        //public String PersonalityTrait()
-        //{
-        //    string[] traits = { "f", "f", "f", "f", "f", "f", "f", "f"};
-        //    string trait = "";
-
-        //    int randNum = RanNumGen(8);
-
-        //    for (int i = 1; i < 8; i++)
-        //        traits[i] = lines[(2 + i)].Split(':')[1];
-
-        //    trait = traits[randNum];
-
-        //    return trait;
-        //}
-
-        //public String Ideal()
-        //{
-        //    string[] traits = { "f", "f", "f", "f", "f", "f"};
-        //    string finalTrait = "";
-
-        //    int randNum = RanNumGen(6);
-
-        //    for (int i = 0; i < 6; i++)
-        //        traits[i] = lines[(14 + i)].Split(':')[1];
-
-        //    finalTrait = traits[randNum];
-
-        //    return finalTrait;
-        //}
+        //public void SkillProfs(ref string skillOne)
 
         public void Traits(ref string Personality, ref string Ideal, ref string Flaw, ref string Bond)
         {
@@ -94,5 +70,16 @@ namespace DnDClassesTest
             Flaw = flaws[RanNumGen(6)];
             Bond = bonds[RanNumGen(6)];
         }
+
+        public void setBackground(string background)
+        {
+            this.background = background;
+        }
+
+        public Background_Class getBackground()
+        {
+            return this;
+        }
+
     }
 }

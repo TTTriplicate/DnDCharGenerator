@@ -8,3 +8,13 @@ C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\bin\Debug\DnDClassesTe
 C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\bin\Debug\DnDClassesTest.pdb
 C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.exe
 C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.pdb
+C:\Users\john.canducci\OneDrive - SNHU\DnDCharGenerator-Constructors\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.csprojResolveAssemblyReference.cache
+C:\Users\john.canducci\OneDrive - SNHU\DnDCharGenerator-Constructors\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.LandingPage.resources
+C:\Users\john.canducci\OneDrive - SNHU\DnDCharGenerator-Constructors\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.Properties.Resources.resources
+C:\Users\john.canducci\OneDrive - SNHU\DnDCharGenerator-Constructors\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.csproj.GenerateResource.Cache
+C:\Users\john.canducci\OneDrive - SNHU\DnDCharGenerator-Constructors\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.exe
+C:\Users\john.canducci\OneDrive - SNHU\DnDCharGenerator-Constructors\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.pdb
+C:\Users\john.canducci\OneDrive - SNHU\DnDCharGenerator-Constructors\DnDClassesTest\DnDClassesTest\bin\Debug\DnDClassesTest.exe.config
+C:\Users\john.canducci\OneDrive - SNHU\DnDCharGenerator-Constructors\DnDClassesTest\DnDClassesTest\bin\Debug\DnDClassesTest.exe
+C:\Users\john.canducci\OneDrive - SNHU\DnDCharGenerator-Constructors\DnDClassesTest\DnDClassesTest\bin\Debug\DnDClassesTest.pdb
+C:\Users\john.canducci\OneDrive - SNHU\DnDCharGenerator-Constructors\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.Background.BackgroundForm.resources

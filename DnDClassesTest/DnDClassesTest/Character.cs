@@ -4,12 +4,18 @@ using System.Windows.Forms;
 
 namespace DnDClassesTest
 {
-
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DnDCharacter NewChar = new DnDCharacter();
+        }
+    }
     public class DnDCharacter
     {
         /*most of this will probably get set in a parameterized constructor
          * not sure yet how best to implement that.
-         All part of the project later on*/
+         All part of the project later on
         protected int Level;
         public int _level
         {
@@ -34,22 +40,22 @@ namespace DnDClassesTest
             {
                 Abilities = value;
             }
-        }
+        }*/
         //STR, DEX, CON, INT, WIS, CHA, in that order for all int[6]
         //get and set(RNG and point buy system in user interface)
         //default to all 8s for point buy start
-        protected Profession CharClass { get; set; }
-        public Profession _class
-        {
-            get
-            {
-                return CharClass;
-            }
-            set
-            {
-                CharClass = value;
-            }
-        }
+        //protected Profession CharClass { get; set; }
+        //public Profession _class
+        //{
+        //    get
+        //    {
+        //        return CharClass;
+        //    }
+        //    set
+        //    {
+        //        CharClass = value;
+        //    }
+        //}
         //get and set(Profession library, Chris)
   //      protected Race Race { get; set; }
         //get and set(Race library, Dylan)
@@ -62,25 +68,25 @@ namespace DnDClassesTest
         //bool[]?
         //add methods from class and background, some user interaction to pick from list
         //skills on list get proficiency bonus
-        public bool[] SavingThrows
-        {
-            get
-            {
-                return this.CharClass.SavingThrows();
-            }
-        }
-        //mark which saves get proficiency bonus, get from CharClass
-        public DnDCharacter()
-        {
-            int[] a = new int[6];
-            this.CharClass = Profession.InteractiveChoice(out a);
-            this._abilities = a;
-            this._level = this.CharClass._level;
-            foreach (int i in this._abilities)
-                Console.WriteLine(i);
-            //needs the remaining interactive constructor pieces
-            //and I forgot to set the ability scores off that form....Chris
-        }
+        //public bool[] SavingThrows
+        //{
+        //    get
+        //    {
+        //        return this.CharClass.SavingThrows();
+        //    }
+        //}
+        ////mark which saves get proficiency bonus, get from CharClass
+        //public DnDCharacter()
+        //{
+        //    int[] a = new int[6];
+        //    this.CharClass = Profession.InteractiveChoice(out a);
+        //    this._abilities = a;
+        //    this._level = this.CharClass._level;
+        //    foreach (int i in this._abilities)
+        //        Console.WriteLine(i);
+        //    //needs the remaining interactive constructor pieces
+        //    //and I forgot to set the ability scores off that form....Chris
+        //}
      /*   public DnDCharacter(int level, int p, int proPath)
         {
             switch (p)
@@ -124,28 +130,28 @@ namespace DnDClassesTest
             this code would break badly*/
             //unnecessary this.SavingThrows = this.CharClass.SavingThrows();
         //}
-        public int ProficiencyBonus()
-        {//passes the proficiency bonus to main function
-            return 2 + (Level / 5);
-        }
-        public int[] AddAbilities(int[] toadd)
-        {
-            for(int i = 0; i < 6; ++i)
-            {
-                toadd[i] += this.Abilities[i];
-            }
-            return toadd;
-        }
-        public int[] AbilityModifiers(int[] Abilities)
-        {//pass ability modifiers to main so they can be accessed there
-            int[] modifiers = new int[6];
-            for (int i = 0; i < 6; ++i)
-            {
-                if (Abilities[i] >= 10) modifiers[i] = (Abilities[i] - 10) / 2;
-                else if (Abilities[i] < 10) modifiers[i] = Math.Min(((10 - Abilities[i]) / -2), -1);
-            }
-            return modifiers;
-        }
+        //public int ProficiencyBonus()
+        //{//passes the proficiency bonus to main function
+        //    return 2 + (Level / 5);
+        //}
+        //public int[] AddAbilities(int[] toadd)
+        //{
+        //    for(int i = 0; i < 6; ++i)
+        //    {
+        //        toadd[i] += this.Abilities[i];
+        //    }
+        //    return toadd;
+        //}
+        //public int[] AbilityModifiers(int[] Abilities)
+        //{//pass ability modifiers to main so they can be accessed there
+        //    int[] modifiers = new int[6];
+        //    for (int i = 0; i < 6; ++i)
+        //    {
+        //        if (Abilities[i] >= 10) modifiers[i] = (Abilities[i] - 10) / 2;
+        //        else if (Abilities[i] < 10) modifiers[i] = Math.Min(((10 - Abilities[i]) / -2), -1);
+        //    }
+        //    return modifiers;
+        //}
      /*   public bool SetProfession(int c, int s, int level = 1)
         {
             try
