@@ -18,3 +18,14 @@ C:\Users\john.canducci\OneDrive - SNHU\DnDCharGenerator-Constructors\DnDClassesT
 C:\Users\john.canducci\OneDrive - SNHU\DnDCharGenerator-Constructors\DnDClassesTest\DnDClassesTest\bin\Debug\DnDClassesTest.exe
 C:\Users\john.canducci\OneDrive - SNHU\DnDCharGenerator-Constructors\DnDClassesTest\DnDClassesTest\bin\Debug\DnDClassesTest.pdb
 C:\Users\john.canducci\OneDrive - SNHU\DnDCharGenerator-Constructors\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.Background.BackgroundForm.resources
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDClassesTest\DnDClassesTest\bin\Debug\DnDClassesTest.exe.config
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDClassesTest\DnDClassesTest\bin\Debug\DnDClassesTest.exe
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDClassesTest\DnDClassesTest\bin\Debug\DnDClassesTest.pdb
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.csprojAssemblyReference.cache
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.Background.BackgroundForm.resources
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.LandingPage.resources
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.Properties.Resources.resources
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.csproj.GenerateResource.cache
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.csproj.CoreCompileInputs.cache
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.exe
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDClassesTest\DnDClassesTest\obj\Debug\DnDClassesTest.pdb

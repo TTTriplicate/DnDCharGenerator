@@ -4,13 +4,13 @@ using System.Windows.Forms;
 
 namespace DnDClassesTest
 {
-    class Program
+ /*   class Program
     {
         static void Main(string[] args)
         {
             DnDCharacter NewChar = new DnDCharacter();
         }
-    }
+    }*/
     public class DnDCharacter
     {
         /*most of this will probably get set in a parameterized constructor
