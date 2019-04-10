@@ -127,7 +127,7 @@ namespace DnDClassesTest
             if (this._level > 1)
                 this._HP += DnDCharacter.RollHP(this._level, this._class._hitDie)+ ((this._level -1) * this.AbilityModifiers()[2]) ;
             this.CharRace = Race.InteractiveChoice();
-            
+            raceAdditions();
 
             //Background selector
             //Race selector
