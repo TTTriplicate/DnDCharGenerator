@@ -20,6 +20,8 @@ namespace DnDClassesTest
         public CharSheet(DnDCharacter leeroy)
         {
             InitializeComponent();
+            richTextBox1.Hide();
+            lblTraits.Hide();
             DisplayChar = leeroy;
             txtName.Text = leeroy._name;
             txtLevel.Text = leeroy._level.ToString();
@@ -51,6 +53,7 @@ namespace DnDClassesTest
             richTextBox2.Text += "\n";
             foreach (string i in leeroy.CharRace.getSA())
                 txtSpecial.Text += i + ", ";
+            txtRace.Text = leeroy.CharRace.getRace();
 
             string Personality = "f", Ideal = "f", Flaw = "f", Bond = "f", Background = "f";
             //leeroy.Background.Traits(ref Personality, ref Ideal, ref Flaw, ref Bond);
@@ -76,6 +79,11 @@ namespace DnDClassesTest
         }
 
         private void displayInventory_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -152,7 +152,7 @@ namespace DnDClassesTest
             
 
 
-            CharGear gear = new CharGear(this._class.ProfessionName(), "Folk Hero", AbilityModifiers()[1]);
+            CharGear gear = new CharGear(this._class.ProfessionName(), "Acolyte", AbilityModifiers()[1]);
             inventory = gear.getInventoryString();
         }
         /*   public DnDCharacter(int level, int p, int proPath)

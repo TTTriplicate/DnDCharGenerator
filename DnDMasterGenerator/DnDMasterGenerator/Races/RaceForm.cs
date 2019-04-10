@@ -43,7 +43,7 @@ namespace DnDClassesTest
             
             foreach (int i in selected.getAA())
                 textBox1.Text += i + ", ";
-            textBox2.Text = selected.getAge();
+            textBox2.Text = selected.getRace();
             textBox3.Text = selected.getAlignment();
             textBox4.Text = selected.getSize();
             textBox5.Text = selected.getSpeed().ToString();

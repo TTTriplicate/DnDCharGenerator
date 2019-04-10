@@ -417,8 +417,8 @@ namespace DnDClassesTest
                 numChoices += 1;
                 gp = 15;
                 this.options.Add(new List<Gear>()); //prayer book or prayer wheel
-                options[2].Add(allGear[101]);
-                options[2].Add(allGear[102]);
+                options[numChoices - 1].Add(new Equipment("Prayer book"));
+                options[numChoices - 1].Add(new Equipment("Prayer wheel"));
             }
             else if (backgroundType == "Charlatan")
             {

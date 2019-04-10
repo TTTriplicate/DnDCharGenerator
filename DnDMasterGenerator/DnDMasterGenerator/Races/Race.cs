@@ -27,15 +27,16 @@ namespace DnDClassesTest
         protected bool[] languages = new bool[16];
         protected string[] specialAbilities = new string[7];
         protected string[] temp = new string[3];
-
+        protected string race;
         public string[] info;
 
 
-        public Race(string race)
+        public Race(string r)
         {
             //Fixed to be universal with project -Jack
-            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Races\" + race + ".txt");
+            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Races\" + r + ".txt");
             info = System.IO.File.ReadAllLines(path);
+            race = info[0].Substring(8);
             for (int i = 0; i < 6; i++)
                 AbilityAdjust[i] = (int)Char.GetNumericValue(info[1][i]);
             age = info[2];
@@ -80,8 +81,14 @@ namespace DnDClassesTest
         }
         public string[] getLanguages()
         {
-            string[] l = new string[16];
             int num = 0;
+            for (int i = 0; i < 16; i++)
+            {
+                if (languages[i])
+                    num++;
+            }
+            string[] l = new string[num];
+            num = 0;
             for (int i = 0; i < 16; i++)
             {
                 if (languages[i])
@@ -93,9 +100,9 @@ namespace DnDClassesTest
         {
             return specialAbilities;
         }
-        public string[,] getraces()
+        public string getRace()
         {
-            return races;
+            return race;
         }
         public static Race InteractiveChoice()
         {
