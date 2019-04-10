@@ -166,7 +166,7 @@
             this.Secondary1.TabIndex = 17;
             this.Secondary1.SelectedIndexChanged += new System.EventHandler(this.Secondary1_SelectedIndexChanged);
             // 
-            // Form1
+            // GearForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -185,8 +185,8 @@
             this.Controls.Add(this.Choice3);
             this.Controls.Add(this.Choice2);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "GearForm";
+            this.Text = "d";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

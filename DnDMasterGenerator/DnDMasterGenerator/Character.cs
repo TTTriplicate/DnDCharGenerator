@@ -88,6 +88,7 @@ namespace DnDClassesTest
         }
         //get and set(Profession library, Chris)
         protected Race CharRace { get; set; }
+        
         //get and set(Race library, Dylan)
         protected Background_Class Background { get; set; }
         //get and set(Background libraries, Jack)

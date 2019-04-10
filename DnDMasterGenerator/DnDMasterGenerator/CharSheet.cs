@@ -45,11 +45,22 @@ namespace DnDClassesTest
                 txtSpecial.AppendText(s + "\n");
             txtMelee.Text = (leeroy.ProficiencyBonus() + leeroy.AbilityModifiers()[0]).ToString();
             txtRanged.Text = (leeroy.ProficiencyBonus() + leeroy.AbilityModifiers()[1]).ToString();
+            //displayInventory.Text = (leeroy.)
         }
 
         private void displayDEXMod_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtRace_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void displayInventory_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

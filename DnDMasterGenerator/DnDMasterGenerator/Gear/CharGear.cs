@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DnDClassesTest
 {
@@ -41,15 +42,20 @@ namespace DnDClassesTest
 
         public CharGear(string classType, string backgroundType, int dexMod)
         {
-            Console.WriteLine("Beta");
             this.classType = classType;
             this.backgroundType = backgroundType;
             this.dexMod = dexMod;
             populateGear();
             popOptions();
 
-            GearForm f = new GearForm();
-            f.Show();
+            GearForm f = new GearForm(this);
+            //f.Show();
+
+            DialogResult result = f.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                //return f;
+            }
         }
         
         /**
@@ -717,5 +723,16 @@ namespace DnDClassesTest
         {
             return this;
         }
+
+        //public static CharGear InteractiveChoice()
+        //{
+        //    GearForm form = new GearForm();
+        //    DialogResult result = form.ShowDialog();
+        //    if (result == DialogResult.OK)
+        //    {
+        //        return form;
+        //    }
+        //    else return new CharGear();
+        //}
     }
 }

@@ -76,6 +76,8 @@
             this.txtHP = new System.Windows.Forms.TextBox();
             this.lblLevel = new System.Windows.Forms.Label();
             this.txtLevel = new System.Windows.Forms.TextBox();
+            this.displayInventory = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.paneAbilities.SuspendLayout();
             this.panelSaves.SuspendLayout();
             this.SuspendLayout();
@@ -283,6 +285,7 @@
             this.txtRace.ReadOnly = true;
             this.txtRace.Size = new System.Drawing.Size(100, 22);
             this.txtRace.TabIndex = 22;
+            this.txtRace.TextChanged += new System.EventHandler(this.txtRace_TextChanged);
             // 
             // lblClass
             // 
@@ -501,11 +504,32 @@
             this.txtLevel.Size = new System.Drawing.Size(57, 22);
             this.txtLevel.TabIndex = 41;
             // 
+            // displayInventory
+            // 
+            this.displayInventory.Location = new System.Drawing.Point(338, 311);
+            this.displayInventory.Name = "displayInventory";
+            this.displayInventory.ReadOnly = true;
+            this.displayInventory.Size = new System.Drawing.Size(288, 386);
+            this.displayInventory.TabIndex = 42;
+            this.displayInventory.Text = "";
+            this.displayInventory.TextChanged += new System.EventHandler(this.displayInventory_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(335, 291);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 17);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Inventory";
+            // 
             // CharSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 709);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.displayInventory);
             this.Controls.Add(this.txtLevel);
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.txtHP);
@@ -597,5 +621,7 @@
         private System.Windows.Forms.TextBox txtHP;
         private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.TextBox txtLevel;
+        private System.Windows.Forms.RichTextBox displayInventory;
+        private System.Windows.Forms.Label label1;
     }
 }
