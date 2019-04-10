@@ -45,6 +45,12 @@ namespace DnDClassesTest
                 txtSpecial.AppendText(s + "\n");
             txtMelee.Text = (leeroy.ProficiencyBonus() + leeroy.AbilityModifiers()[0]).ToString();
             txtRanged.Text = (leeroy.ProficiencyBonus() + leeroy.AbilityModifiers()[1]).ToString();
+            
+            foreach (bool i in leeroy.CharRace.getLanguages())
+                richTextBox1.Text += i + ", ";
+            richTextBox.Text += "\n";
+            foreach (string i in leeroy.CharRace.getSA())
+                txtSpecial.Text += i + ", ";
         }
 
         private void displayDEXMod_TextChanged(object sender, EventArgs e)
