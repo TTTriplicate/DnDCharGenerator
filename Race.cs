@@ -75,9 +75,15 @@ namespace DnDClassesTest
         {
             return speed;
         }
-        public bool[] getLanguages()
+        public string[] getLanguages()
         {
-            return languages;
+            string[] l;
+            int num = 0;
+            for (int i = 0; i < 16; i++){
+                if (languages[i])
+                    l[num++] = allLanguages[i];
+            }
+            return l;
         }
         public string[] getSA()
         {
