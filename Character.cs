@@ -88,6 +88,14 @@ namespace DnDClassesTest
         }
         //get and set(Profession library, Chris)
         protected Race CharRace { get; set; }
+        
+        protected void raceAdditions(){
+            for (int i =0; i < 6; i++){
+               Abilities[i] += CharRace.AbilityAdjust[i];
+            }
+            //pretty sure I need something else here but I don't know what
+        }
+        
         //get and set(Race library, Dylan)
  //       protected Background_Class Background { get; set; }
         //get and set(Background libraries, Jack)
@@ -119,6 +127,7 @@ namespace DnDClassesTest
             if (this._level > 1)
                 this._HP += DnDCharacter.RollHP(this._level, this._class._hitDie)+ ((this._level -1) * this.AbilityModifiers()[2]) ;
             this.CharRace = Race.InteractiveChoice();
+            
 
             //Background selector
             //Race selector
