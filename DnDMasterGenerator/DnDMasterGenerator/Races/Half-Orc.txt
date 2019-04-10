@@ -1,0 +1,8 @@
+This is Half-Orc
+201000
+14-75
+Choatic-Evil
+Medium
+30
+0 7
+Darkvision, Menacing, Relentless Endurance, Savage Attacks

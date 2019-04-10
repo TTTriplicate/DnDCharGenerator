@@ -1,0 +1,16 @@
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csprojAssemblyReference.cache
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.BackgroundForm.resources
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.CharSheet.resources
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.LandingPage.resources
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.GearForm.resources
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Properties.Resources.resources
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.SkillSelect.resources
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.StatsAndProfession.resources
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.GenerateResource.cache
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe.config
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.pdb
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.RaceSelect.resources
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.exe
+C:\Users\Owner\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.pdb
