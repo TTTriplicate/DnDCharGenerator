@@ -17,6 +17,7 @@ namespace DnDClassesTest
         public string background;
         //public String[] SkillProfs = { "Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Preformance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival" };
 
+        public string Personality, Ideal, Flaw, Bond; 
         public Background_Class()//string background)
         {
             setBackground(background);
@@ -27,10 +28,15 @@ namespace DnDClassesTest
             //this.test = lines[0].Split()[1];
         }
 
+        public Background_Class(string background)
+        {
+            this.background = background;
+        }
         public void loadFile(string background)
         {
             string choice = "";
-            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Background\" + background + ".txt");
+            this.background = background;
+            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Background\" + this.background + ".txt");
             lines = File.ReadAllLines(path);
             //choice = background;
         }
@@ -70,10 +76,21 @@ namespace DnDClassesTest
             for (int i = 1; i < 6; i++)
                 bonds[i] = lines[(31 + i)].Split(':')[1];
 
+            this.Personality = personalities[RanNumGen(8)];
+            this.Ideal = ideals[RanNumGen(6)];
+            this.Flaw = flaws[RanNumGen(6)];
+            this.Bond = bonds[RanNumGen(6)];
+
             Personality = personalities[RanNumGen(8)];
             Ideal = ideals[RanNumGen(6)];
             Flaw = flaws[RanNumGen(6)];
             Bond = bonds[RanNumGen(6)];
+        }
+
+        public int setRandNum(int randNum)
+        {
+            int set;
+            return set = randNum;
         }
 
         public void setBackground(string background)

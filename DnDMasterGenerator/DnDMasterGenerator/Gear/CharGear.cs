@@ -16,7 +16,7 @@ namespace DnDClassesTest
         public int gp; //how much gold, determined by background
         public List<List<Gear>> options = new List<List<Gear>>(); //A list containing lists of choices
         public int dexMod;
-        public bool reformat = false; 
+        public bool reformat = false;
         public List<Gear> inventory = new List<Gear>(); //List of inventory after choices are made
         public List<string> inventoryString = new List<string>(); //parallel list of inventory stored as strings
 
@@ -57,7 +57,7 @@ namespace DnDClassesTest
                 //return f;
             }
         }
-        
+
         /**
          * Mutator method to populate a List<Gear> with all possible choices of gear
          * All gear is hardcoded in, even though this is a horrible horrible idea
@@ -74,7 +74,7 @@ namespace DnDClassesTest
             allGear.Add(new Weapon("Mace", 6, 1));
             allGear.Add(new Weapon("Quarterstaff", 6, false, false, true));
             allGear.Add(new Weapon("Sickle", 4, 1));
-            allGear.Add(new Weapon("Spear", 6, false, false, true)); 
+            allGear.Add(new Weapon("Spear", 6, false, false, true));
             allGear.Add(new Weapon("Unarmed strike", 1, 1)); //10
             //11-14 Simple Ranged Weapons
             allGear.Add(new Weapon("Crossbow, light", 8, false, true, false, true));
@@ -86,29 +86,29 @@ namespace DnDClassesTest
             allGear.Add(new Weapon("Flail", 8, 1));
             allGear.Add(new Weapon("Glaive", 10, false, true, false, false, true));
             allGear.Add(new Weapon("Greatax", 12, false, true, false, false, true));
-            allGear.Add(new Weapon("Greatsword", 6, 2)); 
+            allGear.Add(new Weapon("Greatsword", 6, 2));
             allGear.Add(new Weapon("Halberd", 10, false, true, false, false, true)); //20
             allGear.Add(new Weapon("Lance", 12, false, false, false, false, true));
             allGear.Add(new Weapon("Longsword", 8, false, false, true));
             allGear.Add(new Weapon("Maul", 6, false, true, false, false, true, false, 2));
-            allGear.Add(new Weapon("Morningstar", 8, 1)); 
+            allGear.Add(new Weapon("Morningstar", 8, 1));
             allGear.Add(new Weapon("Pike", 10, false, true, false, false, true));//25
             allGear.Add(new Weapon("Rapier", 8, true));
             allGear.Add(new Weapon("Scimitar", 6, true));
             allGear.Add(new Weapon("Shortsword", 6, true));
-            allGear.Add(new Weapon("Trident", 6, false, false, true)); 
+            allGear.Add(new Weapon("Trident", 6, false, false, true));
             allGear.Add(new Weapon("War pick", 8, 1)); //30
             allGear.Add(new Weapon("Warhammer", 8, false, false, true));
             allGear.Add(new Weapon("Whip", 4, true));
             //33-37 Martial Ranged Weapons
             allGear.Add(new Weapon("Blowgun", 1, false, false, false, true));
-            allGear.Add(new Weapon("Crossbow, hand", 6, false, false, false, true)); 
+            allGear.Add(new Weapon("Crossbow, hand", 6, false, false, false, true));
             allGear.Add(new Weapon("Crossbow, heavy", 10, false, true, false, true, true)); //35
             allGear.Add(new Weapon("Longbow", 8, false, true, false, false, true));
             allGear.Add(new Weapon("Net", 0, false, false, false, false, false, true));
             //38-42 Armor
             allGear.Add(new Armor("Leather armor", 11, dexMod));
-            allGear.Add(new Armor("Chain shirt", 13, dexMod, 2)); 
+            allGear.Add(new Armor("Chain shirt", 13, dexMod, 2));
             allGear.Add(new Armor("Scale mail", 14, dexMod, 2, true)); //40
             allGear.Add(new Armor("Chain mail", 16, 0, true));
             allGear.Add(new Armor("Shield", 2));
@@ -117,73 +117,73 @@ namespace DnDClassesTest
             allGear.Add(new Equipment("Sprig of mistletoe"));
             allGear.Add(new Equipment("Totem"));
             allGear.Add(new Equipment("Wooden staff")); //45 
-            allGear.Add(new Equipment("Yew wand")); 
+            allGear.Add(new Equipment("Yew wand"));
             //47-51 Arcane Focus
             allGear.Add(new Equipment("Crystal"));
             allGear.Add(new Equipment("Orb"));
             allGear.Add(new Equipment("Rod"));
             allGear.Add(new Equipment("Staff")); //50
-            allGear.Add(new Equipment("Wand")); 
+            allGear.Add(new Equipment("Wand"));
             //52-54 Holy symbol
             allGear.Add(new Equipment("Amulet"));
             allGear.Add(new Equipment("Emblem"));
             allGear.Add(new Equipment("Reliquary"));
             //55-60 Packs
             allGear.Add(new Equipment("Diplomat's Pack")); //55
-            allGear.Add(new Equipment("Dungeoneer's Pack")); 
+            allGear.Add(new Equipment("Dungeoneer's Pack"));
             allGear.Add(new Equipment("Entertainer's Pack"));
             allGear.Add(new Equipment("Explorer's Pack"));
             allGear.Add(new Equipment("Priest's Pack"));
             allGear.Add(new Equipment("Scholar's Pack")); //60
             //61-77 Artisan's Tools
-            allGear.Add(new Equipment("Alchemist's supplies")); 
+            allGear.Add(new Equipment("Alchemist's supplies"));
             allGear.Add(new Equipment("Brewer's supplies"));
-            allGear.Add(new Equipment("Calligrapher's supplies")); 
-            allGear.Add(new Equipment("Carpenter's tools")); 
+            allGear.Add(new Equipment("Calligrapher's supplies"));
+            allGear.Add(new Equipment("Carpenter's tools"));
             allGear.Add(new Equipment("Cartographer's tools")); //65
-            allGear.Add(new Equipment("Cobbler's tools")); 
+            allGear.Add(new Equipment("Cobbler's tools"));
             allGear.Add(new Equipment("Cook's utensils"));
-            allGear.Add(new Equipment("Glassblower's tools")); 
-            allGear.Add(new Equipment("Jeweler's tools")); 
+            allGear.Add(new Equipment("Glassblower's tools"));
+            allGear.Add(new Equipment("Jeweler's tools"));
             allGear.Add(new Equipment("Leatherworker's tools"));  //70
-            allGear.Add(new Equipment("Mason's tools")); 
+            allGear.Add(new Equipment("Mason's tools"));
             allGear.Add(new Equipment("Painter's supplies"));
-            allGear.Add(new Equipment("Potter's tools")); 
-            allGear.Add(new Equipment("Smith's tools")); 
+            allGear.Add(new Equipment("Potter's tools"));
+            allGear.Add(new Equipment("Smith's tools"));
             allGear.Add(new Equipment("Tinker's tools")); //75
-            allGear.Add(new Equipment("Weaver's tools")); 
+            allGear.Add(new Equipment("Weaver's tools"));
             allGear.Add(new Equipment("Woodcarver's tools"));
             //78-87 Musical instruments
             allGear.Add(new Equipment("Bagpipes"));
-            allGear.Add(new Equipment("Drum")); 
+            allGear.Add(new Equipment("Drum"));
             allGear.Add(new Equipment("Dulcimer")); //80
-            allGear.Add(new Equipment("Flute")); 
+            allGear.Add(new Equipment("Flute"));
             allGear.Add(new Equipment("Lute"));
             allGear.Add(new Equipment("Lyre"));
-            allGear.Add(new Equipment("Horn")); 
+            allGear.Add(new Equipment("Horn"));
             allGear.Add(new Equipment("Pan flute")); //85
-            allGear.Add(new Equipment("Shawm")); 
-            allGear.Add(new Equipment("Viol")); 
+            allGear.Add(new Equipment("Shawm"));
+            allGear.Add(new Equipment("Viol"));
             //88-90 Formatting
             allGear.Add(new Weapon("Light crossbow and 20 bolts", 8, false, true, false, true));
-            allGear.Add(new Weapon("Shortbow and 20 arrows", 6, false, true)); 
+            allGear.Add(new Weapon("Shortbow and 20 arrows", 6, false, true));
             allGear.Add(new Equipment("Leather armor, longbow, and 20 arrows")); //90
             //other equipment
             allGear.Add(new Equipment("Arrows (x20)"));
-            allGear.Add(new Equipment("Crossbow Bolts (x20)")); 
+            allGear.Add(new Equipment("Crossbow Bolts (x20)"));
             allGear.Add(new Equipment("Prayer book"));
             allGear.Add(new Equipment("Prayer wheel"));
-            allGear.Add(new Equipment("Stoppered bottles filled with colored liquid (x10)")); 
-            allGear.Add(new Equipment("Weighted dice")); 
+            allGear.Add(new Equipment("Stoppered bottles filled with colored liquid (x10)"));
+            allGear.Add(new Equipment("Weighted dice"));
             allGear.Add(new Equipment("Deck of marked cards"));
             allGear.Add(new Equipment("Signet ring of an imaginary duke"));
             allGear.Add(new Equipment("Love letter"));
             allGear.Add(new Equipment("Lock of hair"));
-            allGear.Add(new Equipment("Trinket")); 
+            allGear.Add(new Equipment("Trinket"));
             allGear.Add(new Equipment("Disguise kit"));
             allGear.Add(new Equipment("Forgery kit"));
             allGear.Add(new Equipment("Bone dice"));
-            allGear.Add(new Equipment("Playing card set")); 
+            allGear.Add(new Equipment("Playing card set"));
 
         }
 
@@ -266,10 +266,10 @@ namespace DnDClassesTest
                 //}
 
                 this.options.Add(new List<Gear>()); //light crossbow and 20 bolts or any simple weapon
-                options[2].Add(allGear[getIndex("Light crossbow and 20 bolts")]); 
+                options[2].Add(allGear[getIndex("Light crossbow and 20 bolts")]);
                 for (i = startSimpleMelee; i < startMartialMelee; i++)
                 {
-                    options[0].Add(allGear[i]); 
+                    options[0].Add(allGear[i]);
                 }
 
                 this.options.Add(new List<Gear>()); //priest's pack or explorer's pack
@@ -285,20 +285,20 @@ namespace DnDClassesTest
                 numChoices = 3;
                 this.options.Add(new List<Gear>());
                 options[0].Add(allGear[getIndex("Shield")]); //wood shield or any simple weapon
-                for(i = startSimpleMelee; i < startMartialMelee; i++)
+                for (i = startSimpleMelee; i < startMartialMelee; i++)
                 {
                     options[0].Add(allGear[i]);
                 }
                 this.options.Add(new List<Gear>());
                 options[1].Add(allGear[getIndex("Scimitar")]);//scimitar or any simple melee weapon
-              
-                for(i = startSimpleMelee; i < startSimpleRanged; i++)
+
+                for (i = startSimpleMelee; i < startSimpleRanged; i++)
                 {
                     options[1].Add(allGear[i]);
                 }
 
                 this.options.Add(new List<Gear>()); //Druidic Focus
-                for(i = startDruidicFocus; i < startArcaneFocus; i++)
+                for (i = startDruidicFocus; i < startArcaneFocus; i++)
                 {
                     options[2].Add(allGear[i]);
                 }
@@ -415,7 +415,7 @@ namespace DnDClassesTest
                 inventory.Add(new Equipment("Clothes, common"));
                 inventory.Add(new Equipment("Belt pouch"));
                 numChoices += 1;
-                gp = 15;   
+                gp = 15;
                 this.options.Add(new List<Gear>()); //prayer book or prayer wheel
                 options[2].Add(allGear[101]);
                 options[2].Add(allGear[102]);
@@ -478,7 +478,7 @@ namespace DnDClassesTest
                 numChoices++;
 
                 this.options.Add(new List<Gear>()); //Artistans tools
-                for(i = startArtisans; i < startInstruments; i++)
+                for (i = startArtisans; i < startInstruments; i++)
                 {
                     options[numChoices].Add(allGear[i]);
                 }
@@ -566,11 +566,11 @@ namespace DnDClassesTest
             }
 
         }
-        
+
         /**
          * Getter method
          * @return options the List of options of gear
-         */ 
+         */
         public List<List<Gear>> getOptions()
         {
             return options;
@@ -599,7 +599,7 @@ namespace DnDClassesTest
         /**
          * Getter method
          * @return the number of choices generated by the combinationg of class and background
-         */ 
+         */
         public int getNumChoices()
         {
             return numChoices;
@@ -621,7 +621,7 @@ namespace DnDClassesTest
          */
         public int getIndex(string find)
         {
-            for(int i = 0; i < allGear.Count(); i++)
+            for (int i = 0; i < allGear.Count(); i++)
             {
                 if (allGear[i].getName() == find)
                 {
@@ -638,9 +638,9 @@ namespace DnDClassesTest
         public void formatting(ref List<Gear> end, ref List<string> endStrings)
         {
             int count = end.Count();
-            for(int i = 0; i < count; i++)
+            for (int i = 0; i < count; i++)
             {
-                for(int j = startFormat; j < endFormat; j++)
+                for (int j = startFormat; j < endFormat; j++)
                 {
                     if (end[i] == allGear[j])
                     {
@@ -677,7 +677,7 @@ namespace DnDClassesTest
         /**
          * Getter method 
          * @return inventory the List<Gear> of inventory post-choosing
-         */ 
+         */
         public List<Gear> getInventory()
         {
             return inventory;
@@ -686,16 +686,16 @@ namespace DnDClassesTest
         /**
          * Setter method to set inventory
          * @param inventory the updated inventory
-         */ 
+         */
         public void setInventory(List<Gear> inventory)
         {
             this.inventory = inventory;
         }
-        
+
         /**
          * Setter method to set parallel List<string> inventoryString
          * @param inventoryString the updated inventoryString
-         */ 
+         */
         public void setInventoryString(List<string> inventoryString)
         {
             this.inventoryString = inventoryString;
@@ -704,21 +704,26 @@ namespace DnDClassesTest
         /**
          * Getter method to convert inventory into inventoryString
          * @return inventoryString the string representation of inventory
-         */ 
-        public List<string> getInventoryString()
+         */
+        public List<string> convertInventoryString()
         {
-            for(int i = 0; i < inventory.Count(); i++)
+            for (int i = 0; i < inventory.Count(); i++)
             {
                 inventoryString.Add(inventory[i].toString());
             }
             inventoryString.Add(gp + "gp");
             return inventoryString;
         }
-        
+
+        public List<string> getInventoryString()
+        {
+            return inventoryString;
+        }
+
         /**
          * Getter method
          * @return the current object
-         */ 
+         */
         public CharGear getCharGear()
         {
             return this;

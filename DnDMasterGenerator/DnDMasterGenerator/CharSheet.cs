@@ -25,12 +25,12 @@ namespace DnDClassesTest
             txtLevel.Text = leeroy._level.ToString();
             txtClass.Text = leeroy._class.ProfessionName();
             int[] abilfill = new int[12];
-            for(int i = 0; i < 6; ++i)
+            for (int i = 0; i < 6; ++i)
             {//don't touch, needed jesus
-                abilfill[i*2] = leeroy._abilities[i];
-                abilfill[12-((i*2) + 1)] = leeroy.AbilityModifiers()[i];
+                abilfill[i * 2] = leeroy._abilities[i];
+                abilfill[12 - ((i * 2) + 1)] = leeroy.AbilityModifiers()[i];
             }
-            for(int i = 0; i < 12; ++i)
+            for (int i = 0; i < 12; ++i)
             {
                 paneAbilities.Controls[i].Text = abilfill[i].ToString();
                 if (i % 2 == 1)
@@ -45,7 +45,29 @@ namespace DnDClassesTest
                 txtSpecial.AppendText(s + "\n");
             txtMelee.Text = (leeroy.ProficiencyBonus() + leeroy.AbilityModifiers()[0]).ToString();
             txtRanged.Text = (leeroy.ProficiencyBonus() + leeroy.AbilityModifiers()[1]).ToString();
-            //displayInventory.Text = (leeroy.)
+
+            foreach (string i in leeroy.CharRace.getLanguages())
+                richTextBox2.Text += i + ", ";
+            richTextBox2.Text += "\n";
+            foreach (string i in leeroy.CharRace.getSA())
+                txtSpecial.Text += i + ", ";
+
+            string Personality = "f", Ideal = "f", Flaw = "f", Bond = "f", Background = "f";
+            //leeroy.Background.Traits(ref Personality, ref Ideal, ref Flaw, ref Bond);
+            leeroy.backgroundInfo(ref Personality, ref Ideal, ref Flaw, ref Bond, ref Background);
+            richTextBox3.Text += Personality + "\n";
+            richTextBox3.Text += Ideal + "\n";
+            richTextBox3.Text += Bond + "\n";
+            richTextBox3.Text += Flaw + "\n";
+            txtBackground.Text = Background;
+
+
+
+
+            for (int i = 0; i < leeroy.getInventory().Count(); i++)
+            {
+                displayInventory.Text += (leeroy.getInventory()[i]) + "\n";
+            }
         }
 
         private void displayDEXMod_TextChanged(object sender, EventArgs e)
@@ -53,14 +75,9 @@ namespace DnDClassesTest
 
         }
 
-        private void txtRace_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void displayInventory_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

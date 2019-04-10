@@ -77,11 +77,6 @@ namespace DnDClassesTest
             return Saves;
         }
 
-        public int ProficiencyBonus()
-        {//passes the proficiency bonus to main function
-            return 2 + (this._level / 5);
-        }
-
         public override List<string> ClassFeatures()
         {
             List<string> features = new List<string>();
@@ -89,10 +84,10 @@ namespace DnDClassesTest
             //string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
             string[] temp = new string[28];
             temp = File.ReadAllLines(path);
-            foreach(string i in temp)
-                {
-                    features.Add(i);
-                }
+            foreach (string i in temp)
+            {
+                features.Add(i);
+            }
 
             return features;
 
@@ -120,15 +115,24 @@ namespace DnDClassesTest
             List<string> current = new List<string>();
             bool[] unlock = this.Unlocked();
             int i;
-            for (i = 12; i <= 0; --i)
+            for (i = 0; i <= 12; ++i)
             {
-                if (unlock[i]) break;
+                if (unlock[i]) continue;
+                else break;
             }
-            if (i == 12) current = Features.GetRange(0, 11);
+            if (i == 1) current = Features.GetRange(0, 1);
+            else if (i == 12) current = Features.GetRange(0, 11);
+            else if (i == 11) current = Features.GetRange(0, 10);
+            else if (i == 10) ;
+            else if (i == 9) ;
+            else if (i == 8) ;
+            else if (i == 7) ;
+            else if (i == 6) ;
+
             if (_proPath == 0)
             {
                 if (i < 2) return current;
-                if (i > 2 ) current.Add(Features[12]);
+                if (i > 2) current.Add(Features[12]);
                 if (i > 4) current.Add(Features[13]);
                 if (i > 7) current.Add(Features[14]);
                 if (i > 8) current.Add(Features[15]);
@@ -158,7 +162,7 @@ namespace DnDClassesTest
                     else current.Add(Features[27]);
                 }
             }
-        
+
             return current;
         }
 
@@ -167,5 +171,5 @@ namespace DnDClassesTest
             int[] increase = new int[6] { 4, 0, 4, 0, 0, 0 };
             return increase;
         }
-}
+    }
 }

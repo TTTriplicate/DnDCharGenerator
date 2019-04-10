@@ -87,10 +87,27 @@ namespace DnDClassesTest
             }
         }
         //get and set(Profession library, Chris)
-        protected Race CharRace { get; set; }
-        
+        public Race CharRace { get; set; }
+        protected void raceAdditions()
+        {
+            for (int i = 0; i < 6; i++)
+            {
+                Abilities[i] += CharRace.getAA()[i];
+            }
+            //pretty sure I need something else here but I don't know what
+        }
         //get and set(Race library, Dylan)
-        protected Background_Class Background { get; set; }
+        //protected Background_Class Background { get; set; }
+        public static string blah = "f";
+        public BackgroundForm background = new BackgroundForm(ref blah);
+        public Background_Class Background = new Background_Class(blah);
+        public void backgroundInfo(ref string Personality, ref string Ideal, ref string Flaw, ref string Bond, ref string BACKGROUND)
+        {
+            blah = "Acolyte";
+            BACKGROUND = "Acolyte";
+            Background.loadFile(blah);
+            Background.Traits(ref Personality, ref Ideal, ref Flaw, ref Bond);
+        }
         //get and set(Background libraries, Jack)
         //       protected List<Gear> Inventory;
         protected CharGear gear { get; set; }
@@ -108,6 +125,7 @@ namespace DnDClassesTest
             }
         }
         //mark which saves get proficiency bonus, get from CharClass
+        public List<string> inventory = new List<string>();
         public DnDCharacter()
         {
             //CharGear gear = new CharGear("Barbarian", "Folk Hero", 2);
@@ -123,6 +141,7 @@ namespace DnDClassesTest
             if (this._level > 1)
                 this._HP += DnDCharacter.RollHP(this._level, this._class._hitDie) + ((this._level - 1) * this.AbilityModifiers()[2]);
             this.CharRace = Race.InteractiveChoice();
+            raceAdditions();
             //Background selector
             //Race selector
             //this._skills = DnDCharacter.SkillSelectInteractive(CharClass._numProSkills, CharClass.ClassSkills()/*, Background_Class.FixedSkills = new bool[18]*/);
@@ -130,10 +149,11 @@ namespace DnDClassesTest
             //needs the remaining interactive constructor pieces
             //and I forgot to set the ability scores off that form....Chris
             Background_Class Background = Background_Class.InteractiveChoice();
+            
 
 
             CharGear gear = new CharGear(this._class.ProfessionName(), "Folk Hero", AbilityModifiers()[1]);
-            List<string> inventory = gear.getInventoryString();
+            inventory = gear.getInventoryString();
         }
         /*   public DnDCharacter(int level, int p, int proPath)
            {
@@ -178,6 +198,10 @@ namespace DnDClassesTest
          this code would break badly*/
         //unnecessary this.SavingThrows = this.CharClass.SavingThrows();
         //}
+        public List<string> getInventory()
+        {
+            return inventory;
+        }
         public int ProficiencyBonus()
         {//passes the proficiency bonus to main function
             return 2 + (Level / 5);

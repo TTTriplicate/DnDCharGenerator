@@ -22,6 +22,12 @@ namespace DnDClassesTest
             setInfo(ref Personality, ref Ideal, ref Flaw, ref Bond);
         }
 
+        public BackgroundForm(ref string Background)
+        {
+            InitializeComponent();
+            Background = BGChoice.Text;
+        }
+
         public BackgroundForm()
         {
             InitializeComponent();

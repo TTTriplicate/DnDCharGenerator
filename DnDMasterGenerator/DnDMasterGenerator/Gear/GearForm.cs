@@ -110,7 +110,7 @@ namespace DnDClassesTest
             }
 
             inventory = gear.getInventory();
-            inventoryString = gear.getInventoryString();
+            inventoryString = gear.convertInventoryString();
             Inventory.DataSource = inventoryString;
 
         }

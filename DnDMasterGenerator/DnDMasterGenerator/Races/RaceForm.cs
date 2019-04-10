@@ -47,7 +47,7 @@ namespace DnDClassesTest
             textBox3.Text = selected.getAlignment();
             textBox4.Text = selected.getSize();
             textBox5.Text = selected.getSpeed().ToString();
-            foreach (bool i in selected.getLanguages())
+            foreach (string i in selected.getLanguages())
                 textBox6.Text += i + ", ";
             foreach (string i in selected.getSA())
                 textBox7.Text += i + ", ";
