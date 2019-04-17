@@ -1,0 +1,16 @@
+This is Halfling
+020000
+20-200
+Lawful Good
+Small
+25
+0 6
+Lucky, Brave, Halfling Nimbleness
+
+Lightfoot
+000001
+Naturally Stealthy
+
+Stout
+001000
+Stout Resilience

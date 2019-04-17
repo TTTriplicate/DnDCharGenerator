@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26CD37C5-DD7F-49DE-8BB6-887CF4329497}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DnDMasterGenerator</RootNamespace>
+    <AssemblyName>DnDMasterGenerator</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Background\Background Class.cs" />
+    <Compile Include="Background\BackgroundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Background\BackgroundForm.designer.cs">
+      <DependentUpon>BackgroundForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Character.cs" />
+    <Compile Include="CharSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharSheet.designer.cs">
+      <DependentUpon>CharSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gear\Armor.cs" />
+    <Compile Include="Gear\CharGear.cs" />
+    <Compile Include="Gear\Equipment.cs" />
+    <Compile Include="Gear\Gear.cs" />
+    <Compile Include="Gear\GearForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gear\GearForm.designer.cs">
+      <DependentUpon>GearForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gear\Weapon.cs" />
+    <Compile Include="Professions\Barbarian.cs" />
+    <Compile Include="Professions\Bard.cs" />
+    <Compile Include="Professions\Cleric.cs" />
+    <Compile Include="Professions\Druid.cs" />
+    <Compile Include="Professions\Fighter.cs" />
+    <Compile Include="Professions\Monk.cs" />
+    <Compile Include="Professions\Paladin.cs" />
+    <Compile Include="Professions\Profession.cs" />
+    <Compile Include="Professions\Ranger.cs" />
+    <Compile Include="Professions\Rogue.cs" />
+    <Compile Include="Professions\Sorcerer.cs" />
+    <Compile Include="Professions\Warlock.cs" />
+    <Compile Include="Professions\Wizard.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Races\RaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Races\RaceForm.designer.cs">
+      <DependentUpon>RaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Races\Race.cs" />
+    <Compile Include="SkillSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkillSelect.designer.cs">
+      <DependentUpon>SkillSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatsAndProfession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StatsAndProfession.designer.cs">
+      <DependentUpon>StatsAndProfession.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Background\BackgroundForm.resx">
+      <DependentUpon>BackgroundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CharSheet.resx">
+      <DependentUpon>CharSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gear\GearForm.resx">
+      <DependentUpon>GearForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Races\RaceForm.resx">
+      <DependentUpon>RaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkillSelect.resx">
+      <DependentUpon>SkillSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatsAndProfession.resx">
+      <DependentUpon>StatsAndProfession.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Background\Acolyte.txt" />
+    <Content Include="Background\Charlatan.txt" />
+    <Content Include="Background\Criminal.txt" />
+    <Content Include="Background\Entertainer.txt" />
+    <Content Include="Background\Folk Hero.txt" />
+    <Content Include="Background\Guild Artisan.txt" />
+    <Content Include="Background\Hermit.txt" />
+    <Content Include="Background\Noble.txt" />
+    <Content Include="Background\Outlander.txt" />
+    <Content Include="Background\Sage.txt" />
+    <Content Include="Background\Sailor.txt" />
+    <Content Include="Background\Soldier.txt" />
+    <Content Include="Background\Urchin.txt" />
+    <Content Include="Professions\ClassFeatures\BarbarianClassFeatures.txt" />
+    <Content Include="Professions\ClassFeatures\BardFeatures.txt" />
+    <Content Include="Professions\ClassFeatures\ClericClassFeatures.txt" />
+    <Content Include="Races\Dragonborn.txt" />
+    <Content Include="Races\Dwarf.txt" />
+    <Content Include="Races\Elf.txt" />
+    <Content Include="Races\Gnome.txt" />
+    <Content Include="Races\Half-Elf.txt" />
+    <Content Include="Races\Half-Orc.txt" />
+    <Content Include="Races\Halfling.txt" />
+    <Content Include="Races\Human.txt" />
+    <Content Include="Races\Tiefling.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
