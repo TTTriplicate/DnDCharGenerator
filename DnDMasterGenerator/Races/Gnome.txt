@@ -1,0 +1,18 @@
+This is Gnome
+000100
+40-500
+Lawful-Good/Chaotic Good
+Small
+25
+0 4
+Darkvision, Gnome Cunning
+
+Forest
+010000
+Natural Illusionist
+Speak with Small Beasts
+
+Rock
+001000
+Artificer's Lore
+Tinker
