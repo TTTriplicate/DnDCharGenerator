@@ -133,9 +133,9 @@ namespace DnDClassesTest
             int[] a = new int[6];
             string charName;
             this.CharClass = Profession.InteractiveChoice(out a, out charName);
-            this._abilities = a;
             this._HP = this._class._hitDie;
             this._HP += AbilityModifiers()[2];
+            this._abilities = a;
             this._name = charName;
             this._level = this.CharClass._level;
             if (this._level > 1)
