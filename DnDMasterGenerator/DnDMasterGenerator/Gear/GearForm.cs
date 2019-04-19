@@ -18,7 +18,7 @@ namespace DnDClassesTest
         public List<Gear> inventory = new List<Gear>();
         public List<string> inventoryString = new List<string>();
         public List<Gear> firstChoice;
-        //blahhh
+        
         public GearForm()
         { 
             InitializeComponent();
