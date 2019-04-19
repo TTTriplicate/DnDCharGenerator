@@ -66,8 +66,9 @@
             // 
             // Choice2
             // 
+            this.Choice2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice2.FormattingEnabled = true;
-            this.Choice2.Location = new System.Drawing.Point(171, 403);
+            this.Choice2.Location = new System.Drawing.Point(229, 302);
             this.Choice2.Name = "Choice2";
             this.Choice2.Size = new System.Drawing.Size(1028, 33);
             this.Choice2.TabIndex = 1;
@@ -75,8 +76,9 @@
             // 
             // Choice3
             // 
+            this.Choice3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice3.FormattingEnabled = true;
-            this.Choice3.Location = new System.Drawing.Point(171, 580);
+            this.Choice3.Location = new System.Drawing.Point(229, 438);
             this.Choice3.Name = "Choice3";
             this.Choice3.Size = new System.Drawing.Size(1028, 33);
             this.Choice3.TabIndex = 2;
@@ -84,8 +86,9 @@
             // 
             // Choice4
             // 
+            this.Choice4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice4.FormattingEnabled = true;
-            this.Choice4.Location = new System.Drawing.Point(171, 759);
+            this.Choice4.Location = new System.Drawing.Point(229, 578);
             this.Choice4.Name = "Choice4";
             this.Choice4.Size = new System.Drawing.Size(1028, 33);
             this.Choice4.TabIndex = 3;
@@ -93,8 +96,9 @@
             // 
             // Choice5
             // 
+            this.Choice5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice5.FormattingEnabled = true;
-            this.Choice5.Location = new System.Drawing.Point(171, 930);
+            this.Choice5.Location = new System.Drawing.Point(229, 726);
             this.Choice5.Name = "Choice5";
             this.Choice5.Size = new System.Drawing.Size(1028, 33);
             this.Choice5.TabIndex = 4;
@@ -102,8 +106,9 @@
             // 
             // Choice6
             // 
+            this.Choice6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice6.FormattingEnabled = true;
-            this.Choice6.Location = new System.Drawing.Point(171, 1095);
+            this.Choice6.Location = new System.Drawing.Point(229, 874);
             this.Choice6.Name = "Choice6";
             this.Choice6.Size = new System.Drawing.Size(1028, 33);
             this.Choice6.TabIndex = 5;
@@ -113,7 +118,7 @@
             // 
             this.Choice1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice1.FormattingEnabled = true;
-            this.Choice1.Location = new System.Drawing.Point(171, 234);
+            this.Choice1.Location = new System.Drawing.Point(229, 174);
             this.Choice1.Name = "Choice1";
             this.Choice1.Size = new System.Drawing.Size(1028, 33);
             this.Choice1.TabIndex = 6;
@@ -121,7 +126,7 @@
             // 
             // Submit
             // 
-            this.Submit.Location = new System.Drawing.Point(552, 1167);
+            this.Submit.Location = new System.Drawing.Point(646, 999);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(176, 69);
             this.Submit.TabIndex = 7;
@@ -193,10 +198,9 @@
             this.choice3b.Location = new System.Drawing.Point(39, 88);
             this.choice3b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice3b.Name = "choice3b";
-            this.choice3b.Size = new System.Drawing.Size(165, 29);
+            this.choice3b.Size = new System.Drawing.Size(27, 26);
             this.choice3b.TabIndex = 23;
             this.choice3b.TabStop = true;
-            this.choice3b.Text = "radioButton6";
             this.choice3b.UseVisualStyleBackColor = true;
             this.choice3b.CheckedChanged += new System.EventHandler(this.choice3b_CheckedChanged);
             // 
@@ -219,10 +223,9 @@
             this.choice4b.Location = new System.Drawing.Point(22, 61);
             this.choice4b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice4b.Name = "choice4b";
-            this.choice4b.Size = new System.Drawing.Size(165, 29);
+            this.choice4b.Size = new System.Drawing.Size(27, 26);
             this.choice4b.TabIndex = 25;
             this.choice4b.TabStop = true;
-            this.choice4b.Text = "radioButton8";
             this.choice4b.UseVisualStyleBackColor = true;
             this.choice4b.CheckedChanged += new System.EventHandler(this.choice4b_CheckedChanged);
             // 
@@ -245,10 +248,9 @@
             this.choice5b.Location = new System.Drawing.Point(26, 67);
             this.choice5b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice5b.Name = "choice5b";
-            this.choice5b.Size = new System.Drawing.Size(177, 29);
+            this.choice5b.Size = new System.Drawing.Size(27, 26);
             this.choice5b.TabIndex = 27;
             this.choice5b.TabStop = true;
-            this.choice5b.Text = "radioButton10";
             this.choice5b.UseVisualStyleBackColor = true;
             this.choice5b.CheckedChanged += new System.EventHandler(this.choice5b_CheckedChanged);
             // 
@@ -258,10 +260,9 @@
             this.choice6b.Location = new System.Drawing.Point(20, 67);
             this.choice6b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice6b.Name = "choice6b";
-            this.choice6b.Size = new System.Drawing.Size(177, 29);
+            this.choice6b.Size = new System.Drawing.Size(27, 26);
             this.choice6b.TabIndex = 29;
             this.choice6b.TabStop = true;
-            this.choice6b.Text = "radioButton12";
             this.choice6b.UseVisualStyleBackColor = true;
             this.choice6b.CheckedChanged += new System.EventHandler(this.choice6b_CheckedChanged);
             // 
@@ -307,10 +308,9 @@
             this.choice1b.Location = new System.Drawing.Point(54, 67);
             this.choice1b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice1b.Name = "choice1b";
-            this.choice1b.Size = new System.Drawing.Size(165, 29);
+            this.choice1b.Size = new System.Drawing.Size(27, 26);
             this.choice1b.TabIndex = 19;
             this.choice1b.TabStop = true;
-            this.choice1b.Text = "radioButton2";
             this.choice1b.UseVisualStyleBackColor = true;
             this.choice1b.CheckedChanged += new System.EventHandler(this.choice1b_CheckedChanged);
             // 
@@ -320,10 +320,9 @@
             this.choice2b.Location = new System.Drawing.Point(4, 56);
             this.choice2b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice2b.Name = "choice2b";
-            this.choice2b.Size = new System.Drawing.Size(165, 29);
+            this.choice2b.Size = new System.Drawing.Size(27, 26);
             this.choice2b.TabIndex = 21;
             this.choice2b.TabStop = true;
-            this.choice2b.Text = "radioButton4";
             this.choice2b.UseVisualStyleBackColor = true;
             this.choice2b.CheckedChanged += new System.EventHandler(this.choice2b_CheckedChanged);
             // 
@@ -331,7 +330,7 @@
             // 
             this.panel2.Controls.Add(this.choice3a);
             this.panel2.Controls.Add(this.choice3b);
-            this.panel2.Location = new System.Drawing.Point(128, 448);
+            this.panel2.Location = new System.Drawing.Point(135, 352);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 123);
@@ -341,7 +340,7 @@
             // 
             this.panel3.Controls.Add(this.choice2a);
             this.panel3.Controls.Add(this.choice2b);
-            this.panel3.Location = new System.Drawing.Point(166, 289);
+            this.panel3.Location = new System.Drawing.Point(166, 248);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(201, 106);
@@ -351,7 +350,7 @@
             // 
             this.panel4.Controls.Add(this.choice4a);
             this.panel4.Controls.Add(this.choice4b);
-            this.panel4.Location = new System.Drawing.Point(147, 631);
+            this.panel4.Location = new System.Drawing.Point(147, 519);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(254, 120);
@@ -361,7 +360,7 @@
             // 
             this.panel5.Controls.Add(this.choice5a);
             this.panel5.Controls.Add(this.choice5b);
-            this.panel5.Location = new System.Drawing.Point(147, 805);
+            this.panel5.Location = new System.Drawing.Point(147, 661);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(228, 116);
@@ -371,7 +370,7 @@
             // 
             this.panel6.Controls.Add(this.choice6a);
             this.panel6.Controls.Add(this.choice6b);
-            this.panel6.Location = new System.Drawing.Point(147, 975);
+            this.panel6.Location = new System.Drawing.Point(147, 809);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(228, 116);
@@ -383,12 +382,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(2540, 1284);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Inventory);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -399,6 +392,12 @@
             this.Controls.Add(this.Choice4);
             this.Controls.Add(this.Choice3);
             this.Controls.Add(this.Choice2);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel6);
             this.Name = "GearForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

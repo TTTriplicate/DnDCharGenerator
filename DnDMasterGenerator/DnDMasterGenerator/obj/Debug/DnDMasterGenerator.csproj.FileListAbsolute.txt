@@ -73,3 +73,6 @@ C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Gener
 \\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.CoreCompileInputs.cache
 \\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.exe
 \\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.pdb
+\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe.config
+\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe
+\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.pdb

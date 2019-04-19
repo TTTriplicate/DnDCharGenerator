@@ -64,7 +64,7 @@ namespace DnDClassesTest
                 if (firstChoice[0] != null)
                 {
                     choice1a.Show();
-                    choice1a.Text = firstChoice[0];
+                    choice1a.Text = firstChoice[0].toString();
                     choice1b.Show();
                 }
                 Choice1.DataSource = itemString[0];
@@ -74,7 +74,7 @@ namespace DnDClassesTest
                     if (firstChoice[1] != null)
                     {
                         choice2a.Show();
-                        choice2a.Text = firstChoice[1];
+                        choice2a.Text = firstChoice[1].toString();
                         choice2b.Show();
                     }
                     Choice2.Show();
@@ -85,7 +85,7 @@ namespace DnDClassesTest
                         if (firstChoice[2] != null)
                         {
                             choice3a.Show();
-                            choice3a.Text = firstChoice[2];
+                            choice3a.Text = firstChoice[2].toString();
                             choice3b.Show();
                         }
                         Choice3.Show();
@@ -96,7 +96,7 @@ namespace DnDClassesTest
                             if (firstChoice[3] != null)
                             {
                                 choice4a.Show();
-                                choice4a.Text = firstChoice[3];
+                                choice4a.Text = firstChoice[3].toString();
                                 choice4b.Show();
                             }
                             Choice4.Show();
@@ -107,7 +107,7 @@ namespace DnDClassesTest
                                 if (firstChoice[4] != null)
                                 {
                                     choice5a.Show();
-                                    choice5a.Text = firstChoice[4];
+                                    choice5a.Text = firstChoice[4].toString();
                                     choice5b.Show();
                                 }
                                 Choice5.Show();
@@ -118,7 +118,7 @@ namespace DnDClassesTest
                                     if (firstChoice[5] != null)
                                     {
                                         choice6a.Show();
-                                        choice6a.Text = firstChoice[5];
+                                        choice6a.Text = firstChoice[5].toString();
                                         choice6b.Show();
                                     }
                                     Choice6.Show();
@@ -182,16 +182,8 @@ namespace DnDClassesTest
         private void Submit_Click(object sender, EventArgs e)
         {
             string message = "Are you sure this is the gear you want?\n";
-            for (int i = 0; i < inventoryString.Count(); i++)
-            {
-                message = message + inventoryString[i] + "\n";
-            }
-            message = message + Choice1.Text + "\n";
-            message = message + Choice2.Text + "\n";
-            message = message + Choice3.Text + "\n";
-            message = message + Choice4.Text + "\n";
-            message = message + Choice5.Text + "\n";
-            message = message + Choice6.Text + "\n";
+            message = populateMessage(message);
+            
             string caption = "Done";
             DialogResult result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -211,10 +203,46 @@ namespace DnDClassesTest
 
                 this.Close();
             }
-
-
         }
 
+        public string populateMessage(string message)
+        {
+            for (int i = 0; i < inventoryString.Count(); i++)
+            {
+                message = message + inventoryString[i] + "\n";
+            }
+            if(choice1a.Checked)
+                message = message + choice1a.Text + "\n";
+            else
+                message = message + Choice1.Text + "\n";
+
+            if (choice2a.Checked)
+                message = message + choice2a.Text + "\n";
+            else
+                message = message + Choice2.Text + "\n";
+
+            if (choice3a.Checked)
+                message = message + choice3a.Text + "\n";
+            else
+                message = message + Choice3.Text + "\n";
+
+            if (choice4a.Checked)
+                message = message + choice4a.Text + "\n";
+            else
+                message = message + Choice4.Text + "\n";
+
+            if (choice5a.Checked)
+                message = message + choice5a.Text + "\n";
+            else
+                message = message + Choice5.Text + "\n";
+
+            if (choice6a.Checked)
+                message = message + choice6a.Text + "\n";
+            else
+                message = message + Choice6.Text + "\n";
+
+            return message;
+        }
 
         private void GearForm_Load(object sender, EventArgs e)
         {
