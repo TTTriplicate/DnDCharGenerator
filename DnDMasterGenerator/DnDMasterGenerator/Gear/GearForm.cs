@@ -23,7 +23,7 @@ namespace DnDClassesTest
         { 
             InitializeComponent();
         }
-        //test comment for Git
+        //test comment for Giti
         public GearForm(CharGear passedGear)
         {
             gear = passedGear;
