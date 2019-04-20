@@ -39,5 +39,10 @@ namespace DnDClassesTest
             DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void numLevel_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

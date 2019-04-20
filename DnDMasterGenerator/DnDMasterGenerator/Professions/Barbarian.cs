@@ -56,6 +56,7 @@ namespace DnDClassesTest
             this._numProSkills = 2;
             this._proPath = path;
             this.Features = ClassFeatures();
+            Console.WriteLine("Level ta construction == " + level);
         }
         public override bool[] ClassSkills()
         {
@@ -94,20 +95,23 @@ namespace DnDClassesTest
         }
         public override bool[] Unlocked()
         {
+            Console.WriteLine("this.level == " + this._level);
             bool[] unlock = new bool[13];
             unlock[0] = true;
-            if (this._level == 2) unlock[1] = true;
-            if (this._level == 3) unlock[2] = true;
-            if (this._level == 5) unlock[3] = true;
-            if (this._level == 6) unlock[4] = true;
-            if (this._level == 7) unlock[5] = true;
-            if (this._level == 9) unlock[6] = true;
-            if (this._level == 10) unlock[7] = true;
-            if (this._level == 11) unlock[8] = true;
-            if (this._level == 14) unlock[9] = true;
-            if (this._level == 15) unlock[10] = true;
-            if (this._level == 18) unlock[11] = true;
-            if (this._level == 20) unlock[12] = true;
+            if (this._level >= 2) unlock[1] = true;
+            if (this._level >= 3) unlock[2] = true;
+            if (this._level >= 5) unlock[3] = true;
+            if (this._level >= 6) unlock[4] = true;
+            if (this._level >= 7) unlock[5] = true;
+            if (this._level >= 9) unlock[6] = true;
+            if (this._level >= 10) unlock[7] = true;
+            if (this._level >= 11) unlock[8] = true;
+            if (this._level >= 14) unlock[9] = true;
+            if (this._level >= 15) unlock[10] = true;
+            if (this._level >= 18) unlock[11] = true;
+            if (this._level >= 20) unlock[12] = true;
+            foreach (bool i in unlock)
+                Console.WriteLine($"unlock at this place is " + i.ToString());
             return unlock;
         }
         public override List<string> CurrentFeatures()
@@ -120,14 +124,15 @@ namespace DnDClassesTest
                 if (unlock[i]) continue;
                 else break;
             }
+            Console.WriteLine("unlock index == " + i);
             if (i == 1) current = Features.GetRange(0, 3);
             else if (i == 3) current = Features.GetRange(0, 5);
             else if (i == 5) current = Features.GetRange(0, 6);
             else if (i == 6) current = Features.GetRange(0, 7);
             else if (i == 8) current = Features.GetRange(0, 8);
-            else if (i == 8) ;
-            else if (i == 7) ;
-            else if (i == 6) ;
+            else if (i == 10) current = Features.GetRange(0, 9);
+            else if (i == 11) current = Features.GetRange(0, 10);
+            else if (i == 12) current = Features.GetRange(0, 11);
 
             if (_proPath == 0)
             {
