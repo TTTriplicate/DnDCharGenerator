@@ -772,6 +772,7 @@ namespace DnDClassesTest
         public void setInventoryString(List<string> inventoryString)
         {
             this.inventoryString = inventoryString;
+            Console.WriteLine(allGear[0].GetType());
         }
 
         /**
