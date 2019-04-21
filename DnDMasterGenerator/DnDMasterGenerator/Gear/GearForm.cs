@@ -23,7 +23,7 @@ namespace DnDClassesTest
         { 
             InitializeComponent();
         }
-        //test comment for Giti
+
         public GearForm(CharGear passedGear)
         {
             gear = passedGear;
@@ -130,7 +130,6 @@ namespace DnDClassesTest
                 }
             }
 
-
             inventory = gear.getInventory();
             inventoryString = gear.convertInventoryString();
             Inventory.DataSource = inventoryString;
@@ -188,12 +187,35 @@ namespace DnDClassesTest
             DialogResult result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                inventoryString.Add(Choice1.Text);
-                inventoryString.Add(Choice2.Text);
-                inventoryString.Add(Choice3.Text);
-                inventoryString.Add(Choice4.Text);
-                inventoryString.Add(Choice5.Text);
-                inventoryString.Add(Choice6.Text);
+                if (choice1a.Checked)
+                    inventoryString.Add(choice1a.Text);
+                else
+                    inventoryString.Add(Choice1.Text);
+
+                if (choice2a.Checked)
+                    inventoryString.Add(choice2a.Text);
+                else
+                    inventoryString.Add(Choice2.Text);
+
+                if (choice3a.Checked)
+                    inventoryString.Add(choice3a.Text);
+                else
+                    inventoryString.Add(Choice3.Text);
+
+                if (choice4a.Checked)
+                    inventoryString.Add(choice4a.Text);
+                else
+                    inventoryString.Add(Choice4.Text);
+
+                if (choice5a.Checked)
+                    inventoryString.Add(choice5a.Text);
+                else
+                    inventoryString.Add(Choice5.Text);
+
+                if (choice6a.Checked)
+                    inventoryString.Add(choice6a.Text);
+                else
+                    inventoryString.Add(Choice6.Text);
 
                 gear.formatting(ref inventory, ref inventoryString);
 
@@ -308,20 +330,5 @@ namespace DnDClassesTest
         {
 
         }
-
-
-
-
-        //private void InitializeComponent()
-        //{
-        //    this.SuspendLayout();
-        //    // 
-        //    // GearForm
-        //    // 
-        //    this.ClientSize = new System.Drawing.Size(1340, 651);
-        //    this.Name = "GearForm";
-        //    this.ResumeLayout(false);
-
-        //}
     }
 }

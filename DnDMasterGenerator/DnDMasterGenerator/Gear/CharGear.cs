@@ -185,7 +185,6 @@ namespace DnDClassesTest
             allGear.Add(new Equipment("Forgery kit"));
             allGear.Add(new Equipment("Bone dice"));
             allGear.Add(new Equipment("Playing card set"));
-
         }
 
         /**
@@ -201,7 +200,6 @@ namespace DnDClassesTest
                 inventory.Add(new Weapon("Javelines (x4)", 6, 1));
                 numChoices = 2;
                 this.options.Add(new List<Gear>());
-                //options[0].Add(new Weapon("Handaxes (x2)", 6, 1)); //Two handaxes or any simple weapon
                 firstChoice.Add(new Weapon("Handaxes (x2)", 6, 1));
                 for (i = startSimpleMelee; i < startMartialMelee; i++)
                 {
@@ -212,7 +210,6 @@ namespace DnDClassesTest
                 }
 
                 this.options.Add(new List<Gear>());
-                //options[1].Add(allGear[getIndex("Greatax")]);  //Greatax or any martial melee weapon
                 firstChoice.Add(allGear[getIndex("Greatax")]);
                 for (i = startMartialMelee; i < startMartialRanged; i++)
                 {
@@ -221,13 +218,15 @@ namespace DnDClassesTest
                 }
 
             }
-            else if (classType == "Bard")
+            else if (classType == "Bard") //FIX_ME: figure out what to do for rapier or longsword or any simple weapon
             {
+                firstChoice.Add(null);
                 inventory.Add(allGear[getIndex("Leather armor")]);
                 inventory.Add(allGear[getIndex("Dagger")]);
 
                 numChoices = 3;
                 this.options.Add(new List<Gear>());
+                firstChoice.Add(null);
                 options[0].Add(allGear[getIndex("Rapier")]); //Rapier
                 options[0].Add(allGear[getIndex("Longsword")]); //Longsword
                 for (i = startSimpleMelee; i < startMartialMelee; i++)
@@ -236,11 +235,12 @@ namespace DnDClassesTest
                 }
 
                 this.options.Add(new List<Gear>());
+                firstChoice.Add(null);
                 options[1].Add(allGear[getIndex("Diplomat's Pack")]);//diplomats pack or entertainer's pack
                 options[1].Add(allGear[getIndex("Entertainer's Pack")]);
 
                 this.options.Add(new List<Gear>());
-                options[2].Add(allGear[getIndex("Lute")]); //lute or musical instrument
+                firstChoice.Add(allGear[getIndex("Lute")]); //lute or musical instrument
                 for (i = startInstruments; i < startFormat; i++)
                 {
                     if (i != getIndex("Lute"))
@@ -249,12 +249,13 @@ namespace DnDClassesTest
                     }
                 }
             }
-            else if (classType == "Cleric")
+            else if (classType == "Cleric") //FIX_ME: get proficiencies from character class
             {
                 inventory.Add(allGear[getIndex("Shield")]);
                 numChoices = 4;
                 this.options.Add(new List<Gear>()); //scale mail or leather armor or chainmail (if proficient)
-                //if (CharClass._proPath == 3 || CharClass._proPath == 4 || CharClass._proPath == 6)
+                firstChoice.Add(null);
+                //if (Character._proPath == 3 || CharClass._proPath == 4 || CharClass._proPath == 6)
                 //{
                 //    options[0].Add(allGear[getIndex("Chain mail")]);
                 //}
@@ -262,6 +263,7 @@ namespace DnDClassesTest
                 options[0].Add(allGear[getIndex("Leather armor")]);
 
                 this.options.Add(new List<Gear>()); //mace or warhammer (if proficient)
+                firstChoice.Add(null);
                 options[1].Add(allGear[getIndex("Mace")]);
                 //if (CharClass._proPath == 4 || CharClass._proPath == 6)
                 //{
@@ -269,13 +271,14 @@ namespace DnDClassesTest
                 //}
 
                 this.options.Add(new List<Gear>()); //light crossbow and 20 bolts or any simple weapon
-                options[2].Add(allGear[getIndex("Light crossbow and 20 bolts")]);
+                firstChoice.Add(allGear[getIndex("Light crossbow and 20 bolts")]);
                 for (i = startSimpleMelee; i < startMartialMelee; i++)
                 {
                     options[0].Add(allGear[i]);
                 }
 
                 this.options.Add(new List<Gear>()); //priest's pack or explorer's pack
+                firstChoice.Add(null);
                 options[3].Add(new Equipment("Priest's Pack"));
                 options[3].Add(new Equipment("Explorer's Pack"));
 
@@ -287,35 +290,37 @@ namespace DnDClassesTest
 
                 numChoices = 3;
                 this.options.Add(new List<Gear>());
-                options[0].Add(allGear[getIndex("Shield")]); //wood shield or any simple weapon
+                firstChoice.Add(allGear[getIndex("Shield")]); //wood shield or any simple weapon
                 for (i = startSimpleMelee; i < startMartialMelee; i++)
                 {
                     options[0].Add(allGear[i]);
                 }
-                this.options.Add(new List<Gear>());
-                options[1].Add(allGear[getIndex("Scimitar")]);//scimitar or any simple melee weapon
 
+                this.options.Add(new List<Gear>());
+                firstChoice.Add(allGear[getIndex("Scimitar")]);//scimitar or any simple melee weapon
                 for (i = startSimpleMelee; i < startSimpleRanged; i++)
                 {
                     options[1].Add(allGear[i]);
                 }
 
                 this.options.Add(new List<Gear>()); //Druidic Focus
+                firstChoice.Add(null);
                 for (i = startDruidicFocus; i < startArcaneFocus; i++)
                 {
                     options[2].Add(allGear[i]);
                 }
             }
-            else if (classType == "Fighter")
+            else if (classType == "Fighter") //FIX_ME: add two martional weapons
             {
                 reformat = true;
                 numChoices = 4;
                 this.options.Add(new List<Gear>()); //chain mail or (leather and longbow and 20 arrows)
+                firstChoice.Add(null);
                 options[0].Add(allGear[getIndex("Chain mail")]);
                 options[0].Add(allGear[getIndex("Leather armor, longbow, and 20 arrows")]);
 
                 this.options.Add(new List<Gear>()); //martial weapon and shield or two martial weapons
-                options[1].Add(new Equipment("Shield and martial weapon"));
+                firstChoice.Add(new Equipment("Shield and martial weapon"));
                 options[1].Add(new Equipment("Two martial weapons"));
 
                 this.options.Add(new List<Gear>()); //light crossbow and 20 bolt or two handaxes
@@ -323,6 +328,7 @@ namespace DnDClassesTest
                 options[2].Add(new Weapon("Handaxes (x2)", 6, 1));
 
                 this.options.Add(new List<Gear>()); //dungeoneer's pack or an explorer's pack
+                firstChoice.Add(null);
                 options[3].Add(allGear[getIndex("Dungeoneer's Pack")]);
                 options[3].Add(allGear[getIndex("Explorer's Pack")]);
 
@@ -333,39 +339,52 @@ namespace DnDClassesTest
                 numChoices = 2;
                 //shortword or any simple weapon
                 this.options.Add(new List<Gear>());
-                options[0].Add(allGear[getIndex("Shortsword")]);
+                firstChoice.Add(allGear[getIndex("Shortsword")]);
                 for (i = startSimpleMelee; i < startMartialMelee; i++)
                 {
                     options[0].Add(allGear[i]);
                 }
+
                 this.options.Add(new List<Gear>()); //dungeoneer's pack or an explorer's pack
+                firstChoice.Add(null);
                 options[1].Add(new Equipment("Dungeoneer's Pack"));
                 options[1].Add(new Equipment("Explorer's Pack"));
             }
-            else if (classType == "Paladin")
+            else if (classType == "Paladin") //FIX_ME: add two martial weapons
             {
                 inventory.Add(allGear[getIndex("Chain mail")]);
                 numChoices = 3;
                 this.options.Add(new List<Gear>());//a martial weapon and shield or two martial weapons
+                firstChoice.Add(null);
                 this.options.Add(new List<Gear>());//five javelins or any simple melee weapon
-                //option2a.Add(new Weapon("Javelins (x5)", 6, 1));
+                firstChoice.Add(new Weapon("Javelins (x5)", 6, 1));
                 for (i = 0; i < 11; i++)
                 {
-                    //option2a.Add(allGear[i]);
+                    options[1].Add(allGear[i]);
                 }
                 this.options.Add(new List<Gear>());//priest's pack or explorer's pack
+                firstChoice.Add(null);
+                options[2].Add(allGear[getIndex("Priest's Pack")]);
+                options[2].Add(allGear[getIndex("Explorer's Pack")]);
             }
-            else if (classType == "Ranger")
+            else if (classType == "Ranger") //FIX_ME: ADD two simple melee weapons
             {
                 inventory.Add(allGear[getIndex("Longbow")]);
                 inventory.Add(new Equipment("Arrows (x20"));
                 numChoices = 3;
                 reformat = true;
                 this.options.Add(new List<Gear>());//scale mail or leather armor
+                firstChoice.Add(null);
+                options[0].Add(allGear[getIndex("Scale Mail")]);
+                options[0].Add(allGear[getIndex("Leather Armor")]);
                 this.options.Add(new List<Gear>());//two shortwords or two simple melee weapons
-                                                   //option1a.Add(new Weapon("Shortswords (x2)", 6, true));
+                firstChoice.Add(new Weapon("Shortswords (x2)", 6, true));
+                options[1].Add(new Equipment("Two simple melee weapons"));
 
-                this.options.Add(new List<Gear>()); //dungeoneer's pack or an explorer's paack
+                this.options.Add(new List<Gear>()); //dungeoneer's pack or an explorer's pack
+                firstChoice.Add(null);
+                options[2].Add(allGear[getIndex("Dungeoneer's Pack")]);
+                options[2].Add(allGear[getIndex("Explorer's Pack")]);
 
             }
             else if (classType == "Rogue")
@@ -375,19 +394,45 @@ namespace DnDClassesTest
                 inventory.Add(new Equipment("Thieves' Tools"));
                 numChoices = 3;
                 this.options.Add(new List<Gear>());//rapier or shortsword
-                //option2a.Add(allGear[27]);
-                //option2a.Add(allGear[29]);
+                firstChoice.Add(null);
+                options[0].Add(allGear[getIndex("Rapier")]);
+                options[0].Add(allGear[getIndex("Shortsword")]);
                 this.options.Add(new List<Gear>());//short bow and 20 arrows or a shortsword
+                firstChoice.Add(null);
+                options[1].Add(allGear[getIndex("Shortbow")]);
+                options[1].Add(allGear[getIndex("Shortsword")]);
                 this.options.Add(new List<Gear>());//burglar's pack or a dungeoneer's pack or an explorer's pack
+                firstChoice.Add(null);
+                options[2].Add(allGear[getIndex("Burglar's Pack")]);
+                options[2].Add(allGear[getIndex("Dungeoneer's Pack")]);
+                options[2].Add(allGear[getIndex("Explorer's Pack")]);
+
             }
             else if (classType == "Sorcerer")
             {
                 inventory.Add(new Weapon("Daggers (x2)", 4, true));
                 numChoices = 3;
                 this.options.Add(new List<Gear>());//light crossbow and 20 bolts or any simple weapon
+                firstChoice.Add(new Equipment("Light crossbow and 20 bolts"));
+                for(i = startSimpleMelee; i < startMartialMelee; i++)
+                {
+                    if (i != getIndex("Crossbow, light"))
+                    {
+                        options[0].Add(allGear[i]);
+                    }
+                }
 
                 this.options.Add(new List<Gear>());//component pouch or arcane focus
+                firstChoice.Add(new Equipment("Component Pouch"));
+                for(i = startArcaneFocus; i < startHolySymbol; i++)
+                {
+                    options[1].Add(allGear[i]);
+                }
+
                 this.options.Add(new List<Gear>());//dungeoneer's pack or an explorer's pack
+                firstChoice.Add(null);
+                options[2].Add(allGear[getIndex("Dungeoneer's Pack")]);
+                options[2].Add(allGear[getIndex("Explorer's Pack")]);
             }
             else if (classType == "Warlock")
             {
@@ -395,19 +440,43 @@ namespace DnDClassesTest
                 inventory.Add(new Weapon("Daggers (x2)", 4, true));
                 numChoices = 3;
                 this.options.Add(new List<Gear>());//light crossbow and 20 bolts or any simple weapon
-                options[0].Add(allGear[getIndex("Light crossbow and 20 bolts")]);
+                firstChoice.Add(allGear[getIndex("Light crossbow and 20 bolts")]);
+                for (i = startSimpleMelee; i < startMartialMelee; i++)
+                {
+                    if (i != getIndex("Crossbow, light"))
+                    {
+                        options[0].Add(allGear[i]);
+                    }
+                }
                 this.options.Add(new List<Gear>());//component pouch or arcane focus
+                firstChoice.Add(new Equipment("Component Pouch"));
+                for (i = startArcaneFocus; i < startHolySymbol; i++)
+                {
+                    options[1].Add(allGear[i]);
+                }
                 this.options.Add(new List<Gear>());//scholar's pack or dungeoneer's pack
+                firstChoice.Add(null);
+                options[2].Add(allGear[getIndex("Dungeoneer's Pack")]);
+                options[2].Add(allGear[getIndex("Scholar's Pack")]);
             }
             else //Wizard
             {
                 inventory.Add(new Equipment("Spell book"));
                 numChoices = 3;
                 this.options.Add(new List<Gear>());//quarterstaff or dagger
-                //option1a.Add(allGear[7]);
-                //option1a.Add(allGear[2]);
+                firstChoice.Add(null);
+                options[0].Add(allGear[getIndex("Quarterstaff")]);
+                options[0].Add(allGear[getIndex("Dagger")]);
                 this.options.Add(new List<Gear>());//component pouch or arcane focus
+                firstChoice.Add(new Equipment("Component Pouch"));
+                for (i = startArcaneFocus; i < startHolySymbol; i++)
+                {
+                    options[1].Add(allGear[i]);
+                }
                 this.options.Add(new List<Gear>()); //scholar's pouch or explorer's pack
+                firstChoice.Add(null);
+                options[2].Add(allGear[getIndex("Explorer's Pack")]);
+                options[2].Add(allGear[getIndex("Scholar's Pack")]);
             }
 
 
