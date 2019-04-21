@@ -25,6 +25,11 @@ namespace DnDClassesTest
                     lblSubClass.Visible = true;
                     comboSubClass.DataSource = new List<string> { "Berserker", "Totem Warrior" };
                     break;
+                case 1:
+                    lblSubClass.Text = "Choose a College:";
+                    lblSubClass.Visible = true;
+                    comboSubClass.DataSource = new List<string> { "Lore", "Valor" };
+                    break;
             }
 
         }
