@@ -101,7 +101,7 @@ namespace DnDClassesTest
             List<string> current = new List<string>();
             bool[] unlock = this.Unlocked();
             int i;
-            for (i = 7; i <= 0; --i)
+            for (i = 0; i <= 7; ++i)
             {
                 if (unlock[i]) break;
             }
@@ -111,7 +111,7 @@ namespace DnDClassesTest
             else if (i == 4) current = Features.GetRange(0, 5);
             else if (i == 3) current = Features.GetRange(0, 3);
             else if (i == 2) current = Features.GetRange(0, 2);
-            else if (i == 2) current = Features.GetRange(0, 1);
+            else if (i == 1) current = Features.GetRange(0, 1);
             else current.Add(Features[0]);
             return current;
         }
