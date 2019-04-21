@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 
 namespace DnDClassesTest
 {
@@ -66,16 +65,17 @@ namespace DnDClassesTest
 
         public override List<string> ClassFeatures()
         {
+            int path = this._proPath;
             List<string> features = new List<string>();
-            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\BardClassFeatures.txt");
-            //string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
-            string[] temp = new string[16];
-            temp = File.ReadAllLines(path);
-            foreach (string i in temp)
-            {
-                features.Add(i);
-            }
-
+            features.Add(Inspiration());//0
+            features.Add(SongOfRest());//1
+            features.Add(path == 0 ? CuttingWords() : CombatInspiration());//2
+            features.Add(FontOfInspiration());//3
+            features.Add(CounterCharm());//4
+            features.Add(path == 0 ? ExtraSecrets() : ExtraAttack());//4
+            features.Add(MagicSecrets());//5
+            features.Add(path == 0 ? PeerlessSkill() : BattleMagic());//6
+            features.Add(SuperiorInspiration());//7
             return features;
 
         }
@@ -103,7 +103,7 @@ namespace DnDClassesTest
             int i;
             for (i = 0; i <= 7; ++i)
             {
-                if (!unlock[i]) break;
+                if (unlock[i]) break;
             }
             current.Add( Features[0]);
             if (i == 1) current = Features.GetRange(0, 2);

@@ -26,6 +26,18 @@ namespace DnDClassesTest
             get;            set;            //contains full listing of class features 
              //to be passed to character sheet through ClassFeatures method
         }
+        protected List<string> Domain;
+        public List<string> _domain
+        {
+            set
+            {
+                this.Domain = value;
+            }
+            get
+            {
+                return this.Domain;
+            }
+        }
 
         public Cleric()
         {
@@ -41,6 +53,7 @@ namespace DnDClassesTest
             this._hitDie = 8;
             this._caster = true;
             this._proPath = path;
+            this.Domain = setDomain(path);
             this._numProSkills = 2;
             //this.ClassFeatures = this.Unlocked();
         }
@@ -68,23 +81,68 @@ namespace DnDClassesTest
         {//passes the proficiency bonus to main function
             return 2 + (this._level / 5);
         }
+
+        public List<string> setDomain(int pro)
+        {
+            List<string> powers = new List<string>();
+            string current = Environment.CurrentDirectory;
+            string path = Path.Combine(current, @"/ClassFeatures/ClericClassFeatures");
+            string[] bits = new string[6];
+            string[] fullSet = new string[33];
+            fullSet = File.ReadAllLines(path);
+            int start, end;
+                if( pro == 0)
+            {
+                start = 4;
+                end = 8;
+            }
+                else if(pro == 1)
+            {
+                start = 8;
+                end = 13;
+            }
+                else if(pro == 2)
+            {
+                start = 13;
+                end = 19;
+            }
+                else if(pro == 3)
+            {
+                start = 19;
+                end = 23;
+            }
+                else if(pro == 4)
+            {
+                start = 23;
+                end = 28;
+            }
+            else
+            {
+                start = 28;
+                end = 33;
+            }
+            for(int i = start; i < end; ++i)
+            {
+                powers.Add(bits[i]);
+            }
+            return powers;
+            }
         
 
         public override List<string> ClassFeatures()
         {
+            int path = this._proPath;
             List<string> features = new List<string>();
-            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\ClericClassFeatures.txt");
-            //string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
-            string[] temp = new string[33];
-            temp = File.ReadAllLines(path);
-            foreach (string i in temp)
-            {
-                features.Add(i);
-            }
-
+            /*features.Add(Inspiration());//0
+            features.Add(SongOfRest());//1
+            features.Add(path == 0 ? CuttingWords() : CombatInspiration());//2
+            features.Add(FontOfInspiration());//3
+            features.Add(CounterCharm());//4
+            features.Add(path == 0 ? ExtraSecrets() : ExtraAttack());//4
+            features.Add(MagicSecrets());//5
+            features.Add(path == 0 ? PeerlessSkill() : BattleMagic());//6
+            features.Add(SuperiorInspiration());//7*/
             return features;
-
-
 
         }
 
@@ -92,14 +150,15 @@ namespace DnDClassesTest
 
         public override bool[] Unlocked()
         {
-            bool[] unlocked = new bool[6]/*{ false, false, false, false, false, false, false, false }*/;
+            bool[] unlocked = new bool[8]/*{ false, false, false, false, false, false, false, false }*/;
             unlocked[0] = true;         //false is the default, shouldn't need that
             if (this._level >= 2) unlocked[1] = true;
-            if (this._level >= 5) unlocked[2] = true;
-            if (this._level >= 6) unlocked[3] = true;
-            if (this._level >= 8) unlocked[4] = true;
+            if (this._level >= 3) unlocked[2] = true;
+            if (this._level >= 5) unlocked[3] = true;
+            if (this._level >= 6) unlocked[4] = true;
             if (this._level >= 10) unlocked[5] = true;
-            if (this._level >= 17) unlocked[6] = true;
+            if (this._level >= 14) unlocked[6] = true;
+            if (this._level == 20) unlocked[7] = true;
             return unlocked;
         }
 
@@ -108,70 +167,18 @@ namespace DnDClassesTest
             List<string> current = new List<string>();
             bool[] unlock = this.Unlocked();
             int i;
-            for (i = 0; i <= 6; ++i)
+            for (i = 7; i <= 0; --i)
             {
-                if (!unlock[i]) break;
+                if (unlock[i]) break;
             }
-            current.Add(Features[0]);
-            if (i == 1) current = Features.GetRange(0, 1);
+            if (i == 7) current = Features;
+            else if (i == 6) current = Features.GetRange(0, 7);
+            else if (i == 5) current = Features.GetRange(0, 6);
+            else if (i == 4) current = Features.GetRange(0, 5);
+            else if (i == 3) current = Features.GetRange(0, 3);
             else if (i == 2) current = Features.GetRange(0, 2);
-            else if (i >= 5) current = Features.GetRange(0, 3);
-
-            if (_proPath == 0)
-            {
-                if (i < 1) return current;
-                if (i >= 1) current.Add(Features[4]);
-                if (i >= 2) current.Add(Features[5]);
-                if (i >= 4) current.Add(Features[6]);
-                if (i >= 6) current.Add(Features[7]);
-            }
-            else if (_proPath == 1)
-            {
-                current.Add(Features[8]);
-                if (i < 1) return current;
-                if (1 >= 1) current.Add(Features[9]);
-                if (i >= 2) current.Add(Features[10]);
-                if (i >= 4) current.Add(Features[11]);
-                if (i >= 6) current.Add(Features[12]);
-            }
-            else if(_proPath == 2)
-            {
-                current.Add(Features[13]);
-                current.Add(Features[14]);
-                if (i < 1) return current;
-                if (1 >= 1) current.Add(Features[15]);
-                if (i >= 2) current.Add(Features[16]);
-                if (i >= 4) current.Add(Features[17]);
-                if (i >= 6) current.Add(Features[18]);
-
-            }
-            else if(_proPath == 3)
-            {
-                if (i < 1) return current;
-                if (i >= 1) current.Add(Features[19]);
-                if (i >= 2) current.Add(Features[20]);
-                if (i >= 4) current.Add(Features[21]);
-                if (i >= 6) current.Add(Features[22]);
-            }
-            else if(_proPath == 4)
-            {
-                current.Add(Features[23]);
-                if (i < 1) return current;
-                if (1 >= 1) current.Add(Features[24]);
-                if (i >= 2) current.Add(Features[25]);
-                if (i >= 4) current.Add(Features[26]);
-                if (i >= 6) current.Add(Features[27]);
-            }
-            else if(_proPath == 5)
-            {
-                current.Add(Features[28]);
-                if (i < 1) return current;
-                if (1 >= 1) current.Add(Features[29]);
-                if (i >= 2) current.Add(Features[30]);
-                if (i >= 4) current.Add(Features[31]);
-                if (i >= 6) current.Add(Features[32]);
-
-            }
+            else if (i == 2) current = Features.GetRange(0, 1);
+            else current.Add(Features[0]);
             return current;
         }
 
