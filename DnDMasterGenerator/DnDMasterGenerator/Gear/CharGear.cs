@@ -220,7 +220,6 @@ namespace DnDClassesTest
             }
             else if (classType == "Bard") //FIX_ME: figure out what to do for rapier or longsword or any simple weapon
             {
-                firstChoice.Add(null);
                 inventory.Add(allGear[getIndex("Leather armor")]);
                 inventory.Add(allGear[getIndex("Dagger")]);
 
