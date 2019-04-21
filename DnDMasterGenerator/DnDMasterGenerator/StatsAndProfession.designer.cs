@@ -325,6 +325,7 @@
             0,
             0,
             0});
+            this.numLevel.ValueChanged += new System.EventHandler(this.numLevel_ValueChanged);
             // 
             // lblLevel
             // 

@@ -25,6 +25,11 @@ namespace DnDClassesTest
                     lblSubClass.Visible = true;
                     comboSubClass.DataSource = new List<string> { "Berserker", "Totem Warrior" };
                     break;
+                case 1:
+                    lblSubClass.Text = "Choose a College:";
+                    lblSubClass.Visible = true;
+                    comboSubClass.DataSource = new List<string> { "Lore", "Valor" };
+                    break;
             }
 
         }
@@ -38,6 +43,11 @@ namespace DnDClassesTest
             Abilities = new int[6] { (int)numSTR.Value, (int)numDEX.Value, (int)numCON.Value, (int)numINT.Value, (int)numWIS.Value, (int)numCHA.Value };
             DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void numLevel_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

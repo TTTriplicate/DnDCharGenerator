@@ -133,13 +133,13 @@ namespace DnDClassesTest
             int[] a = new int[6];
             string charName;
             this.CharClass = Profession.InteractiveChoice(out a, out charName);
+            this._abilities = a;
             this._HP = this._class._hitDie;
             this._HP += AbilityModifiers()[2];
-            this._abilities = a;
             this._name = charName;
             this._level = this.CharClass._level;
             if (this._level > 1)
-                this._HP += DnDCharacter.RollHP(this._level, this._class._hitDie) + ((this._level - 1) * this.AbilityModifiers()[2]);
+                this._HP += DnDCharacter.RollHP(this._level - 1, this._class._hitDie, this._HP) + ((this._level - 1) * this.AbilityModifiers()[2]);
             this.CharRace = Race.InteractiveChoice();
             raceAdditions();
             //Background selector
@@ -214,14 +214,16 @@ namespace DnDClassesTest
             }
             return toadd;
         }
-        private static int RollHP(int l, int d)
+        private static int RollHP(int l, int d, int hp)
         {
             Random hitdie = new Random();
-            int hp = 0;
-            if (l == 0) return hitdie.Next(1, d);
+            if (l == 1)
+            {
+                return hitdie.Next(1, d);
+            }
             else
             {
-                hp += RollHP(l - 1, d);
+                hp += RollHP(l - 1, d, hp);
             }
             return hp;
         }
