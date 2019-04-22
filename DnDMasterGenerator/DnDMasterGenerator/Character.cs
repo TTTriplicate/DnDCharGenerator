@@ -156,7 +156,7 @@ namespace DnDClassesTest
             inventory = gear.getInventoryString();
 
 
-            PDF_Filler test = new PDF_Filler();
+            //PDF_Filler test = new PDF_Filler();
         }
         /*   public DnDCharacter(int level, int p, int proPath)
            {
