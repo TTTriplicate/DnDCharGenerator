@@ -35,6 +35,11 @@ namespace DnDClassesTest
                     lblSubClass.Visible = true;
                     comboSubClass.DataSource = new List<string> { "Knowledge", "Life", "Light", "Nature", "Tempest", "Trickery", "War" };
                     break;
+                case 3:
+                    lblSubClass.Text = "Select a Circle:";
+                    lblSubClass.Visible = true;
+                    comboSubClass.DataSource = new List<string> { "Land", "Moon" };
+                    break;
             }
 
         }

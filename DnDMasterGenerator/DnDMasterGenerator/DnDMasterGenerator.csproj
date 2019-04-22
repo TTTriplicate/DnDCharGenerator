@@ -171,6 +171,8 @@
     <Content Include="Professions\ClassFeatures\BarbarianClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\BardClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\ClericClassFeatures.txt" />
+    <Content Include="Professions\ClassFeatures\DruidClassFeatures.txt" />
+    <Content Include="Professions\ClassFeatures\FighterClassFeatures.txt" />
     <Content Include="Races\Dragonborn.txt" />
     <Content Include="Races\Dwarf.txt" />
     <Content Include="Races\Elf.txt" />
