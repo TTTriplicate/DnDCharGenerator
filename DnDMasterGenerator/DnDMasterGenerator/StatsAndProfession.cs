@@ -45,6 +45,11 @@ namespace DnDClassesTest
                     lblSubClass.Visible = true;
                     comboSubClass.DataSource = new List<string> { "Champion", "Battle Master", "Eldritch Knight" };
                     break;
+                case 5:
+                    lblSubClass.Text = "Choose a Discipline";
+                    lblSubClass.Visible = true;
+                    comboSubClass.DataSource = new List<string> { "Way of the Open Hand", "Way of Shadows" };
+                    break;
             }
 
         }

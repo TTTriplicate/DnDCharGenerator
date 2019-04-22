@@ -116,14 +116,36 @@ namespace DnDClassesTest
             {
                 if (!unlock[i]) break;
             }
-            if (i == 7) current = Features;
-            else if (i == 6) current = Features.GetRange(0, 7);
-            else if (i == 5) current = Features.GetRange(0, 6);
-            else if (i == 4) current = Features.GetRange(0, 5);
-            else if (i == 3) current = Features.GetRange(0, 3);
-            else if (i == 2) current = Features.GetRange(0, 2);
-            else if (i == 2) current = Features.GetRange(0, 1);
-            else current.Add(Features[0]);
+            current = Features.GetRange(0, 1);
+            if (i == 1) current = Features.GetRange(0, 6);
+            else if (i == 2) current = Features.GetRange(0, 7);
+            else if (i == 3) current = Features.GetRange(0, 8);
+            else if (i == 4) current = Features.GetRange(0, 10);
+            else if (i == 5) current = Features.GetRange(0, 11);
+            else if (i == 6) current = Features.GetRange(0, 13);
+            else if (i == 7) current = Features.GetRange(0, 14);
+            else if (i == 9) current = Features.GetRange(0, 15);
+            else if (i == 10) current = Features.GetRange(0, 16);
+            else if (i == 11) current = Features.GetRange(0, 17);
+            else if (i == 13) current = Features.GetRange(0, 18);
+            else current = Features.GetRange(0, 19);
+
+            if (_proPath == 0)
+            {
+                if (i >= 2) current.Add(Features[20]);
+                if (i >= 5) current.Add(Features[21]);
+                if (i >= 8) current.Add(Features[22]);
+                if (i >= 12) current.Add(Features[23]);
+            }
+            if (_proPath == 1)
+            {
+                if (i >= 2) current.Add(Features[24]);
+                if (i >= 5) current.Add(Features[25]);
+                if (i >= 8) current.Add(Features[26]);
+                if (i >= 12) current.Add(Features[27]);
+            }
+
+
             return current;
         }
 
