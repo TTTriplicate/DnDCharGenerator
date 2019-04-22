@@ -90,7 +90,7 @@ namespace DnDClassesTest
 
         public override bool[] Unlocked()
         {
-            bool[] unlocked = new bool[8]/*{ false, false, false, false, false, false, false, false }*/;
+            bool[] unlocked = new bool[7]/*{ false, false, false, false, false, false, false, false }*/;
             unlocked[0] = true;         //false is the default, shouldn't need that
             if (this._level >= 2) unlocked[1] = true;
             if (this._level >= 5) unlocked[2] = true;
@@ -127,7 +127,7 @@ namespace DnDClassesTest
             {
                 current.Add(Features[8]);
                 if (i < 1) return current;
-                if (1 >= 1) current.Add(Features[9]);
+                if (i >= 1) current.Add(Features[9]);
                 if (i >= 2) current.Add(Features[10]);
                 if (i >= 4) current.Add(Features[11]);
                 if (i >= 6) current.Add(Features[12]);
@@ -137,7 +137,7 @@ namespace DnDClassesTest
                 current.Add(Features[13]);
                 current.Add(Features[14]);
                 if (i < 1) return current;
-                if (1 >= 1) current.Add(Features[15]);
+                if (i >= 1) current.Add(Features[15]);
                 if (i >= 2) current.Add(Features[16]);
                 if (i >= 4) current.Add(Features[17]);
                 if (i >= 6) current.Add(Features[18]);
@@ -155,7 +155,7 @@ namespace DnDClassesTest
             {
                 current.Add(Features[23]);
                 if (i < 1) return current;
-                if (1 >= 1) current.Add(Features[24]);
+                if (i >= 1) current.Add(Features[24]);
                 if (i >= 2) current.Add(Features[25]);
                 if (i >= 4) current.Add(Features[26]);
                 if (i >= 6) current.Add(Features[27]);
@@ -164,7 +164,7 @@ namespace DnDClassesTest
             {
                 current.Add(Features[28]);
                 if (i < 1) return current;
-                if (1 >= 1) current.Add(Features[29]);
+                if (i >= 1) current.Add(Features[29]);
                 if (i >= 2) current.Add(Features[30]);
                 if (i >= 4) current.Add(Features[31]);
                 if (i >= 6) current.Add(Features[32]);
