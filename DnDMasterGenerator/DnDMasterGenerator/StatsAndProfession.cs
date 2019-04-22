@@ -30,6 +30,11 @@ namespace DnDClassesTest
                     lblSubClass.Visible = true;
                     comboSubClass.DataSource = new List<string> { "Lore", "Valor" };
                     break;
+                case 2:
+                    lblSubClass.Text = "Choose a Divine Domain:";
+                    lblSubClass.Visible = true;
+                    comboSubClass.DataSource = new List<string> { "Knowledge", "Life", "Light", "Nature", "Tempest", "Trickery", "War" };
+                    break;
             }
 
         }
