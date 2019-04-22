@@ -123,3 +123,8 @@ C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMa
 C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\itextsharp.dll
 C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\BitMiracle.Docotic.Pdf.xml
 C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\itextsharp.xml
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\BitMiracle.Docotic.Pdf.dll
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\itextsharp.dll
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\BitMiracle.Docotic.Pdf.xml
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\itextsharp.xml
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.CopyComplete

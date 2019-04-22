@@ -22,18 +22,7 @@ namespace DnDClassesTest
             }
         }
         protected override List<string> Features
-        {
-            get
-            {
-                return Features;
-            }
-            set
-            {//contains full listing of class features 
-             //to be passed to character sheet through ClassFeatures method
-                Features = ClassFeatures();
-            }
-        }
-
+        { get; set; }
         public Druid()
         {
             this._level = 1;
