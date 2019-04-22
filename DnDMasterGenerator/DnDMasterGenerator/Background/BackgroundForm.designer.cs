@@ -121,9 +121,13 @@
             // 
             // langList
             // 
+            this.langList.CheckOnClick = true;
+            this.langList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.langList.FormattingEnabled = true;
             this.langList.Location = new System.Drawing.Point(27, 338);
+            this.langList.MultiColumn = true;
             this.langList.Name = "langList";
+            this.langList.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.langList.Size = new System.Drawing.Size(494, 123);
             this.langList.TabIndex = 14;
             this.langList.Visible = false;
