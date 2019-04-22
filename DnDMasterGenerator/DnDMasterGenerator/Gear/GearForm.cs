@@ -32,7 +32,7 @@ namespace DnDClassesTest
 
         public void Form1_Load(object sender, EventArgs e)
         {
-            //gear = new CharGear("Barbarian", "Folk Hero", 0);
+            //gear = new CharGear("Fighter", "Acolyte", 0);
             items = gear.getOptions();
             itemString = gear.getStrings();
             firstChoice = gear.getFirstChoice();
@@ -57,6 +57,7 @@ namespace DnDClassesTest
             choice5b.Hide();
             choice6a.Hide();
             choice6b.Hide();
+            wackadooThingy.Hide();
 
             if(numItems >= 1)
             {
@@ -68,6 +69,16 @@ namespace DnDClassesTest
                     choice1a.Text = firstChoice[0].toString();
                     choice1b.Show();
                 }
+                else if (gear.classType == "Fighter")
+                {
+                    choice1a.Show();
+                    choice1b.Checked = true;
+                    choice1a.Text = "Shield and ";
+                    wackadooThingy.Show();
+                    wackadooThingy.DataSource = itemString[0];
+                    twoMartial.Show();
+                    twoMartial.DataSource = itemString[0];
+                    }
                 Choice1.DataSource = itemString[0];
                 
                 if(numItems >= 2)
@@ -79,6 +90,7 @@ namespace DnDClassesTest
                         choice2a.Text = firstChoice[1].toString();
                         choice2b.Show();
                     }
+                    
                     Choice2.Show();
                     Choice2.DataSource = itemString[1];
 
@@ -195,13 +207,33 @@ namespace DnDClassesTest
             {
                 if (choice1a.Checked)
                 {
-                    inventoryString.Add(choice1a.Text);
-                    inventory.Add(firstChoice[0]);
+                    if(gear.classType == "Fighter")
+                    {
+                        inventoryString.Add("Shield    " + (2 + gear.dexMod));
+                        inventory.Add(new Armor("Shield", 2));
+                        inventoryString.Add(wackadooThingy.Text);
+                        inventory.Add(items[0][wackadooThingy.SelectedIndex]);
+                    }
+                    else
+                    {
+                        inventoryString.Add(choice1a.Text);
+                        inventory.Add(firstChoice[0]);
+                    }
                 }
                 else if (choice2b.Checked)
                 {
-                    inventoryString.Add(Choice1.Text);
-                    inventory.Add(items[0][Choice1.SelectedIndex]);
+                    if(gear.classType == "Fighter")
+                    {
+                        inventory.Add(items[0][Choice1.SelectedIndex]);
+                        inventory.Add(items[0][twoMartial.SelectedIndex]);
+                        inventoryString.Add(Choice1.Text);
+                        inventoryString.Add(twoMartial.Text);
+                    }
+                    else
+                    {
+                        inventoryString.Add(Choice1.Text);
+                        inventory.Add(items[0][Choice1.SelectedIndex]);
+                    }
                 }
                 if (choice2a.Checked)
                 {
@@ -369,6 +401,11 @@ namespace DnDClassesTest
         }
 
         private void twoMartial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wackadooThingy_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

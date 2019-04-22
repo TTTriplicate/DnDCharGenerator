@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace DnDClassesTest
 {
@@ -20,18 +21,7 @@ namespace DnDClassesTest
                 PickedSkills = value;
             }
         }
-        protected override List<string> Features
-        {
-            get
-            {
-                return Features;
-            }
-            set
-            {//contains full listing of class features 
-             //to be passed to character sheet through ClassFeatures method
-                Features = ClassFeatures();
-            }
-        }
+        protected override List<string> Features { get; set; }
 
         public Paladin()
         {
@@ -48,7 +38,7 @@ namespace DnDClassesTest
             this._caster = true;
             this._proPath = path;
             this._numProSkills = 2;
-            //this.ClassFeatures = this.Unlocked();
+            this.Features = ClassFeatures();
         }
         public override bool[] ClassSkills()
         {//Athletics, Insight, Intimidation, Medicine, Persuasion, and Religion
