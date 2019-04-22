@@ -40,6 +40,11 @@ namespace DnDClassesTest
                     lblSubClass.Visible = true;
                     comboSubClass.DataSource = new List<string> { "Land", "Moon" };
                     break;
+                case 4:
+                    lblSubClass.Text = "Select an Archetype:";
+                    lblSubClass.Visible = true;
+                    comboSubClass.DataSource = new List<string> { "Champion", "Battle Master", "Eldritch Knight" };
+                    break;
             }
 
         }
