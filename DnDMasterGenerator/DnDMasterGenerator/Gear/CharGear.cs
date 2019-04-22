@@ -21,7 +21,6 @@ namespace DnDClassesTest
         public List<string> inventoryString = new List<string>(); //parallel list of inventory stored as strings
         public List<Gear> firstChoice = new List<Gear>();
 
-
         //Index values used to more easily populate lists of choices
         public const int startSimpleMelee = 0;
         public const int startSimpleRanged = 11;
@@ -43,7 +42,8 @@ namespace DnDClassesTest
 
         public CharGear(string classType, string backgroundType, int dexMod)
         {
-            this.classType = classType;
+            //this.classType = classType;
+            this.classType = "Fighter";
             this.backgroundType = backgroundType;
             this.dexMod = dexMod;
             populateGear();
@@ -216,7 +216,6 @@ namespace DnDClassesTest
                     if (i != getIndex("Greatax"))
                         options[1].Add(allGear[i]);
                 }
-
             }
             else if (classType == "Bard")
             {
@@ -254,7 +253,10 @@ namespace DnDClassesTest
                 numChoices = 4;
                 this.options.Add(new List<Gear>()); //scale mail or leather armor or chainmail (if proficient)
                 firstChoice.Add(null);
-                //if (DnDCharacter._proPath == 3 || DnDCharacter._proPath == 4 || DnDCharacter._proPath == 6)
+                //Cleric.Proficiencies(n);
+                //bool[] proficiencies = Cleric.Proficiencies(leeroy._class._proPath);
+                //Profession cleric =
+                //if (DnDCharacter.getProPath() == 3 || DnDCharacter._class._proPath == 4 || DnDCharacter._class._proPath == 6)
                 //{
                 //    options[0].Add(allGear[getIndex("Chain mail")]);
                 //}
@@ -313,16 +315,21 @@ namespace DnDClassesTest
             {
                 reformat = true;
                 numChoices = 4;
-                this.options.Add(new List<Gear>()); //chain mail or (leather and longbow and 20 arrows)
-                firstChoice.Add(null);
-                options[0].Add(allGear[getIndex("Chain mail")]);
-                options[0].Add(allGear[getIndex("Leather armor, longbow, and 20 arrows")]);
 
                 this.options.Add(new List<Gear>()); //martial weapon and shield or two martial weapons
-                firstChoice.Add(new Equipment("Shield and martial weapon"));
-                options[1].Add(new Equipment("Two martial weapons"));
+                firstChoice.Add(null);
+                for(i = startMartialMelee; i < startArmor; i++)
+                {
+                    options[0].Add(allGear[i]);
+                }
+
+                this.options.Add(new List<Gear>()); //chain mail or (leather and longbow and 20 arrows)
+                firstChoice.Add(null);
+                options[1].Add(allGear[getIndex("Chain mail")]);
+                options[1].Add(allGear[getIndex("Leather armor, longbow, and 20 arrows")]);
 
                 this.options.Add(new List<Gear>()); //light crossbow and 20 bolt or two handaxes
+                firstChoice.Add(null);
                 options[2].Add(allGear[getIndex("Light Crossbow and 20 bolts")]);
                 options[2].Add(new Weapon("Handaxes (x2)", 6, 1));
 
@@ -485,12 +492,12 @@ namespace DnDClassesTest
                 inventory.Add(new Equipment("Venstments"));
                 inventory.Add(new Equipment("Clothes, common"));
                 inventory.Add(new Equipment("Belt pouch"));
-                numChoices += 1;
                 gp = 15;
                 this.options.Add(new List<Gear>()); //prayer book or prayer wheel
                 firstChoice.Add(null);
-                options[numChoices - 1].Add(new Equipment("Prayer book"));
-                options[numChoices - 1].Add(new Equipment("Prayer wheel"));
+                options[numChoices].Add(new Equipment("Prayer book"));
+                options[numChoices].Add(new Equipment("Prayer wheel"));
+                numChoices++;
             }
             else if (backgroundType == "Charlatan")
             {

@@ -16,6 +16,8 @@ namespace DnDClassesTest
 
         public string Personality, Ideal, Bond, Flaw;
 
+        string[] allLanguages = { "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic", "Deep Speech", "Infernal", "Primordial", "Sylvan", "Undercommon" };
+
         public BackgroundForm(ref string Personality, ref string Ideal, ref string Bond, ref string Flaw)
         {
             InitializeComponent();
@@ -39,6 +41,11 @@ namespace DnDClassesTest
             this.Close();
         }
 
+        private void langList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void PERSONALITY_TextChanged(object sender, EventArgs e)
         {
 
@@ -58,6 +65,25 @@ namespace DnDClassesTest
             IDEAL.Text = Ideal;
             FLAW.Text = Flaw;
             BOND.Text = Bond;
+
+
+            if (Character.getNumLang() > 0)
+            {
+                chooseLang();
+                langList.Visible = true;
+            }
+            else
+                langList.Visible = false;
+        }
+
+        protected void chooseLang()
+        {
+            Race race = new Race("Half-Orc");
+            for (int i = 0; i < 8; i++) {
+                if (race.getLangRace()[i]) {
+                    langList.Items.Add(allLanguages[i]);
+                }
+            }
         }
 
         public void setInfo(ref string Personality, ref string Ideal, ref string Flaw, ref string Bond)

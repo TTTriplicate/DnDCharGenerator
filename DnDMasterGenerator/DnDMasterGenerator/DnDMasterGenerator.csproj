@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BitMiracle.Docotic.Pdf, Version=5.8.9425.0, Culture=neutral, PublicKeyToken=221650e173990c07, processorArchitecture=MSIL">
+      <HintPath>..\packages\BitMiracle.Docotic.Pdf.5.8.9425\lib\net40\BitMiracle.Docotic.Pdf.dll</HintPath>
+    </Reference>
     <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
     </Reference>
@@ -80,6 +83,7 @@
       <DependentUpon>GearForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Gear\Weapon.cs" />
+    <Compile Include="PDF Filler.cs" />
     <Compile Include="Professions\Barbarian.cs" />
     <Compile Include="Professions\Bard.cs" />
     <Compile Include="Professions\Cleric.cs" />

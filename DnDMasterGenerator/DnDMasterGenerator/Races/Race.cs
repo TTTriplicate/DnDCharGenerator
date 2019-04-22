@@ -96,6 +96,10 @@ namespace DnDClassesTest
             }
             return l;
         }
+        public bool[] getLangRace()
+        {
+            return languages;
+        }
         public string[] getSA()
         {
             return specialAbilities;

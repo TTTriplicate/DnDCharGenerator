@@ -57,6 +57,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.twoMartial = new System.Windows.Forms.ComboBox();
+            this.wackadooThingy = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -69,9 +70,10 @@
             // 
             this.Choice2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice2.FormattingEnabled = true;
-            this.Choice2.Location = new System.Drawing.Point(229, 302);
+            this.Choice2.Location = new System.Drawing.Point(153, 193);
+            this.Choice2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Choice2.Name = "Choice2";
-            this.Choice2.Size = new System.Drawing.Size(1028, 33);
+            this.Choice2.Size = new System.Drawing.Size(687, 24);
             this.Choice2.TabIndex = 1;
             this.Choice2.SelectedIndexChanged += new System.EventHandler(this.Choice2_SelectedIndexChanged);
             // 
@@ -79,9 +81,10 @@
             // 
             this.Choice3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice3.FormattingEnabled = true;
-            this.Choice3.Location = new System.Drawing.Point(229, 438);
+            this.Choice3.Location = new System.Drawing.Point(153, 280);
+            this.Choice3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Choice3.Name = "Choice3";
-            this.Choice3.Size = new System.Drawing.Size(1028, 33);
+            this.Choice3.Size = new System.Drawing.Size(687, 24);
             this.Choice3.TabIndex = 2;
             this.Choice3.SelectedIndexChanged += new System.EventHandler(this.Choice3_SelectedIndexChanged);
             // 
@@ -89,9 +92,10 @@
             // 
             this.Choice4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice4.FormattingEnabled = true;
-            this.Choice4.Location = new System.Drawing.Point(229, 578);
+            this.Choice4.Location = new System.Drawing.Point(153, 370);
+            this.Choice4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Choice4.Name = "Choice4";
-            this.Choice4.Size = new System.Drawing.Size(1028, 33);
+            this.Choice4.Size = new System.Drawing.Size(687, 24);
             this.Choice4.TabIndex = 3;
             this.Choice4.SelectedIndexChanged += new System.EventHandler(this.Choice4_SelectedIndexChanged);
             // 
@@ -99,9 +103,10 @@
             // 
             this.Choice5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice5.FormattingEnabled = true;
-            this.Choice5.Location = new System.Drawing.Point(229, 726);
+            this.Choice5.Location = new System.Drawing.Point(153, 465);
+            this.Choice5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Choice5.Name = "Choice5";
-            this.Choice5.Size = new System.Drawing.Size(1028, 33);
+            this.Choice5.Size = new System.Drawing.Size(687, 24);
             this.Choice5.TabIndex = 4;
             this.Choice5.SelectedIndexChanged += new System.EventHandler(this.Choice5_SelectedIndexChanged);
             // 
@@ -109,9 +114,10 @@
             // 
             this.Choice6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice6.FormattingEnabled = true;
-            this.Choice6.Location = new System.Drawing.Point(229, 874);
+            this.Choice6.Location = new System.Drawing.Point(153, 559);
+            this.Choice6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Choice6.Name = "Choice6";
-            this.Choice6.Size = new System.Drawing.Size(1028, 33);
+            this.Choice6.Size = new System.Drawing.Size(687, 24);
             this.Choice6.TabIndex = 5;
             this.Choice6.SelectedIndexChanged += new System.EventHandler(this.Choice6_SelectedIndexChanged);
             // 
@@ -119,17 +125,19 @@
             // 
             this.Choice1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice1.FormattingEnabled = true;
-            this.Choice1.Location = new System.Drawing.Point(229, 174);
+            this.Choice1.Location = new System.Drawing.Point(153, 111);
+            this.Choice1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Choice1.Name = "Choice1";
-            this.Choice1.Size = new System.Drawing.Size(1028, 33);
+            this.Choice1.Size = new System.Drawing.Size(687, 24);
             this.Choice1.TabIndex = 6;
             this.Choice1.SelectedIndexChanged += new System.EventHandler(this.Choice1_SelectedIndexChanged);
             // 
             // Submit
             // 
-            this.Submit.Location = new System.Drawing.Point(646, 999);
+            this.Submit.Location = new System.Drawing.Point(431, 639);
+            this.Submit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(176, 69);
+            this.Submit.Size = new System.Drawing.Size(117, 44);
             this.Submit.TabIndex = 7;
             this.Submit.Text = "Done";
             this.Submit.UseVisualStyleBackColor = true;
@@ -139,9 +147,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1347, 128);
+            this.label1.Location = new System.Drawing.Point(898, 82);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 37);
+            this.label1.Size = new System.Drawing.Size(162, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "Current Inventory";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -150,9 +159,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(164, 64);
+            this.label2.Location = new System.Drawing.Point(109, 41);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(378, 37);
+            this.label2.Size = new System.Drawing.Size(234, 25);
             this.label2.TabIndex = 9;
             this.label2.Text = "Please choose your gear:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -160,20 +170,20 @@
             // Inventory
             // 
             this.Inventory.FormattingEnabled = true;
-            this.Inventory.ItemHeight = 25;
-            this.Inventory.Location = new System.Drawing.Point(1354, 170);
+            this.Inventory.ItemHeight = 16;
+            this.Inventory.Location = new System.Drawing.Point(903, 109);
+            this.Inventory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Inventory.Name = "Inventory";
-            this.Inventory.Size = new System.Drawing.Size(500, 554);
+            this.Inventory.Size = new System.Drawing.Size(335, 356);
             this.Inventory.TabIndex = 14;
             this.Inventory.SelectedIndexChanged += new System.EventHandler(this.Inventory_SelectedIndexChanged);
             // 
             // choice1a
             // 
             this.choice1a.AutoSize = true;
-            this.choice1a.Location = new System.Drawing.Point(54, 25);
-            this.choice1a.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.choice1a.Location = new System.Drawing.Point(36, 16);
             this.choice1a.Name = "choice1a";
-            this.choice1a.Size = new System.Drawing.Size(165, 29);
+            this.choice1a.Size = new System.Drawing.Size(110, 21);
             this.choice1a.TabIndex = 18;
             this.choice1a.TabStop = true;
             this.choice1a.Text = "radioButton1";
@@ -183,10 +193,9 @@
             // choice3a
             // 
             this.choice3a.AutoSize = true;
-            this.choice3a.Location = new System.Drawing.Point(39, 45);
-            this.choice3a.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.choice3a.Location = new System.Drawing.Point(26, 29);
             this.choice3a.Name = "choice3a";
-            this.choice3a.Size = new System.Drawing.Size(165, 29);
+            this.choice3a.Size = new System.Drawing.Size(110, 21);
             this.choice3a.TabIndex = 22;
             this.choice3a.TabStop = true;
             this.choice3a.Text = "radioButton5";
@@ -196,10 +205,9 @@
             // choice3b
             // 
             this.choice3b.AutoSize = true;
-            this.choice3b.Location = new System.Drawing.Point(39, 88);
-            this.choice3b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.choice3b.Location = new System.Drawing.Point(26, 56);
             this.choice3b.Name = "choice3b";
-            this.choice3b.Size = new System.Drawing.Size(27, 26);
+            this.choice3b.Size = new System.Drawing.Size(17, 16);
             this.choice3b.TabIndex = 23;
             this.choice3b.TabStop = true;
             this.choice3b.UseVisualStyleBackColor = true;
@@ -208,10 +216,9 @@
             // choice4a
             // 
             this.choice4a.AutoSize = true;
-            this.choice4a.Location = new System.Drawing.Point(22, 16);
-            this.choice4a.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.choice4a.Location = new System.Drawing.Point(15, 10);
             this.choice4a.Name = "choice4a";
-            this.choice4a.Size = new System.Drawing.Size(165, 29);
+            this.choice4a.Size = new System.Drawing.Size(110, 21);
             this.choice4a.TabIndex = 24;
             this.choice4a.TabStop = true;
             this.choice4a.Text = "radioButton7";
@@ -221,10 +228,9 @@
             // choice4b
             // 
             this.choice4b.AutoSize = true;
-            this.choice4b.Location = new System.Drawing.Point(22, 61);
-            this.choice4b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.choice4b.Location = new System.Drawing.Point(15, 39);
             this.choice4b.Name = "choice4b";
-            this.choice4b.Size = new System.Drawing.Size(27, 26);
+            this.choice4b.Size = new System.Drawing.Size(17, 16);
             this.choice4b.TabIndex = 25;
             this.choice4b.TabStop = true;
             this.choice4b.UseVisualStyleBackColor = true;
@@ -233,10 +239,9 @@
             // choice5a
             // 
             this.choice5a.AutoSize = true;
-            this.choice5a.Location = new System.Drawing.Point(26, 20);
-            this.choice5a.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.choice5a.Location = new System.Drawing.Point(17, 13);
             this.choice5a.Name = "choice5a";
-            this.choice5a.Size = new System.Drawing.Size(165, 29);
+            this.choice5a.Size = new System.Drawing.Size(110, 21);
             this.choice5a.TabIndex = 26;
             this.choice5a.TabStop = true;
             this.choice5a.Text = "radioButton9";
@@ -246,10 +251,9 @@
             // choice5b
             // 
             this.choice5b.AutoSize = true;
-            this.choice5b.Location = new System.Drawing.Point(26, 67);
-            this.choice5b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.choice5b.Location = new System.Drawing.Point(17, 43);
             this.choice5b.Name = "choice5b";
-            this.choice5b.Size = new System.Drawing.Size(27, 26);
+            this.choice5b.Size = new System.Drawing.Size(17, 16);
             this.choice5b.TabIndex = 27;
             this.choice5b.TabStop = true;
             this.choice5b.UseVisualStyleBackColor = true;
@@ -258,10 +262,9 @@
             // choice6b
             // 
             this.choice6b.AutoSize = true;
-            this.choice6b.Location = new System.Drawing.Point(20, 67);
-            this.choice6b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.choice6b.Location = new System.Drawing.Point(13, 43);
             this.choice6b.Name = "choice6b";
-            this.choice6b.Size = new System.Drawing.Size(27, 26);
+            this.choice6b.Size = new System.Drawing.Size(17, 16);
             this.choice6b.TabIndex = 29;
             this.choice6b.TabStop = true;
             this.choice6b.UseVisualStyleBackColor = true;
@@ -270,10 +273,9 @@
             // choice2a
             // 
             this.choice2a.AutoSize = true;
-            this.choice2a.Location = new System.Drawing.Point(4, 14);
-            this.choice2a.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.choice2a.Location = new System.Drawing.Point(3, 9);
             this.choice2a.Name = "choice2a";
-            this.choice2a.Size = new System.Drawing.Size(165, 29);
+            this.choice2a.Size = new System.Drawing.Size(110, 21);
             this.choice2a.TabIndex = 30;
             this.choice2a.TabStop = true;
             this.choice2a.Text = "radioButton1";
@@ -283,10 +285,9 @@
             // choice6a
             // 
             this.choice6a.AutoSize = true;
-            this.choice6a.Location = new System.Drawing.Point(20, 20);
-            this.choice6a.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.choice6a.Location = new System.Drawing.Point(13, 13);
             this.choice6a.Name = "choice6a";
-            this.choice6a.Size = new System.Drawing.Size(165, 29);
+            this.choice6a.Size = new System.Drawing.Size(110, 21);
             this.choice6a.TabIndex = 31;
             this.choice6a.TabStop = true;
             this.choice6a.Text = "radioButton1";
@@ -297,19 +298,17 @@
             // 
             this.panel1.Controls.Add(this.choice1a);
             this.panel1.Controls.Add(this.choice1b);
-            this.panel1.Location = new System.Drawing.Point(112, 109);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(75, 70);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(236, 117);
+            this.panel1.Size = new System.Drawing.Size(157, 75);
             this.panel1.TabIndex = 32;
             // 
             // choice1b
             // 
             this.choice1b.AutoSize = true;
-            this.choice1b.Location = new System.Drawing.Point(54, 67);
-            this.choice1b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.choice1b.Location = new System.Drawing.Point(36, 43);
             this.choice1b.Name = "choice1b";
-            this.choice1b.Size = new System.Drawing.Size(27, 26);
+            this.choice1b.Size = new System.Drawing.Size(17, 16);
             this.choice1b.TabIndex = 19;
             this.choice1b.TabStop = true;
             this.choice1b.UseVisualStyleBackColor = true;
@@ -318,10 +317,9 @@
             // choice2b
             // 
             this.choice2b.AutoSize = true;
-            this.choice2b.Location = new System.Drawing.Point(4, 56);
-            this.choice2b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.choice2b.Location = new System.Drawing.Point(3, 36);
             this.choice2b.Name = "choice2b";
-            this.choice2b.Size = new System.Drawing.Size(27, 26);
+            this.choice2b.Size = new System.Drawing.Size(17, 16);
             this.choice2b.TabIndex = 21;
             this.choice2b.TabStop = true;
             this.choice2b.UseVisualStyleBackColor = true;
@@ -331,68 +329,76 @@
             // 
             this.panel2.Controls.Add(this.choice3a);
             this.panel2.Controls.Add(this.choice3b);
-            this.panel2.Location = new System.Drawing.Point(135, 352);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(90, 225);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(240, 123);
+            this.panel2.Size = new System.Drawing.Size(160, 79);
             this.panel2.TabIndex = 33;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.choice2a);
             this.panel3.Controls.Add(this.choice2b);
-            this.panel3.Location = new System.Drawing.Point(166, 248);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Location = new System.Drawing.Point(111, 159);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(201, 106);
+            this.panel3.Size = new System.Drawing.Size(134, 68);
             this.panel3.TabIndex = 34;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.choice4a);
             this.panel4.Controls.Add(this.choice4b);
-            this.panel4.Location = new System.Drawing.Point(147, 519);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel4.Location = new System.Drawing.Point(98, 332);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(254, 120);
+            this.panel4.Size = new System.Drawing.Size(169, 77);
             this.panel4.TabIndex = 35;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.choice5a);
             this.panel5.Controls.Add(this.choice5b);
-            this.panel5.Location = new System.Drawing.Point(147, 661);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel5.Location = new System.Drawing.Point(98, 423);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(228, 116);
+            this.panel5.Size = new System.Drawing.Size(152, 74);
             this.panel5.TabIndex = 36;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.choice6a);
             this.panel6.Controls.Add(this.choice6b);
-            this.panel6.Location = new System.Drawing.Point(147, 809);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel6.Location = new System.Drawing.Point(98, 518);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(228, 116);
+            this.panel6.Size = new System.Drawing.Size(152, 74);
             this.panel6.TabIndex = 37;
             // 
             // twoMartial
             // 
             this.twoMartial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.twoMartial.FormattingEnabled = true;
-            this.twoMartial.Location = new System.Drawing.Point(229, 213);
+            this.twoMartial.Location = new System.Drawing.Point(153, 136);
+            this.twoMartial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.twoMartial.Name = "twoMartial";
-            this.twoMartial.Size = new System.Drawing.Size(1028, 33);
+            this.twoMartial.Size = new System.Drawing.Size(687, 24);
             this.twoMartial.TabIndex = 38;
             this.twoMartial.SelectedIndexChanged += new System.EventHandler(this.twoMartial_SelectedIndexChanged);
             // 
+            // wackadooThingy
+            // 
+            this.wackadooThingy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.wackadooThingy.FormattingEnabled = true;
+            this.wackadooThingy.Location = new System.Drawing.Point(237, 83);
+            this.wackadooThingy.Margin = new System.Windows.Forms.Padding(2);
+            this.wackadooThingy.Name = "wackadooThingy";
+            this.wackadooThingy.Size = new System.Drawing.Size(603, 24);
+            this.wackadooThingy.TabIndex = 39;
+            this.wackadooThingy.SelectedIndexChanged += new System.EventHandler(this.wackadooThingy_SelectedIndexChanged);
+            // 
             // GearForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(2540, 1284);
+            this.ClientSize = new System.Drawing.Size(1693, 822);
+            this.Controls.Add(this.wackadooThingy);
             this.Controls.Add(this.twoMartial);
             this.Controls.Add(this.Inventory);
             this.Controls.Add(this.label2);
@@ -410,6 +416,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "GearForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -461,6 +468,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.ComboBox twoMartial;
+        private System.Windows.Forms.ComboBox wackadooThingy;
     }
 }
 
