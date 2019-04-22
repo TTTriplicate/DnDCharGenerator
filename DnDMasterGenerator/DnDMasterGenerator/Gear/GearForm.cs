@@ -45,6 +45,7 @@ namespace DnDClassesTest
             Choice4.Hide();
             Choice5.Hide();
             Choice6.Hide();
+            twoMartial.Hide();
             choice1a.Hide();
             choice1b.Hide();
             choice2a.Hide();
@@ -64,6 +65,7 @@ namespace DnDClassesTest
                 if (firstChoice[0] != null)
                 {
                     choice1a.Show();
+                    choice1a.Checked = true;
                     choice1a.Text = firstChoice[0].toString();
                     choice1b.Show();
                 }
@@ -74,6 +76,7 @@ namespace DnDClassesTest
                     if (firstChoice[1] != null)
                     {
                         choice2a.Show();
+                        choice2a.Checked = true;
                         choice2a.Text = firstChoice[1].toString();
                         choice2b.Show();
                     }
@@ -85,6 +88,7 @@ namespace DnDClassesTest
                         if (firstChoice[2] != null)
                         {
                             choice3a.Show();
+                            choice3a.Checked = true;
                             choice3a.Text = firstChoice[2].toString();
                             choice3b.Show();
                         }
@@ -96,6 +100,7 @@ namespace DnDClassesTest
                             if (firstChoice[3] != null)
                             {
                                 choice4a.Show();
+                                choice4a.Checked = true;
                                 choice4a.Text = firstChoice[3].toString();
                                 choice4b.Show();
                             }
@@ -107,6 +112,7 @@ namespace DnDClassesTest
                                 if (firstChoice[4] != null)
                                 {
                                     choice5a.Show();
+                                    choice5a.Checked = true;
                                     choice5a.Text = firstChoice[4].toString();
                                     choice5b.Show();
                                 }
@@ -118,6 +124,7 @@ namespace DnDClassesTest
                                     if (firstChoice[5] != null)
                                     {
                                         choice6a.Show();
+                                        choice6a.Checked = true;
                                         choice6a.Text = firstChoice[5].toString();
                                         choice6b.Show();
                                     }
@@ -188,34 +195,65 @@ namespace DnDClassesTest
             if (result == DialogResult.Yes)
             {
                 if (choice1a.Checked)
+                {
                     inventoryString.Add(choice1a.Text);
-                else
+                    inventory.Add(firstChoice[0]);
+                }
+                else if (choice2b.Checked)
+                {
                     inventoryString.Add(Choice1.Text);
-
+                    inventory.Add(items[0][Choice1.SelectedIndex]);
+                }
                 if (choice2a.Checked)
+                {
                     inventoryString.Add(choice2a.Text);
-                else
+                    inventory.Add(firstChoice[1]);
+                }    
+                else if (choice2b.Checked)
+                {
                     inventoryString.Add(Choice2.Text);
-
+                    inventory.Add(items[1][Choice2.SelectedIndex]);
+                }
                 if (choice3a.Checked)
+                {
                     inventoryString.Add(choice3a.Text);
-                else
+                    inventory.Add(firstChoice[2]);
+                }
+                else if (choice3b.Checked)
+                {
                     inventoryString.Add(Choice3.Text);
-
+                    inventory.Add(items[2][Choice3.SelectedIndex]);
+                }
                 if (choice4a.Checked)
+                {
                     inventoryString.Add(choice4a.Text);
-                else
+                    inventory.Add(firstChoice[3]);
+                }
+                else if (choice4b.Checked)
+                {
                     inventoryString.Add(Choice4.Text);
-
+                    inventory.Add(items[3][Choice4.SelectedIndex]);
+                }
                 if (choice5a.Checked)
+                {
                     inventoryString.Add(choice5a.Text);
-                else
+                    inventory.Add(firstChoice[4]);
+                } 
+                else if (choice5b.Checked)
+                {
                     inventoryString.Add(Choice5.Text);
-
+                    inventory.Add(items[4][Choice5.SelectedIndex]);
+                }
                 if (choice6a.Checked)
+                {
                     inventoryString.Add(choice6a.Text);
-                else
+                    inventory.Add(firstChoice[5]);
+                }
+                else if (choice6b.Checked)
+                {
                     inventoryString.Add(Choice6.Text);
+                    inventory.Add(items[5][Choice6.SelectedIndex]);
+                }   
 
                 gear.formatting(ref inventory, ref inventoryString);
 
@@ -327,6 +365,11 @@ namespace DnDClassesTest
         }
 
         private void choice6b_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void twoMartial_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

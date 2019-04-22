@@ -166,7 +166,7 @@ namespace DnDClassesTest
             allGear.Add(new Equipment("Shawm"));
             allGear.Add(new Equipment("Viol"));
             //88-90 Formatting
-            allGear.Add(new Weapon("Light crossbow and 20 bolts", 8, false, true, false, true));
+            allGear.Add(new Weapon("Light Crossbow and 20 bolts", 8, false, true, false, true));
             allGear.Add(new Weapon("Shortbow and 20 arrows", 6, false, true));
             allGear.Add(new Equipment("Leather armor, longbow, and 20 arrows")); //90
             //other equipment
@@ -218,7 +218,7 @@ namespace DnDClassesTest
                 }
 
             }
-            else if (classType == "Bard") //FIX_ME: figure out what to do for rapier or longsword or any simple weapon
+            else if (classType == "Bard")
             {
                 inventory.Add(allGear[getIndex("Leather armor")]);
                 inventory.Add(allGear[getIndex("Dagger")]);
@@ -270,7 +270,7 @@ namespace DnDClassesTest
                 //}
 
                 this.options.Add(new List<Gear>()); //light crossbow and 20 bolts or any simple weapon
-                firstChoice.Add(allGear[getIndex("Light crossbow and 20 bolts")]);
+                firstChoice.Add(allGear[getIndex("Light Crossbow and 20 bolts")]);
                 for (i = startSimpleMelee; i < startMartialMelee; i++)
                 {
                     options[0].Add(allGear[i]);
@@ -309,7 +309,7 @@ namespace DnDClassesTest
                     options[2].Add(allGear[i]);
                 }
             }
-            else if (classType == "Fighter") //FIX_ME: add two martional weapons
+            else if (classType == "Fighter") //FIX_ME: add two martial weapons
             {
                 reformat = true;
                 numChoices = 4;
@@ -323,7 +323,7 @@ namespace DnDClassesTest
                 options[1].Add(new Equipment("Two martial weapons"));
 
                 this.options.Add(new List<Gear>()); //light crossbow and 20 bolt or two handaxes
-                options[2].Add(allGear[getIndex("Light crossbow and 20 bolts")]);
+                options[2].Add(allGear[getIndex("Light Crossbow and 20 bolts")]);
                 options[2].Add(new Weapon("Handaxes (x2)", 6, 1));
 
                 this.options.Add(new List<Gear>()); //dungeoneer's pack or an explorer's pack
@@ -412,7 +412,7 @@ namespace DnDClassesTest
                 inventory.Add(new Weapon("Daggers (x2)", 4, true));
                 numChoices = 3;
                 this.options.Add(new List<Gear>());//light crossbow and 20 bolts or any simple weapon
-                firstChoice.Add(new Equipment("Light crossbow and 20 bolts"));
+                firstChoice.Add(new Equipment("Light Crossbow and 20 bolts"));
                 for(i = startSimpleMelee; i < startMartialMelee; i++)
                 {
                     if (i != getIndex("Crossbow, light"))
@@ -439,7 +439,7 @@ namespace DnDClassesTest
                 inventory.Add(new Weapon("Daggers (x2)", 4, true));
                 numChoices = 3;
                 this.options.Add(new List<Gear>());//light crossbow and 20 bolts or any simple weapon
-                firstChoice.Add(allGear[getIndex("Light crossbow and 20 bolts")]);
+                firstChoice.Add(allGear[getIndex("Light Crossbow and 20 bolts")]);
                 for (i = startSimpleMelee; i < startMartialMelee; i++)
                 {
                     if (i != getIndex("Crossbow, light"))
@@ -497,16 +497,17 @@ namespace DnDClassesTest
                 inventory.Add(new Equipment("Clothes, fine"));
                 inventory.Add(new Equipment("Disguise kit"));
                 inventory.Add(new Equipment("Belt pouch"));
-                //a holy symbol
-                this.options.Add(new List<Gear>());//Ten stoppered bottles filled with colored liquid, a set of weighted dice, a deck of marked cards, or a signet ring of an imaginary duke
-
-                gp = 15;
-                this.options.Add(new List<Gear>());
-                for (i = 105; i < 109; i++)
+                for (i = startHolySymbol; i < startPacks; i++)//a holy symbol
                 {
-                    //option1b.Add(allGear[i]);
+                    options[numChoices].Add(allGear[i]);
                 }
-                numChoices += 2;
+                numChoices++;
+                this.options.Add(new List<Gear>());//Ten stoppered bottles filled with colored liquid, a set of weighted dice, a deck of marked cards, or a signet ring of an imaginary duke
+                options[numChoices].Add(new Equipment("Ten stoppered bottles filled with colored liquid"));
+                options[numChoices].Add(new Equipment("Set of weighted dice"));
+                options[numChoices].Add(new Equipment("Deck of marked cards"));
+                options[numChoices++].Add(new Equipment("Signet ring of an imaginary duke"));
+                gp = 15;
             }
             else if (backgroundType == "Criminal")
             {
@@ -520,20 +521,17 @@ namespace DnDClassesTest
             {
                 inventory.Add(new Equipment("Costume"));
                 inventory.Add(new Equipment("Belt pouch"));
-                numChoices += 2;
                 gp = 15;
                 this.options.Add(new List<Gear>());
-                for (i = 92; i < 102; i++) //Any musical instrument
+                for (i = startInstruments; i < startFormat; i++) //Any musical instrument
                 {
-                    //option1b.Add(allGear[i]);
+                    options[numChoices].Add(allGear[i]);
                 }
-                this.options.Add(new List<Gear>());
-                for (i = 109; i < 111; i++) //Love letter, lock of hair, or trinket
-                {
-                    //option2b.Add(allGear[i]);
-
-                }
-
+                numChoices++;
+                this.options.Add(new List<Gear>());//Love letter, lock of hair, or trinket
+                options[numChoices].Add(new Equipment("Love letter"));
+                options[numChoices].Add(new Equipment("Lock of hair"));
+                options[numChoices++].Add(new Equipment("Tricket"));
             }
             else if (backgroundType == "Folk Hero")
             {
@@ -562,12 +560,12 @@ namespace DnDClassesTest
                 inventory.Add(new Equipment("Clothes, traveler's"));
                 inventory.Add(new Equipment("Belt pouch"));
                 gp = 15;
-                numChoices += 1;
                 this.options.Add(new List<Gear>());
-                for (i = 71; i < 88; i++) //Any set of artisans tools
+                for (i = startArtisans; i < startInstruments; i++) //Any set of artisans tools
                 {
-                    //option1b.Add(allGear[i]);
+                    options[numChoices].Add(allGear[i]);
                 }
+                numChoices++;
             }
             else if (backgroundType == "Hermit")
             {
@@ -623,8 +621,9 @@ namespace DnDClassesTest
                 gp = 10;
 
                 this.options.Add(new List<Gear>()); //bone dice or deck of cards
-
-                numChoices += 1;
+                options[numChoices].Add(new Equipment("Bone dice"));
+                options[numChoices].Add(new Equipment("Deck of cards"));
+                numChoices++;
             }
             else //Urchin
             {
@@ -636,7 +635,6 @@ namespace DnDClassesTest
                 inventory.Add(new Equipment("Belt pouch"));
                 gp = 10;
             }
-
         }
 
         /**
@@ -662,8 +660,6 @@ namespace DnDClassesTest
                 {
                     choicesString[i].Add(options[i][j].toString());
                 }
-
-
             }
             return choicesString;
         }
@@ -718,6 +714,8 @@ namespace DnDClassesTest
                     {
                         if (j == startFormat)
                         {
+                            end.Remove(allGear[j]);
+                            endStrings.Remove(allGear[j].toString());
                             end.Add(allGear[getIndex("Crossbow, light")]);
                             end.Add(allGear[getIndex("Crossbow Bolts (x20)")]);
                             endStrings.Add(end[end.Count() - 2].toString());
@@ -726,6 +724,8 @@ namespace DnDClassesTest
 
                         if (j == startFormat + 1)
                         {
+                            end.Remove(allGear[j]);
+                            endStrings.Remove(allGear[j].toString());
                             end.Add(allGear[getIndex("Shortbow")]);
                             end.Add(allGear[getIndex("Arrows (x20)")]);
                             endStrings.Add(end[end.Count() - 2].toString());
@@ -734,6 +734,8 @@ namespace DnDClassesTest
 
                         if (j == startFormat + 2)
                         {
+                            end.Remove(allGear[j]);
+                            endStrings.Remove(allGear[j].toString());
                             end.Add(allGear[getIndex("Leather armor")]);
                             end.Add(allGear[getIndex("Longbow")]);
                             end.Add(allGear[getIndex("Arrows (x20)")]);

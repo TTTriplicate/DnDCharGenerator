@@ -56,6 +56,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.twoMartial = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -376,12 +377,23 @@
             this.panel6.Size = new System.Drawing.Size(228, 116);
             this.panel6.TabIndex = 37;
             // 
+            // twoMartial
+            // 
+            this.twoMartial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.twoMartial.FormattingEnabled = true;
+            this.twoMartial.Location = new System.Drawing.Point(229, 213);
+            this.twoMartial.Name = "twoMartial";
+            this.twoMartial.Size = new System.Drawing.Size(1028, 33);
+            this.twoMartial.TabIndex = 38;
+            this.twoMartial.SelectedIndexChanged += new System.EventHandler(this.twoMartial_SelectedIndexChanged);
+            // 
             // GearForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(2540, 1284);
+            this.Controls.Add(this.twoMartial);
             this.Controls.Add(this.Inventory);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -448,6 +460,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.ComboBox twoMartial;
     }
 }
 
