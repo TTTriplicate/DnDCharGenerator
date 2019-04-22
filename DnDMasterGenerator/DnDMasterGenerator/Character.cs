@@ -154,6 +154,9 @@ namespace DnDClassesTest
 
             CharGear gear = new CharGear(this._class.ProfessionName(), "Acolyte", AbilityModifiers()[1]);
             inventory = gear.getInventoryString();
+
+
+            PDF_Filler test = new PDF_Filler();
         }
         /*   public DnDCharacter(int level, int p, int proPath)
            {
