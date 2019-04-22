@@ -254,7 +254,7 @@ namespace DnDClassesTest
                 numChoices = 4;
                 this.options.Add(new List<Gear>()); //scale mail or leather armor or chainmail (if proficient)
                 firstChoice.Add(null);
-                //if (Character._proPath == 3 || CharClass._proPath == 4 || CharClass._proPath == 6)
+                //if (DnDCharacter._proPath == 3 || DnDCharacter._proPath == 4 || DnDCharacter._proPath == 6)
                 //{
                 //    options[0].Add(allGear[getIndex("Chain mail")]);
                 //}
@@ -264,7 +264,7 @@ namespace DnDClassesTest
                 this.options.Add(new List<Gear>()); //mace or warhammer (if proficient)
                 firstChoice.Add(null);
                 options[1].Add(allGear[getIndex("Mace")]);
-                //if (CharClass._proPath == 4 || CharClass._proPath == 6)
+                //if (DnDCharacter._proPath == 4 || DnDCharacter._proPath == 6)
                 //{
                 //    options[1].Add(allGear[getIndex("Warhammer")]);
                 //}
@@ -773,7 +773,6 @@ namespace DnDClassesTest
         public void setInventoryString(List<string> inventoryString)
         {
             this.inventoryString = inventoryString;
-            Console.WriteLine(allGear[0].GetType());
         }
 
         /**
@@ -787,6 +786,7 @@ namespace DnDClassesTest
                 inventoryString.Add(inventory[i].toString());
             }
             inventoryString.Add(gp + "gp");
+            inventory.Add(new Equipment(gp + "gp"));
             return inventoryString;
         }
 
