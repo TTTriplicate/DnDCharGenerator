@@ -55,6 +55,20 @@ namespace DnDClassesTest
                 txtSpecial.Text += i + ", ";
             txtRace.Text = leeroy.CharRace.getRace();
 
+            if(leeroy._class.ProfessionName() == "Cleric")
+            {
+                try
+                {
+                    bool[] test = Cleric.Proficiencies(leeroy._class._proPath);
+                    foreach (bool i in test)
+                        Console.WriteLine(i);
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+
             string Personality = "f", Ideal = "f", Flaw = "f", Bond = "f", Background = "f";
             //leeroy.Background.Traits(ref Personality, ref Ideal, ref Flaw, ref Bond);
             leeroy.backgroundInfo(ref Personality, ref Ideal, ref Flaw, ref Bond, ref Background);

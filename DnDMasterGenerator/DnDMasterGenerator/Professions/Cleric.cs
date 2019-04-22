@@ -26,9 +26,9 @@ namespace DnDClassesTest
             get;            set;            //contains full listing of class features 
              //to be passed to character sheet through ClassFeatures method
         }
-        public bool[] Proficiencies()//bool[6] {light, medium, heavy, sheild, simple, martial}
+        public static bool[] Proficiencies(int proPath)//bool[6] {light, medium, heavy, sheild, simple, martial}
         {
-            bool[] pros = new bool[6] { true, true, (_proPath % 2 != 0)? true : false, true, true, (this._proPath == 3 || this._proPath == 5)? true:false };
+            bool[] pros = new bool[6] { true, true, (proPath == 2 || proPath == 4 || proPath == 6)? true : false, true, true, (proPath == 4 || proPath == 6)? true:false };
             return pros;
         }
 
