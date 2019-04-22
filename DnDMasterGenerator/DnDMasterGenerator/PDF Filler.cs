@@ -21,8 +21,9 @@ namespace DnDClassesTest
         public void buildPDF()
         {
             string nameOfFile = "";
-            string pdfTemplate = Path.Combine(Environment.CurrentDirectory, @"..\..\PDFs\TWC-DnD-5E-Character-Sheet-v1.3");
-            string newFile = Path.Combine(Environment.CurrentDirectory, @"..\..\PDFs\" + nameOfFile + ".pdf");
+            string PDFFolder = Path.Combine(Environment.CurrentDirectory, @"..\..\PDFs");
+            string pdfTemplate =  PDFFolder  + @"\TWC-DnD-5E-Character-Sheet-v1.3";
+            string newFile = PDFFolder + @"\" + nameOfFile + ".pdf";
 
             PdfReader reader = new PdfReader(pdfTemplate);
             PdfStamper pdfStamper = new PdfStamper(reader, new FileStream(newFile, FileMode.Create));
