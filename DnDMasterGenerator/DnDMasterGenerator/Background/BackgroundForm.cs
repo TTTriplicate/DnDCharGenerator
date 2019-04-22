@@ -43,7 +43,8 @@ namespace DnDClassesTest
 
         private void langList_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (langList.CheckedItems.Count == Character.getNumLang())
+                langList.Enabled = false;
         }
 
         private void PERSONALITY_TextChanged(object sender, EventArgs e)
@@ -79,8 +80,9 @@ namespace DnDClassesTest
         protected void chooseLang()
         {
             Race race = new Race("Half-Orc");
+            langList.Items.Clear();
             for (int i = 0; i < 8; i++) {
-                if (race.getLangRace()[i]) {
+                if (!(race.getLangRace()[i])) {
                     langList.Items.Add(allLanguages[i]);
                 }
             }
