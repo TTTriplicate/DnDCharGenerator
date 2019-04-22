@@ -25,11 +25,13 @@ namespace DnDClassesTest
             string pdfTemplate =  PDFFolder  + @"\TWC-DnD-5E-Character-Sheet-v1.3.pdf";
             string newFile = PDFFolder + @"\" + nameOfFile + ".pdf";
 
-            PdfReader reader = new PdfReader(pdfTemplate);
-            PdfStamper pdfStamper = new PdfStamper(reader, new FileStream(newFile, FileMode.Create));
+            PdfReader pdfReader = new PdfReader(pdfTemplate);
+            PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
             AcroFields pdfFormFields = pdfStamper.AcroFields;
 
             pdfFormFields.SetField("Background", "blah");
+            pdfStamper.FormFlattening = false;
+            pdfStamper.Close();
         }
     }
 }
