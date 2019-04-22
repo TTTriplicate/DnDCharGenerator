@@ -30,7 +30,6 @@ namespace DnDClassesTest
             InitializeComponent();
         }
 
-
         public void Form1_Load(object sender, EventArgs e)
         {
             //gear = new CharGear("Barbarian", "Folk Hero", 0);
@@ -65,7 +64,7 @@ namespace DnDClassesTest
                 if (firstChoice[0] != null)
                 {
                     choice1a.Show();
-                    choice1a.Checked = true;
+                    choice1b.Checked = true;
                     choice1a.Text = firstChoice[0].toString();
                     choice1b.Show();
                 }
@@ -76,7 +75,7 @@ namespace DnDClassesTest
                     if (firstChoice[1] != null)
                     {
                         choice2a.Show();
-                        choice2a.Checked = true;
+                        choice2b.Checked = true;
                         choice2a.Text = firstChoice[1].toString();
                         choice2b.Show();
                     }
@@ -88,7 +87,7 @@ namespace DnDClassesTest
                         if (firstChoice[2] != null)
                         {
                             choice3a.Show();
-                            choice3a.Checked = true;
+                            choice3b.Checked = true;
                             choice3a.Text = firstChoice[2].toString();
                             choice3b.Show();
                         }
@@ -100,7 +99,7 @@ namespace DnDClassesTest
                             if (firstChoice[3] != null)
                             {
                                 choice4a.Show();
-                                choice4a.Checked = true;
+                                choice4b.Checked = true;
                                 choice4a.Text = firstChoice[3].toString();
                                 choice4b.Show();
                             }
@@ -112,7 +111,7 @@ namespace DnDClassesTest
                                 if (firstChoice[4] != null)
                                 {
                                     choice5a.Show();
-                                    choice5a.Checked = true;
+                                    choice5b.Checked = true;
                                     choice5a.Text = firstChoice[4].toString();
                                     choice5b.Show();
                                 }
@@ -124,7 +123,7 @@ namespace DnDClassesTest
                                     if (firstChoice[5] != null)
                                     {
                                         choice6a.Show();
-                                        choice6a.Checked = true;
+                                        choice6b.Checked = true;
                                         choice6a.Text = firstChoice[5].toString();
                                         choice6b.Show();
                                     }
