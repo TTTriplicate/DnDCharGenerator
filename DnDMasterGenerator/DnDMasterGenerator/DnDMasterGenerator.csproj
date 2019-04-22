@@ -169,7 +169,7 @@
     <Content Include="Background\Soldier.txt" />
     <Content Include="Background\Urchin.txt" />
     <Content Include="Professions\ClassFeatures\BarbarianClassFeatures.txt" />
-    <Content Include="Professions\ClassFeatures\BardFeatures.txt" />
+    <Content Include="Professions\ClassFeatures\BardClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\ClericClassFeatures.txt" />
     <Content Include="Races\Dragonborn.txt" />
     <Content Include="Races\Dwarf.txt" />

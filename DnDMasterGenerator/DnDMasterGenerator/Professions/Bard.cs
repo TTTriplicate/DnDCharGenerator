@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace DnDClassesTest
 {
@@ -40,7 +41,7 @@ namespace DnDClassesTest
             this._caster = true;
             this._proPath = path;
             this._numProSkills =(_proPath == 0 && _level >= 3)? 6 : 3;
-            //this.ClassFeatures = this.Unlocked();
+            this.Features = this.ClassFeatures();
         }
         public override bool[] ClassSkills()
         {
@@ -65,19 +66,16 @@ namespace DnDClassesTest
 
         public override List<string> ClassFeatures()
         {
-            int path = this._proPath;
             List<string> features = new List<string>();
-            features.Add(Inspiration());//0
-            features.Add(SongOfRest());//1
-            features.Add(path == 0 ? CuttingWords() : CombatInspiration());//2
-            features.Add(FontOfInspiration());//3
-            features.Add(CounterCharm());//4
-            features.Add(path == 0 ? ExtraSecrets() : ExtraAttack());//4
-            features.Add(MagicSecrets());//5
-            features.Add(path == 0 ? PeerlessSkill() : BattleMagic());//6
-            features.Add(SuperiorInspiration());//7
+            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\BardClassFeatures.txt");
+            //string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
+            string[] temp = new string[16];
+            temp = File.ReadAllLines(path);
+            foreach (string i in temp)
+            {
+                features.Add(i);
+            }
             return features;
-
         }
 
 
@@ -139,56 +137,6 @@ namespace DnDClassesTest
         }
 
 
-        public string Inspiration()
-        {
-            string inspire = this.Features[0];
-            inspire.Replace("#", $"{6 + ((this._level / 5) * 2)}");
-            return inspire;
-        }
-        public string SongOfRest()
-        {
-            return $"If you or any friendly creatures who can hear your performance regain hit points at the end of the short rest, each of those creatures regains an extra 1d{6 + (this._level / 2)} hit points.";
-        }
-        protected string CuttingWords()
-        {
-            return "When a creature that you can see within 60 feet of you makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one of your uses of Bardic Inspiration, rolling a Bardic Inspiration die and subtracting the number rolled from the creature’s roll. The creature is immune if it can’t hear you or if it’s immune to being charmed.";
-        }
-        protected string CombatInspiration()
-        {
-            return "A creature that has a Bardic Inspiration die from you can roll that die and add the number rolled to a weapon damage roll it just made.Alternatively, when an attack roll is made against the creature, it can use its reaction to roll the Bardic Inspiration die and add the number rolled to its AC against that attack, after seeing the roll but before knowing whether it hits or misses.";
-        }
-        protected string FontOfInspiration()
-        {
-            return "you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest.";
-        }
-        protected string CounterCharm()
-        {
-            return "At 6th level, you gain the ability to use musical notes or words of power to disrupt mind - influencing effects.As   an action, you can start a performance that lasts until the end of your next turn.During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it(no action required).";
-        }
-        protected string ExtraSecrets()
-        {
-            return "you learn two spells of your choice from any class. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip.The chosen spells count as bard spells for you but don’t count against the number of bard spells you know.";
-        }
-        protected string ExtraAttack()
-        {
-            return "you can attack twice, instead of once, whenever you take the Attack action on your turn.";
-        }
-        protected string MagicSecrets()
-        {
-            return "Choose two spells from any class, including this one. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. The chosen spells count as bard spells for you and are included in the number in the Spells Known column of the Bard table. You learn two additional spells from any class at 14th level and again at 18th level.";
-        }
-        protected string PeerlessSkill()
-        {
-            return "when you make an ability check, you can expend one use of Bardic Inspiration.Roll a Bardic Inspiration die and add the number rolled to your ability check.";
-        }
-        protected string BattleMagic()
-        {
-            return "Battle Magic: \nWhen you use your action to cast a bard spell, you can make one weapon attack as a bonus action.";
-        }
-        protected string SuperiorInspiration()
-        {
-            return "when you roll initiative and have no uses of Bardic Inspiration left, you regain one use.";
-        }
         public int[] JackOfAllTrades()
         {//half proficiency bonus to non-proficient skills
             int n = this.ProficiencyBonus() / 2;
