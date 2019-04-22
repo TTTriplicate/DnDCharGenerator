@@ -69,3 +69,6 @@ Professor
 Researcher
 Wizard's apprentice
 Scribe
+
+
+L2
