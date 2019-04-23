@@ -18,7 +18,7 @@ namespace DnDClassesTest
         protected int numLang = 0;
         //public String[] SkillProfs = { "Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Preformance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival" };
 
-        public string Personality, Ideal, Flaw, Bond, Background;
+        public string Personality, Ideal, Flaw, Bond, Background, SkillProfOne, SkillProfTwo;
 
         public Background_Class()//string background)
         {
@@ -57,9 +57,35 @@ namespace DnDClassesTest
             return randNum;
         }
 
-        public void SkillProfs(ref string skillProfOne, ref string skillProfTwo)
+        public void SkillProfs(string bg)
         {
-
+            switch(bg)
+            {
+                case "Acolyte":
+                    SkillProfOne = "Insight";
+                    SkillProfTwo = "Religion";
+                    SkillProf[6] = true;
+                    SkillProf[14] = true;
+                    break;
+                case "Charlatan":
+                    SkillProfOne = "Deception";
+                    SkillProfTwo = "Sleight of Hand";
+                    SkillProf[4] = true;
+                    SkillProf[15] = true;
+                    break;
+                case "Criminal":
+                    SkillProfOne = "Deception";
+                    SkillProfTwo = "Stealth";
+                    SkillProf[4] = true;
+                    SkillProf[16] = true;
+                    break;
+                case "Entertainer":
+                    SkillProfOne = "Acrobatics";
+                    SkillProfTwo = "Performance";
+                    break;
+                default:
+                    break;
+            }
         }
 
         //public void SkillProfs(ref string skillOne)
