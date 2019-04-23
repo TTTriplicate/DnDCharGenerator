@@ -142,6 +142,7 @@ namespace DnDClassesTest
         }
         //mark which saves get proficiency bonus, get from CharClass
         public List<string> inventory = new List<string>();
+        public int gold = 0;
 
         public DnDCharacter()
         {
@@ -170,8 +171,9 @@ namespace DnDClassesTest
             
 
 
-            CharGear gear = new CharGear(this._class.ProfessionName(), "Acolyte", AbilityModifiers()[1]);
+            CharGear gear = new CharGear(this._class.ProfessionName(), CharBackground.Background , AbilityModifiers()[1]);
             inventory = gear.getInventoryString();
+            gold = gear.getGP();
         }
         /*   public DnDCharacter(int level, int p, int proPath)
            {

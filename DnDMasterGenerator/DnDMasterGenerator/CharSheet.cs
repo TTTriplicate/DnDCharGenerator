@@ -83,7 +83,7 @@ namespace DnDClassesTest
             {
                 displayInventory.Text += (leeroy.getInventory()[i]) + "\n";
             }
-
+            
             PDF_Filler fhsduf = new PDF_Filler(leeroy);
         }
 

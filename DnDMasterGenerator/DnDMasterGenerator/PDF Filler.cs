@@ -36,6 +36,15 @@ namespace DnDClassesTest
             pdfFormFields.SetField("Flaws", newChar.CharBackground.getFlaw());
             pdfFormFields.SetField("Race ", newChar.CharRace.getRace());
             pdfFormFields.SetField("PlayerName", newChar._playerName);
+            pdfFormFields.SetField("GP", newChar.gold.ToString());
+
+            //pdfFormFields.SetField("Equipment", "Test test test");
+            string stringInventory = "";
+            for (int i = 0; i < newChar.getInventory().Count(); i++)
+            {
+                stringInventory += (newChar.getInventory()[i]) + "\n";
+            }
+            pdfFormFields.SetField("Equipment", stringInventory);
 
             pdfStamper.FormFlattening = false;
             pdfStamper.Close();

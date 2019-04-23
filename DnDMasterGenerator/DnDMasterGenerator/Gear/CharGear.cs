@@ -795,8 +795,6 @@ namespace DnDClassesTest
             {
                 inventoryString.Add(inventory[i].toString());
             }
-            inventoryString.Add(gp + "gp");
-            inventory.Add(new Equipment(gp + "gp"));
             return inventoryString;
         }
 
@@ -817,6 +815,11 @@ namespace DnDClassesTest
         public List<Gear> getFirstChoice()
         {
             return firstChoice;
+        }
+
+        public int getGP()
+        {
+            return gp;
         }
     }
 }
