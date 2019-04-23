@@ -445,7 +445,7 @@
             // lblMelee
             // 
             this.lblMelee.AutoSize = true;
-            this.lblMelee.Location = new System.Drawing.Point(136, 311);
+            this.lblMelee.Location = new System.Drawing.Point(19, 314);
             this.lblMelee.Name = "lblMelee";
             this.lblMelee.Size = new System.Drawing.Size(93, 17);
             this.lblMelee.TabIndex = 34;
@@ -454,7 +454,7 @@
             // lblRangedAttack
             // 
             this.lblRangedAttack.AutoSize = true;
-            this.lblRangedAttack.Location = new System.Drawing.Point(124, 351);
+            this.lblRangedAttack.Location = new System.Drawing.Point(7, 354);
             this.lblRangedAttack.Name = "lblRangedAttack";
             this.lblRangedAttack.Size = new System.Drawing.Size(105, 17);
             this.lblRangedAttack.TabIndex = 35;
@@ -462,7 +462,7 @@
             // 
             // txtMelee
             // 
-            this.txtMelee.Location = new System.Drawing.Point(235, 308);
+            this.txtMelee.Location = new System.Drawing.Point(118, 311);
             this.txtMelee.Name = "txtMelee";
             this.txtMelee.ReadOnly = true;
             this.txtMelee.Size = new System.Drawing.Size(29, 22);
@@ -470,7 +470,7 @@
             // 
             // txtRanged
             // 
-            this.txtRanged.Location = new System.Drawing.Point(235, 348);
+            this.txtRanged.Location = new System.Drawing.Point(118, 351);
             this.txtRanged.Name = "txtRanged";
             this.txtRanged.ReadOnly = true;
             this.txtRanged.Size = new System.Drawing.Size(29, 22);

@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AttackRoll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttackRoll.Designer.cs">
+      <DependentUpon>AttackRoll.cs</DependentUpon>
+    </Compile>
     <Compile Include="Background\Background Class.cs" />
     <Compile Include="Background\BackgroundForm.cs">
       <SubType>Form</SubType>
@@ -118,6 +124,9 @@
     <Compile Include="StatsAndProfession.designer.cs">
       <DependentUpon>StatsAndProfession.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AttackRoll.resx">
+      <DependentUpon>AttackRoll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Background\BackgroundForm.resx">
       <DependentUpon>BackgroundForm.cs</DependentUpon>
     </EmbeddedResource>

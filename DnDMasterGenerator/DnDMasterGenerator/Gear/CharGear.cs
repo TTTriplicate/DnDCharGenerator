@@ -42,8 +42,7 @@ namespace DnDClassesTest
 
         public CharGear(string classType, string backgroundType, int dexMod)
         {
-            //this.classType = classType;
-            this.classType = "Fighter";
+            this.classType = classType;
             this.backgroundType = backgroundType;
             this.dexMod = dexMod;
             populateGear();
@@ -360,8 +359,12 @@ namespace DnDClassesTest
             {
                 inventory.Add(allGear[getIndex("Chain mail")]);
                 numChoices = 3;
-                this.options.Add(new List<Gear>());//a martial weapon and shield or two martial weapons
+                this.options.Add(new List<Gear>()); //martial weapon and shield or two martial weapons
                 firstChoice.Add(null);
+                for (i = startMartialMelee; i < startArmor; i++)
+                {
+                    options[0].Add(allGear[i]);
+                }
                 this.options.Add(new List<Gear>());//five javelins or any simple melee weapon
                 firstChoice.Add(new Weapon("Javelins (x5)", 6, 1));
                 for (i = 0; i < 11; i++)
@@ -373,7 +376,7 @@ namespace DnDClassesTest
                 options[2].Add(allGear[getIndex("Priest's Pack")]);
                 options[2].Add(allGear[getIndex("Explorer's Pack")]);
             }
-            else if (classType == "Ranger") //FIX_ME: ADD two simple melee weapons
+            else if (classType == "Ranger") //FIX_ME: Add two simple melee weapons
             {
                 inventory.Add(allGear[getIndex("Longbow")]);
                 inventory.Add(new Equipment("Arrows (x20"));

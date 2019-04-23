@@ -78,5 +78,10 @@ namespace DnDClassesTest
             return name;
         }
 
+        public int getDamage()
+        {
+            return damageFactor;
+        }
+
     }
 }

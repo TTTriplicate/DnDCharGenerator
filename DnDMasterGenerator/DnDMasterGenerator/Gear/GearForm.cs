@@ -32,7 +32,6 @@ namespace DnDClassesTest
 
         public void Form1_Load(object sender, EventArgs e)
         {
-            //gear = new CharGear("Fighter", "Acolyte", 0);
             items = gear.getOptions();
             itemString = gear.getStrings();
             firstChoice = gear.getFirstChoice();
@@ -57,19 +56,28 @@ namespace DnDClassesTest
             choice5b.Hide();
             choice6a.Hide();
             choice6b.Hide();
-            wackadooThingy.Hide();
+            wackadooThingy.Hide(); //Literally only for fighter because fighter is a whole bitch.  Oh wait also for paladin
 
             if(numItems >= 1)
             {
                 Choice1.Show();
-                if (firstChoice[0] != null)
+                if (gear.classType == "Ranger")
+                {
+                    choice1a.Show();
+                    choice1b.Checked = true;
+                    choice1a.Text = firstChoice[0].toString();
+                    choice1b.Show();
+                    twoMartial.Show();
+                    twoMartial.DataSource = itemString[0];
+                }
+                else if (firstChoice[0] != null)
                 {
                     choice1a.Show();
                     choice1b.Checked = true;
                     choice1a.Text = firstChoice[0].toString();
                     choice1b.Show();
                 }
-                else if (gear.classType == "Fighter")
+                else if (gear.classType == "Fighter" || gear.classType == "Paladin")
                 {
                     choice1a.Show();
                     choice1b.Checked = true;
@@ -78,7 +86,7 @@ namespace DnDClassesTest
                     wackadooThingy.DataSource = itemString[0];
                     twoMartial.Show();
                     twoMartial.DataSource = itemString[0];
-                    }
+                }
                 Choice1.DataSource = itemString[0];
                 
                 if(numItems >= 2)
@@ -147,11 +155,9 @@ namespace DnDClassesTest
                     }
                 }
             }
-
             inventory = gear.getInventory();
             inventoryString = gear.convertInventoryString();
             Inventory.DataSource = inventoryString;
-
         }
 
         public void Choice1_SelectedIndexChanged(object sender, EventArgs e)
@@ -160,7 +166,6 @@ namespace DnDClassesTest
 
         public void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         public void Choice2_SelectedIndexChanged(object sender, EventArgs e)
@@ -173,27 +178,22 @@ namespace DnDClassesTest
 
         public void Choice4_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         public void Choice5_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         public void Choice6_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         public void label2_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Inventory_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void Submit_Click(object sender, EventArgs e)
@@ -207,7 +207,7 @@ namespace DnDClassesTest
             {
                 if (choice1a.Checked)
                 {
-                    if(gear.classType == "Fighter")
+                    if(gear.classType == "Fighter" || gear.classType == "Paladin")
                     {
                         inventoryString.Add("Shield    " + (2 + gear.dexMod));
                         inventory.Add(new Armor("Shield", 2));
@@ -222,7 +222,7 @@ namespace DnDClassesTest
                 }
                 else if (choice2b.Checked)
                 {
-                    if(gear.classType == "Fighter")
+                    if(gear.classType == "Fighter" || gear.classType == "Paladin" || gear.classType == "Ranger")
                     {
                         inventory.Add(items[0][Choice1.SelectedIndex]);
                         inventory.Add(items[0][twoMartial.SelectedIndex]);
@@ -291,7 +291,6 @@ namespace DnDClassesTest
                 gear.setInventory(inventory);
                 gear.setInventoryString(inventoryString);
 
-
                 this.Close();
             }
         }
@@ -303,9 +302,31 @@ namespace DnDClassesTest
                 message = message + inventoryString[i] + "\n";
             }
             if(choice1a.Checked)
-                message = message + choice1a.Text + "\n";
+            {
+                if(gear.classType == "Fighter")
+                {
+                    message = message + ("Shield    " + (2 + gear.dexMod)) + "\n";
+                    message = message + wackadooThingy.Text + "\n";
+                }
+                else
+                {
+                    message = message + choice1a.Text + "\n";
+                }
+            }  
             else
-                message = message + Choice1.Text + "\n";
+            {
+                if (gear.classType == "Fighter")
+                {
+                    message = message + Choice1.Text + "\n";
+                    message = message + twoMartial + "\n";
+                }
+                else
+                {
+                    message = message + Choice1.Text + "\n";
+                }
+                
+            }
+                
 
             if (choice2a.Checked)
                 message = message + choice2a.Text + "\n";
@@ -337,77 +358,62 @@ namespace DnDClassesTest
 
         private void GearForm_Load(object sender, EventArgs e)
         {
-
         }
 
         private void choice4a_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void choice1a_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void choice1b_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void choice2a_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void choice2b_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void choice3a_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void choice3b_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void choice4b_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void choice5a_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void choice5b_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void choice6a_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void choice6b_CheckedChanged(object sender, EventArgs e)
         {
-
         }
 
         private void twoMartial_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void wackadooThingy_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
     }
 }
