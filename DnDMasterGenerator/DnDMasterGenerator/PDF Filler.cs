@@ -20,16 +20,18 @@ namespace DnDClassesTest
 
         public void buildPDF()
         {
-            string nameOfFile = "";
+            string nameOfFile = "Test";
             string PDFFolder = Path.Combine(Environment.CurrentDirectory, @"..\..\PDFs");
-            string pdfTemplate =  PDFFolder  + @"\TWC-DnD-5E-Character-Sheet-v1.3";
+            string pdfTemplate =  PDFFolder  + @"\TWC-DnD-5E-Character-Sheet-v1.3.pdf";
             string newFile = PDFFolder + @"\" + nameOfFile + ".pdf";
 
-            PdfReader reader = new PdfReader(pdfTemplate);
-            PdfStamper pdfStamper = new PdfStamper(reader, new FileStream(newFile, FileMode.Create));
+            PdfReader pdfReader = new PdfReader(pdfTemplate);
+            PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
             AcroFields pdfFormFields = pdfStamper.AcroFields;
 
-            pdfFormFields.SetField("f1_91(0)", "blah");
+            pdfFormFields.SetField("Background", "blah");
+            pdfStamper.FormFlattening = false;
+            pdfStamper.Close();
         }
     }
 }
