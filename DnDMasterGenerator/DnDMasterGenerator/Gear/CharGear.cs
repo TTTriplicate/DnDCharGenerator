@@ -507,12 +507,15 @@ namespace DnDClassesTest
                 inventory.Add(new Equipment("Clothes, fine"));
                 inventory.Add(new Equipment("Disguise kit"));
                 inventory.Add(new Equipment("Belt pouch"));
+                this.options.Add(new List<Gear>());
+                firstChoice.Add(null);
                 for (i = startHolySymbol; i < startPacks; i++)//a holy symbol
                 {
                     options[numChoices].Add(allGear[i]);
                 }
                 numChoices++;
                 this.options.Add(new List<Gear>());//Ten stoppered bottles filled with colored liquid, a set of weighted dice, a deck of marked cards, or a signet ring of an imaginary duke
+                firstChoice.Add(null);
                 options[numChoices].Add(new Equipment("Ten stoppered bottles filled with colored liquid"));
                 options[numChoices].Add(new Equipment("Set of weighted dice"));
                 options[numChoices].Add(new Equipment("Deck of marked cards"));
@@ -533,12 +536,14 @@ namespace DnDClassesTest
                 inventory.Add(new Equipment("Belt pouch"));
                 gp = 15;
                 this.options.Add(new List<Gear>());
+                firstChoice.Add(null);
                 for (i = startInstruments; i < startFormat; i++) //Any musical instrument
                 {
                     options[numChoices].Add(allGear[i]);
                 }
                 numChoices++;
                 this.options.Add(new List<Gear>());//Love letter, lock of hair, or trinket
+                firstChoice.Add(null);
                 options[numChoices].Add(new Equipment("Love letter"));
                 options[numChoices].Add(new Equipment("Lock of hair"));
                 options[numChoices++].Add(new Equipment("Tricket"));
@@ -551,6 +556,7 @@ namespace DnDClassesTest
                 inventory.Add(new Equipment("Common clothes"));
                 inventory.Add(new Equipment("Belt pouch"));
                 this.options.Add(new List<Gear>());
+                firstChoice.Add(null);
                 for (i = startInstruments; i < startFormat; i++) //Any musical instrument
                 {
                     options[numChoices].Add(allGear[i]);
@@ -558,6 +564,7 @@ namespace DnDClassesTest
                 numChoices++;
 
                 this.options.Add(new List<Gear>()); //Artistans tools
+                firstChoice.Add(null);
                 for (i = startArtisans; i < startInstruments; i++)
                 {
                     options[numChoices].Add(allGear[i]);
@@ -571,6 +578,7 @@ namespace DnDClassesTest
                 inventory.Add(new Equipment("Belt pouch"));
                 gp = 15;
                 this.options.Add(new List<Gear>());
+                firstChoice.Add(null);
                 for (i = startArtisans; i < startInstruments; i++) //Any set of artisans tools
                 {
                     options[numChoices].Add(allGear[i]);
@@ -631,6 +639,7 @@ namespace DnDClassesTest
                 gp = 10;
 
                 this.options.Add(new List<Gear>()); //bone dice or deck of cards
+                firstChoice.Add(null);
                 options[numChoices].Add(new Equipment("Bone dice"));
                 options[numChoices].Add(new Equipment("Deck of cards"));
                 numChoices++;
