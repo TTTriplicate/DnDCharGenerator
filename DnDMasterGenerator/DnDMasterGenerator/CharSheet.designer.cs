@@ -82,6 +82,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtPlayerName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.paneAbilities.SuspendLayout();
             this.panelSaves.SuspendLayout();
             this.SuspendLayout();
@@ -563,11 +565,30 @@
             this.label3.TabIndex = 49;
             this.label3.Text = "Background Info";
             // 
+            // txtPlayerName
+            // 
+            this.txtPlayerName.Location = new System.Drawing.Point(286, 83);
+            this.txtPlayerName.Name = "txtPlayerName";
+            this.txtPlayerName.ReadOnly = true;
+            this.txtPlayerName.Size = new System.Drawing.Size(100, 22);
+            this.txtPlayerName.TabIndex = 51;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(283, 63);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 17);
+            this.label4.TabIndex = 50;
+            this.label4.Text = "Player Name:";
+            // 
             // CharSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 709);
+            this.Controls.Add(this.txtPlayerName);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.richTextBox3);
             this.Controls.Add(this.label2);
@@ -671,5 +692,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtPlayerName;
+        private System.Windows.Forms.Label label4;
     }
 }

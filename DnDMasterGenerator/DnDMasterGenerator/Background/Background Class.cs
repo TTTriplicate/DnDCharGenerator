@@ -14,14 +14,15 @@ namespace DnDClassesTest
         public String[] ToolProf = { "Artisan's Tools", "Disguise Kit", "Forgery Kit", "Gaming Set", "Herbalism Kit", "Musical Instrument", "Navigator's tools", "Poisoner's kit", "Theives' Tools" };
         public String[] BACKGROUNDS = { "Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin" };
         public string[] lines;
-        public string background;
+        //public string background;
         protected int numLang = 0;
         //public String[] SkillProfs = { "Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Preformance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival" };
 
-        public string Personality, Ideal, Flaw, Bond; 
+        public string Personality, Ideal, Flaw, Bond, Background;
+
         public Background_Class()//string background)
         {
-            setBackground(background);
+            //setBackground(background);
             //BackgroundForm form = new BackgroundForm(this);
             //setBackground(background);
             //string[] lines;
@@ -31,13 +32,16 @@ namespace DnDClassesTest
 
         public Background_Class(string background)
         {
-            this.background = background;
+            this.Background = background;
+            loadFile(background);
+            Traits();
         }
+
         public void loadFile(string background)
         {
-            string choice = "";
-            this.background = background;
-            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Background\" + this.background + ".txt");
+            //string choice = "";
+            //this.background = background;
+            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Background\" + background + ".txt");
             lines = File.ReadAllLines(path);
             //choice = background;
         }
@@ -60,7 +64,7 @@ namespace DnDClassesTest
 
         //public void SkillProfs(ref string skillOne)
 
-        public void Traits(ref string Personality, ref string Ideal, ref string Flaw, ref string Bond)
+        public void Traits()
         {
             string[] personalities = { "f", "f", "f", "f", "f", "f", "f", "f" };
             string[] ideals = { "f", "f", "f", "f", "f", "f" };
@@ -82,10 +86,6 @@ namespace DnDClassesTest
             this.Flaw = flaws[RanNumGen(6)];
             this.Bond = bonds[RanNumGen(6)];
 
-            Personality = personalities[RanNumGen(8)];
-            Ideal = ideals[RanNumGen(6)];
-            Flaw = flaws[RanNumGen(6)];
-            Bond = bonds[RanNumGen(6)];
             if (lines.Contains("L1"))
                 numLang = 1;
             else if (lines.Contains("L2"))
@@ -103,14 +103,34 @@ namespace DnDClassesTest
             return set = randNum;
         }
 
-        public void setBackground(string background)
+        public string getPersonality()
         {
-            this.background = background;
+            return Personality;
         }
 
-        public Background_Class getBackground()
+        public string getIdeal()
         {
-            return this;
+            return Ideal;
+        }
+
+        public string getBond()
+        {
+            return Bond;
+        }
+
+        public string getFlaw()
+        {
+            return Flaw;
+        }
+
+        public string getBackground()
+        {
+            return Background;
+        }
+
+        public void setBackground(string background)
+        {
+            //this.background = background;
         }
 
         public static Background_Class InteractiveChoice()
@@ -119,7 +139,7 @@ namespace DnDClassesTest
             DialogResult result = form.ShowDialog();
             if (result == DialogResult.OK)
             {
-                return form.Character;
+                return form.selected;
             }
             else return new Background_Class();
         }

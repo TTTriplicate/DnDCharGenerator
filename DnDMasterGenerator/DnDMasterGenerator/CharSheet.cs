@@ -24,6 +24,7 @@ namespace DnDClassesTest
             lblTraits.Hide();
             DisplayChar = leeroy;
             txtName.Text = leeroy._name;
+            txtPlayerName.Text = leeroy._playerName;
             txtLevel.Text = leeroy._level.ToString();
             txtClass.Text = leeroy._class.ProfessionName();
             int[] abilfill = new int[12];
@@ -69,14 +70,13 @@ namespace DnDClassesTest
                 }
             }
 
-            string Personality = "f", Ideal = "f", Flaw = "f", Bond = "f", Background = "f";
+            //string Personality = "f", Ideal = "f", Flaw = "f", Bond = "f", Background = "f";
             //leeroy.Background.Traits(ref Personality, ref Ideal, ref Flaw, ref Bond);
-            leeroy.backgroundInfo(ref Personality, ref Ideal, ref Flaw, ref Bond, ref Background);
-            richTextBox3.Text += Personality + "\n";
-            richTextBox3.Text += Ideal + "\n";
-            richTextBox3.Text += Bond + "\n";
-            richTextBox3.Text += Flaw + "\n";
-            txtBackground.Text = Background;
+            richTextBox3.Text += leeroy.CharBackground.getPersonality() + "\n";
+            richTextBox3.Text += leeroy.CharBackground.getIdeal() + "\n";
+            richTextBox3.Text += leeroy.CharBackground.getBond() + "\n";
+            richTextBox3.Text += leeroy.CharBackground.getFlaw() + "\n";
+            txtBackground.Text = leeroy.CharBackground.getBackground();
 
 
 
@@ -85,6 +85,8 @@ namespace DnDClassesTest
             {
                 displayInventory.Text += (leeroy.getInventory()[i]) + "\n";
             }
+
+            PDF_Filler fhsduf = new PDF_Filler(leeroy);
         }
 
         private void displayDEXMod_TextChanged(object sender, EventArgs e)

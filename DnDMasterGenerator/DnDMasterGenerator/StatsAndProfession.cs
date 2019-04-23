@@ -15,6 +15,7 @@ namespace DnDClassesTest
         public int level { get; set; }
         public int[] Abilities { get; set; }
         public string Name { get; set; }
+        public string PlayerName { get; set; }
 
         private void comboClass_SelectedIndexChanged(object sender, System.EventArgs e)
         {
@@ -60,12 +61,18 @@ namespace DnDClassesTest
             proPath = comboSubClass.SelectedIndex;
             level = (int)numLevel.Value;
             Name = txtName.Text;
+            PlayerName = playerNameBox.Text;
             Abilities = new int[6] { (int)numSTR.Value, (int)numDEX.Value, (int)numCON.Value, (int)numINT.Value, (int)numWIS.Value, (int)numCHA.Value };
             DialogResult = DialogResult.OK;
             this.Close();
         }
 
         private void numLevel_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void playerNameBox_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -12,7 +12,7 @@ namespace DnDClassesTest
 {
     public partial class BackgroundForm : Form
     {
-        public Background_Class Character = new Background_Class();
+        //public Background_Class Character = new Background_Class();
 
         public string Personality, Ideal, Bond, Flaw;
 
@@ -43,7 +43,7 @@ namespace DnDClassesTest
 
         private void langList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (langList.CheckedItems.Count == Character.getNumLang())
+            if (langList.CheckedItems.Count == selected.getNumLang())
                 langList.Enabled = false;
         }
 
@@ -52,23 +52,19 @@ namespace DnDClassesTest
 
         }
 
+        public Background_Class selected { get; set; }
+
         private void BGChoice_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string Personality = "", Ideal = "", Flaw = "", Bond = "";
-            string choice = BGChoice.Text;
-            //Background_Class Character = new Background_Class(choice);
-
-            Character.loadFile(choice);
-            //TEXTBOX.Text = choice;
-            //TEXTBOX.Text = Character.PersonalityTrait();
-            Character.Traits(ref Personality, ref Ideal, ref Flaw, ref Bond);
-            PERSONALITY.Text = Personality;
-            IDEAL.Text = Ideal;
-            FLAW.Text = Flaw;
-            BOND.Text = Bond;
+            selected = new Background_Class(BGChoice.SelectedItem.ToString());
+            
+            PERSONALITY.Text = selected.Personality;
+            IDEAL.Text = selected.Ideal;
+            FLAW.Text = selected.Flaw;
+            BOND.Text = selected.Bond;
 
 
-            if (Character.getNumLang() > 0)
+            if (selected.getNumLang() > 0)
             {
                 chooseLang();
                 langList.Visible = true;
