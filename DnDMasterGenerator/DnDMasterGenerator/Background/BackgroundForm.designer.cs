@@ -35,7 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BGChoice = new System.Windows.Forms.ComboBox();
             this.btnNext = new System.Windows.Forms.Button();
-            this.langList = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // BOND
@@ -111,7 +110,7 @@
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(231, 492);
+            this.btnNext.Location = new System.Drawing.Point(218, 348);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 13;
@@ -119,26 +118,11 @@
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // langList
-            // 
-            this.langList.CheckOnClick = true;
-            this.langList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.langList.FormattingEnabled = true;
-            this.langList.Location = new System.Drawing.Point(27, 338);
-            this.langList.MultiColumn = true;
-            this.langList.Name = "langList";
-            this.langList.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.langList.Size = new System.Drawing.Size(494, 123);
-            this.langList.TabIndex = 14;
-            this.langList.Visible = false;
-            this.langList.SelectedIndexChanged += new System.EventHandler(this.langList_SelectedIndexChanged);
-            // 
             // BackgroundForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 537);
-            this.Controls.Add(this.langList);
+            this.ClientSize = new System.Drawing.Size(545, 456);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.BOND);
             this.Controls.Add(this.FLAW);
@@ -162,6 +146,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox BGChoice;
         private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.CheckedListBox langList;
     }
 }

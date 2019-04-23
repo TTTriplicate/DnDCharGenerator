@@ -82,8 +82,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPlayerName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.paneAbilities.SuspendLayout();
             this.panelSaves.SuspendLayout();
             this.SuspendLayout();
@@ -445,7 +443,7 @@
             // lblMelee
             // 
             this.lblMelee.AutoSize = true;
-            this.lblMelee.Location = new System.Drawing.Point(19, 314);
+            this.lblMelee.Location = new System.Drawing.Point(136, 311);
             this.lblMelee.Name = "lblMelee";
             this.lblMelee.Size = new System.Drawing.Size(93, 17);
             this.lblMelee.TabIndex = 34;
@@ -454,7 +452,7 @@
             // lblRangedAttack
             // 
             this.lblRangedAttack.AutoSize = true;
-            this.lblRangedAttack.Location = new System.Drawing.Point(7, 354);
+            this.lblRangedAttack.Location = new System.Drawing.Point(124, 351);
             this.lblRangedAttack.Name = "lblRangedAttack";
             this.lblRangedAttack.Size = new System.Drawing.Size(105, 17);
             this.lblRangedAttack.TabIndex = 35;
@@ -462,7 +460,7 @@
             // 
             // txtMelee
             // 
-            this.txtMelee.Location = new System.Drawing.Point(118, 311);
+            this.txtMelee.Location = new System.Drawing.Point(235, 308);
             this.txtMelee.Name = "txtMelee";
             this.txtMelee.ReadOnly = true;
             this.txtMelee.Size = new System.Drawing.Size(29, 22);
@@ -470,7 +468,7 @@
             // 
             // txtRanged
             // 
-            this.txtRanged.Location = new System.Drawing.Point(118, 351);
+            this.txtRanged.Location = new System.Drawing.Point(235, 348);
             this.txtRanged.Name = "txtRanged";
             this.txtRanged.ReadOnly = true;
             this.txtRanged.Size = new System.Drawing.Size(29, 22);
@@ -565,30 +563,11 @@
             this.label3.TabIndex = 49;
             this.label3.Text = "Background Info";
             // 
-            // txtPlayerName
-            // 
-            this.txtPlayerName.Location = new System.Drawing.Point(286, 83);
-            this.txtPlayerName.Name = "txtPlayerName";
-            this.txtPlayerName.ReadOnly = true;
-            this.txtPlayerName.Size = new System.Drawing.Size(100, 22);
-            this.txtPlayerName.TabIndex = 51;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(283, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 17);
-            this.label4.TabIndex = 50;
-            this.label4.Text = "Player Name:";
-            // 
             // CharSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 709);
-            this.Controls.Add(this.txtPlayerName);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.richTextBox3);
             this.Controls.Add(this.label2);
@@ -692,7 +671,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPlayerName;
-        private System.Windows.Forms.Label label4;
     }
 }

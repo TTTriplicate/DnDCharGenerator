@@ -24,7 +24,6 @@ namespace DnDClassesTest
             lblTraits.Hide();
             DisplayChar = leeroy;
             txtName.Text = leeroy._name;
-            txtPlayerName.Text = leeroy._playerName;
             txtLevel.Text = leeroy._level.ToString();
             txtClass.Text = leeroy._class.ProfessionName();
             int[] abilfill = new int[12];
@@ -56,35 +55,22 @@ namespace DnDClassesTest
                 txtSpecial.Text += i + ", ";
             txtRace.Text = leeroy.CharRace.getRace();
 
-            if(leeroy._class.ProfessionName() == "Cleric")
-            {
-                try
-                {
-                    bool[] test = Cleric.Proficiencies(leeroy._class._proPath);
-                    foreach (bool i in test)
-                        Console.WriteLine(i);
-                }
-                catch (Exception)
-                {
-
-                }
-            }
-
-            //string Personality = "f", Ideal = "f", Flaw = "f", Bond = "f", Background = "f";
+            string Personality = "f", Ideal = "f", Flaw = "f", Bond = "f", Background = "f";
             //leeroy.Background.Traits(ref Personality, ref Ideal, ref Flaw, ref Bond);
-            richTextBox3.Text += leeroy.CharBackground.getPersonality() + "\n";
-            richTextBox3.Text += leeroy.CharBackground.getIdeal() + "\n";
-            richTextBox3.Text += leeroy.CharBackground.getBond() + "\n";
-            richTextBox3.Text += leeroy.CharBackground.getFlaw() + "\n";
-            txtBackground.Text = leeroy.CharBackground.getBackground();
+            leeroy.backgroundInfo(ref Personality, ref Ideal, ref Flaw, ref Bond, ref Background);
+            richTextBox3.Text += Personality + "\n";
+            richTextBox3.Text += Ideal + "\n";
+            richTextBox3.Text += Bond + "\n";
+            richTextBox3.Text += Flaw + "\n";
+            txtBackground.Text = Background;
+
+
 
 
             for (int i = 0; i < leeroy.getInventory().Count(); i++)
             {
                 displayInventory.Text += (leeroy.getInventory()[i]) + "\n";
             }
-            
-            PDF_Filler fhsduf = new PDF_Filler(leeroy);
         }
 
         private void displayDEXMod_TextChanged(object sender, EventArgs e)
@@ -100,12 +86,6 @@ namespace DnDClassesTest
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void Attack_Click(object sender, EventArgs e)
-        {
-            AttackRoll attack = new AttackRoll();
-            attack.Show();
         }
     }
 }

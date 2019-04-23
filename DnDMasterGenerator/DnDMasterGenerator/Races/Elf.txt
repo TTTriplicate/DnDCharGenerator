@@ -9,12 +9,12 @@ Darkvision(60ft), Keen Senses, Fey Ancestry, Trance
 
 High
 000100
-Elf Weapon Training, Cantrip, +1 Language
+Elf Weapon Training, Cantrip(Intelligence), +1 Language
 
 Wood
 000010
-Elf Weapon Training, Fleet of Foot, Mask of the Wild
+Elf Weapon Training, Mask of the Wild, Fleet of Foot
 
 Dark
 000001
-Superior Darkvision(120), Sunlight Sensitivity, Drow Magic, Drow Weapon Training
+Superior Darkvision(120ft), Sunlight Sensitivity, Drow Magic, Drow Weapon Training

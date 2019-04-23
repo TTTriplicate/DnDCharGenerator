@@ -12,11 +12,9 @@ namespace DnDClassesTest
 {
     public partial class BackgroundForm : Form
     {
-        //public Background_Class Character = new Background_Class();
+        public Background_Class Character = new Background_Class();
 
         public string Personality, Ideal, Bond, Flaw;
-
-        string[] allLanguages = { "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic", "Deep Speech", "Infernal", "Primordial", "Sylvan", "Undercommon" };
 
         public BackgroundForm(ref string Personality, ref string Ideal, ref string Bond, ref string Flaw)
         {
@@ -41,47 +39,25 @@ namespace DnDClassesTest
             this.Close();
         }
 
-        private void langList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (langList.CheckedItems.Count == selected.getNumLang())
-                langList.Enabled = false;
-        }
-
         private void PERSONALITY_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        public Background_Class selected { get; set; }
-
         private void BGChoice_SelectedIndexChanged(object sender, EventArgs e)
         {
-            selected = new Background_Class(BGChoice.SelectedItem.ToString());
-            
-            PERSONALITY.Text = selected.Personality;
-            IDEAL.Text = selected.Ideal;
-            FLAW.Text = selected.Flaw;
-            BOND.Text = selected.Bond;
+            string Personality = "", Ideal = "", Flaw = "", Bond = "";
+            string choice = BGChoice.Text;
+            //Background_Class Character = new Background_Class(choice);
 
-
-            if (selected.getNumLang() > 0)
-            {
-                chooseLang();
-                langList.Visible = true;
-            }
-            else
-                langList.Visible = false;
-        }
-
-        protected void chooseLang()
-        {
-            Race race = new Race("Half-Orc");
-            langList.Items.Clear();
-            for (int i = 0; i < 8; i++) {
-                if (!(race.getLangRace()[i])) {
-                    langList.Items.Add(allLanguages[i]);
-                }
-            }
+            Character.loadFile(choice);
+            //TEXTBOX.Text = choice;
+            //TEXTBOX.Text = Character.PersonalityTrait();
+            Character.Traits(ref Personality, ref Ideal, ref Flaw, ref Bond);
+            PERSONALITY.Text = Personality;
+            IDEAL.Text = Ideal;
+            FLAW.Text = Flaw;
+            BOND.Text = Bond;
         }
 
         public void setInfo(ref string Personality, ref string Ideal, ref string Flaw, ref string Bond)

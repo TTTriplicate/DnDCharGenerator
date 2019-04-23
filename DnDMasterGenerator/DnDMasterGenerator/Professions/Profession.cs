@@ -92,11 +92,10 @@ namespace DnDClassesTest
 
         public abstract List<string> ClassFeatures();
 
-        public static Profession InteractiveChoice(out int[] abilities, out string name, out string playerName)
+        public static Profession InteractiveChoice(out int[] abilities, out string name)
         {
             int p = 1, proPath = 9, level = 12;
             name = "";
-            playerName = "";
             Profession CharClass = new Bard();
 
             using (var first = new StatsAndProfession())
@@ -110,7 +109,6 @@ namespace DnDClassesTest
                     level = first.level;
                     abilities = first.Abilities;
                     name = first.Name;
-                    playerName = first.PlayerName;
                 }
                 switch (p)
                 {

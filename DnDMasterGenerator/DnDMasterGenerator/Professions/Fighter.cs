@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,8 +20,18 @@ namespace DnDClassesTest
                 PickedSkills = value;
             }
         }
-        protected override List<string> Features{ get; set; }
-
+        protected override List<string> Features
+        {
+            get
+            {
+                return Features;
+            }
+            set
+            {//contains full listing of class features 
+             //to be passed to character sheet through ClassFeatures method
+                Features = ClassFeatures();
+            }
+        }
         public Fighter()
         {
             this._level = 1;
@@ -38,7 +47,6 @@ namespace DnDClassesTest
             this._numProSkills = 2;
             this._proPath = path;
             this.AbilityIncreaseLevels = new int[] { 4, 6, 8, 12, 14, 16, 19 };
-            this.Features = ClassFeatures();
         }
         public override bool[] ClassSkills()
         {
@@ -69,29 +77,45 @@ namespace DnDClassesTest
         public override List<string> ClassFeatures()
         {
             List<string> features = new List<string>();
-            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\FighterClassFeatures.txt");
-            //string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
-            string[] temp = new string[19];
-            temp = File.ReadAllLines(path);
-            foreach (string i in temp)
+            /*features.Add(Rage());//0
+            features.Add(UnarmoredDefense());//1
+            features.Add(RecklessAttack());//2
+            features.Add(DangerSense());//3
+            if (_proPath == 0) features.Add(Frenzy());//4
+            else
             {
-                features.Add(i);
+                features.Add(SpiritSeeker());//4
+                features.Add(TotemSpirit());//5
             }
+            features.Add(ExtraAttack());//5 or 6
+            Features.Add(FastMovement());//6 or 7
+            features.Add((_proPath == 0) ? MindlessRage() : AspectOfTheBeast());
+            features.Add(FeralInstinct());
+            features.Add(BrutalCrit());
+            features.Add((_proPath == 0) ? IntimidatingPresence() : SpiritWalker());
+            features.Add(RelentlessRage());
+            features.Add((_proPath == 0) ? Retaliation() : TotemAttunement());
+            features.Add(PersistentRage());
+            features.Add(IndomitableMight());*/
 
             return features;
         }
         public override bool[] Unlocked()
         {//this might need jesus on this one...three classes in a trenchcoat....
-            bool[] unlock = new bool[9];
+            bool[] unlock = new bool[13];
             unlock[0] = true;
             if (this._level == 2) unlock[1] = true;
             if (this._level == 3) unlock[2] = true;
             if (this._level == 5) unlock[3] = true;
-            if (this._level == 7) unlock[4] = true;
-            if (this._level == 9) unlock[5] = true;
-            if (this._level == 10) unlock[6] = true;
-            if (this._level == 15) unlock[7] = true;
-            if (this._level == 18) unlock[8] = true;
+            if (this._level == 6) unlock[4] = true;
+            if (this._level == 7) unlock[5] = true;
+            if (this._level == 9) unlock[6] = true;
+            if (this._level == 10) unlock[7] = true;
+            if (this._level == 11) unlock[8] = true;
+            if (this._level == 14) unlock[9] = true;
+            if (this._level == 15) unlock[10] = true;
+            if (this._level == 18) unlock[11] = true;
+            if (this._level == 20) unlock[12] = true;
             return unlock;
         }
         public override List<string> CurrentFeatures()
@@ -99,44 +123,30 @@ namespace DnDClassesTest
             List<string> current = new List<string>();
             bool[] unlock = this.Unlocked();
             int i;
-            for (i = 0; i <= 8; ++i)
+            for (i = 12; i <= 0; --i)
             {
-                if (!unlock[i]) break;
+                if (unlock[i]) break;
             }
-            current.Add(Features[0]);
-            if (i == 1) current = Features.GetRange(0, 1);
-            else if (i == 2) current = Features.GetRange(0, 2);
-            else if (i >= 5) current = Features.GetRange(0, 3);
-
-            if (_proPath == 0)
+            if (i == 12) return Features;
+            else if (_proPath == 0)
             {
-                if (i < 2) return current;
-                if (i >= 2) current.Add(Features[4]);
-                if (i >= 4) current.Add(Features[5]);
-                if (i >= 6) current.Add(Features[6]);
-                if (i >= 7) current.Add(Features[7]);
-                if (i >= 8) current.Add(Features[8]);
+                if (i == 11) current = Features.GetRange(0, 13);
+                else if (i == 10) current = Features.GetRange(0, 12);
+                else if (i == 9) current = Features.GetRange(0, 11);
+                else if (i == 3) current = Features.GetRange(0, 3);
+                else if (i == 2) current = Features.GetRange(0, 2);
+                else if (i == 2) current = Features.GetRange(0, 4);
+                else current = Features.GetRange(0, 1);
             }
             else if (_proPath == 1)
             {
-                if (i < 2) return current;
-                if (i >= 2)
-                {
-                    current.Add(Features[9]);
-                    current.Add(Features[10]);
-                }
-                if (i >= 4) current.Add(Features[11]);
-                if (i >= 6) current.Add(Features[12]);
-                if (i >= 7) current.Add(Features[13]);
-            }
-            else if (_proPath == 2)
-            {
-                if (i < 2) return current;
-                if (i >= 2) current.Add(Features[14]);
-                if (i >= 4) current.Add(Features[15]);
-                if (i >= 6) current.Add(Features[16]);
-                if (i >= 7) current.Add(Features[17]);
-                if (i >= 8) current.Add(Features[18]);
+                if (i == 11) current = Features.GetRange(0, 14);
+                else if (i == 5) current = Features.GetRange(0, 6);
+                else if (i == 4) current = Features.GetRange(0, 5);
+                else if (i == 3) current = Features.GetRange(0, 3);
+                else if (i == 2) current = Features.GetRange(0, 2);
+                else if (i == 2) current = Features.GetRange(0, 1);
+                else current.Add(Features[0]);
 
             }
             return current;

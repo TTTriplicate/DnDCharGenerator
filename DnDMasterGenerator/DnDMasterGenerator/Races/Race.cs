@@ -20,14 +20,16 @@ namespace DnDClassesTest
         };
         string[] allLanguages = { "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic", "Deep Speech", "Infernal", "Primordial", "Sylvan", "Undercommon" };
         protected int[] AbilityAdjust = new int[6];
+        //protected int[] subAA = new int[6];
         protected string age;
         protected string alignment;
         protected string size;
         protected int speed;
         protected bool[] languages = new bool[16];
-        protected string[] specialAbilities = new string[7];
-        protected string[] temp = new string[3];
+        protected string[] specialAbilities = new string[15];
+        protected string[] temp = new string[10];
         protected string race;
+        protected string subRace;
         public string[] info;
 
 
@@ -36,6 +38,11 @@ namespace DnDClassesTest
             //Fixed to be universal with project -Jack
             String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Races\" + r + ".txt");
             info = System.IO.File.ReadAllLines(path);
+            setAll();
+        }
+
+        protected void setAll()
+        {
             race = info[0].Substring(8);
             for (int i = 0; i < 6; i++)
                 AbilityAdjust[i] = (int)Char.GetNumericValue(info[1][i]);
@@ -56,6 +63,50 @@ namespace DnDClassesTest
 
             if (info.Last() != info[6])
                 specialAbilities = info[7].Split(',');
+            setSubRace("");
+        }
+
+        public void subChange()
+        {
+            int i;
+            specialAbilities = info[7].Split(',');
+            for (i = 9; i < 18; i += 4)
+                if (info[i] == subRace)
+                    break;
+            for (int j = 0; j < 6; j++)
+                AbilityAdjust[j] = (int)Char.GetNumericValue(info[1][j]) + (int)Char.GetNumericValue(info[i + 1][j]);
+            Array.Resize(ref specialAbilities, 20);
+            for (int j = 0; j < specialAbilities.Length; j++)
+            {
+                if (specialAbilities.ElementAt(j) == null) {
+                    info[i + 2].Split(',').CopyTo(specialAbilities, j);
+                    break;
+                }
+            }
+            if (race == "Elf")
+                overWrite();
+        }
+
+        protected void overWrite()
+        {
+            if (specialAbilities[0] == "Darkvision(60ft)" && specialAbilities[4] == "Superior Darkvision(120ft)")
+            {
+                for (int i = 0; i < specialAbilities.Length - 1; i++)
+                {
+                    specialAbilities[i] = specialAbilities[i + 1];
+                }
+            }
+            else if (specialAbilities[6] == " Fleet of Foot")
+            {
+                speed = 35;
+                specialAbilities[6] = null;
+            }
+            else if (specialAbilities[6] == " +1 Language")
+            {
+                //add one to jacks numLang
+                specialAbilities[6] = null;
+            }
+
         }
 
 
@@ -108,6 +159,20 @@ namespace DnDClassesTest
         {
             return race;
         }
+        public int getSubRace()
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                if (race == races[0, i])
+                    return i;
+            }
+            return 0;
+        }
+        public void setSubRace(string sr)
+        {
+            subRace = sr;
+        }
+
         public static Race InteractiveChoice()
         {
             using (var form = new RaceSelect())

@@ -22,21 +22,6 @@ namespace DnDClassesTest
                 this.Name = value;
             }
         }
-        protected string playerName;
-        public string _playerName
-        {
-            get
-            {
-                return this.playerName;
-            }
-            set
-            {
-                this.playerName = value;
-                this.playerName = value;
-                this.playerName = value;
-                this.playerName = value;
-            }
-        }
         protected int Level;
         public int _level
         {
@@ -111,19 +96,18 @@ namespace DnDClassesTest
             }
             //pretty sure I need something else here but I don't know what
         }
-        public Background_Class CharBackground { get; set; }
         //get and set(Race library, Dylan)
         //protected Background_Class Background { get; set; }
-        //public static string blah = "f";
-        //public BackgroundForm background = new BackgroundForm(ref blah);
-        //public Background_Class Background = new Background_Class(blah);
-        //public void backgroundInfo(ref string Personality, ref string Ideal, ref string Flaw, ref string Bond, ref string BACKGROUND)
-        //{
-        //    blah = "Acolyte";
-        //    BACKGROUND = "Acolyte";
-        //    Background.loadFile(blah);
-        //    //Background.Traits(ref Personality, ref Ideal, ref Flaw, ref Bond);
-        //}
+        public static string blah = "f";
+        public BackgroundForm background = new BackgroundForm(ref blah);
+        public Background_Class Background = new Background_Class(blah);
+        public void backgroundInfo(ref string Personality, ref string Ideal, ref string Flaw, ref string Bond, ref string BACKGROUND)
+        {
+            blah = "Acolyte";
+            BACKGROUND = "Acolyte";
+            Background.loadFile(blah);
+            Background.Traits(ref Personality, ref Ideal, ref Flaw, ref Bond);
+        }
         //get and set(Background libraries, Jack)
         //       protected List<Gear> Inventory;
         protected CharGear gear { get; set; }
@@ -142,23 +126,20 @@ namespace DnDClassesTest
         }
         //mark which saves get proficiency bonus, get from CharClass
         public List<string> inventory = new List<string>();
-        public int gold = 0;
-
         public DnDCharacter()
         {
             //CharGear gear = new CharGear("Barbarian", "Folk Hero", 2);
             //List<string> inventory = gear.getInventoryString();
             int[] a = new int[6];
-            string charName, playName;
-            this.CharClass = Profession.InteractiveChoice(out a, out charName, out playName);
-            this._abilities = a;
+            string charName;
+            this.CharClass = Profession.InteractiveChoice(out a, out charName);
             this._HP = this._class._hitDie;
             this._HP += AbilityModifiers()[2];
+            this._abilities = a;
             this._name = charName;
-            this._playerName = playName;
             this._level = this.CharClass._level;
             if (this._level > 1)
-                this._HP += DnDCharacter.RollHP(this._level - 1, this._class._hitDie, this._HP) + ((this._level - 1) * this.AbilityModifiers()[2]);
+                this._HP += DnDCharacter.RollHP(this._level, this._class._hitDie) + ((this._level - 1) * this.AbilityModifiers()[2]);
             this.CharRace = Race.InteractiveChoice();
             raceAdditions();
             //Background selector
@@ -167,13 +148,12 @@ namespace DnDClassesTest
             //skills picker is broken....all individual checkboxes?
             //needs the remaining interactive constructor pieces
             //and I forgot to set the ability scores off that form....Chris
-            CharBackground =  Background_Class.InteractiveChoice();
+            Background_Class Background = Background_Class.InteractiveChoice();
             
 
 
-            CharGear gear = new CharGear(this._class.ProfessionName(), CharBackground.Background , AbilityModifiers()[1]);
+            CharGear gear = new CharGear(this._class.ProfessionName(), "Acolyte", AbilityModifiers()[1]);
             inventory = gear.getInventoryString();
-            gold = gear.getGP();
         }
         /*   public DnDCharacter(int level, int p, int proPath)
            {
@@ -234,16 +214,14 @@ namespace DnDClassesTest
             }
             return toadd;
         }
-        private static int RollHP(int l, int d, int hp)
+        private static int RollHP(int l, int d)
         {
             Random hitdie = new Random();
-            if (l == 1)
-            {
-                return hitdie.Next(1, d);
-            }
+            int hp = 0;
+            if (l == 0) return hitdie.Next(1, d);
             else
             {
-                hp += RollHP(l - 1, d, hp);
+                hp += RollHP(l - 1, d);
             }
             return hp;
         }

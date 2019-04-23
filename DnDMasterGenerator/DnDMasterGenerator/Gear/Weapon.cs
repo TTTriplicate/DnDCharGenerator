@@ -35,7 +35,7 @@ namespace DnDClassesTest
          */
         public override string toString()
         {
-            string temp =  name + "    " + numDice + "d" + damageFactor;
+            string temp =  name + "    " + damageFactor + "d" + numDice;
             if (finesse)
             {
                 temp += "    Finesse";
@@ -76,11 +76,6 @@ namespace DnDClassesTest
         public override string getName()
         {
             return name;
-        }
-
-        public int getDamage()
-        {
-            return damageFactor;
         }
 
     }

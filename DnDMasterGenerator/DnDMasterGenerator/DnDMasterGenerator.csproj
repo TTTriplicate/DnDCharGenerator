@@ -33,12 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BitMiracle.Docotic.Pdf, Version=5.8.9425.0, Culture=neutral, PublicKeyToken=221650e173990c07, processorArchitecture=MSIL">
-      <HintPath>..\packages\BitMiracle.Docotic.Pdf.5.8.9425\lib\net40\BitMiracle.Docotic.Pdf.dll</HintPath>
-    </Reference>
-    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
-      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AttackRoll.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AttackRoll.Designer.cs">
-      <DependentUpon>AttackRoll.cs</DependentUpon>
-    </Compile>
     <Compile Include="Background\Background Class.cs" />
     <Compile Include="Background\BackgroundForm.cs">
       <SubType>Form</SubType>
@@ -89,7 +77,6 @@
       <DependentUpon>GearForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Gear\Weapon.cs" />
-    <Compile Include="PDF Filler.cs" />
     <Compile Include="Professions\Barbarian.cs" />
     <Compile Include="Professions\Bard.cs" />
     <Compile Include="Professions\Cleric.cs" />
@@ -124,9 +111,6 @@
     <Compile Include="StatsAndProfession.designer.cs">
       <DependentUpon>StatsAndProfession.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AttackRoll.resx">
-      <DependentUpon>AttackRoll.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Background\BackgroundForm.resx">
       <DependentUpon>BackgroundForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,7 +141,6 @@
     <EmbeddedResource Include="StatsAndProfession.resx">
       <DependentUpon>StatsAndProfession.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -186,12 +169,8 @@
     <Content Include="Background\Soldier.txt" />
     <Content Include="Background\Urchin.txt" />
     <Content Include="Professions\ClassFeatures\BarbarianClassFeatures.txt" />
-    <Content Include="Professions\ClassFeatures\BardClassFeatures.txt" />
+    <Content Include="Professions\ClassFeatures\BardFeatures.txt" />
     <Content Include="Professions\ClassFeatures\ClericClassFeatures.txt" />
-    <Content Include="Professions\ClassFeatures\DruidClassFeatures.txt" />
-    <Content Include="Professions\ClassFeatures\FighterClassFeatures.txt" />
-    <Content Include="Professions\ClassFeatures\MonkClassFeatures.txt" />
-    <Content Include="Professions\ClassFeatures\PaladinClassFeatures.txt" />
     <Content Include="Races\Dragonborn.txt" />
     <Content Include="Races\Dwarf.txt" />
     <Content Include="Races\Elf.txt" />

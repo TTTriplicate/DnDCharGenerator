@@ -29,127 +29,49 @@ C:\Users\john.canducci\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj
 C:\Users\john.canducci\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.GenerateResource.Cache
 C:\Users\john.canducci\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.exe
 C:\Users\john.canducci\OneDrive - SNHU\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.pdb
-C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe.config
-C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe
-C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.pdb
-C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csprojResolveAssemblyReference.cache
-C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.BackgroundForm.resources
-C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.CharSheet.resources
-C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.LandingPage.resources
-C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.GearForm.resources
-C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Properties.Resources.resources
-C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.RaceSelect.resources
-C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.SkillSelect.resources
-C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.StatsAndProfession.resources
-C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.GenerateResource.Cache
-C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.exe
-C:\Users\catherine.gallaher\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.pdb
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe.config
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.pdb
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csprojAssemblyReference.cache
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.BackgroundForm.resources
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.CharSheet.resources
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.LandingPage.resources
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.GearForm.resources
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Properties.Resources.resources
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.RaceSelect.resources
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.SkillSelect.resources
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.StatsAndProfession.resources
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.GenerateResource.cache
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.CoreCompileInputs.cache
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.exe
-\\Mac\Home\Documents\OneDrive - SNHU\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.pdb
-\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csprojAssemblyReference.cache
-\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.BackgroundForm.resources
-\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.CharSheet.resources
-\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.LandingPage.resources
-\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.GearForm.resources
-\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Properties.Resources.resources
-\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.RaceSelect.resources
-\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.SkillSelect.resources
-\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.StatsAndProfession.resources
-\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.GenerateResource.cache
-\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.CoreCompileInputs.cache
-\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.exe
-\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.pdb
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csprojAssemblyReference.cache
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.BackgroundForm.resources
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.CharSheet.resources
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.LandingPage.resources
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.GearForm.resources
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Properties.Resources.resources
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.RaceSelect.resources
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.SkillSelect.resources
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.StatsAndProfession.resources
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.GenerateResource.cache
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.CoreCompileInputs.cache
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.exe
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.pdb
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe.config
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.pdb
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe.config
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.pdb
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csprojResolveAssemblyReference.cache
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.BackgroundForm.resources
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.CharSheet.resources
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.LandingPage.resources
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.GearForm.resources
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Properties.Resources.resources
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.RaceSelect.resources
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.SkillSelect.resources
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.StatsAndProfession.resources
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.GenerateResource.Cache
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.exe
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.pdb
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe.config
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.pdb
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csprojResolveAssemblyReference.cache
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.BackgroundForm.resources
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.CharSheet.resources
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.LandingPage.resources
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.GearForm.resources
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Properties.Resources.resources
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.RaceSelect.resources
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.SkillSelect.resources
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.StatsAndProfession.resources
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.GenerateResource.Cache
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.exe
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.pdb
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\BitMiracle.Docotic.Pdf.dll
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\itextsharp.dll
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\BitMiracle.Docotic.Pdf.xml
-C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\itextsharp.xml
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\BitMiracle.Docotic.Pdf.dll
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\itextsharp.dll
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\BitMiracle.Docotic.Pdf.xml
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\itextsharp.xml
-C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.CopyComplete
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\BitMiracle.Docotic.Pdf.dll
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\itextsharp.dll
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\BitMiracle.Docotic.Pdf.xml
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\itextsharp.xml
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe.config
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.pdb
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\BitMiracle.Docotic.Pdf.dll
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\itextsharp.dll
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\BitMiracle.Docotic.Pdf.xml
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\itextsharp.xml
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csprojResolveAssemblyReference.cache
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.BackgroundForm.resources
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.CharSheet.resources
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.LandingPage.resources
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.GearForm.resources
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Properties.Resources.resources
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.RaceSelect.resources
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.SkillSelect.resources
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.StatsAndProfession.resources
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.GenerateResource.Cache
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.exe
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.pdb
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.AttackRoll.resources
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.AttackRoll.resources
+C:\Users\dylan.bryant\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe.config
+C:\Users\dylan.bryant\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe
+C:\Users\dylan.bryant\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.pdb
+C:\Users\dylan.bryant\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csprojResolveAssemblyReference.cache
+C:\Users\dylan.bryant\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.BackgroundForm.resources
+C:\Users\dylan.bryant\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.CharSheet.resources
+C:\Users\dylan.bryant\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.LandingPage.resources
+C:\Users\dylan.bryant\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.GearForm.resources
+C:\Users\dylan.bryant\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Properties.Resources.resources
+C:\Users\dylan.bryant\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.RaceSelect.resources
+C:\Users\dylan.bryant\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.SkillSelect.resources
+C:\Users\dylan.bryant\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.StatsAndProfession.resources
+C:\Users\dylan.bryant\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.GenerateResource.Cache
+C:\Users\dylan.bryant\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.exe
+C:\Users\dylan.bryant\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.pdb
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe.config
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.pdb
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csprojAssemblyReference.cache
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.BackgroundForm.resources
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.CharSheet.resources
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.LandingPage.resources
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.GearForm.resources
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Properties.Resources.resources
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.RaceSelect.resources
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.SkillSelect.resources
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.StatsAndProfession.resources
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.GenerateResource.cache
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.CoreCompileInputs.cache
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.exe
+C:\Users\TheProgrammer\OneDrive\OneDrive - SNHU\SoftwareEngineering\DnD\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.pdb
+C:\Users\dylan.bryant\Documents\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe.config
+C:\Users\dylan.bryant\Documents\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe
+C:\Users\dylan.bryant\Documents\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.pdb
+C:\Users\dylan.bryant\Documents\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csprojResolveAssemblyReference.cache
+C:\Users\dylan.bryant\Documents\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.BackgroundForm.resources
+C:\Users\dylan.bryant\Documents\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.CharSheet.resources
+C:\Users\dylan.bryant\Documents\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.LandingPage.resources
+C:\Users\dylan.bryant\Documents\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.GearForm.resources
+C:\Users\dylan.bryant\Documents\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Properties.Resources.resources
+C:\Users\dylan.bryant\Documents\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.RaceSelect.resources
+C:\Users\dylan.bryant\Documents\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.SkillSelect.resources
+C:\Users\dylan.bryant\Documents\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.StatsAndProfession.resources
+C:\Users\dylan.bryant\Documents\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.GenerateResource.Cache
+C:\Users\dylan.bryant\Documents\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.exe
+C:\Users\dylan.bryant\Documents\Everything\DnDCharGenerator-MVP-Character-Generator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.pdb

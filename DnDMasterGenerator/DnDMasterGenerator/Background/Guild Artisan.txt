@@ -58,6 +58,3 @@ Guild Business
 18: Wagon-makers and wheelwrights
 19: Weavers and dyers
 20: Woodcarvers, coopers, and bowyers
-
-
-L1

@@ -50,8 +50,6 @@
             this.btnRoll = new System.Windows.Forms.Button();
             this.lblCharName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.playerNameBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numSTR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDEX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCON)).BeginInit();
@@ -327,7 +325,6 @@
             0,
             0,
             0});
-            this.numLevel.ValueChanged += new System.EventHandler(this.numLevel_ValueChanged);
             // 
             // lblLevel
             // 
@@ -363,30 +360,11 @@
             this.txtName.Size = new System.Drawing.Size(141, 22);
             this.txtName.TabIndex = 21;
             // 
-            // playerNameBox
-            // 
-            this.playerNameBox.Location = new System.Drawing.Point(362, 40);
-            this.playerNameBox.Name = "playerNameBox";
-            this.playerNameBox.Size = new System.Drawing.Size(141, 22);
-            this.playerNameBox.TabIndex = 23;
-            this.playerNameBox.TextChanged += new System.EventHandler(this.playerNameBox_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(362, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 17);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Player Name:";
-            // 
             // StatsAndProfession
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 386);
-            this.Controls.Add(this.playerNameBox);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblCharName);
             this.Controls.Add(this.btnRoll);
@@ -447,7 +425,5 @@
         private System.Windows.Forms.Button btnRoll;
         private System.Windows.Forms.Label lblCharName;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox playerNameBox;
-        private System.Windows.Forms.Label label1;
     }
 }
