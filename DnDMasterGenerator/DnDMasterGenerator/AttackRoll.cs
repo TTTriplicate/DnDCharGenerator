@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DnDMasterGenerator
+namespace DnDClassesTest
 {
     public partial class AttackRoll : Form
     {
         public AttackRoll()
         {
             InitializeComponent();
+        }
+
+        private void AttackRoll_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

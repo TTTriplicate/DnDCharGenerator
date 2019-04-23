@@ -124,6 +124,9 @@
     <Compile Include="StatsAndProfession.designer.cs">
       <DependentUpon>StatsAndProfession.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AttackRoll.resx">
+      <DependentUpon>AttackRoll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Background\BackgroundForm.resx">
       <DependentUpon>BackgroundForm.cs</DependentUpon>
     </EmbeddedResource>

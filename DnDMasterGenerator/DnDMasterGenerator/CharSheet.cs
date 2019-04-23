@@ -79,8 +79,6 @@ namespace DnDClassesTest
             txtBackground.Text = Background;
 
 
-
-
             for (int i = 0; i < leeroy.getInventory().Count(); i++)
             {
                 displayInventory.Text += (leeroy.getInventory()[i]) + "\n";
@@ -100,6 +98,12 @@ namespace DnDClassesTest
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Attack_Click(object sender, EventArgs e)
+        {
+            AttackRoll attack = new AttackRoll();
+            attack.Show();
         }
     }
 }

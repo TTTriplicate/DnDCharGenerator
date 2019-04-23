@@ -151,3 +151,4 @@ C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDM
 C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.GenerateResource.Cache
 C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.exe
 C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.pdb
+C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.AttackRoll.resources

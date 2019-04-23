@@ -82,6 +82,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.Attack = new System.Windows.Forms.Button();
             this.paneAbilities.SuspendLayout();
             this.panelSaves.SuspendLayout();
             this.SuspendLayout();
@@ -563,11 +564,22 @@
             this.label3.TabIndex = 49;
             this.label3.Text = "Background Info";
             // 
+            // Attack
+            // 
+            this.Attack.Location = new System.Drawing.Point(168, 323);
+            this.Attack.Name = "Attack";
+            this.Attack.Size = new System.Drawing.Size(96, 36);
+            this.Attack.TabIndex = 50;
+            this.Attack.Text = "Attack Roll";
+            this.Attack.UseVisualStyleBackColor = true;
+            this.Attack.Click += new System.EventHandler(this.Attack_Click);
+            // 
             // CharSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 709);
+            this.Controls.Add(this.Attack);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.richTextBox3);
             this.Controls.Add(this.label2);
@@ -671,5 +683,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Attack;
     }
 }
