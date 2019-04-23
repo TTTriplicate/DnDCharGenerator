@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace DnDClassesTest
 {
@@ -20,18 +21,7 @@ namespace DnDClassesTest
                 PickedSkills = value;
             }
         }
-        protected override List<string> Features
-        {
-            get
-            {
-                return Features;
-            }
-            set
-            {//contains full listing of class features 
-             //to be passed to character sheet through ClassFeatures method
-                Features = ClassFeatures();
-            }
-        }
+        protected override List<string> Features { get; set; }
 
         public Rogue()
         {
@@ -48,7 +38,7 @@ namespace DnDClassesTest
             this._proPath = path;
             this._caster = (path == 2) ? true : false;
             this._numProSkills = 4;
-            //this.ClassFeatures = this.Unlocked();
+            this.Features = this.ClassFeatures();
         }
         public override bool[] ClassSkills()
         {//Acrobatics, Athletics, Deception. Insight, Intimidation, Investigation,
@@ -84,17 +74,16 @@ namespace DnDClassesTest
 
         public override List<string> ClassFeatures()
         {
-            int path = this._proPath;
             List<string> features = new List<string>();
-            /*features.Add(Inspiration());//0
-            features.Add(SongOfRest());//1
-            features.Add(path == 0 ? CuttingWords() : CombatInspiration());//2
-            features.Add(FontOfInspiration());//3
-            features.Add(CounterCharm());//4
-            features.Add(path == 0 ? ExtraSecrets() : ExtraAttack());//4
-            features.Add(MagicSecrets());//5
-            features.Add(path == 0 ? PeerlessSkill() : BattleMagic());//6
-            features.Add(SuperiorInspiration());//7*/
+            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\RogueClassFeatures.txt");
+            //string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
+            string[] temp = new string[19];
+            temp = File.ReadAllLines(path);
+            foreach (string i in temp)
+            {
+                features.Add(i);
+            }
+
             return features;
 
         }
@@ -103,15 +92,20 @@ namespace DnDClassesTest
 
         public override bool[] Unlocked()
         {
-            bool[] unlocked = new bool[8]/*{ false, false, false, false, false, false, false, false }*/;
+            bool[] unlocked = new bool[12]/*{ false, false, false, false, false, false, false, false }*/;
             unlocked[0] = true;         //false is the default, shouldn't need that
             if (this._level >= 2) unlocked[1] = true;
             if (this._level >= 3) unlocked[2] = true;
             if (this._level >= 5) unlocked[3] = true;
-            if (this._level >= 6) unlocked[4] = true;
-            if (this._level >= 10) unlocked[5] = true;
-            if (this._level >= 14) unlocked[6] = true;
-            if (this._level == 20) unlocked[7] = true;
+            if (this._level >= 7) unlocked[4] = true;
+            if (this._level >= 9) unlocked[5] = true;
+            if (this._level >= 11) unlocked[6] = true;
+            if (this._level >= 13) unlocked[7] = true;
+            if (this._level >= 14) unlocked[8] = true;
+            if (this._level >= 15) unlocked[9] = true;
+            if (this._level >= 17) unlocked[10] = true;
+            if (this._level >= 18) unlocked[11] = true;
+            if (this._level == 20) unlocked[12] = true;
             return unlocked;
         }
 

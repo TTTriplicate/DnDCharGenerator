@@ -74,9 +74,9 @@ namespace DnDClassesTest
         public override List<string> ClassFeatures()
         {
             List<string> features = new List<string>();
-            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\FighterClassFeatures.txt");
+            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\RangerClassFeatures.txt");
             //string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
-            string[] temp = new string[19];
+            string[] temp = new string[18];
             temp = File.ReadAllLines(path);
             foreach (string i in temp)
             {
