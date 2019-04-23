@@ -51,6 +51,16 @@ namespace DnDClassesTest
                     lblSubClass.Visible = true;
                     comboSubClass.DataSource = new List<string> { "Way of the Open Hand", "Way of Shadows" };
                     break;
+                case 6:
+                    lblSubClass.Text = "Select an Oath:";
+                    lblSubClass.Visible = true;
+                    comboSubClass.DataSource = new List<string> { "Devotion", "The Ancients", "Vengeance" };
+                    break;
+                case 7:
+                    lblSubClass.Text = "Choose an Archetype:";
+                    lblSubClass.Visible = true;
+                    comboSubClass.DataSource = new List<string> { "Hunter", "Beast Master" };
+                    break;
             }
 
         }
