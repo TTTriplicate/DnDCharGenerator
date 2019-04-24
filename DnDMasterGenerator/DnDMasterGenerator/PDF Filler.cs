@@ -37,6 +37,8 @@ namespace DnDClassesTest
             pdfFormFields.SetField("Race ", newChar.CharRace.getRace());
             pdfFormFields.SetField("PlayerName", newChar._playerName);
             pdfFormFields.SetField("GP", newChar.gold.ToString());
+            pdfFormFields.SetField("Alignment", newChar.CharRace.getAlignment());
+            pdfFormFields.SetField("ProfBonus", newChar.ProficiencyBonus().ToString());
 
             //pdfFormFields.SetField("Equipment", "Test test test");
             string stringInventory = "";
