@@ -382,16 +382,18 @@ namespace DnDClassesTest
                 inventory.Add(new Equipment("Arrows (x20"));
                 numChoices = 3;
                 reformat = true;
-                this.options.Add(new List<Gear>());//scale mail or leather armor
-                firstChoice.Add(null);
-                options[0].Add(allGear[getIndex("Scale Mail")]);
-                options[0].Add(allGear[getIndex("Leather Armor")]);
                 this.options.Add(new List<Gear>());//two shortwords or two simple melee weapons
                 firstChoice.Add(new Weapon("Shortswords (x2)", 6, true));
-                for(i = startSimpleMelee; i < startSimpleRanged; i++)
+                for (i = startSimpleMelee; i < startSimpleRanged; i++)
                 {
-                    options[1].Add(allGear[i]);
+                    options[0].Add(allGear[i]);
                 }
+                this.options.Add(new List<Gear>());//scale mail or leather armor
+                firstChoice.Add(null);
+                options[1].Add(allGear[getIndex("Scale Mail")]);
+                options[1].Add(allGear[getIndex("Leather Armor")]);
+                
+                
 
                 this.options.Add(new List<Gear>()); //dungeoneer's pack or an explorer's pack
                 firstChoice.Add(null);
