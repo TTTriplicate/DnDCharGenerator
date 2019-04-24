@@ -37,6 +37,7 @@ namespace DnDClassesTest
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            race.setLanguages();
             DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -73,9 +74,15 @@ namespace DnDClassesTest
                 langList.Visible = false;
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        Race race = new Race("Half-Orc");
         protected void chooseLang()
         {
-            Race race = new Race("Half-Orc");
+            selected.setNumLang(race.getMoreLang());
             langList.Items.Clear();
             for (int i = 0; i < 8; i++) {
                 if (!(race.getLangRace()[i])) {

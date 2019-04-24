@@ -80,6 +80,7 @@
             this.label1.Size = new System.Drawing.Size(148, 29);
             this.label1.TabIndex = 7;
             this.label1.Text = "Background:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // BGChoice
             // 
@@ -128,7 +129,7 @@
             this.langList.MultiColumn = true;
             this.langList.Name = "langList";
             this.langList.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.langList.Size = new System.Drawing.Size(494, 123);
+            this.langList.Size = new System.Drawing.Size(494, 104);
             this.langList.TabIndex = 14;
             this.langList.Visible = false;
             this.langList.SelectedIndexChanged += new System.EventHandler(this.langList_SelectedIndexChanged);

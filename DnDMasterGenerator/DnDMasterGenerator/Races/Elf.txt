@@ -17,4 +17,4 @@ Elf Weapon Training, Fleet of Foot, Mask of the Wild
 
 Dark
 000001
-Superior Darkvision(120), Sunlight Sensitivity, Drow Magic, Drow Weapon Training
+Superior Darkvision(120ft), Sunlight Sensitivity, Drow Magic, Drow Weapon Training

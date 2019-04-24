@@ -30,7 +30,8 @@ namespace DnDClassesTest
         protected string[] temp = new string[10];
         protected string race;
         protected string subRace;
-        public string[] info;
+        protected string[] info;
+        protected int moreLang;
 
 
         public Race(string r)
@@ -52,13 +53,14 @@ namespace DnDClassesTest
             speed = int.Parse(info[5]);
 
             temp = info[6].Split(' ');
+            moreLang = 0;
             for (int i = 0; i < temp.Length; i++)
             {
                 //Language, checks number, if + continues to else
                 if (temp[i] != "+")
                     languages[int.Parse(temp[i])] = true;
                 else
-                    continue; //will open a dropbox that allows the choice of a language in Main class
+                    moreLang++; //will open a dropbox that allows the choice of a language in Main class
             }
 
             if (info.Last() != info[6])
@@ -86,11 +88,15 @@ namespace DnDClassesTest
             }
             if (race == "Elf")
                 overWrite();
+            else if (race == "Human")
+            {
+
+            }
         }
 
         protected void overWrite()
         {
-            if (specialAbilities[0] == "Darkvision(60ft)" && specialAbilities[4] == " Superior Darkvision(120ft)")
+            if (specialAbilities[0] == "Darkvision(60ft)" && specialAbilities[4] == "Superior Darkvision(120ft)")
             {
                 for (int i = 0; i < specialAbilities.Length - 1; i++)
                 {
@@ -123,6 +129,10 @@ namespace DnDClassesTest
         {
             return alignment;
         }
+        public void setAlignment(string a)
+        {
+            alignment = a;
+        }
         public string getSize()
         {
             return size;
@@ -152,6 +162,10 @@ namespace DnDClassesTest
         {
             return languages;
         }
+        public void setLanguages()
+        {
+
+        }
         public string[] getSA()
         {
             return specialAbilities;
@@ -173,6 +187,11 @@ namespace DnDClassesTest
         {
             subRace = sr;
         }
+        public int getMoreLang()
+        {
+            return moreLang;
+        }
+
 
         public static Race InteractiveChoice()
         {

@@ -5,4 +5,4 @@ Chaotic Evil
 Medium
 30
 0 12
-Darkvision, Hellish Resistance, Infernal Legacy
+Darkvision(60ft), Hellish Resistance, Infernal Legacy

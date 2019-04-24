@@ -36,10 +36,10 @@
             this.chooser = new System.Windows.Forms.ComboBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.alignmentBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // subRaceBox
@@ -51,6 +51,7 @@
             this.subRaceBox.Size = new System.Drawing.Size(242, 46);
             this.subRaceBox.TabIndex = 37;
             this.subRaceBox.Visible = false;
+            this.subRaceBox.SelectedIndexChanged += new System.EventHandler(this.subRaceBox_SelectedIndexChanged);
             // 
             // specialsBox
             // 
@@ -61,6 +62,7 @@
             this.specialsBox.Size = new System.Drawing.Size(490, 110);
             this.specialsBox.TabIndex = 36;
             this.specialsBox.Text = "";
+            this.specialsBox.TextChanged += new System.EventHandler(this.specialsBox_TextChanged);
             // 
             // error
             // 
@@ -73,6 +75,7 @@
             this.error.TabIndex = 35;
             this.error.Text = "Please fill out all fields";
             this.error.Visible = false;
+            this.error.Click += new System.EventHandler(this.error_Click);
             // 
             // langBox
             // 
@@ -83,6 +86,7 @@
             this.langBox.Size = new System.Drawing.Size(490, 97);
             this.langBox.TabIndex = 34;
             this.langBox.Text = "";
+            this.langBox.TextChanged += new System.EventHandler(this.langBox_TextChanged);
             // 
             // btnNext
             // 
@@ -92,6 +96,7 @@
             this.btnNext.TabIndex = 33;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // chooser
             // 
@@ -102,6 +107,7 @@
             this.chooser.Size = new System.Drawing.Size(490, 46);
             this.chooser.TabIndex = 32;
             this.chooser.Text = " (Choose One)";
+            this.chooser.SelectedIndexChanged += new System.EventHandler(this.chooser_SelectedIndexChanged);
             // 
             // textBox5
             // 
@@ -111,6 +117,7 @@
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(465, 53);
             this.textBox5.TabIndex = 31;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox4
             // 
@@ -120,15 +127,7 @@
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(465, 53);
             this.textBox4.TabIndex = 30;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(456, 245);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(242, 53);
-            this.textBox3.TabIndex = 29;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox2
             // 
@@ -138,6 +137,7 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(242, 53);
             this.textBox2.TabIndex = 28;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -147,6 +147,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(465, 53);
             this.textBox1.TabIndex = 27;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -157,12 +158,35 @@
             this.label1.Size = new System.Drawing.Size(338, 135);
             this.label1.TabIndex = 26;
             this.label1.Text = "Race";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // alignmentBox
+            // 
+            this.alignmentBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alignmentBox.FormattingEnabled = true;
+            this.alignmentBox.Items.AddRange(new object[] {
+            "Lawful Good",
+            "Lawful Neutral",
+            "Lawful Evil",
+            "Neutral Good",
+            "True Neutral",
+            "Neutral Ecil",
+            "Chaotic Good",
+            "Chaotic Neutral",
+            "Chaotic Evil"});
+            this.alignmentBox.Location = new System.Drawing.Point(456, 245);
+            this.alignmentBox.Name = "alignmentBox";
+            this.alignmentBox.Size = new System.Drawing.Size(242, 46);
+            this.alignmentBox.TabIndex = 38;
+            this.alignmentBox.Text = "(Choose One)";
+            this.alignmentBox.SelectedIndexChanged += new System.EventHandler(this.alignmentBox_SelectedIndexChanged);
             // 
             // RaceSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 858);
+            this.Controls.Add(this.alignmentBox);
             this.Controls.Add(this.subRaceBox);
             this.Controls.Add(this.specialsBox);
             this.Controls.Add(this.error);
@@ -171,7 +195,6 @@
             this.Controls.Add(this.chooser);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -192,10 +215,10 @@
         private System.Windows.Forms.ComboBox chooser;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox alignmentBox;
     }
 }
 

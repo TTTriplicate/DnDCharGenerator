@@ -15,7 +15,7 @@ namespace DnDClassesTest
         public String[] BACKGROUNDS = { "Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin" };
         public string[] lines;
         //public string background;
-        protected int numLang = 0;
+        protected int numLang;
         //public String[] SkillProfs = { "Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Preformance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival" };
 
         public string Personality, Ideal, Flaw, Bond, Background, SkillProfOne, SkillProfTwo;
@@ -112,6 +112,7 @@ namespace DnDClassesTest
             this.Flaw = flaws[RanNumGen(6)];
             this.Bond = bonds[RanNumGen(6)];
 
+            numLang = 0;
             if (lines.Contains("L1"))
                 numLang = 1;
             else if (lines.Contains("L2"))
@@ -121,6 +122,11 @@ namespace DnDClassesTest
         public int getNumLang()
         {
             return numLang;
+        }
+
+        public void setNumLang(int n)
+        {
+            numLang += n;
         }
 
         public int setRandNum(int randNum)
