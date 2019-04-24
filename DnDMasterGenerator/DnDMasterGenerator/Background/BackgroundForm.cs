@@ -55,19 +55,14 @@ namespace DnDClassesTest
 
         public Background_Class selected { get; set; }
 
-        public Race race { get; set; }
-
         private void BGChoice_SelectedIndexChanged(object sender, EventArgs e)
         {
             selected = new Background_Class(BGChoice.SelectedItem.ToString());
-            
+
             PERSONALITY.Text = selected.Personality;
             IDEAL.Text = selected.Ideal;
             FLAW.Text = selected.Flaw;
             BOND.Text = selected.Bond;
-            this.Race = selected.getRace();
-            //MessageBox.Show();
-            race = new Race(Race);
 
             if (selected.getNumLang() > 0)
             {
@@ -83,12 +78,16 @@ namespace DnDClassesTest
 
         }
 
+
+        Race race = new DnDClassesTest.Race("Half-Orc");
         protected void chooseLang()
         {
             selected.setNumLang(race.getMoreLang());
             langList.Items.Clear();
-            for (int i = 0; i < 8; i++) {
-                if (!(race.getLangRace(i))) {
+            for (int i = 0; i < 8; i++)
+            {
+                if (!(race.getLangRace(i)))
+                {
                     langList.Items.Add(allLanguages[i]);
                 }
             }

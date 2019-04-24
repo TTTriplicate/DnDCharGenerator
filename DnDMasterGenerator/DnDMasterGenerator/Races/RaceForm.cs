@@ -64,12 +64,21 @@ namespace DnDClassesTest
             }
         }
 
+        private void RaceSelect_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void chooser_SelectedIndexChanged(object sender, EventArgs e)
         {
             selected = new Race(chooser.SelectedItem.ToString());
             subRaceBox.Items.Clear(); subRaceBox.Text = "(Choose One)";
             setUp();
-
             for (int i = 1; i < 4; i++)
             {
                 if (races[i, selected.getSubRace()] != "")
@@ -100,13 +109,28 @@ namespace DnDClassesTest
             setUp();
         }
 
+        private void specialsBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void error_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void langBox_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (alignmentBox.Text == "(Choose One)" || chooser.Text == "(Choose One)" || (subRaceBox.Text == "(Choose One)" && subRaceBox.Visible))
                 error.Visible = true;
             else
             {
-                
+
                 error.Visible = false;
                 selected.setAlignment(alignmentBox.Text);
                 DialogResult = DialogResult.OK;
@@ -119,42 +143,24 @@ namespace DnDClassesTest
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void specialsBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void error_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void langBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }
+
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
