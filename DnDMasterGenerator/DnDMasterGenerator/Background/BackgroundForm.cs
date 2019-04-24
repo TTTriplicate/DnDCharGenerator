@@ -14,7 +14,7 @@ namespace DnDClassesTest
     {
         //public Background_Class Character = new Background_Class();
 
-        public string Personality, Ideal, Bond, Flaw;
+        public string Personality, Ideal, Bond, Flaw, Race;
 
         string[] allLanguages = { "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic", "Deep Speech", "Infernal", "Primordial", "Sylvan", "Undercommon" };
 
@@ -37,6 +37,7 @@ namespace DnDClassesTest
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            race.setLanguages();
             DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -57,12 +58,11 @@ namespace DnDClassesTest
         private void BGChoice_SelectedIndexChanged(object sender, EventArgs e)
         {
             selected = new Background_Class(BGChoice.SelectedItem.ToString());
-            
+
             PERSONALITY.Text = selected.Personality;
             IDEAL.Text = selected.Ideal;
             FLAW.Text = selected.Flaw;
             BOND.Text = selected.Bond;
-
 
             if (selected.getNumLang() > 0)
             {
@@ -73,12 +73,21 @@ namespace DnDClassesTest
                 langList.Visible = false;
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        Race race = new DnDClassesTest.Race("Half-Orc");
         protected void chooseLang()
         {
-            Race race = new Race("Half-Orc");
+            selected.setNumLang(race.getMoreLang());
             langList.Items.Clear();
-            for (int i = 0; i < 8; i++) {
-                if (!(race.getLangRace()[i])) {
+            for (int i = 0; i < 8; i++)
+            {
+                if (!(race.getLangRace(i)))
+                {
                     langList.Items.Add(allLanguages[i]);
                 }
             }
