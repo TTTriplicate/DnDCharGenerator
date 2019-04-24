@@ -83,7 +83,8 @@ namespace DnDClassesTest
                     choice1b.Checked = true;
                     choice1a.Text = "Shield and ";
                     wackadooThingy.Show();
-                    wackadooThingy.DataSource = itemString[0];
+                    //List<string> test = itemString[0];
+                    wackadooThingy.DataSource = itemString[1];
                     twoMartial.Show();
                     twoMartial.DataSource = itemString[0];
                 }
