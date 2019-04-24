@@ -114,18 +114,55 @@ namespace DnDClassesTest
             List<string> current = new List<string>();
             bool[] unlock = this.Unlocked();
             int i;
-            for (i = 7; i <= 0; --i)
+            for (i = 1; i <= 12; ++i)
             {
-                if (unlock[i]) break;
+                if (!unlock[i]) break;
             }
-            if (i == 7) current = Features;
-            else if (i == 6) current = Features.GetRange(0, 7);
-            else if (i == 5) current = Features.GetRange(0, 6);
+            current = Features.GetRange(0, 2);
+            if (i == 1) current = Features.GetRange(0, 3);
+            else if (i == 3) current = Features.GetRange(0, 4);
             else if (i == 4) current = Features.GetRange(0, 5);
-            else if (i == 3) current = Features.GetRange(0, 3);
-            else if (i == 2) current = Features.GetRange(0, 2);
-            else if (i == 2) current = Features.GetRange(0, 1);
-            else current.Add(Features[0]);
+            else if (i == 6) current = Features.GetRange(0, 6);
+            else if (i == 8) current = Features.GetRange(0, 7);
+            else if (i == 9) current = Features.GetRange(0, 8);
+            else if (i == 11) current = Features.GetRange(0, 9);
+            else if (i == 12) current = Features.GetRange(0, 10);
+
+            if(_proPath == 0)
+            {
+                if (i < 2) return current;
+                else if (i >= 2)
+                {
+                    current.Add(Features[11]);
+                    current.Add(Features[12]);
+                }
+                else if (i >= 5) current.Add(Features[13]);
+                else if (i >= 7) current.Add(Features[14]);
+                else if (i >= 10) current.Add(Features[15]);
+            }
+
+            else if(_proPath == 1)
+            {
+                if (i < 2) return current;
+                else if (i >= 2)
+                {
+                    current.Add(Features[16]);
+                    current.Add(Features[17]);
+                }
+                else if (i >= 5) current.Add(Features[18]);
+                else if (i >= 7) current.Add(Features[19]);
+                else if (i >= 10) current.Add(Features[20]);
+            }
+
+            else if (_proPath == 2)
+            {
+                if (i < 2) return current;
+                else if (i >= 2) current.Add(Features[21]);
+                else if (i >= 5) current.Add(Features[22]);
+                else if (i >= 7) current.Add(Features[23]);
+                else if (i >= 10) current.Add(Features[24]);
+            }
+
             return current;
         }
 

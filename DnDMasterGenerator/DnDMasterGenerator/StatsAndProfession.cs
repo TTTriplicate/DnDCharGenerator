@@ -61,6 +61,11 @@ namespace DnDClassesTest
                     lblSubClass.Visible = true;
                     comboSubClass.DataSource = new List<string> { "Hunter", "Beast Master" };
                     break;
+                case 8:
+                    lblSubClass.Text = "Choose a specialty:";
+                    lblSubClass.Visible = true;
+                    comboSubClass.DataSource = new List<string> { "Thief", "Assassin", "Arcane Trickster" };
+                    break;
             }
 
         }
