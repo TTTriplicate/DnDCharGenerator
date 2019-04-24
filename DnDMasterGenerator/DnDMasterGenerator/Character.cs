@@ -171,11 +171,9 @@ namespace DnDClassesTest
             
             for (int i = 0; i < 16; i++)
             {
-                MessageBox.Show("For Loop Character");
                 if (CharBackground.backlanguage[i])
                 {
                     CharRace.setLanguages(i);
-                    MessageBox.Show("In if");
                 }
             }
 

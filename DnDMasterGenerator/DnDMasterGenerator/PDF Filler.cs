@@ -50,7 +50,7 @@ namespace DnDClassesTest
             pdfFormFields.SetField("WIS", newChar._abilities[4].ToString());
             pdfFormFields.SetField("WISmod", newChar.AbilityModifiers()[4].ToString());
             pdfFormFields.SetField("CHA", newChar._abilities[5].ToString());
-            pdfFormFields.SetField("CHAmod ", newChar.AbilityModifiers()[5].ToString());
+            pdfFormFields.SetField("CHamod", newChar.AbilityModifiers()[5].ToString());
 
             //pdfFormFields.SetField("Equipment", "Test test test");
             string stringInventory = "";

@@ -48,10 +48,8 @@ namespace DnDClassesTest
             int num = 0;
             for (int i = 0; i< 8; i++)
             {
-                MessageBox.Show("For Loop Background");
                 if (num < langList.CheckedItems.Count && langList.CheckedItems[num].ToString() == allLanguages[i])
                 {
-                    MessageBox.Show("In if of Back");
                     bl[i] = true;
                     num++;
                 }

@@ -163,7 +163,6 @@ namespace DnDClassesTest
         public void setLanguages(int i)
         {
             languages[i] = true;
-            MessageBox.Show(getLanguages().ToString());
         }
         public string[] getSA()
         {
