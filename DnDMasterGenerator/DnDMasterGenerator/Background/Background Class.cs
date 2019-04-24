@@ -175,9 +175,9 @@ namespace DnDClassesTest
             //this.background = background;
         }
 
-        public static Background_Class InteractiveChoice()
+        public static Background_Class InteractiveChoice(Race r)
         {
-            BackgroundForm form = new BackgroundForm();
+            BackgroundForm form = new BackgroundForm(r);
             DialogResult result = form.ShowDialog();
             if (result == DialogResult.OK)
             {

@@ -13,10 +13,12 @@ namespace DnDClassesTest
     public partial class BackgroundForm : Form
     {
         //public Background_Class Character = new Background_Class();
+        public Race race = new DnDClassesTest.Race();
 
         public string Personality, Ideal, Bond, Flaw, Race;
 
         string[] allLanguages = { "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic", "Deep Speech", "Infernal", "Primordial", "Sylvan", "Undercommon" };
+        public bool[] backlanguage = new bool[16];
 
         public BackgroundForm(ref string Personality, ref string Ideal, ref string Bond, ref string Flaw)
         {
@@ -35,9 +37,21 @@ namespace DnDClassesTest
             InitializeComponent();
         }
 
+        public BackgroundForm(Race race)
+        {
+            InitializeComponent();
+            this.race = race;
+        }
+
         private void btnNext_Click(object sender, EventArgs e)
         {
-            race.setLanguages();
+            for (int i = 0; i< 8; i++)
+            {
+                if (langList.CheckedItems.ToString() == allLanguages[i])
+                {
+                    backlanguage[i] = true;
+                }
+            }
             DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -73,13 +87,23 @@ namespace DnDClassesTest
                 langList.Visible = false;
         }
 
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BackgroundForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
 
-        Race race = new DnDClassesTest.Race("Half-Orc");
+        //Race race = new Race();
         protected void chooseLang()
         {
             selected.setNumLang(race.getMoreLang());
