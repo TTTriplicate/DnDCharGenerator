@@ -167,7 +167,7 @@ namespace DnDClassesTest
             //skills picker is broken....all individual checkboxes?
             //needs the remaining interactive constructor pieces
             //and I forgot to set the ability scores off that form....Chris
-            CharBackground =  Background_Class.InteractiveChoice();
+            CharBackground =  Background_Class.InteractiveChoice(this.CharRace);
             
 
 

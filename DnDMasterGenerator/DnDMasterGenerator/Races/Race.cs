@@ -42,6 +42,10 @@ namespace DnDClassesTest
             setAll();
         }
 
+        public Race() {
+            MessageBox.Show("Works");
+        }
+
         protected void setAll()
         {
             race = info[0].Substring(8);
@@ -200,6 +204,11 @@ namespace DnDClassesTest
                 }
             }
             return new Race("Human");
+        }
+
+        public Race getRaceObject()
+        {
+            return this;
         }
     }
 }
