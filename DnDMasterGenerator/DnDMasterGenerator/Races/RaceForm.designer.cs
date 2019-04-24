@@ -138,6 +138,7 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(242, 53);
             this.textBox2.TabIndex = 28;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 

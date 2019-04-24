@@ -25,12 +25,13 @@ namespace DnDClassesTest
         protected string alignment;
         protected string size;
         protected int speed;
-        protected bool[] languages = new bool[16];
+        public bool[] languages = new bool[16];
         protected string[] specialAbilities = new string[15];
         protected string[] temp = new string[10];
         protected string race;
         protected string subRace;
-        public string[] info;
+        protected string[] info;
+        protected int moreLang;
 
 
         public Race(string r)
@@ -52,13 +53,14 @@ namespace DnDClassesTest
             speed = int.Parse(info[5]);
 
             temp = info[6].Split(' ');
+            moreLang = 0;
             for (int i = 0; i < temp.Length; i++)
             {
                 //Language, checks number, if + continues to else
                 if (temp[i] != "+")
                     languages[int.Parse(temp[i])] = true;
                 else
-                    continue; //will open a dropbox that allows the choice of a language in Main class
+                    moreLang++; //will open a dropbox that allows the choice of a language in Background class
             }
 
             if (info.Last() != info[6])
@@ -90,7 +92,7 @@ namespace DnDClassesTest
 
         protected void overWrite()
         {
-            if (specialAbilities[0] == "Darkvision(60ft)" && specialAbilities[4] == " Superior Darkvision(120ft)")
+            if (specialAbilities[0] == "Darkvision(60ft)" && specialAbilities[4] == "Superior Darkvision(120ft)")
             {
                 for (int i = 0; i < specialAbilities.Length - 1; i++)
                 {
@@ -104,7 +106,7 @@ namespace DnDClassesTest
             }
             else if (specialAbilities[6] == " +1 Language")
             {
-                //add one to jacks numLang
+                moreLang++;
                 specialAbilities[6] = null;
             }
 
@@ -122,6 +124,10 @@ namespace DnDClassesTest
         public string getAlignment()
         {
             return alignment;
+        }
+        public void setAlignment(string a)
+        {
+            alignment = a;
         }
         public string getSize()
         {
@@ -148,9 +154,13 @@ namespace DnDClassesTest
             }
             return l;
         }
-        public bool[] getLangRace()
+        public bool getLangRace(int i)
         {
-            return languages;
+            return languages[i];
+        }
+        public void setLanguages()
+        {
+
         }
         public string[] getSA()
         {
@@ -173,6 +183,11 @@ namespace DnDClassesTest
         {
             subRace = sr;
         }
+        public int getMoreLang()
+        {
+            return moreLang;
+        }
+
 
         public static Race InteractiveChoice()
         {
