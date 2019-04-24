@@ -169,6 +169,15 @@ namespace DnDClassesTest
             //and I forgot to set the ability scores off that form....Chris
             CharBackground =  Background_Class.InteractiveChoice(this.CharRace);
             
+            for (int i = 0; i < 16; i++)
+            {
+                MessageBox.Show("For Loop Character");
+                if (CharBackground.backlanguage[i])
+                {
+                    CharRace.setLanguages(i);
+                    MessageBox.Show("In if");
+                }
+            }
 
 
             CharGear gear = new CharGear(this._class.ProfessionName(), CharBackground.Background , AbilityModifiers()[1]);

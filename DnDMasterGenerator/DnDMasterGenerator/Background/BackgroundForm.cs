@@ -18,7 +18,7 @@ namespace DnDClassesTest
         public string Personality, Ideal, Bond, Flaw, Race;
 
         string[] allLanguages = { "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic", "Deep Speech", "Infernal", "Primordial", "Sylvan", "Undercommon" };
-        public bool[] backlanguage = new bool[16];
+        public bool[] bl = new bool[16];
 
         public BackgroundForm(ref string Personality, ref string Ideal, ref string Bond, ref string Flaw)
         {
@@ -45,13 +45,18 @@ namespace DnDClassesTest
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            int num = 0;
             for (int i = 0; i< 8; i++)
             {
-                if (langList.CheckedItems.ToString() == allLanguages[i])
+                MessageBox.Show("For Loop Background");
+                if (num < langList.CheckedItems.Count && langList.CheckedItems[num].ToString() == allLanguages[i])
                 {
-                    backlanguage[i] = true;
+                    MessageBox.Show("In if of Back");
+                    bl[i] = true;
+                    num++;
                 }
             }
+            selected.setBackLang(bl);
             DialogResult = DialogResult.OK;
             this.Close();
         }

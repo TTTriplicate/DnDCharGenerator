@@ -42,9 +42,7 @@ namespace DnDClassesTest
             setAll();
         }
 
-        public Race() {
-            MessageBox.Show("Works");
-        }
+        public Race() { }
 
         protected void setAll()
         {
@@ -162,9 +160,10 @@ namespace DnDClassesTest
         {
             return languages[i];
         }
-        public void setLanguages()
+        public void setLanguages(int i)
         {
-
+            languages[i] = true;
+            MessageBox.Show(getLanguages().ToString());
         }
         public string[] getSA()
         {
