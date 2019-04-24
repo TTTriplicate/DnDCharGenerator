@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace DnDClassesTest
 {
@@ -660,7 +661,6 @@ namespace DnDClassesTest
                 gp = 10;
             }
         }
-
         /**
          * Getter method
          * @return options the List of options of gear

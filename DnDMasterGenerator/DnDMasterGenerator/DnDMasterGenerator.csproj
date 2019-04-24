@@ -179,6 +179,7 @@
     <Content Include="Background\Folk Hero.txt" />
     <Content Include="Background\Guild Artisan.txt" />
     <Content Include="Background\Hermit.txt" />
+    <Content Include="Background\Languages.txt" />
     <Content Include="Background\Noble.txt" />
     <Content Include="Background\Outlander.txt" />
     <Content Include="Background\Sage.txt" />

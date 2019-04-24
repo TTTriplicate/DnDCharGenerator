@@ -77,7 +77,7 @@ namespace DnDClassesTest
             Saves[2] = true;
             return Saves;
         }
-
+        
         public override List<string> ClassFeatures()
         {
             List<string> features = new List<string>();

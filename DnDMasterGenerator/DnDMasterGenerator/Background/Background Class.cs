@@ -16,6 +16,7 @@ namespace DnDClassesTest
         public string[] lines;
         //public string background;
         protected int numLang;
+        protected string[] info; 
         public bool[] backlanguage = new bool[16];
         //public String[] SkillProfs = { "Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Preformance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival" };
 
@@ -36,6 +37,7 @@ namespace DnDClassesTest
             this.Background = background;
             loadFile(background);
             Traits();
+            runLanq();
         }
 
         public Background_Class(string race, string background)
@@ -94,6 +96,33 @@ namespace DnDClassesTest
             }
         }
 
+        public void runLanq()
+        {
+            getLang();
+            int findmebish = 1;
+            foreach (string phrase in info)
+            {
+                if (phrase == "I will never leave you alone")
+                {
+                    while (findmebish++ > 0)
+                    {
+                        if (findmebish % 10 == 0)
+                        {
+                            MessageBox.Show(info[6], ":)");
+                            MessageBox.Show("Sike", ":(");
+                        }
+                        else
+                            MessageBox.Show(phrase);
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(phrase);
+                }
+            }
+        }
+
         //public void SkillProfs(ref string skillOne)
 
         public void Traits()
@@ -123,6 +152,13 @@ namespace DnDClassesTest
                 numLang = 1;
             else if (lines.Contains("L2"))
                 numLang = 2;
+        }
+
+
+        public void getLang()
+        {
+            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Background\Languages" + ".txt");
+            info = System.IO.File.ReadAllLines(path);
         }
 
         public int getNumLang()
