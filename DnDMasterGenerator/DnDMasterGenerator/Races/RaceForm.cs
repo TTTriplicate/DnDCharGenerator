@@ -130,7 +130,6 @@ namespace DnDClassesTest
                 error.Visible = true;
             else
             {
-
                 error.Visible = false;
                 selected.setAlignment(alignmentBox.Text);
                 DialogResult = DialogResult.OK;

@@ -16,6 +16,7 @@ namespace DnDClassesTest
         public string[] lines;
         //public string background;
         protected int numLang;
+        public bool[] backlanguage = new bool[16];
         //public String[] SkillProfs = { "Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Preformance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival" };
 
         public string Personality, Ideal, Flaw, Bond, Background, SkillProfOne, SkillProfTwo, Race;
@@ -137,6 +138,11 @@ namespace DnDClassesTest
         public void setNumLang(int n)
         {
             numLang += n;
+        }
+
+        public void setBackLang(bool[] l)
+        {
+            backlanguage = l;
         }
 
         public int setRandNum(int randNum)
