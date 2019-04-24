@@ -303,7 +303,7 @@ namespace DnDClassesTest
             }
             if(choice1a.Checked)
             {
-                if(gear.classType == "Fighter")
+                if(gear.classType == "Fighter" || gear.classType == "Paladin")
                 {
                     message = message + ("Shield    " + (2 + gear.dexMod)) + "\n";
                     message = message + wackadooThingy.Text + "\n";
@@ -315,7 +315,7 @@ namespace DnDClassesTest
             }  
             else
             {
-                if (gear.classType == "Fighter")
+                if (gear.classType == "Fighter" || gear.classType == "Paladin" || gear.classType == "Ranger")
                 {
                     message = message + Choice1.Text + "\n";
                     message = message + twoMartial + "\n";
