@@ -107,5 +107,10 @@ namespace DnDClassesTest
             AttackRoll attack = new AttackRoll();
             attack.Show();
         }
+
+        private void txtBackground_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

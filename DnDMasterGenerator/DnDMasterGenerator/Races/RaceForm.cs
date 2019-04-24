@@ -58,9 +58,9 @@ namespace DnDClassesTest
                     specialsBox.Text += ", ";
                 specialsBox.Text += i;
             }*/
-            foreach (bool i in selected.getLangRace())
+            for (int i = 0; i < 16; i++)
             {
-                specialsBox.Text = i.ToString();
+                specialsBox.Text += selected.getLangRace(i).ToString();
             }
         }
 
@@ -106,6 +106,7 @@ namespace DnDClassesTest
                 error.Visible = true;
             else
             {
+                
                 error.Visible = false;
                 selected.setAlignment(alignmentBox.Text);
                 DialogResult = DialogResult.OK;

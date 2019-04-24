@@ -18,7 +18,7 @@ namespace DnDClassesTest
         protected int numLang;
         //public String[] SkillProfs = { "Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Preformance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival" };
 
-        public string Personality, Ideal, Flaw, Bond, Background, SkillProfOne, SkillProfTwo;
+        public string Personality, Ideal, Flaw, Bond, Background, SkillProfOne, SkillProfTwo, Race;
 
         public Background_Class()//string background)
         {
@@ -35,6 +35,11 @@ namespace DnDClassesTest
             this.Background = background;
             loadFile(background);
             Traits();
+        }
+
+        public Background_Class(string race, string background)
+        {
+            this.Race = race;
         }
 
         public void loadFile(string background)
@@ -122,6 +127,11 @@ namespace DnDClassesTest
         public int getNumLang()
         {
             return numLang;
+        }
+
+        public string getRace()
+        {
+            return Race;
         }
 
         public void setNumLang(int n)

@@ -161,14 +161,15 @@ namespace DnDClassesTest
                 this._HP += DnDCharacter.RollHP(this._level - 1, this._class._hitDie, this._HP) + ((this._level - 1) * this.AbilityModifiers()[2]);
             this.CharRace = Race.InteractiveChoice();
             raceAdditions();
+            MessageBox.Show(CharRace.getRace());
+            Background_Class race = new Background_Class(CharRace.getRace(), "hsdfjsdfsd");
             //Background selector
             //Race selector
             //this._skills = DnDCharacter.SkillSelectInteractive(CharClass._numProSkills, CharClass.ClassSkills()/*, Background_Class.FixedSkills = new bool[18]*/);
             //skills picker is broken....all individual checkboxes?
             //needs the remaining interactive constructor pieces
             //and I forgot to set the ability scores off that form....Chris
-            CharBackground =  Background_Class.InteractiveChoice();
-            
+            CharBackground = Background_Class.InteractiveChoice();
 
 
             CharGear gear = new CharGear(this._class.ProfessionName(), CharBackground.Background , AbilityModifiers()[1]);

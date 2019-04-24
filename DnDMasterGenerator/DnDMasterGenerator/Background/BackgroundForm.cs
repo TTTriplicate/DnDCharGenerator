@@ -14,7 +14,7 @@ namespace DnDClassesTest
     {
         //public Background_Class Character = new Background_Class();
 
-        public string Personality, Ideal, Bond, Flaw;
+        public string Personality, Ideal, Bond, Flaw, Race;
 
         string[] allLanguages = { "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic", "Deep Speech", "Infernal", "Primordial", "Sylvan", "Undercommon" };
 
@@ -55,6 +55,8 @@ namespace DnDClassesTest
 
         public Background_Class selected { get; set; }
 
+        public Race race { get; set; }
+
         private void BGChoice_SelectedIndexChanged(object sender, EventArgs e)
         {
             selected = new Background_Class(BGChoice.SelectedItem.ToString());
@@ -63,7 +65,9 @@ namespace DnDClassesTest
             IDEAL.Text = selected.Ideal;
             FLAW.Text = selected.Flaw;
             BOND.Text = selected.Bond;
-
+            this.Race = selected.getRace();
+            MessageBox.Show(RaceSelect.);
+            race = new Race(Race);
 
             if (selected.getNumLang() > 0)
             {
@@ -79,13 +83,12 @@ namespace DnDClassesTest
 
         }
 
-        Race race = new Race("Half-Orc");
         protected void chooseLang()
         {
             selected.setNumLang(race.getMoreLang());
             langList.Items.Clear();
             for (int i = 0; i < 8; i++) {
-                if (!(race.getLangRace()[i])) {
+                if (!(race.getLangRace(i))) {
                     langList.Items.Add(allLanguages[i]);
                 }
             }

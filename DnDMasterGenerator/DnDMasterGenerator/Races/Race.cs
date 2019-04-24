@@ -25,7 +25,7 @@ namespace DnDClassesTest
         protected string alignment;
         protected string size;
         protected int speed;
-        protected bool[] languages = new bool[16];
+        public bool[] languages = new bool[16];
         protected string[] specialAbilities = new string[15];
         protected string[] temp = new string[10];
         protected string race;
@@ -60,7 +60,7 @@ namespace DnDClassesTest
                 if (temp[i] != "+")
                     languages[int.Parse(temp[i])] = true;
                 else
-                    moreLang++; //will open a dropbox that allows the choice of a language in Main class
+                    moreLang++; //will open a dropbox that allows the choice of a language in Background class
             }
 
             if (info.Last() != info[6])
@@ -88,10 +88,6 @@ namespace DnDClassesTest
             }
             if (race == "Elf")
                 overWrite();
-            else if (race == "Human")
-            {
-
-            }
         }
 
         protected void overWrite()
@@ -110,7 +106,7 @@ namespace DnDClassesTest
             }
             else if (specialAbilities[6] == " +1 Language")
             {
-                //add one to jacks numLang
+                moreLang++;
                 specialAbilities[6] = null;
             }
 
@@ -158,9 +154,9 @@ namespace DnDClassesTest
             }
             return l;
         }
-        public bool[] getLangRace()
+        public bool getLangRace(int i)
         {
-            return languages;
+            return languages[i];
         }
         public void setLanguages()
         {
