@@ -39,6 +39,18 @@ namespace DnDClassesTest
             pdfFormFields.SetField("GP", newChar.gold.ToString());
             pdfFormFields.SetField("Alignment", newChar.CharRace.getAlignment());
             pdfFormFields.SetField("ProfBonus", newChar.ProficiencyBonus().ToString());
+            pdfFormFields.SetField("STRmod", newChar._abilities[0].ToString());
+            pdfFormFields.SetField("STR", newChar.AbilityModifiers()[0].ToString());
+            pdfFormFields.SetField("DEXmod ", newChar._abilities[1].ToString());
+            pdfFormFields.SetField("DEX", newChar.AbilityModifiers()[1].ToString());
+            pdfFormFields.SetField("CON", newChar._abilities[2].ToString());
+            pdfFormFields.SetField("CONmod", newChar.AbilityModifiers()[2].ToString());
+            pdfFormFields.SetField("INT", newChar._abilities[3].ToString());
+            pdfFormFields.SetField("INTmod", newChar.AbilityModifiers()[3].ToString());
+            pdfFormFields.SetField("WIS", newChar._abilities[4].ToString());
+            pdfFormFields.SetField("WISmod", newChar.AbilityModifiers()[4].ToString());
+            pdfFormFields.SetField("CHA", newChar._abilities[5].ToString());
+            pdfFormFields.SetField("CHAmod ", newChar.AbilityModifiers()[5].ToString());
 
             //pdfFormFields.SetField("Equipment", "Test test test");
             string stringInventory = "";
