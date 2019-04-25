@@ -84,6 +84,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtPlayerName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.testBox1 = new System.Windows.Forms.TextBox();
+            this.testBox2 = new System.Windows.Forms.TextBox();
+            this.testBox4 = new System.Windows.Forms.TextBox();
+            this.testBox3 = new System.Windows.Forms.TextBox();
+            this.testBox6 = new System.Windows.Forms.TextBox();
+            this.testBox5 = new System.Windows.Forms.TextBox();
             this.paneAbilities.SuspendLayout();
             this.panelSaves.SuspendLayout();
             this.SuspendLayout();
@@ -555,6 +561,7 @@
             this.richTextBox3.Size = new System.Drawing.Size(223, 293);
             this.richTextBox3.TabIndex = 48;
             this.richTextBox3.Text = "";
+            this.richTextBox3.TextChanged += new System.EventHandler(this.richTextBox3_TextChanged);
             // 
             // label3
             // 
@@ -582,11 +589,65 @@
             this.label4.TabIndex = 50;
             this.label4.Text = "Player Name:";
             // 
+            // testBox1
+            // 
+            this.testBox1.Location = new System.Drawing.Point(187, 170);
+            this.testBox1.Name = "testBox1";
+            this.testBox1.ReadOnly = true;
+            this.testBox1.Size = new System.Drawing.Size(27, 22);
+            this.testBox1.TabIndex = 52;
+            // 
+            // testBox2
+            // 
+            this.testBox2.Location = new System.Drawing.Point(187, 199);
+            this.testBox2.Name = "testBox2";
+            this.testBox2.ReadOnly = true;
+            this.testBox2.Size = new System.Drawing.Size(27, 22);
+            this.testBox2.TabIndex = 53;
+            // 
+            // testBox4
+            // 
+            this.testBox4.Location = new System.Drawing.Point(187, 257);
+            this.testBox4.Name = "testBox4";
+            this.testBox4.ReadOnly = true;
+            this.testBox4.Size = new System.Drawing.Size(27, 22);
+            this.testBox4.TabIndex = 55;
+            // 
+            // testBox3
+            // 
+            this.testBox3.Location = new System.Drawing.Point(187, 228);
+            this.testBox3.Name = "testBox3";
+            this.testBox3.ReadOnly = true;
+            this.testBox3.Size = new System.Drawing.Size(27, 22);
+            this.testBox3.TabIndex = 54;
+            // 
+            // testBox6
+            // 
+            this.testBox6.Location = new System.Drawing.Point(220, 199);
+            this.testBox6.Name = "testBox6";
+            this.testBox6.ReadOnly = true;
+            this.testBox6.Size = new System.Drawing.Size(27, 22);
+            this.testBox6.TabIndex = 57;
+            // 
+            // testBox5
+            // 
+            this.testBox5.Location = new System.Drawing.Point(220, 170);
+            this.testBox5.Name = "testBox5";
+            this.testBox5.ReadOnly = true;
+            this.testBox5.Size = new System.Drawing.Size(27, 22);
+            this.testBox5.TabIndex = 56;
+            // 
             // CharSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 709);
+            this.Controls.Add(this.testBox6);
+            this.Controls.Add(this.testBox5);
+            this.Controls.Add(this.testBox4);
+            this.Controls.Add(this.testBox3);
+            this.Controls.Add(this.testBox2);
+            this.Controls.Add(this.testBox1);
             this.Controls.Add(this.txtPlayerName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -694,5 +755,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPlayerName;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox testBox1;
+        private System.Windows.Forms.TextBox testBox2;
+        private System.Windows.Forms.TextBox testBox4;
+        private System.Windows.Forms.TextBox testBox3;
+        private System.Windows.Forms.TextBox testBox6;
+        private System.Windows.Forms.TextBox testBox5;
     }
 }

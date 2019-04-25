@@ -38,11 +38,23 @@ namespace DnDClassesTest
                 paneAbilities.Controls[i].Text = abilfill[i].ToString();
                 if (i % 2 == 1)
                 {
-                    if (leeroy.SavingThrows[i / 2])
+                    if (leeroy.SavingThrows[(i / 2)])
                         panelSaves.Controls[i / 2].Text = (abilfill[i] + leeroy.ProficiencyBonus()).ToString();
                     else panelSaves.Controls[i / 2].Text = abilfill[i].ToString();
+                    //MessageBox.Show(abilfill[i].ToString());
                 }
             }
+            System.Windows.Forms.TextBox[] boxes = { testBox1, testBox2, testBox3, testBox4, testBox5, testBox6 };
+            int count = 0;
+            foreach (System.Windows.Forms.TextBox i in boxes)
+            {
+                if (leeroy.SavingThrows[count])
+                    i.Text = (leeroy.AbilityModifiers()[count] + leeroy.ProficiencyBonus()).ToString();
+                else
+                    i.Text = leeroy.AbilityModifiers()[count].ToString();
+                count++;
+            }
+
             txtHP.Text = leeroy._HP.ToString();
             foreach (string s in leeroy._class.CurrentFeatures())
                 txtSpecial.AppendText(s + "\n");
@@ -106,6 +118,11 @@ namespace DnDClassesTest
         {
             AttackRoll attack = new AttackRoll();
             attack.Show();
+        }
+
+        private void richTextBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

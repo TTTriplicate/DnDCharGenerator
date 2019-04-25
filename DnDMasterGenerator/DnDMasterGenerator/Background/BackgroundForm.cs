@@ -134,13 +134,14 @@ namespace DnDClassesTest
             }
             else if(ChooseTraits.Checked == false)
             {
+                string[] blank = new string[9];
                 PersonalityDropDown.Visible = false;
-                PersonalityDropDown.DataSource = "";
+                PersonalityDropDown.DataSource = blank;
                 IdealDropDown.Visible = false;
-                IdealDropDown.DataSource = "";
-                FlawDropDown.DataSource = "";
+                IdealDropDown.DataSource = blank;
+                FlawDropDown.DataSource = blank;
                 FlawDropDown.Visible = false;
-                BondDropDown.DataSource = "";
+                BondDropDown.DataSource = blank;
                 BondDropDown.Visible = false;
             }
         }

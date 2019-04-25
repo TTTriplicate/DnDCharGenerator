@@ -81,6 +81,15 @@ namespace DnDClassesTest
             DialogResult = DialogResult.OK;
             this.Close();
         }
+        private Random dice = new Random();
+        public int RanNumGen()
+        {
+            int randNum;
+
+            randNum = dice.Next(8, 19);
+
+            return randNum;
+        }
 
         private void numLevel_ValueChanged(object sender, EventArgs e)
         {
@@ -90,6 +99,16 @@ namespace DnDClassesTest
         private void playerNameBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRoll_Click(object sender, EventArgs e)
+        {
+            numSTR.Value = RanNumGen();
+            numDEX.Value = RanNumGen();
+            numCON.Value = RanNumGen();
+            numINT.Value = RanNumGen();
+            numWIS.Value = RanNumGen();
+            numCHA.Value = RanNumGen();
         }
     }
 }
