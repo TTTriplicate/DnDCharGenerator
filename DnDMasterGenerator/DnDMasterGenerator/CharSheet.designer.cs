@@ -60,7 +60,6 @@
             this.lblSaves = new System.Windows.Forms.Label();
             this.lblAbilities = new System.Windows.Forms.Label();
             this.panelSaves = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.txtWISSave = new System.Windows.Forms.TextBox();
             this.txtINTSave = new System.Windows.Forms.TextBox();
             this.txtCONSave = new System.Windows.Forms.TextBox();
@@ -366,7 +365,7 @@
             // 
             // panelSaves
             // 
-            this.panelSaves.Controls.Add(this.textBox6);
+            this.panelSaves.Controls.Add(this.txtCHASave);
             this.panelSaves.Controls.Add(this.txtWISSave);
             this.panelSaves.Controls.Add(this.txtINTSave);
             this.panelSaves.Controls.Add(this.txtCONSave);
@@ -376,14 +375,6 @@
             this.panelSaves.Name = "panelSaves";
             this.panelSaves.Size = new System.Drawing.Size(40, 185);
             this.panelSaves.TabIndex = 31;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(4, 154);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(27, 22);
-            this.textBox6.TabIndex = 5;
             // 
             // txtWISSave
             // 
@@ -556,6 +547,7 @@
             this.richTextBox3.Size = new System.Drawing.Size(223, 293);
             this.richTextBox3.TabIndex = 48;
             this.richTextBox3.Text = "";
+            this.richTextBox3.TextChanged += new System.EventHandler(this.richTextBox3_TextChanged);
             // 
             // label3
             // 
@@ -683,7 +675,6 @@
         private System.Windows.Forms.Label lblSaves;
         private System.Windows.Forms.Label lblAbilities;
         private System.Windows.Forms.Panel panelSaves;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox txtWISSave;
         private System.Windows.Forms.TextBox txtINTSave;
         private System.Windows.Forms.TextBox txtCONSave;

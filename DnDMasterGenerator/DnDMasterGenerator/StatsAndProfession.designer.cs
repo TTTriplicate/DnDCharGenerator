@@ -346,6 +346,7 @@
             this.btnRoll.TabIndex = 19;
             this.btnRoll.Text = "Roll stats";
             this.btnRoll.UseVisualStyleBackColor = true;
+            this.btnRoll.Click += new System.EventHandler(this.btnRoll_Click);
             // 
             // lblCharName
             // 
