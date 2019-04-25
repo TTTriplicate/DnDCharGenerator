@@ -37,7 +37,7 @@ namespace DnDClassesTest
             this.Background = background;
             loadFile(background);
             Traits();
-            runLanq();
+            //runLanq();
         }
 
         public Background_Class(string race, string background)
