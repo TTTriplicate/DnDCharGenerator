@@ -19,6 +19,7 @@ namespace DnDClassesTest
         public List<string> inventoryString = new List<string>();
         public List<Gear> firstChoice;
         public List<List<string>> twoMartialIsStupid = new List<List<string>>();
+        public List<List<string>> wackadooIsAlsoStupid = new List<List<string>>();
 
         public GearForm()
         { 
@@ -36,6 +37,7 @@ namespace DnDClassesTest
             items = gear.getOptions();
             itemString = gear.getStrings();
             twoMartialIsStupid = gear.getStrings();
+            wackadooIsAlsoStupid = gear.getStrings();
             firstChoice = gear.getFirstChoice();
 
             int numItems = gear.getNumChoices();
@@ -63,7 +65,7 @@ namespace DnDClassesTest
             if(numItems >= 1)
             {
                 Choice1.Show();
-                if (gear.classType == "Ranger") //This works great
+                if (gear.classType == "Ranger")
                 {
                     choice1a.Show();
                     choice1b.Checked = true;
@@ -79,7 +81,7 @@ namespace DnDClassesTest
                     choice1a.Text = firstChoice[0].toString();
                     choice1b.Show();
                 }
-                else if (gear.classType == "Fighter" || gear.classType == "Paladin") //This works never
+                else if (gear.classType == "Fighter" || gear.classType == "Paladin") 
                 {
                     choice1a.Show();
                     choice1b.Show();
@@ -88,7 +90,7 @@ namespace DnDClassesTest
                     wackadooThingy.Show();
                     wackadooThingy.DataSource = itemString[0];
                     twoMartial.Show();
-                    twoMartial.DataSource = itemString[0];
+                    twoMartial.DataSource = twoMartialIsStupid[0];
                 }
                 Choice1.DataSource = itemString[0];
                 
