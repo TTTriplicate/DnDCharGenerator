@@ -84,6 +84,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtPlayerName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.Attack = new System.Windows.Forms.Button();
             this.paneAbilities.SuspendLayout();
             this.panelSaves.SuspendLayout();
             this.SuspendLayout();
@@ -572,6 +573,7 @@
             this.txtPlayerName.ReadOnly = true;
             this.txtPlayerName.Size = new System.Drawing.Size(100, 22);
             this.txtPlayerName.TabIndex = 51;
+            this.txtPlayerName.TextChanged += new System.EventHandler(this.txtPlayerName_TextChanged);
             // 
             // label4
             // 
@@ -582,11 +584,22 @@
             this.label4.TabIndex = 50;
             this.label4.Text = "Player Name:";
             // 
+            // Attack
+            // 
+            this.Attack.Location = new System.Drawing.Point(188, 314);
+            this.Attack.Name = "Attack";
+            this.Attack.Size = new System.Drawing.Size(76, 44);
+            this.Attack.TabIndex = 52;
+            this.Attack.Text = "Attack Roll";
+            this.Attack.UseVisualStyleBackColor = true;
+            this.Attack.Click += new System.EventHandler(this.Attack_Click_1);
+            // 
             // CharSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 709);
+            this.Controls.Add(this.Attack);
             this.Controls.Add(this.txtPlayerName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -694,5 +707,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPlayerName;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Attack;
     }
 }

@@ -22,13 +22,19 @@ namespace DnDClassesTest
             InitializeComponent();
         }
 
+        public AttackRoll(List<Gear> inventory)
+        {
+            InitializeComponent();
+            this.inventory = inventory;
+        }
+
         private void AttackRoll_Load(object sender, EventArgs e)
         {
             damageFactor.Hide();
-            inventory = gear.getInventory();
 
             for(int i = 0; i < inventory.Count(); i++)
             {
+                Console.WriteLine(inventory[i].GetType().ToString());
                 if (inventory[i].GetType().ToString() == "DnDClassesTest.Weapon")
                 {
                     weapons.Add(inventory[i]);
@@ -90,7 +96,7 @@ namespace DnDClassesTest
             }
         }
 
-        public int rollDice(int low = 1, int high = 20)
+        public int rollDice(int low = 1, int high = 21)
         {
             Random random = new Random();
             return random.Next(low, high);

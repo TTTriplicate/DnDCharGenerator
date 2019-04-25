@@ -87,9 +87,9 @@ namespace DnDClassesTest
 
             //pdfFormFields.SetField("Equipment", "Test test test");
             string stringInventory = "";
-            for (int i = 0; i < newChar.getInventory().Count(); i++)
+            for (int i = 0; i < newChar.getInventoryString().Count(); i++)
             {
-                stringInventory += (newChar.getInventory()[i]) + "\n";
+                stringInventory += (newChar.getInventoryString()[i]) + "\n";
             }
             pdfFormFields.SetField("Equipment", stringInventory);
 

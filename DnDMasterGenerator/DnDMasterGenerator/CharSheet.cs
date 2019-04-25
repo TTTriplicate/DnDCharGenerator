@@ -79,9 +79,9 @@ namespace DnDClassesTest
             txtBackground.Text = leeroy.CharBackground.getBackground();
 
 
-            for (int i = 0; i < leeroy.getInventory().Count(); i++)
+            for (int i = 0; i < leeroy.getInventoryString().Count(); i++)
             {
-                displayInventory.Text += (leeroy.getInventory()[i]) + "\n";
+                displayInventory.Text += (leeroy.getInventoryString()[i]) + "\n";
             }
             
             PDF_Filler fhsduf = new PDF_Filler(leeroy);
@@ -102,9 +102,15 @@ namespace DnDClassesTest
 
         }
 
-        private void Attack_Click(object sender, EventArgs e)
+
+        private void txtPlayerName_TextChanged(object sender, EventArgs e)
         {
-            AttackRoll attack = new AttackRoll();
+
+        }
+
+        private void Attack_Click_1(object sender, EventArgs e)
+        {
+            AttackRoll attack = new AttackRoll(DisplayChar.getInventory());
             attack.Show();
         }
     }
