@@ -8,6 +8,7 @@ using System.Diagnostics;
 using iTextSharp;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using System.Windows.Forms;
 
 namespace DnDClassesTest
 {
@@ -25,6 +26,22 @@ namespace DnDClassesTest
             PdfReader pdfReader = new PdfReader(pdfTemplate);
             PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
             AcroFields pdfFormFields = pdfStamper.AcroFields;
+            string[] checkBoxTrueFalse = pdfFormFields.GetAppearanceStates("Check Box 11_Yes");
+            int indexOne = -1, indexTwo = -1, count = 0;
+
+            for (count = 0; count < 17; count++)
+            {
+                if (indexOne == -1)
+                {
+                    if (newChar.CharBackground.SkillProf[count] == true)
+                        indexOne = count;
+                }
+                else if (indexTwo == -1 && indexOne != count)
+                {
+                    if (newChar.CharBackground.SkillProf[count] == true)
+                        indexTwo = count;
+                }
+            }
 
             pdfFormFields.SetField("PersonalityTraits ", newChar.CharBackground.getPersonality());
             pdfFormFields.SetField("CharacterName", newChar._name);
@@ -43,14 +60,17 @@ namespace DnDClassesTest
             pdfFormFields.SetField("STR", newChar.AbilityModifiers()[0].ToString());
             pdfFormFields.SetField("DEXmod ", newChar._abilities[1].ToString());
             pdfFormFields.SetField("DEX", newChar.AbilityModifiers()[1].ToString());
-            pdfFormFields.SetField("CON", newChar._abilities[2].ToString());
-            pdfFormFields.SetField("CONmod", newChar.AbilityModifiers()[2].ToString());
-            pdfFormFields.SetField("INT", newChar._abilities[3].ToString());
-            pdfFormFields.SetField("INTmod", newChar.AbilityModifiers()[3].ToString());
-            pdfFormFields.SetField("WIS", newChar._abilities[4].ToString());
-            pdfFormFields.SetField("WISmod", newChar.AbilityModifiers()[4].ToString());
-            pdfFormFields.SetField("CHA", newChar._abilities[5].ToString());
-            pdfFormFields.SetField("CHamod", newChar.AbilityModifiers()[5].ToString());
+            pdfFormFields.SetField("CONmod", newChar._abilities[2].ToString());
+            pdfFormFields.SetField("CON", newChar.AbilityModifiers()[2].ToString());
+            pdfFormFields.SetField("INTmod", newChar._abilities[3].ToString());
+            pdfFormFields.SetField("INT", newChar.AbilityModifiers()[3].ToString());
+            pdfFormFields.SetField("WISmod", newChar._abilities[4].ToString());
+            pdfFormFields.SetField("WIS", newChar.AbilityModifiers()[4].ToString());
+            pdfFormFields.SetField("CHamod", newChar._abilities[5].ToString());
+            pdfFormFields.SetField("CHA", newChar.AbilityModifiers()[5].ToString());
+            MessageBox.Show((indexOne + 23).ToString() + "blah1 " + (indexTwo + 23).ToString() + "blah2" );
+            //pdfFormFields.SetField("Check Box " + (indexOne + 23) + "_Yes", checkBoxTrueFalse[1]);
+            //pdfFormFields.SetField("Check Box " + (indexTwo + 23) + "_Yes", checkBoxTrueFalse[1]);
 
             //pdfFormFields.SetField("Equipment", "Test test test");
             string stringInventory = "";
