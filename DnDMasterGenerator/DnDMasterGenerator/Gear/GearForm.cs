@@ -18,6 +18,7 @@ namespace DnDClassesTest
         public List<Gear> inventory = new List<Gear>();
         public List<string> inventoryString = new List<string>();
         public List<Gear> firstChoice;
+        public List<List<string>> twoMartialIsStupid = new List<List<string>>();
 
         public GearForm()
         { 
@@ -34,6 +35,7 @@ namespace DnDClassesTest
         {
             items = gear.getOptions();
             itemString = gear.getStrings();
+            twoMartialIsStupid = gear.getStrings();
             firstChoice = gear.getFirstChoice();
 
             int numItems = gear.getNumChoices();
@@ -43,7 +45,7 @@ namespace DnDClassesTest
             Choice4.Hide();
             Choice5.Hide();
             Choice6.Hide();
-            twoMartial.Hide();
+            twoMartial.Hide(); //Literally only for fighter, paladin, and ranger.  The name is misleading because ranger uses two simple melee weapons instead of two martial weapons but I don't give a fuck
             choice1a.Hide();
             choice1b.Hide();
             choice2a.Hide();
@@ -56,19 +58,19 @@ namespace DnDClassesTest
             choice5b.Hide();
             choice6a.Hide();
             choice6b.Hide();
-            wackadooThingy.Hide(); //Literally only for fighter because fighter is a whole bitch.  Oh wait also for paladin
+            wackadooThingy.Hide(); //Literally only for fighter because fighter is a whole bitch.  Oh wait, also for paladin
 
             if(numItems >= 1)
             {
                 Choice1.Show();
-                if (gear.classType == "Ranger")
+                if (gear.classType == "Ranger") //This works great
                 {
                     choice1a.Show();
                     choice1b.Checked = true;
                     choice1a.Text = firstChoice[0].toString();
                     choice1b.Show();
                     twoMartial.Show();
-                    twoMartial.DataSource = itemString[0];
+                    twoMartial.DataSource = twoMartialIsStupid[0];
                 }
                 else if (firstChoice[0] != null)
                 {
@@ -77,14 +79,14 @@ namespace DnDClassesTest
                     choice1a.Text = firstChoice[0].toString();
                     choice1b.Show();
                 }
-                else if (gear.classType == "Fighter" || gear.classType == "Paladin")
+                else if (gear.classType == "Fighter" || gear.classType == "Paladin") //This works never
                 {
                     choice1a.Show();
+                    choice1b.Show();
                     choice1b.Checked = true;
                     choice1a.Text = "Shield and ";
                     wackadooThingy.Show();
-                    //List<string> test = itemString[0];
-                    wackadooThingy.DataSource = itemString[1];
+                    wackadooThingy.DataSource = itemString[0];
                     twoMartial.Show();
                     twoMartial.DataSource = itemString[0];
                 }
@@ -319,15 +321,13 @@ namespace DnDClassesTest
                 if (gear.classType == "Fighter" || gear.classType == "Paladin" || gear.classType == "Ranger")
                 {
                     message = message + Choice1.Text + "\n";
-                    message = message + twoMartial + "\n";
+                    message = message + twoMartial.Text + "\n";
                 }
                 else
                 {
                     message = message + Choice1.Text + "\n";
                 }
-                
-            }
-                
+            }  
 
             if (choice2a.Checked)
                 message = message + choice2a.Text + "\n";

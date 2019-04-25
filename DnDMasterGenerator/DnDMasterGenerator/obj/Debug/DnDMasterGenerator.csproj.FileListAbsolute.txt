@@ -155,3 +155,12 @@ C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator
 C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.AttackRoll.resources
 C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.AttackRoll.resources
 C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.AttackRoll.resources
+\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe.config
+\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe
+\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.pdb
+\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\BitMiracle.Docotic.Pdf.dll
+\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\itextsharp.dll
+\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\BitMiracle.Docotic.Pdf.xml
+\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\itextsharp.xml
+\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.AttackRoll.resources
+\\Mac\Home\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.CopyComplete

@@ -391,10 +391,8 @@ namespace DnDClassesTest
                 }
                 this.options.Add(new List<Gear>());//scale mail or leather armor
                 firstChoice.Add(null);
-                options[1].Add(allGear[getIndex("Scale Mail")]);
-                options[1].Add(allGear[getIndex("Leather Armor")]);
-                
-                
+                options[1].Add(allGear[getIndex("Scale mail")]);
+                options[1].Add(allGear[getIndex("Leather armor")]);
 
                 this.options.Add(new List<Gear>()); //dungeoneer's pack or an explorer's pack
                 firstChoice.Add(null);
