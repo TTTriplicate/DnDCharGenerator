@@ -20,8 +20,12 @@ namespace DnDClassesTest
         public bool[] backlanguage = new bool[16];
         public String[] allSkillProfs = { "Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Preformance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival" };
         //public String[] allToolProfs = { "Artisan’s Tools", "Disguise Kit", "Forgery Kit", "Gaming Set", "Herbalism Kit", "Musical Instrument", "Navigator’s Tools", "Poisoner’s Kit", "Thieves’ Tools" };
+        public string[] personalities = { "f", "f", "f", "f", "f", "f", "f", "f" };
+        public string[] ideals = { "f", "f", "f", "f", "f", "f" };
+        public string[] flaws = { "f", "f", "f", "f", "f", "f" };
+        public string[] bonds = { "f", "f", "f", "f", "f", "f" };
 
-        public string Personality, Ideal, Flaw, Bond, Background, SkillProfOne, SkillProfTwo, Race, ToolProfOne, ToolProfTwo;
+        public string Personality, Ideal, Flaw, Bond, Background, SkillProfOne, SkillProfTwo, Race, Hair, Skin, Eyes, Weight, Height, Age, Gender;
 
         public Background_Class()//string background)
         {
@@ -39,6 +43,7 @@ namespace DnDClassesTest
             loadFile(background);
             Traits();
             SkillProfs(background);
+            
             //njnrunLanq();
         }
 
@@ -183,23 +188,25 @@ namespace DnDClassesTest
         }
 
         //public void SkillProfs(ref string skillOne)
+        
+        public void loadShit()
+        {
+            loadFile(Background);
+            for (int i = 0; i < 8; i++)
+                personalities[i] = lines[(2 + i)].Split(':')[1];
+            for (int i = 0; i < 6; i++)
+                ideals[i] = lines[(13 + i)].Split(':')[1];
+            for (int i = 0; i < 6; i++)
+                flaws[i] = lines[(22 + i)].Split(':')[1];
+            for (int i = 0; i < 6; i++)
+                bonds[i] = lines[(31 + i)].Split(':')[1];
+        }
 
         public void Traits()
         {
-            string[] personalities = { "f", "f", "f", "f", "f", "f", "f", "f" };
-            string[] ideals = { "f", "f", "f", "f", "f", "f" };
-            string[] flaws = { "f", "f", "f", "f", "f", "f" };
-            string[] bonds = { "f", "f", "f", "f", "f", "f" };
             //string[] finalTraits = { "f", "f", "f", "f" };
 
-            for (int i = 1; i < 8; i++)
-                personalities[i] = lines[(2 + i)].Split(':')[1];
-            for (int i = 1; i < 6; i++)
-                ideals[i] = lines[(13 + i)].Split(':')[1];
-            for (int i = 1; i < 6; i++)
-                flaws[i] = lines[(22 + i)].Split(':')[1];
-            for (int i = 1; i < 6; i++)
-                bonds[i] = lines[(31 + i)].Split(':')[1];
+            loadShit();
 
             this.Personality = personalities[RanNumGen(8)];
             this.Ideal = ideals[RanNumGen(6)];
@@ -220,9 +227,55 @@ namespace DnDClassesTest
             info = System.IO.File.ReadAllLines(path);
         }
 
+        public void setFluff(string[] backgroundAddOns)
+        {
+            this.Hair = backgroundAddOns[0];
+            this.Skin = backgroundAddOns[1];
+            this.Eyes = backgroundAddOns[2];
+            this.Height = backgroundAddOns[3];
+            this.Weight = backgroundAddOns[4];
+            this.Age = backgroundAddOns[5];
+            this.Gender = backgroundAddOns[6];
+        }
+
         public int getNumLang()
         {
             return numLang;
+        }
+
+        public string getHair()
+        {
+            return Hair;
+        }
+
+        public string getSkin()
+        {
+            return Skin;
+        }
+
+        public string getEyes()
+        {
+            return Eyes;
+        }
+
+        public string getWeight()
+        {
+            return Weight;
+        }
+
+        public string getHeight()
+        {
+            return Height;
+        }
+
+        public string getAge()
+        {
+            return Age;
+        }
+
+        public string getGender()
+        {
+            return Gender;
         }
 
         public string getRace()

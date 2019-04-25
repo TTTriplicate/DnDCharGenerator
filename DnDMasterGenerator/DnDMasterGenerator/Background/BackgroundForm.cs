@@ -41,11 +41,17 @@ namespace DnDClassesTest
         {
             InitializeComponent();
             this.race = race;
+            PersonalityDropDown.Visible = false;
+            IdealDropDown.Visible = false;
+            FlawDropDown.Visible = false;
+            BondDropDown.Visible = false;
+            ChooseTraits.Visible = false;
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
             int num = 0;
+            string[] backgroundAddOns = new string[7];
             for (int i = 0; i< 8; i++)
             {
                 if (num < langList.CheckedItems.Count && langList.CheckedItems[num].ToString() == allLanguages[i])
@@ -54,7 +60,17 @@ namespace DnDClassesTest
                     num++;
                 }
             }
+
+            backgroundAddOns[0] = Hair.Text;
+            backgroundAddOns[1] = Skin.Text;
+            backgroundAddOns[2] = Eyes.Text;
+            backgroundAddOns[3] = Height.Text;
+            backgroundAddOns[4] = Weight.Text;
+            backgroundAddOns[5] = Age.Text;
+            backgroundAddOns[6] = Gender.Text;
+
             selected.setBackLang(bl);
+            selected.setFluff(backgroundAddOns);
             DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -76,6 +92,8 @@ namespace DnDClassesTest
         {
             selected = new Background_Class(BGChoice.SelectedItem.ToString());
 
+            ChooseTraits.Visible = true;
+
             PERSONALITY.Text = selected.Personality;
             IDEAL.Text = selected.Ideal;
             FLAW.Text = selected.Flaw;
@@ -91,6 +109,48 @@ namespace DnDClassesTest
         }
 
         private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IDEAL_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChooseTraits_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ChooseTraits.Checked == true)
+            {
+                selected.loadShit();
+                PersonalityDropDown.DataSource = selected.personalities;
+                PersonalityDropDown.Visible = true;
+                IdealDropDown.DataSource = selected.ideals;
+                IdealDropDown.Visible = true;
+                FlawDropDown.DataSource = selected.flaws;
+                FlawDropDown.Visible = true;
+                BondDropDown.DataSource = selected.bonds;
+                BondDropDown.Visible = true;
+            }
+            else if(ChooseTraits.Checked == false)
+            {
+                PersonalityDropDown.Visible = false;
+                PersonalityDropDown.DataSource = "";
+                IdealDropDown.Visible = false;
+                IdealDropDown.DataSource = "";
+                FlawDropDown.DataSource = "";
+                FlawDropDown.Visible = false;
+                BondDropDown.DataSource = "";
+                BondDropDown.Visible = false;
+            }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }

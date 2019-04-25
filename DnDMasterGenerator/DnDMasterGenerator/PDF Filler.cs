@@ -26,7 +26,7 @@ namespace DnDClassesTest
             PdfReader pdfReader = new PdfReader(pdfTemplate);
             PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
             AcroFields pdfFormFields = pdfStamper.AcroFields;
-            string[] checkBoxTrueFalse = pdfFormFields.GetAppearanceStates("Check Box 11_Yes");
+            //string[] checkBoxTrueFalse = pdfFormFields.GetAppearanceStates("Check Box 11");
             int indexOne = -1, indexTwo = -1, count = 0;
 
             for (count = 0; count < 17; count++)
@@ -68,9 +68,22 @@ namespace DnDClassesTest
             pdfFormFields.SetField("WIS", newChar.AbilityModifiers()[4].ToString());
             pdfFormFields.SetField("CHamod", newChar._abilities[5].ToString());
             pdfFormFields.SetField("CHA", newChar.AbilityModifiers()[5].ToString());
-            MessageBox.Show((indexOne + 23).ToString() + "blah1 " + (indexTwo + 23).ToString() + "blah2" );
-            //pdfFormFields.SetField("Check Box " + (indexOne + 23) + "_Yes", checkBoxTrueFalse[1]);
-            //pdfFormFields.SetField("Check Box " + (indexTwo + 23) + "_Yes", checkBoxTrueFalse[1]);
+            pdfFormFields.SetField("Age", newChar.CharBackground.getAge());
+            pdfFormFields.SetField("CharacterName 2", newChar._name);
+            pdfFormFields.SetField("Height", newChar.CharBackground.getHeight());
+            pdfFormFields.SetField("Weight", newChar.CharBackground.getWeight());
+            pdfFormFields.SetField("Eyes", newChar.CharBackground.getEyes());
+            pdfFormFields.SetField("Skin", newChar.CharBackground.getSkin());
+            pdfFormFields.SetField("Hair", newChar.CharBackground.getHair());
+            //MessageBox.Show((indexOne + 23).ToString() + "blah1 " + (indexTwo + 23).ToString() + "blah2");
+
+            //bool set = pdfFormFields.SetFieldProperty("Check Box 11", "textsize", 10.0f, null);
+            //MessageBox.Show(GetCheckBoxExportValue(pdfFormFields, "Check Box 27_Yes "));
+            //pdfFormFields.SetField("Check Box 23", "Yes");
+            //pdfFormFields.SetField(("Check Box 27_Yes"), "FillText156" );
+
+            pdfFormFields.SetField("Check Box " + (indexOne + 23), "Yes");
+            pdfFormFields.SetField("Check Box " + (indexTwo + 23), "Yes");
 
             //pdfFormFields.SetField("Equipment", "Test test test");
             string stringInventory = "";
