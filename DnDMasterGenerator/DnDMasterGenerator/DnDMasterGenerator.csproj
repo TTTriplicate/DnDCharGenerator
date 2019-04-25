@@ -158,6 +158,24 @@
       <DependentUpon>StatsAndProfession.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="PDFs\.pdf" />
+    <None Include="PDFs\Amy.pdf" />
+    <None Include="PDFs\BackgroundTest.pdf" />
+    <None Include="PDFs\billy.pdf" />
+    <None Include="PDFs\Blob.pdf" />
+    <None Include="PDFs\dfg.pdf" />
+    <None Include="PDFs\gdfg.pdf" />
+    <None Include="PDFs\Jor%27b%27th.pdf" />
+    <None Include="PDFs\Jose.pdf" />
+    <None Include="PDFs\jsefiosd.pdf" />
+    <None Include="PDFs\Praise.pdf" />
+    <None Include="PDFs\Rolen A.pdf" />
+    <None Include="PDFs\Rolen Amakiir.pdf" />
+    <None Include="PDFs\Rolen.pdf" />
+    <None Include="PDFs\Test.pdf" />
+    <None Include="PDFs\testtstststs.pdf" />
+    <None Include="PDFs\TWC-DnD-5E-Character-Sheet-v1.3.pdf" />
+    <None Include="PDFs\wakawaka.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
