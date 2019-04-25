@@ -135,5 +135,10 @@ namespace DnDClassesTest
         {
 
         }
+
+        private void txtCHASave_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -84,6 +84,7 @@
             this.txtPlayerName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Attack = new System.Windows.Forms.Button();
+            this.txtCHASave = new System.Windows.Forms.TextBox();
             this.paneAbilities.SuspendLayout();
             this.panelSaves.SuspendLayout();
             this.SuspendLayout();
@@ -586,6 +587,15 @@
             this.Attack.UseVisualStyleBackColor = true;
             this.Attack.Click += new System.EventHandler(this.Attack_Click_1);
             // 
+            // txtCHASave
+            // 
+            this.txtCHASave.Location = new System.Drawing.Point(4, 154);
+            this.txtCHASave.Name = "txtCHASave";
+            this.txtCHASave.ReadOnly = true;
+            this.txtCHASave.Size = new System.Drawing.Size(27, 22);
+            this.txtCHASave.TabIndex = 53;
+            this.txtCHASave.TextChanged += new System.EventHandler(this.txtCHASave_TextChanged_1);
+            // 
             // CharSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -699,5 +709,6 @@
         private System.Windows.Forms.TextBox txtPlayerName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Attack;
+        private System.Windows.Forms.TextBox txtCHASave;
     }
 }
