@@ -11,16 +11,17 @@ namespace DnDClassesTest
     public class Background_Class
     {
         public bool[] SkillProf = new bool[18];
-        public String[] ToolProf = { "Artisan's Tools", "Disguise Kit", "Forgery Kit", "Gaming Set", "Herbalism Kit", "Musical Instrument", "Navigator's tools", "Poisoner's kit", "Theives' Tools" };
+        //public bool[] ToolProf = new bool[9];
         public String[] BACKGROUNDS = { "Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin" };
         public string[] lines;
         //public string background;
         protected int numLang;
         protected string[] info; 
         public bool[] backlanguage = new bool[16];
-        //public String[] SkillProfs = { "Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Preformance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival" };
+        public String[] allSkillProfs = { "Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Preformance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival" };
+        //public String[] allToolProfs = { "Artisan’s Tools", "Disguise Kit", "Forgery Kit", "Gaming Set", "Herbalism Kit", "Musical Instrument", "Navigator’s Tools", "Poisoner’s Kit", "Thieves’ Tools" };
 
-        public string Personality, Ideal, Flaw, Bond, Background, SkillProfOne, SkillProfTwo, Race;
+        public string Personality, Ideal, Flaw, Bond, Background, SkillProfOne, SkillProfTwo, Race, ToolProfOne, ToolProfTwo;
 
         public Background_Class()//string background)
         {
@@ -90,7 +91,64 @@ namespace DnDClassesTest
                 case "Entertainer":
                     SkillProfOne = "Acrobatics";
                     SkillProfTwo = "Performance";
+                    SkillProf[0] = true;
+                    SkillProf[13] = true;
                     break;
+                case "Folk Hero":
+                    SkillProfOne = "Animal Handing";
+                    SkillProfTwo = "Survival";
+                    SkillProf[1] = true;
+                    SkillProf[17] = true;
+                    break;
+                case "Guild Artisan":
+                    SkillProfOne = "Insight";
+                    SkillProfTwo = "Persuasion";
+                    SkillProf[6] = true;
+                    SkillProf[13] = true;
+                    break;
+                case "Hermit":
+                    SkillProfOne = "Medicine";
+                    SkillProfTwo = "Religion";
+                    SkillProf[9] = true;
+                    SkillProf[14] = true;
+                    break;
+                case "Noble":
+                    SkillProfOne = "History";
+                    SkillProfTwo = "Persuasion";
+                    SkillProf[5] = true;
+                    SkillProf[13] = true;
+                    break;
+                case "Outlander":
+                    SkillProfOne = "Athletics";
+                    SkillProfTwo = "Survival";
+                    SkillProf[3] = true;
+                    SkillProf[17] = true;
+                    break;
+                case "Sage":
+                    SkillProfOne = "Arcana";
+                    SkillProfTwo = "History";
+                    SkillProf[2] = true;
+                    SkillProf[5] = true;
+                    break;
+                case "Sailor":
+                    SkillProfOne = "Athletics";
+                    SkillProfTwo = "Perception";
+                    SkillProf[3] = true;
+                    SkillProf[12] = true;
+                    break;
+                case "Soldier":
+                    SkillProfOne = "Athletics";
+                    SkillProfTwo = "Intimidation";
+                    SkillProf[3] = true;
+                    SkillProf[7] = true;
+                    break;
+                case "Urchin":
+                    SkillProfOne = "Sleight of Hand";
+                    SkillProfTwo = "Stealth";
+                    SkillProf[15] = true;
+                    SkillProf[16] = true;
+                    break;
+
                 default:
                     break;
             }

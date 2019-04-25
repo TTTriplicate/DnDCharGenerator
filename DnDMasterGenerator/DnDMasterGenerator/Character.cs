@@ -152,15 +152,15 @@ namespace DnDClassesTest
             string charName, playName;
             this.CharClass = Profession.InteractiveChoice(out a, out charName, out playName);
             this._abilities = a;
-            this._HP = this._class._hitDie;
-            this._HP += AbilityModifiers()[2];
             this._name = charName;
             this._playerName = playName;
             this._level = this.CharClass._level;
-            if (this._level > 1)
-                this._HP += DnDCharacter.RollHP(this._level - 1, this._class._hitDie, this._HP) + ((this._level - 1) * this.AbilityModifiers()[2]);
             this.CharRace = Race.InteractiveChoice();
             raceAdditions();
+            this._HP = this._class._hitDie;
+            this._HP += AbilityModifiers()[2];
+            if (this._level > 1)
+                this._HP += DnDCharacter.RollHP(this._level - 1, this._class._hitDie, this._HP) + ((this._level - 1) * this.AbilityModifiers()[2]);
             //Background selector
             //Race selector
             //this._skills = DnDCharacter.SkillSelectInteractive(CharClass._numProSkills, CharClass.ClassSkills()/*, Background_Class.FixedSkills = new bool[18]*/);
@@ -260,8 +260,8 @@ namespace DnDClassesTest
             int[] modifiers = new int[6];
             for (int i = 0; i < 6; ++i)
             {
-                if (Abilities[i] >= 10) modifiers[i] = (Abilities[i] - 10) / 2;
-                else if (Abilities[i] < 10) modifiers[i] = Math.Min(((10 - Abilities[i]) / -2), -1);
+                if (Abilities[i] != 9) modifiers[i] = (Abilities[i] - 10) / 2;
+                else modifiers[i] = -1;
             }
             return modifiers;
         }
