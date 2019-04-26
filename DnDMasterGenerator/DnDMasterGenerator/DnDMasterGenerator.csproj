@@ -72,6 +72,12 @@
     <Compile Include="CharSheet.designer.cs">
       <DependentUpon>CharSheet.cs</DependentUpon>
     </Compile>
+    <Compile Include="FightingStyles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FightingStyles.Designer.cs">
+      <DependentUpon>FightingStyles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CharSheet.resx">
       <DependentUpon>CharSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FightingStyles.resx">
+      <DependentUpon>FightingStyles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -209,6 +218,7 @@
     <Content Include="Professions\ClassFeatures\ClericClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\DruidClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\FighterClassFeatures.txt" />
+    <Content Include="Professions\ClassFeatures\FightingStyles\FightingStyles.txt" />
     <Content Include="Professions\ClassFeatures\MonkClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\PaladinClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\RangerClassFeatures.txt" />

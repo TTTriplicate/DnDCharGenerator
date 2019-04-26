@@ -106,8 +106,8 @@ namespace DnDClassesTest
             {
                 if (!unlock[i]) break;
             }
-            if (_proPath == 0) current = Features.GetRange(3, 1);
-            else current = Features.GetRange(9, 1);
+            if (_proPath == 0) current = Features.GetRange(3, 2);
+            else current = Features.GetRange(9, 2);
 
             if (i >= 1) current.Add(Features[0]);
             if (i >= 2) current.Add(Features[1]);
