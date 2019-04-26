@@ -417,7 +417,7 @@ namespace DnDClassesTest
                 options[1].Add(allGear[getIndex("Shortsword")]);
                 this.options.Add(new List<Gear>());//burglar's pack or a dungeoneer's pack or an explorer's pack
                 firstChoice.Add(null);
-                options[2].Add(allGear[getIndex("Burglar's Pack")]);
+                options[2].Add(new Equipment("Burglar's Pack"));
                 options[2].Add(allGear[getIndex("Dungeoneer's Pack")]);
                 options[2].Add(allGear[getIndex("Explorer's Pack")]);
 
