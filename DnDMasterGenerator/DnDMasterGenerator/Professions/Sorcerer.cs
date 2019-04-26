@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,17 +22,7 @@ namespace DnDClassesTest
             }
         }
         protected override List<string> Features
-        {
-            get
-            {
-                return Features;
-            }
-            set
-            {//contains full listing of class features 
-             //to be passed to character sheet through ClassFeatures method
-                Features = ClassFeatures();
-            }
-        }
+        {            get; set;        }
 
         public Sorcerer()
         {
@@ -48,7 +39,7 @@ namespace DnDClassesTest
             this._caster = true;
             this._proPath = path;
             this._numProSkills = 2;
-            //this.ClassFeatures = this.Unlocked();
+            this.Features = this.ClassFeatures();
         }
         public override bool[] ClassSkills()
         {//Arcana, Deception, Insight, Intimidation, Persuasion, and Religion
@@ -78,34 +69,31 @@ namespace DnDClassesTest
 
         public override List<string> ClassFeatures()
         {
-            int path = this._proPath;
             List<string> features = new List<string>();
-            /*features.Add(Inspiration());//0
-            features.Add(SongOfRest());//1
-            features.Add(path == 0 ? CuttingWords() : CombatInspiration());//2
-            features.Add(FontOfInspiration());//3
-            features.Add(CounterCharm());//4
-            features.Add(path == 0 ? ExtraSecrets() : ExtraAttack());//4
-            features.Add(MagicSecrets());//5
-            features.Add(path == 0 ? PeerlessSkill() : BattleMagic());//6
-            features.Add(SuperiorInspiration());//7*/
-            return features;
+            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\SorcererClassFeatures.txt");
+            //string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
+            string[] temp = new string[28];
+            temp = File.ReadAllLines(path);
+            foreach (string i in temp)
+            {
+                features.Add(i);
+            }
 
+            return features;
         }
 
 
 
         public override bool[] Unlocked()
         {
-            bool[] unlocked = new bool[8]/*{ false, false, false, false, false, false, false, false }*/;
+            bool[] unlocked = new bool[7]/*{ false, false, false, false, false, false, false, false }*/;
             unlocked[0] = true;         //false is the default, shouldn't need that
             if (this._level >= 2) unlocked[1] = true;
             if (this._level >= 3) unlocked[2] = true;
-            if (this._level >= 5) unlocked[3] = true;
-            if (this._level >= 6) unlocked[4] = true;
-            if (this._level >= 10) unlocked[5] = true;
-            if (this._level >= 14) unlocked[6] = true;
-            if (this._level == 20) unlocked[7] = true;
+            if (this._level >= 6) unlocked[3] = true;
+            if (this._level >= 14) unlocked[4] = true;
+            if (this._level >= 18) unlocked[5] = true;
+            if (this._level >= 20) unlocked[6] = true;
             return unlocked;
         }
 
@@ -114,17 +102,22 @@ namespace DnDClassesTest
             List<string> current = new List<string>();
             bool[] unlock = this.Unlocked();
             int i;
-            for (i = 7; i <= 0; --i)
+            for (i = 0; i < 7; ++i)
             {
-                if (unlock[i]) break;
+                if (!unlock[i]) break;
             }
-            if (i == 7) current = Features;
-            else if (i == 6) current = Features.GetRange(0, 7);
-            else if (i == 5) current = Features.GetRange(0, 6);
-            else if (i == 4) current = Features.GetRange(0, 5);
-            else if (i == 3) current = Features.GetRange(0, 3);
-            else if (i == 2) current = Features.GetRange(0, 2);
-            else if (i == 2) current = Features.GetRange(0, 1);
+            if (_proPath == 0) current = Features.GetRange(3, 4);
+            else current = Features.GetRange(9, 10);
+
+            if (i >= 1) current.Add(Features[0]);
+            if (i >= 2) current.Add(Features[1]);
+            if (i >= 3 && _proPath == 0) current.Add(Features[5]);
+            else if (i >= 3 && _proPath == 1) current.Add(Features[11]);
+            if (i >= 4 && _proPath == 0) current.Add(Features[6]);
+            else if (i >= 4 && _proPath == 1) current.Add(Features[12]);
+            if (i >= 5 && _proPath == 0) current.Add(Features[7]);
+            else if(i >= 5 && _proPath == 1)current.Add(Features[13]);
+            if (i >= 6) current.Add(Features[2]);
             else current.Add(Features[0]);
             return current;
         }
