@@ -254,7 +254,6 @@ namespace DnDClassesTest
                     }
                 }*/
 
-                Console.WriteLine("Alpha");
                 if (choice2a.Checked)
                 {
                     inventoryString.Add(choice2a.Text);
@@ -262,7 +261,6 @@ namespace DnDClassesTest
                 }    
                 else if (choice2b.Checked)
                 {
-                    Console.WriteLine("Beta");
                     inventoryString.Add(Choice2.Text);
                     inventory.Add(items[1][Choice2.SelectedIndex]);
                 }

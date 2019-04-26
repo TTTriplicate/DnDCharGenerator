@@ -57,7 +57,7 @@ namespace DnDMasterGenerator.Professions.ClassFeatures.MetaMagic
                 bits.Add(i);
             }
             int count = 0;
-            int[] indicies removed
+            int[] indiciesremoved;
             return bits;
 
         }
