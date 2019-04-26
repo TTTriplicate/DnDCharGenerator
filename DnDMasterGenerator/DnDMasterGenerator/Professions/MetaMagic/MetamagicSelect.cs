@@ -17,7 +17,7 @@ namespace DnDMasterGenerator.Professions.ClassFeatures.MetaMagic
 
         public int[] Selected { get; set; }
 
-        private int[] Current { get; set; }
+        public List<int> Current { get; set; }
 
         public MetamagicSelect()
         {
@@ -35,13 +35,38 @@ namespace DnDMasterGenerator.Professions.ClassFeatures.MetaMagic
         {
             InitializeComponent();
             Source = SetSource();
-            comboSelector.DataSource = Source;
-            comboSelector.SelectedIndex = 0;
-            comboSelector2.Enabled = false;
-            comboSelector2.Visible = false;
-            foreach (int i in indicies)
-                txtCurrent.AppendText(Source[i]);
-
+            Current = new List<int>();
+            if (indicies[0] >= 0)
+            {
+                comboSelector2.Enabled = false;
+                comboSelector2.Visible = false;
+                foreach (int i in indicies)
+                {
+                    Current.Add(i);
+                    if (i == -1) continue;
+                    else txtCurrent.AppendText(Source[i]);
+                }
+                Array.Sort(indicies);
+                Array.Reverse(indicies);
+                foreach (int i in indicies)
+                {
+                    if (i == -1) break;
+                    else Source.RemoveAt(i);
+                }
+                comboSelector.DataSource = Source;
+                comboSelector.SelectedIndex = 0;
+                Selected = new int[1];
+            }
+            else
+            {
+                Current = new List<int> { -1, -1, -1, -1, -1 };
+                comboSelector.DataSource = Source;
+                comboSelector.SelectedIndex = 0;
+                comboSelector2.BindingContext = new BindingContext();
+                comboSelector2.DataSource = Source;
+                comboSelector2.SelectedIndex = 0;
+                Selected = new int[2];
+            }
         }
 
         private List<string> SetSource()
@@ -73,9 +98,26 @@ namespace DnDMasterGenerator.Professions.ClassFeatures.MetaMagic
             {
                 if (comboSelector.SelectedIndex != comboSelector2.SelectedIndex)
                 {
+                    Selected[0] = comboSelector.SelectedIndex;
+                    Selected[1] = comboSelector2.SelectedIndex;
+                    foreach (int i in Selected)
+                        Current[Current.IndexOf(-1)] = i;
                     DialogResult = DialogResult.OK;
                     this.Close();
                 }
+                else
+                {
+                    MessageBox.Show("Please select two different options.", "Same item selected.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                Selected[0] = comboSelector.SelectedIndex;
+                foreach (int i in Selected)
+                    Current[Current.IndexOf(-1)] = i;
+                DialogResult = DialogResult.OK;
+                this.Close();
+
             }
         }
     }
