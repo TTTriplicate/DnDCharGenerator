@@ -20,6 +20,7 @@ namespace DnDClassesTest
         public CharSheet(DnDCharacter leeroy)
         {
             InitializeComponent();
+            Attack.Hide();
             richTextBox1.Hide();
             lblTraits.Hide();
             DisplayChar = leeroy;
@@ -67,7 +68,6 @@ namespace DnDClassesTest
             foreach (string i in leeroy.CharRace.getSA())
                 txtSpecial.Text += i + ", ";
             txtRace.Text = leeroy.CharRace.getRace();
-
             if(leeroy._class.ProfessionName() == "Cleric")
             {
                 try
@@ -137,6 +137,11 @@ namespace DnDClassesTest
         }
 
         private void txtCHASave_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMelee_TextChanged(object sender, EventArgs e)
         {
 
         }

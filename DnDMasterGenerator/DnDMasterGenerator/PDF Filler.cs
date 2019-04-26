@@ -18,6 +18,13 @@ namespace DnDClassesTest
 
         public PDF_Filler(DnDCharacter newChar)
         {
+            string[] abils = { "ST Strength", "ST Dexterity", "ST Constitution", "ST Intelligence", "ST Wisdom", "ST Charisma" };
+            //string[] skills = { "Athletics", "end", "end",  "end", "end", };
+            string[] dex = { "0", "Acrobatics", "15", "SleightofHand", "16", "Stealth" };
+            string[] intel = { "Arcana", "History", "Investigation", "Nature", "Religion" };
+            string[] wis = { "Animal", "Insight", "Medicine", "Perception", "Survival" };
+            string[] cha = { "Deception", "Intimidation", "Performance", "Persuasion" };
+            bool[] skillBoxes = new bool[18];
             string nameOfFile = newChar._name;
             string PDFFolder = Path.Combine(Environment.CurrentDirectory, @"..\..\PDFs");
             string pdfTemplate = PDFFolder + @"\TWC-DnD-5E-Character-Sheet-v1.3.pdf";
@@ -104,11 +111,11 @@ namespace DnDClassesTest
                     save = "Yes";
                 else
                     save = "No";
-                pdfFormFields.SetField("Check Box "+i.ToString(), save);
+                pdfFormFields.SetField("Check Box " + i.ToString(), save);
             }
 
             //int[] abilfill = new int[12];
-            string[] abils = { "ST Strength", "ST Dexterity", "ST Constitution", "ST Intelligence", "ST Wisdom", "ST Charisma" };
+
             count = 0;
             foreach (string i in abils)
             {
@@ -145,9 +152,27 @@ namespace DnDClassesTest
             //MessageBox.Show(GetCheckBoxExportValue(pdfFormFields, "Check Box 27_Yes "));
             //pdfFormFields.SetField("Check Box 23", "Yes");
             //pdfFormFields.SetField(("Check Box 27_Yes"), "FillText156" );
-            MessageBox.Show((indexOne + 23).ToString() + " " + (indexTwo + 23).ToString());
+            //MessageBox.Show((indexOne + 23).ToString() + " " + (indexTwo + 23).ToString());
             pdfFormFields.SetField("Check Box " + (indexOne + 23), "Yes");
             pdfFormFields.SetField("Check Box " + (indexTwo + 23), "Yes");
+            skillBoxes[indexOne] = true;
+            skillBoxes[indexTwo] = true;
+            string indexNum = "0";
+            foreach (string i in dex)
+            {
+                if (i.Length < 3)
+                {
+                    indexNum = i;
+                }
+                else if (i.Length > 3)
+                {
+                    if (skillBoxes[int.Parse(indexNum)])
+                        pdfFormFields.SetField(i, (newChar.AbilityModifiers()[1] + newChar.ProficiencyBonus()).ToString());
+                    else
+                        pdfFormFields.SetField(i, newChar.AbilityModifiers()[1].ToString());
+                }
+                indexNum = "0";
+            }
 
             //pdfFormFields.SetField("Equipment", "Test test test");
             string stringInventory = "";

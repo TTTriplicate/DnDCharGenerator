@@ -253,6 +253,7 @@ namespace DnDClassesTest
                 numChoices = 4;
                 this.options.Add(new List<Gear>()); //scale mail or leather armor or chainmail (if proficient)
                 firstChoice.Add(null);
+                
                 //Cleric.Proficiencies(n);
                 //bool[] proficiencies = Cleric.Proficiencies(leeroy._class._proPath);
                 //Profession cleric =
@@ -311,7 +312,7 @@ namespace DnDClassesTest
                     options[2].Add(allGear[i]);
                 }
             }
-            else if (classType == "Fighter") //FIX_ME: add two martial weapons
+            else if (classType == "Fighter") 
             {
                 reformat = true;
                 numChoices = 4;
@@ -356,7 +357,7 @@ namespace DnDClassesTest
                 options[1].Add(new Equipment("Dungeoneer's Pack"));
                 options[1].Add(new Equipment("Explorer's Pack"));
             }
-            else if (classType == "Paladin") //FIX_ME: add two martial weapons
+            else if (classType == "Paladin") 
             {
                 inventory.Add(allGear[getIndex("Chain mail")]);
                 numChoices = 3;

@@ -103,9 +103,13 @@ namespace DnDClassesTest
             {
                 chooseLang();
                 langList.Visible = true;
+                button1.Visible = true;
             }
             else
+            {
                 langList.Visible = false;
+                button1.Visible = false;
+            }
         }
 
         private void label1_Click_1(object sender, EventArgs e)
