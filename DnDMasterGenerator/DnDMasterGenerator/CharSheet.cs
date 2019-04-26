@@ -68,7 +68,6 @@ namespace DnDClassesTest
             foreach (string i in leeroy.CharRace.getSA())
                 txtSpecial.Text += i + ", ";
             txtRace.Text = leeroy.CharRace.getRace();
-
             if(leeroy._class.ProfessionName() == "Cleric")
             {
                 try

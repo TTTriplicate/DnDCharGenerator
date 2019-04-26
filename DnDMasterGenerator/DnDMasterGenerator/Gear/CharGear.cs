@@ -253,6 +253,7 @@ namespace DnDClassesTest
                 numChoices = 4;
                 this.options.Add(new List<Gear>()); //scale mail or leather armor or chainmail (if proficient)
                 firstChoice.Add(null);
+                
                 //Cleric.Proficiencies(n);
                 //bool[] proficiencies = Cleric.Proficiencies(leeroy._class._proPath);
                 //Profession cleric =
