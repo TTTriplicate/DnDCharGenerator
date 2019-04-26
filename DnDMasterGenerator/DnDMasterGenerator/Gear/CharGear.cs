@@ -276,7 +276,7 @@ namespace DnDClassesTest
                 firstChoice.Add(allGear[getIndex("Light Crossbow and 20 bolts")]);
                 for (i = startSimpleMelee; i < startMartialMelee; i++)
                 {
-                    options[0].Add(allGear[i]);
+                    options[2].Add(allGear[i]);
                 }
 
                 this.options.Add(new List<Gear>()); //priest's pack or explorer's pack
@@ -378,7 +378,7 @@ namespace DnDClassesTest
                 options[2].Add(allGear[getIndex("Priest's Pack")]);
                 options[2].Add(allGear[getIndex("Explorer's Pack")]);
             }
-            else if (classType == "Ranger") //FIX_ME: Add two simple melee weapons
+            else if (classType == "Ranger")
             {
                 inventory.Add(allGear[getIndex("Longbow")]);
                 inventory.Add(new Equipment("Arrows (x20"));
