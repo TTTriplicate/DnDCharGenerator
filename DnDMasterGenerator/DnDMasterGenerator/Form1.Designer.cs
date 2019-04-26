@@ -51,6 +51,7 @@
             this.btnLoadCharacter.TabIndex = 1;
             this.btnLoadCharacter.Text = "Load";
             this.btnLoadCharacter.UseVisualStyleBackColor = true;
+            this.btnLoadCharacter.Click += new System.EventHandler(this.btnLoadCharacter_Click);
             // 
             // lblWelcome
             // 
@@ -61,7 +62,7 @@
             this.lblWelcome.TabIndex = 2;
             this.lblWelcome.Text = "Would you like to load a character, or create a new character?";
             // 
-            // Form1
+            // LandingPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -69,7 +70,7 @@
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnLoadCharacter);
             this.Controls.Add(this.btnNewCharacter);
-            this.Name = "Form1";
+            this.Name = "LandingPage";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
