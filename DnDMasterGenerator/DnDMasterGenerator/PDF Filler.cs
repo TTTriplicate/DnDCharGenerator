@@ -98,6 +98,15 @@ namespace DnDClassesTest
                 save = "No";
             pdfFormFields.SetField("Check Box 11", save);
 
+            for (int i = 18, num = 1; i < 23; i++)
+            {
+                if (newChar.SavingThrows[num++])
+                    save = "Yes";
+                else
+                    save = "No";
+                pdfFormFields.SetField("Check Box "+i.ToString(), save);
+            }
+            /*{
             if (newChar.SavingThrows[1])
                 save = "Yes";
             else
@@ -127,6 +136,7 @@ namespace DnDClassesTest
             else
                 save = "No";
             pdfFormFields.SetField("Check Box 22", save);
+            }*/
 
             //int[] abilfill = new int[12];
             string[] abils = { "ST Strength", "ST Dexterity", "ST Constitution", "ST Intelligence", "ST Wisdom", "ST Charisma" };
@@ -181,7 +191,9 @@ namespace DnDClassesTest
             string languages = "";
             foreach (string i in newChar.CharRace.getLanguages())
             {
-                languages += i + ", ";
+                if (languages == "")
+                    languages += ", ";
+                languages += i;
             }
             pdfFormFields.SetField("ProficienciesLang", languages);
 

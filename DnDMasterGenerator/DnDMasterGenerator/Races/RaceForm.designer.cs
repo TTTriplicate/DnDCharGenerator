@@ -34,12 +34,10 @@
             this.langBox = new System.Windows.Forms.RichTextBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.chooser = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.alignmentBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.saasBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // subRaceBox
@@ -56,7 +54,7 @@
             // specialsBox
             // 
             this.specialsBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.specialsBox.Location = new System.Drawing.Point(208, 407);
+            this.specialsBox.Location = new System.Drawing.Point(208, 429);
             this.specialsBox.Name = "specialsBox";
             this.specialsBox.ReadOnly = true;
             this.specialsBox.Size = new System.Drawing.Size(490, 110);
@@ -80,7 +78,7 @@
             // langBox
             // 
             this.langBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.langBox.Location = new System.Drawing.Point(208, 304);
+            this.langBox.Location = new System.Drawing.Point(208, 326);
             this.langBox.Name = "langBox";
             this.langBox.ReadOnly = true;
             this.langBox.Size = new System.Drawing.Size(490, 97);
@@ -109,46 +107,6 @@
             this.chooser.Text = " (Choose One)";
             this.chooser.SelectedIndexChanged += new System.EventHandler(this.chooser_SelectedIndexChanged);
             // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(233, 593);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(465, 53);
-            this.textBox5.TabIndex = 31;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(233, 523);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(465, 53);
-            this.textBox4.TabIndex = 30;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(208, 245);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(242, 53);
-            this.textBox2.TabIndex = 28;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(233, 666);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(465, 53);
-            this.textBox1.TabIndex = 27;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -174,18 +132,42 @@
             "Chaotic Good",
             "Chaotic Neutral",
             "Chaotic Evil"});
-            this.alignmentBox.Location = new System.Drawing.Point(456, 245);
+            this.alignmentBox.Location = new System.Drawing.Point(208, 263);
             this.alignmentBox.Name = "alignmentBox";
-            this.alignmentBox.Size = new System.Drawing.Size(242, 46);
+            this.alignmentBox.Size = new System.Drawing.Size(490, 46);
             this.alignmentBox.TabIndex = 38;
             this.alignmentBox.Text = "(Choose One)";
             this.alignmentBox.SelectedIndexChanged += new System.EventHandler(this.alignmentBox_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(203, 235);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 25);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Alignment";
+            // 
+            // saasBox
+            // 
+            this.saasBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saasBox.Location = new System.Drawing.Point(208, 545);
+            this.saasBox.Name = "saasBox";
+            this.saasBox.ReadOnly = true;
+            this.saasBox.Size = new System.Drawing.Size(490, 172);
+            this.saasBox.TabIndex = 40;
+            this.saasBox.Text = "";
+            this.saasBox.TextChanged += new System.EventHandler(this.saasBox_TextChanged);
             // 
             // RaceSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 858);
+            this.Controls.Add(this.saasBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.alignmentBox);
             this.Controls.Add(this.subRaceBox);
             this.Controls.Add(this.specialsBox);
@@ -193,10 +175,6 @@
             this.Controls.Add(this.langBox);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.chooser);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "RaceSelect";
             this.Text = "Form1";
@@ -213,12 +191,10 @@
         private System.Windows.Forms.RichTextBox langBox;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.ComboBox chooser;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox alignmentBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox saasBox;
     }
 }
 
