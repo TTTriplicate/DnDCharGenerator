@@ -43,15 +43,15 @@ namespace DnDClassesTest
         public override bool[] ClassSkills()
         {//history insight medicine persuasion religion
             bool[] SkillList = new bool[18];
-            /*Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             bool[] = true;
-             bool[] = true;
-             bool[] = true;*/
+            //Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival
+             SkillList[1] = true;
+             SkillList[2] = true;
+             SkillList[6] = true;
+             SkillList[9] = true;
+             SkillList[10] = true;
+             SkillList[11] = true;
+             SkillList[14] = true;
+             SkillList[17] = true;
             return SkillList;
         }
 

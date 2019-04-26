@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using DnDMasterGenerator;
+using System.Windows.Forms;
 
 namespace DnDClassesTest
 {
@@ -43,12 +45,12 @@ namespace DnDClassesTest
         public override bool[] ClassSkills()
         {//Athletics, Insight, Intimidation, Medicine, Persuasion, and Religion
             bool[] SkillList = new bool[18];
-            /*bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             bool[] = true*/
+            SkillList[3] = true;
+            SkillList[6] = true;
+            SkillList[7] = true;
+            SkillList[8] = true;
+            SkillList[13] = true;
+            SkillList[14] = true;
             return SkillList;
         }
 
@@ -110,15 +112,19 @@ namespace DnDClassesTest
                 if (!unlock[i]) break;
             }
             current = Features.GetRange(0, 1);
-            if (i == 1) current = Features.GetRange(0, 3);
-            else if (i == 2) current = Features.GetRange(0, 4);
-            else if (i == 3) current = Features.GetRange(0, 5);
-            else if (i == 4) current = Features.GetRange(0, 6);
-            else if (i == 6) current = Features.GetRange(0, 7);
-            else if (i == 7) current = Features.GetRange(0, 8);
-            else if (i == 8) current = Features.GetRange(0, 9);
-            
-            if(_proPath == 0)
+            if (i >= 1)
+            {
+                current = Features.GetRange(0, 3);
+                current.Add(this.ChooseFightingStyle());
+            }
+            else if (i >= 2) current.Add(Features[4]);
+            else if (i >= 3) current.Add(Features[5]);
+            else if (i >= 4) current.Add(Features[6]);
+            else if (i >= 6) current.Add(Features[7]);
+            else if (i >= 7) current.Add(Features[8]);
+            else if (i >= 8) current.Add(Features[9]);
+
+            if (_proPath == 0)
             {
                 if (i < 2) return current;
                 else if (i >= 2) current.Add(Features[10]);
@@ -144,6 +150,17 @@ namespace DnDClassesTest
             }
 
             return current;
+        }
+        private string ChooseFightingStyle()
+        {
+            var picker = new FightingStyles(this.ProfessionName());
+            var result = picker.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                return picker.Source[picker.Index];
+            }
+
+            else return "";
         }
 
         //insert class feature methods here

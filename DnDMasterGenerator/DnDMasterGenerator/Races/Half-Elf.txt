@@ -5,4 +5,4 @@ Chaotic-Neutral
 Medium
 30
 0 2 +
-Darkvision, Fey Ancestry, Skill Versatility
+Darkvision(60ft), Fey Ancestry, Skill Versatility

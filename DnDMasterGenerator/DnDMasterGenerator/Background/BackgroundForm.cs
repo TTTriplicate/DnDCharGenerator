@@ -103,9 +103,13 @@ namespace DnDClassesTest
             {
                 chooseLang();
                 langList.Visible = true;
+                button1.Visible = true;
             }
             else
+            {
                 langList.Visible = false;
+                button1.Visible = false;
+            }
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -134,13 +138,14 @@ namespace DnDClassesTest
             }
             else if(ChooseTraits.Checked == false)
             {
+                string[] blank = new string[9];
                 PersonalityDropDown.Visible = false;
-                PersonalityDropDown.DataSource = "";
+                PersonalityDropDown.DataSource = blank;
                 IdealDropDown.Visible = false;
-                IdealDropDown.DataSource = "";
-                FlawDropDown.DataSource = "";
+                IdealDropDown.DataSource = blank;
+                FlawDropDown.DataSource = blank;
                 FlawDropDown.Visible = false;
-                BondDropDown.DataSource = "";
+                BondDropDown.DataSource = blank;
                 BondDropDown.Visible = false;
             }
         }
@@ -153,6 +158,11 @@ namespace DnDClassesTest
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            chooseLang();
         }
 
         private void BackgroundForm_Load(object sender, EventArgs e)
@@ -178,6 +188,7 @@ namespace DnDClassesTest
                     langList.Items.Add(allLanguages[i]);
                 }
             }
+            langList.Enabled = true;
         }
 
         public void setInfo(ref string Personality, ref string Ideal, ref string Flaw, ref string Bond)

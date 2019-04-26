@@ -29,49 +29,39 @@ namespace DnDClassesTest
             {"Mountain", "Wood", "Stout", "", "", "Rock", "", "", ""},
             {"", "Dark", "", "", "", "", "", "", ""}
         };
+        protected string[] ability = new string[6] { "Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma" };
 
         protected void setUp()
         {
-            textBox1.Text = ""; textBox2.Text = ""; textBox4.Text = "";
-            textBox5.Text = ""; langBox.Text = ""; specialsBox.Text = "";
+            langBox.Text = ""; specialsBox.Text = ""; saasBox.Text = "";
 
             for (int i = 0; i < 6; i++)
             {
-                if (i != 0)
-                    textBox1.Text += ", ";
-                textBox1.Text += selected.getAA()[i];
+                if (selected.getAA()[i] != 0)
+                {
+                    if (saasBox.Text != "")
+                        saasBox.Text += ", ";
+                    saasBox.Text += ability[i] + ": +"+selected.getAA()[i];
+
+                }
             }
-            textBox2.Text = selected.getAge() + " years";
-            textBox4.Text = selected.getSize();
-            textBox5.Text = selected.getSpeed().ToString();
+            saasBox.Text += "\nAdult at "+selected.getAge().Split('-')[0] + " years old, dies around "+selected.getAge().Split('-')[1] +" years old";
+            saasBox.Text += "\nSize: " + selected.getSize();
+            saasBox.Text += "\nSpeed: " + selected.getSpeed().ToString();
             foreach (string i in selected.getLanguages())
             {
                 if (i != selected.getLanguages()[0])
                     langBox.Text += ", ";
                 langBox.Text += i;
             }
-            /*foreach (string i in selected.getSA())
+            foreach (string i in selected.getSA())
             {
                 if (i == null)
                     break;
                 if (i != selected.getSA()[0])
                     specialsBox.Text += ", ";
                 specialsBox.Text += i;
-            }*/
-            for (int i = 0; i < 16; i++)
-            {
-                specialsBox.Text += selected.getLangRace(i).ToString();
             }
-        }
-
-        private void RaceSelect_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void chooser_SelectedIndexChanged(object sender, EventArgs e)
@@ -108,22 +98,7 @@ namespace DnDClassesTest
             selected.subChange();
             setUp();
         }
-
-        private void specialsBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void error_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void langBox_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (alignmentBox.Text == "(Choose One)" || chooser.Text == "(Choose One)" || (subRaceBox.Text == "(Choose One)" && subRaceBox.Visible))
@@ -136,30 +111,14 @@ namespace DnDClassesTest
                 this.Close();
             }
         }
+        
 
-        private void alignmentBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void RaceSelect_Load(object sender, EventArgs e) { }
+        private void specialsBox_TextChanged(object sender, EventArgs e) { }
+        private void error_Click(object sender, EventArgs e) { }
+        private void langBox_TextChanged_1(object sender, EventArgs e) { }
+        private void alignmentBox_SelectedIndexChanged(object sender, EventArgs e) { }
+        private void label1_Click(object sender, EventArgs e) { }
+        private void saasBox_TextChanged(object sender, EventArgs e) { }
     }
 }

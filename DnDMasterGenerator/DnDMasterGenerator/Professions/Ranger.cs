@@ -1,9 +1,11 @@
-﻿using System;
+﻿using DnDMasterGenerator;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DnDClassesTest
 {
@@ -42,18 +44,18 @@ namespace DnDClassesTest
             this.Features = this.ClassFeatures();
         }
         public override bool[] ClassSkills()
-        {//history insight medicine persuasion religion
+        {
             bool[] SkillList = new bool[18];
-            /*Animal Handling, Athletics, Insight, Investigation, Nature, Perception,
-                Stealth, and Survival
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             bool[] = true;
-             bool[] = true;
-             bool[] = true;*/
+            //Animal Handling, Athletics, Insight, Investigation, Nature, Perception,
+              //  Stealth, and Survival
+             SkillList[1] = true;
+             SkillList[3] = true;
+             SkillList[6] = true;
+             SkillList[8] = true;
+             SkillList[10] = true;
+             SkillList[11] = true;
+             SkillList[16] = true;
+             SkillList[17] = true;
             return SkillList;
         }
 
@@ -91,7 +93,7 @@ namespace DnDClassesTest
 
         public override bool[] Unlocked()
         {
-            bool[] unlocked = new bool[11]/*{ false, false, false, false, false, false, false, false }*/;
+            bool[] unlocked = new bool[12]/*{ false, false, false, false, false, false, false, false }*/;
             unlocked[0] = true;         //false is the default, shouldn't need that
             if (this._level >= 2) unlocked[1] = true;
             if (this._level >= 3) unlocked[2] = true;
@@ -116,44 +118,52 @@ namespace DnDClassesTest
             {
                 if (!unlock[i]) break;
             }
-            current = Features.GetRange(0, 1);
-            if (i == 1) current = Features.GetRange(0, 2);
-            else if (i == 2) current = Features.GetRange(0, 3);
-            else if (i == 3) current = Features.GetRange(0, 4);
-            else if (i == 5) current = Features.GetRange(0, 5);
-            else if (i == 6) current = Features.GetRange(0, 6);
-            else if (i == 8) current = Features.GetRange(0, 7);
-            else if (i == 10) current = Features.GetRange(0, 8);
-            else if (i == 11) current = Features.GetRange(0, 9);
+            current = Features.GetRange(0, 2);
+            if (i >= 1) {
+                current.Add(Features[2]);
+                current.Add(this.ChooseFightingStyle());
+            }
+            else if (i >= 2) current.Add(Features[3]);
+            else if (i >= 3) current.Add(Features[4]);
+            else if (i >= 5) current.Add(Features[5]);
+            else if (i >= 6) current.Add(Features[6]);
+            else if (i >= 8) current.Add(Features[7]);
+            else if (i >= 10) current.Add(Features[8]);
+            else if (i >= 11) current.Add(Features[9]);
 
-            if (_proPath == 0)
-            {
-                if (i < 2) return current;
-                else if (i >= 2) current.Add(Features[10]);
-                if (i >= 4) current.Add(Features[11]);
-                if (i >= 7) current.Add(Features[12]);
-                if (i >= 8) current.Add(Features[13]);
-            }
-            else if (_proPath == 1)
-            {
-                if (i < 2) return current;
-                else if (i >= 2) current.Add(Features[14]);
-                if (i >= 4) current.Add(Features[15]);
-                if (i >= 7) current.Add(Features[16]);
-                if (i >= 8) current.Add(Features[17]);
-            }
-            else if (_proPath == 2)
-            {
-                if (i < 2) return current;
-                else if (i >= 2) current.Add(Features[18]);
-                if (i >= 5) current.Add(Features[19]);
-                if (i >= 8) current.Add(Features[20]);
-                if (i >= 10) current.Add(Features[21]);
-            }
-
+                if (_proPath == 0)
+                {
+                    if (i < 2) return current;
+                    else if (i >= 2) current.Add(Features[10]);
+                    if (i >= 4) current.Add(Features[11]);
+                    if (i >= 7) current.Add(Features[12]);
+                    if (i >= 8) current.Add(Features[13]);
+                }
+                else if (_proPath == 1)
+                {
+                    if (i < 2) return current;
+                    else if (i >= 2) current.Add(Features[14]);
+                    if (i >= 4) current.Add(Features[15]);
+                    if (i >= 7) current.Add(Features[16]);
+                    if (i >= 8) current.Add(Features[17]);
+                }
             return current;
+
+        }
+        private string ChooseFightingStyle()
+        {
+            var picker = new FightingStyles(this.ProfessionName());
+            var result = picker.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                return picker.Source[picker.Index];
+            }
+
+            else return "";
         }
 
-        //insert class feature methods here
     }
+
+
 }
+

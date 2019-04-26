@@ -32,11 +32,12 @@
             this.WeaponsLabel = new System.Windows.Forms.Label();
             this.Roll = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Miss = new System.Windows.Forms.RadioButton();
             this.Hit = new System.Windows.Forms.RadioButton();
             this.RollResult = new System.Windows.Forms.Label();
-            this.Miss = new System.Windows.Forms.RadioButton();
             this.ResultLabel = new System.Windows.Forms.Label();
             this.damageFactor = new System.Windows.Forms.Label();
+            this.Damage = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@
             this.Weapons.FormattingEnabled = true;
             this.Weapons.Location = new System.Drawing.Point(12, 30);
             this.Weapons.Name = "Weapons";
-            this.Weapons.Size = new System.Drawing.Size(121, 24);
+            this.Weapons.Size = new System.Drawing.Size(274, 24);
             this.Weapons.TabIndex = 0;
             this.Weapons.SelectedIndexChanged += new System.EventHandler(this.Weapons_SelectedIndexChanged);
             // 
@@ -60,7 +61,7 @@
             // 
             // Roll
             // 
-            this.Roll.Location = new System.Drawing.Point(15, 78);
+            this.Roll.Location = new System.Drawing.Point(88, 60);
             this.Roll.Name = "Roll";
             this.Roll.Size = new System.Drawing.Size(111, 36);
             this.Roll.TabIndex = 2;
@@ -72,10 +73,22 @@
             // 
             this.panel2.Controls.Add(this.Miss);
             this.panel2.Controls.Add(this.Hit);
-            this.panel2.Location = new System.Drawing.Point(12, 156);
+            this.panel2.Location = new System.Drawing.Point(68, 139);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(152, 36);
             this.panel2.TabIndex = 4;
+            // 
+            // Miss
+            // 
+            this.Miss.AutoSize = true;
+            this.Miss.Location = new System.Drawing.Point(64, 4);
+            this.Miss.Name = "Miss";
+            this.Miss.Size = new System.Drawing.Size(57, 21);
+            this.Miss.TabIndex = 7;
+            this.Miss.TabStop = true;
+            this.Miss.Text = "Miss";
+            this.Miss.UseVisualStyleBackColor = true;
+            this.Miss.CheckedChanged += new System.EventHandler(this.Miss_CheckedChanged);
             // 
             // Hit
             // 
@@ -92,43 +105,40 @@
             // RollResult
             // 
             this.RollResult.AutoSize = true;
-            this.RollResult.Location = new System.Drawing.Point(85, 126);
+            this.RollResult.Location = new System.Drawing.Point(183, 109);
             this.RollResult.Name = "RollResult";
             this.RollResult.Size = new System.Drawing.Size(16, 17);
             this.RollResult.TabIndex = 6;
             this.RollResult.Text = "0";
             this.RollResult.Click += new System.EventHandler(this.RollResult_Click);
             // 
-            // Miss
-            // 
-            this.Miss.AutoSize = true;
-            this.Miss.Location = new System.Drawing.Point(64, 4);
-            this.Miss.Name = "Miss";
-            this.Miss.Size = new System.Drawing.Size(57, 21);
-            this.Miss.TabIndex = 7;
-            this.Miss.TabStop = true;
-            this.Miss.Text = "Miss";
-            this.Miss.UseVisualStyleBackColor = true;
-            this.Miss.CheckedChanged += new System.EventHandler(this.Miss_CheckedChanged);
-            // 
             // ResultLabel
             // 
             this.ResultLabel.AutoSize = true;
-            this.ResultLabel.Location = new System.Drawing.Point(15, 126);
+            this.ResultLabel.Location = new System.Drawing.Point(85, 109);
             this.ResultLabel.Name = "ResultLabel";
-            this.ResultLabel.Size = new System.Drawing.Size(48, 17);
+            this.ResultLabel.Size = new System.Drawing.Size(56, 17);
             this.ResultLabel.TabIndex = 8;
-            this.ResultLabel.Text = "Result";
+            this.ResultLabel.Text = "Result: ";
             // 
             // damageFactor
             // 
             this.damageFactor.AutoSize = true;
-            this.damageFactor.Location = new System.Drawing.Point(17, 211);
+            this.damageFactor.Location = new System.Drawing.Point(22, 197);
             this.damageFactor.Name = "damageFactor";
             this.damageFactor.Size = new System.Drawing.Size(109, 17);
             this.damageFactor.TabIndex = 9;
             this.damageFactor.Text = "Damage Factor:";
             this.damageFactor.Click += new System.EventHandler(this.damageFactor_Click);
+            // 
+            // Damage
+            // 
+            this.Damage.AutoSize = true;
+            this.Damage.Location = new System.Drawing.Point(138, 197);
+            this.Damage.Name = "Damage";
+            this.Damage.Size = new System.Drawing.Size(16, 17);
+            this.Damage.TabIndex = 10;
+            this.Damage.Text = "0";
             // 
             // AttackRoll
             // 
@@ -136,6 +146,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(311, 375);
+            this.Controls.Add(this.Damage);
             this.Controls.Add(this.damageFactor);
             this.Controls.Add(this.ResultLabel);
             this.Controls.Add(this.RollResult);
@@ -164,5 +175,6 @@
         private System.Windows.Forms.RadioButton Miss;
         private System.Windows.Forms.Label ResultLabel;
         private System.Windows.Forms.Label damageFactor;
+        private System.Windows.Forms.Label Damage;
     }
 }

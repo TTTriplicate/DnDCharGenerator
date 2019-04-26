@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.IO;
+using System.Diagnostics;
 
 namespace DnDClassesTest
 {
@@ -22,6 +24,12 @@ namespace DnDClassesTest
             var sheet = new CharSheet(NewChar);
             sheet.ShowDialog();
             this.Close();
+        }
+
+        private void btnLoadCharacter_Click(object sender, EventArgs e)
+        {
+            string PDFFolder = Path.Combine(Environment.CurrentDirectory, @"..\..\PDFs");
+            Process.Start(PDFFolder);
         }
     }
 }

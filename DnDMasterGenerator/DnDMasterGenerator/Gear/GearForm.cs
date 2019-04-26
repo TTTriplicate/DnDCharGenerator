@@ -19,6 +19,7 @@ namespace DnDClassesTest
         public List<string> inventoryString = new List<string>();
         public List<Gear> firstChoice;
         public List<List<string>> twoMartialIsStupid = new List<List<string>>();
+        public List<List<string>> wackadooIsAlsoStupid = new List<List<string>>();
 
         public GearForm()
         { 
@@ -36,6 +37,7 @@ namespace DnDClassesTest
             items = gear.getOptions();
             itemString = gear.getStrings();
             twoMartialIsStupid = gear.getStrings();
+            wackadooIsAlsoStupid = gear.getStrings();
             firstChoice = gear.getFirstChoice();
 
             int numItems = gear.getNumChoices();
@@ -63,10 +65,15 @@ namespace DnDClassesTest
             if(numItems >= 1)
             {
                 Choice1.Show();
-                if (gear.classType == "Ranger") //This works great
+                choice1b.Checked = true;
+                choice2b.Checked = true;
+                choice3b.Checked = true;
+                choice4b.Checked = true;
+                choice5b.Checked = true;
+                choice6b.Checked = true;
+                if (gear.classType == "Ranger")
                 {
                     choice1a.Show();
-                    choice1b.Checked = true;
                     choice1a.Text = firstChoice[0].toString();
                     choice1b.Show();
                     twoMartial.Show();
@@ -75,20 +82,18 @@ namespace DnDClassesTest
                 else if (firstChoice[0] != null)
                 {
                     choice1a.Show();
-                    choice1b.Checked = true;
                     choice1a.Text = firstChoice[0].toString();
                     choice1b.Show();
                 }
-                else if (gear.classType == "Fighter" || gear.classType == "Paladin") //This works never
+                else if (gear.classType == "Fighter" || gear.classType == "Paladin") 
                 {
                     choice1a.Show();
                     choice1b.Show();
-                    choice1b.Checked = true;
                     choice1a.Text = "Shield and ";
                     wackadooThingy.Show();
-                    wackadooThingy.DataSource = itemString[0];
+                    wackadooThingy.DataSource = wackadooIsAlsoStupid[0];
                     twoMartial.Show();
-                    twoMartial.DataSource = itemString[0];
+                    twoMartial.DataSource = twoMartialIsStupid[0];
                 }
                 Choice1.DataSource = itemString[0];
                 
@@ -97,7 +102,6 @@ namespace DnDClassesTest
                     if (firstChoice[1] != null)
                     {
                         choice2a.Show();
-                        choice2b.Checked = true;
                         choice2a.Text = firstChoice[1].toString();
                         choice2b.Show();
                     }
@@ -110,7 +114,6 @@ namespace DnDClassesTest
                         if (firstChoice[2] != null)
                         {
                             choice3a.Show();
-                            choice3b.Checked = true;
                             choice3a.Text = firstChoice[2].toString();
                             choice3b.Show();
                         }
@@ -122,7 +125,6 @@ namespace DnDClassesTest
                             if (firstChoice[3] != null)
                             {
                                 choice4a.Show();
-                                choice4b.Checked = true;
                                 choice4a.Text = firstChoice[3].toString();
                                 choice4b.Show();
                             }
@@ -134,7 +136,6 @@ namespace DnDClassesTest
                                 if (firstChoice[4] != null)
                                 {
                                     choice5a.Show();
-                                    choice5b.Checked = true;
                                     choice5a.Text = firstChoice[4].toString();
                                     choice5b.Show();
                                 }
@@ -146,7 +147,6 @@ namespace DnDClassesTest
                                     if (firstChoice[5] != null)
                                     {
                                         choice6a.Show();
-                                        choice6b.Checked = true;
                                         choice6a.Text = firstChoice[5].toString();
                                         choice6b.Show();
                                     }
@@ -238,6 +238,23 @@ namespace DnDClassesTest
                         inventory.Add(items[0][Choice1.SelectedIndex]);
                     }
                 }
+
+                /*
+                 * or (int i = 2, num = 1; i < 7; i++)
+                {
+                    if (choice2a.Checked)
+                    {
+                        inventoryString.Add(choice2a.Text);
+                        inventory.Add(firstChoice[1]);
+                    }    
+                    else if (choice2b.Checked)
+                    {
+                        inventoryString.Add(Choice2.Text);
+                        inventory.Add(items[num][Choice2.SelectedIndex]);
+                    }
+                }*/
+
+                Console.WriteLine("Alpha");
                 if (choice2a.Checked)
                 {
                     inventoryString.Add(choice2a.Text);
@@ -245,6 +262,7 @@ namespace DnDClassesTest
                 }    
                 else if (choice2b.Checked)
                 {
+                    Console.WriteLine("Beta");
                     inventoryString.Add(Choice2.Text);
                     inventory.Add(items[1][Choice2.SelectedIndex]);
                 }
@@ -288,7 +306,7 @@ namespace DnDClassesTest
                     inventoryString.Add(Choice6.Text);
                     inventory.Add(items[5][Choice6.SelectedIndex]);
                 }   
-
+                
                 gear.formatting(ref inventory, ref inventoryString);
 
                 gear.setInventory(inventory);

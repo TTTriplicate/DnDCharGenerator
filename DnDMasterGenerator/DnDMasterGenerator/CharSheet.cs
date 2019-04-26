@@ -20,6 +20,7 @@ namespace DnDClassesTest
         public CharSheet(DnDCharacter leeroy)
         {
             InitializeComponent();
+            Attack.Hide();
             richTextBox1.Hide();
             lblTraits.Hide();
             DisplayChar = leeroy;
@@ -36,13 +37,25 @@ namespace DnDClassesTest
             for (int i = 0; i < 12; ++i)
             {
                 paneAbilities.Controls[i].Text = abilfill[i].ToString();
-                if (i % 2 == 1)
-                {
-                    if (leeroy.SavingThrows[i / 2])
-                        panelSaves.Controls[i / 2].Text = (abilfill[i] + leeroy.ProficiencyBonus()).ToString();
-                    else panelSaves.Controls[i / 2].Text = abilfill[i].ToString();
-                }
+                //if (i % 2 == 1)
+                //{
+                //    if (leeroy.SavingThrows[(i / 2)])
+                //        panelSaves.Controls[i / 2].Text = (abilfill[i] + leeroy.ProficiencyBonus()).ToString();
+                //    else panelSaves.Controls[i / 2].Text = abilfill[i].ToString();
+                //    //MessageBox.Show(abilfill[i].ToString());
+                //}
             }
+            System.Windows.Forms.TextBox[] boxes = { txtSTRSave, txtDEXSave, txtCONSave, txtINTSave, txtWISSave, txtCHASave };
+            int count = 0;
+            foreach (System.Windows.Forms.TextBox i in boxes)
+            {
+                if (leeroy.SavingThrows[count])
+                    i.Text = (leeroy.AbilityModifiers()[count] + leeroy.ProficiencyBonus()).ToString();
+                else
+                    i.Text = leeroy.AbilityModifiers()[count].ToString();
+                count++;
+            }
+
             txtHP.Text = leeroy._HP.ToString();
             foreach (string s in leeroy._class.CurrentFeatures())
                 txtSpecial.AppendText(s + "\n");
@@ -55,7 +68,6 @@ namespace DnDClassesTest
             foreach (string i in leeroy.CharRace.getSA())
                 txtSpecial.Text += i + ", ";
             txtRace.Text = leeroy.CharRace.getRace();
-
             if(leeroy._class.ProfessionName() == "Cleric")
             {
                 try
@@ -79,9 +91,9 @@ namespace DnDClassesTest
             txtBackground.Text = leeroy.CharBackground.getBackground();
 
 
-            for (int i = 0; i < leeroy.getInventory().Count(); i++)
+            for (int i = 0; i < leeroy.getInventoryString().Count(); i++)
             {
-                displayInventory.Text += (leeroy.getInventory()[i]) + "\n";
+                displayInventory.Text += (leeroy.getInventoryString()[i]) + "\n";
             }
             
             PDF_Filler fhsduf = new PDF_Filler(leeroy);
@@ -102,10 +114,36 @@ namespace DnDClassesTest
 
         }
 
-        private void Attack_Click(object sender, EventArgs e)
+
+        private void txtPlayerName_TextChanged(object sender, EventArgs e)
         {
-            AttackRoll attack = new AttackRoll();
+
+        }
+
+        private void Attack_Click_1(object sender, EventArgs e)
+        {
+            AttackRoll attack = new AttackRoll(DisplayChar.getInventory());
             attack.Show();
+        }
+
+        private void richTextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCHASave_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCHASave_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMelee_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

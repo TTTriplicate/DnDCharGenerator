@@ -60,7 +60,7 @@
             this.lblSaves = new System.Windows.Forms.Label();
             this.lblAbilities = new System.Windows.Forms.Label();
             this.panelSaves = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtCHASave = new System.Windows.Forms.TextBox();
             this.txtWISSave = new System.Windows.Forms.TextBox();
             this.txtINTSave = new System.Windows.Forms.TextBox();
             this.txtCONSave = new System.Windows.Forms.TextBox();
@@ -84,6 +84,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtPlayerName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.Attack = new System.Windows.Forms.Button();
             this.paneAbilities.SuspendLayout();
             this.panelSaves.SuspendLayout();
             this.SuspendLayout();
@@ -365,7 +366,7 @@
             // 
             // panelSaves
             // 
-            this.panelSaves.Controls.Add(this.textBox6);
+            this.panelSaves.Controls.Add(this.txtCHASave);
             this.panelSaves.Controls.Add(this.txtWISSave);
             this.panelSaves.Controls.Add(this.txtINTSave);
             this.panelSaves.Controls.Add(this.txtCONSave);
@@ -376,13 +377,14 @@
             this.panelSaves.Size = new System.Drawing.Size(40, 185);
             this.panelSaves.TabIndex = 31;
             // 
-            // textBox6
+            // txtCHASave
             // 
-            this.textBox6.Location = new System.Drawing.Point(4, 154);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(27, 22);
-            this.textBox6.TabIndex = 5;
+            this.txtCHASave.Location = new System.Drawing.Point(4, 154);
+            this.txtCHASave.Name = "txtCHASave";
+            this.txtCHASave.ReadOnly = true;
+            this.txtCHASave.Size = new System.Drawing.Size(27, 22);
+            this.txtCHASave.TabIndex = 53;
+            this.txtCHASave.TextChanged += new System.EventHandler(this.txtCHASave_TextChanged_1);
             // 
             // txtWISSave
             // 
@@ -467,6 +469,7 @@
             this.txtMelee.ReadOnly = true;
             this.txtMelee.Size = new System.Drawing.Size(29, 22);
             this.txtMelee.TabIndex = 36;
+            this.txtMelee.TextChanged += new System.EventHandler(this.txtMelee_TextChanged);
             // 
             // txtRanged
             // 
@@ -555,6 +558,7 @@
             this.richTextBox3.Size = new System.Drawing.Size(223, 293);
             this.richTextBox3.TabIndex = 48;
             this.richTextBox3.Text = "";
+            this.richTextBox3.TextChanged += new System.EventHandler(this.richTextBox3_TextChanged);
             // 
             // label3
             // 
@@ -572,6 +576,7 @@
             this.txtPlayerName.ReadOnly = true;
             this.txtPlayerName.Size = new System.Drawing.Size(100, 22);
             this.txtPlayerName.TabIndex = 51;
+            this.txtPlayerName.TextChanged += new System.EventHandler(this.txtPlayerName_TextChanged);
             // 
             // label4
             // 
@@ -582,11 +587,22 @@
             this.label4.TabIndex = 50;
             this.label4.Text = "Player Name:";
             // 
+            // Attack
+            // 
+            this.Attack.Location = new System.Drawing.Point(188, 314);
+            this.Attack.Name = "Attack";
+            this.Attack.Size = new System.Drawing.Size(76, 44);
+            this.Attack.TabIndex = 52;
+            this.Attack.Text = "Attack Roll";
+            this.Attack.UseVisualStyleBackColor = true;
+            this.Attack.Click += new System.EventHandler(this.Attack_Click_1);
+            // 
             // CharSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(855, 709);
+            this.Controls.Add(this.Attack);
             this.Controls.Add(this.txtPlayerName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -670,7 +686,6 @@
         private System.Windows.Forms.Label lblSaves;
         private System.Windows.Forms.Label lblAbilities;
         private System.Windows.Forms.Panel panelSaves;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox txtWISSave;
         private System.Windows.Forms.TextBox txtINTSave;
         private System.Windows.Forms.TextBox txtCONSave;
@@ -694,5 +709,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPlayerName;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Attack;
+        private System.Windows.Forms.TextBox txtCHASave;
     }
 }

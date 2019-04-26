@@ -149,6 +149,9 @@ namespace DnDClassesTest
                         CharClass = new Sorcerer(level, proPath);
                         break;
                     case 10:
+                        CharClass = new Warlock(level, proPath);
+                        break;
+                    case 11:
                         CharClass = new Wizard(level, proPath);
                         break;
                 }

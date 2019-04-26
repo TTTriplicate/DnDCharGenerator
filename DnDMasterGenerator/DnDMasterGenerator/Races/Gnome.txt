@@ -5,14 +5,12 @@ Lawful-Good/Chaotic Good
 Small
 25
 0 4
-Darkvision, Gnome Cunning
+Darkvision(60ft), Gnome Cunning
 
 Forest
 010000
-Natural Illusionist
-Speak with Small Beasts
+Natural Illusionist (Intelligence), Speak with Small Beasts
 
 Rock
 001000
-Artificer's Lore
-Tinker
+Artificer's Lore, Tinker

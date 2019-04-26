@@ -66,6 +66,21 @@ namespace DnDClassesTest
                     lblSubClass.Visible = true;
                     comboSubClass.DataSource = new List<string> { "Thief", "Assassin", "Arcane Trickster" };
                     break;
+                case 9:
+                    lblSubClass.Text = "Choose an Origin:";
+                    lblSubClass.Visible = true;
+                    comboSubClass.DataSource = new List<string> { "Draconic", "Wild Magic" };
+                    break;
+                case 10:
+                    lblSubClass.Text = "Choose a Patron:";
+                    lblSubClass.Visible = true;
+                    comboSubClass.DataSource = new List<string> { "Fiend", "Arch-Fey", "Great Old One" };
+                    break;
+                case 11:
+                    lblSubClass.Text = "Select a speciality:";
+                    lblSubClass.Visible = true;
+                    comboSubClass.DataSource = new List<string> { "Abjuration", "Conjuration", "Divination", "Enchantment", "Evocation", "Illusion", "Necromancy", "Transmutation" };
+                    break;
             }
 
         }
@@ -81,6 +96,15 @@ namespace DnDClassesTest
             DialogResult = DialogResult.OK;
             this.Close();
         }
+        private Random dice = new Random();
+        public int RanNumGen()
+        {
+            int randNum;
+
+            randNum = dice.Next(8, 19);
+
+            return randNum;
+        }
 
         private void numLevel_ValueChanged(object sender, EventArgs e)
         {
@@ -90,6 +114,16 @@ namespace DnDClassesTest
         private void playerNameBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRoll_Click(object sender, EventArgs e)
+        {
+            numSTR.Value = RanNumGen();
+            numDEX.Value = RanNumGen();
+            numCON.Value = RanNumGen();
+            numINT.Value = RanNumGen();
+            numWIS.Value = RanNumGen();
+            numCHA.Value = RanNumGen();
         }
     }
 }

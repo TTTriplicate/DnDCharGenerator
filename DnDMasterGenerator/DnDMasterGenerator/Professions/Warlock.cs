@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,17 +22,8 @@ namespace DnDClassesTest
             }
         }
         protected override List<string> Features
-        {
-            get
-            {
-                return Features;
-            }
-            set
-            {//contains full listing of class features 
-             //to be passed to character sheet through ClassFeatures method
-                Features = ClassFeatures();
-            }
-        }
+        { get; set; }
+        
         //add patron? int(0-2) to pick between the three
         public Warlock()
         {
@@ -48,18 +40,18 @@ namespace DnDClassesTest
             this._caster = true;
             this._proPath = path;
             this._numProSkills = 2;
-            //this.ClassFeatures = this.Unlocked();
+            this.Features = this.ClassFeatures();
         }
         public override bool[] ClassSkills()
         {//Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion
             bool[] SkillList = new bool[18];
-            /*bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             bool[] = true;
-             bool[] = true;*/
+            SkillList[2] = true;
+            SkillList[4] = true;
+            SkillList[5] = true;
+            SkillList[7] = true;
+            SkillList[8] = true;
+            SkillList[10] = true;
+            SkillList[14] = true;
             return SkillList;
         }
 
@@ -79,19 +71,17 @@ namespace DnDClassesTest
 
         public override List<string> ClassFeatures()
         {
-            int path = this._proPath;
             List<string> features = new List<string>();
-            /*features.Add(Inspiration());//0
-            features.Add(SongOfRest());//1
-            features.Add(path == 0 ? CuttingWords() : CombatInspiration());//2
-            features.Add(FontOfInspiration());//3
-            features.Add(CounterCharm());//4
-            features.Add(path == 0 ? ExtraSecrets() : ExtraAttack());//4
-            features.Add(MagicSecrets());//5
-            features.Add(path == 0 ? PeerlessSkill() : BattleMagic());//6
-            features.Add(SuperiorInspiration());//7*/
-            return features;
+            String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\WarlockClassFeatures.txt");
+            //string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
+            string[] temp = new string[15];
+            temp = File.ReadAllLines(path);
+            foreach (string i in temp)
+            {
+                features.Add(i);
+            }
 
+            return features;
         }
 
 
@@ -102,9 +92,9 @@ namespace DnDClassesTest
             unlocked[0] = true;         //false is the default, shouldn't need that
             if (this._level >= 2) unlocked[1] = true;
             if (this._level >= 3) unlocked[2] = true;
-            if (this._level >= 5) unlocked[3] = true;
-            if (this._level >= 6) unlocked[4] = true;
-            if (this._level >= 10) unlocked[5] = true;
+            if (this._level >= 6) unlocked[3] = true;
+            if (this._level >= 10) unlocked[4] = true;
+            if (this._level >= 11) unlocked[5] = true;
             if (this._level >= 14) unlocked[6] = true;
             if (this._level == 20) unlocked[7] = true;
             return unlocked;
@@ -115,18 +105,39 @@ namespace DnDClassesTest
             List<string> current = new List<string>();
             bool[] unlock = this.Unlocked();
             int i;
-            for (i = 7; i <= 0; --i)
+            for (i = 0; i <= 8; ++i)
             {
-                if (unlock[i]) break;
+                if (!unlock[i]) break;
             }
-            if (i == 7) current = Features;
-            else if (i == 6) current = Features.GetRange(0, 7);
-            else if (i == 5) current = Features.GetRange(0, 6);
-            else if (i == 4) current = Features.GetRange(0, 5);
-            else if (i == 3) current = Features.GetRange(0, 3);
-            else if (i == 2) current = Features.GetRange(0, 2);
-            else if (i == 2) current = Features.GetRange(0, 1);
-            else current.Add(Features[0]);
+            if (i >= 1) current.Add(Features[0]);
+            //if (i >= 2) PactBoonPicker();
+            if (i >= 5) current.Add(Features[1]);
+            if (i >= 7) current.Add(Features[2]);
+
+            if(this._proPath == 0)
+            {
+                current.Add(Features[3]);
+                if (i >= 2) current.Add(Features[4]);
+                if (i >= 5) current.Add(Features[5]);
+                if (i >= 7) current.Add(Features[6]);
+            }
+
+            if (this._proPath == 1)
+            {
+                current.Add(Features[7]);
+                if (i >= 2) current.Add(Features[8]);
+                if (i >= 5) current.Add(Features[9]);
+                if (i >= 7) current.Add(Features[10]);
+            }
+
+            if (this._proPath == 2)
+            {
+                current.Add(Features[11]);
+                if (i >= 2) current.Add(Features[12]);
+                if (i >= 5) current.Add(Features[13]);
+                if (i >= 7) current.Add(Features[14]);
+            }
+
             return current;
         }
 
