@@ -91,7 +91,7 @@ namespace DnDClassesTest
 
         public override bool[] Unlocked()
         {
-            bool[] unlocked = new bool[11]/*{ false, false, false, false, false, false, false, false }*/;
+            bool[] unlocked = new bool[12]/*{ false, false, false, false, false, false, false, false }*/;
             unlocked[0] = true;         //false is the default, shouldn't need that
             if (this._level >= 2) unlocked[1] = true;
             if (this._level >= 3) unlocked[2] = true;
@@ -142,15 +142,6 @@ namespace DnDClassesTest
                 if (i >= 7) current.Add(Features[16]);
                 if (i >= 8) current.Add(Features[17]);
             }
-            else if (_proPath == 2)
-            {
-                if (i < 2) return current;
-                else if (i >= 2) current.Add(Features[18]);
-                if (i >= 5) current.Add(Features[19]);
-                if (i >= 8) current.Add(Features[20]);
-                if (i >= 10) current.Add(Features[21]);
-            }
-
             return current;
         }
 
