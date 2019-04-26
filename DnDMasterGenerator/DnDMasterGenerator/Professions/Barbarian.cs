@@ -56,7 +56,7 @@ namespace DnDClassesTest
             this._numProSkills = 2;
             this._proPath = path;
             this.Features = ClassFeatures();
-            Console.WriteLine("Level ta construction == " + level);
+            Console.WriteLine("Level at construction == " + level);
         }
         public override bool[] ClassSkills()
         {
