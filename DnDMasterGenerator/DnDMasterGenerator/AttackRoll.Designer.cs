@@ -37,6 +37,7 @@
             this.RollResult = new System.Windows.Forms.Label();
             this.ResultLabel = new System.Windows.Forms.Label();
             this.damageFactor = new System.Windows.Forms.Label();
+            this.Damage = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,12 +131,22 @@
             this.damageFactor.Text = "Damage Factor:";
             this.damageFactor.Click += new System.EventHandler(this.damageFactor_Click);
             // 
+            // Damage
+            // 
+            this.Damage.AutoSize = true;
+            this.Damage.Location = new System.Drawing.Point(138, 197);
+            this.Damage.Name = "Damage";
+            this.Damage.Size = new System.Drawing.Size(16, 17);
+            this.Damage.TabIndex = 10;
+            this.Damage.Text = "0";
+            // 
             // AttackRoll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(311, 375);
+            this.Controls.Add(this.Damage);
             this.Controls.Add(this.damageFactor);
             this.Controls.Add(this.ResultLabel);
             this.Controls.Add(this.RollResult);
@@ -164,5 +175,6 @@
         private System.Windows.Forms.RadioButton Miss;
         private System.Windows.Forms.Label ResultLabel;
         private System.Windows.Forms.Label damageFactor;
+        private System.Windows.Forms.Label Damage;
     }
 }

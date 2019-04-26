@@ -20,6 +20,7 @@ namespace DnDClassesTest
         public CharSheet(DnDCharacter leeroy)
         {
             InitializeComponent();
+            Attack.Hide();
             richTextBox1.Hide();
             lblTraits.Hide();
             DisplayChar = leeroy;
@@ -137,6 +138,11 @@ namespace DnDClassesTest
         }
 
         private void txtCHASave_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMelee_TextChanged(object sender, EventArgs e)
         {
 
         }
