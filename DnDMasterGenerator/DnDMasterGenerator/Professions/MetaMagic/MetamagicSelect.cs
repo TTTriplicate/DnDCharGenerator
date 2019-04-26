@@ -22,18 +22,32 @@ namespace DnDMasterGenerator.Professions.ClassFeatures.MetaMagic
         public MetamagicSelect()
         {
             InitializeComponent();
+            Source = SetSource();
+            comboSelector.DataSource = Source;
+            comboSelector.SelectedIndex = 0;
+            comboSelector2.DataSource = Source;
+            comboSelector2.SelectedIndex = 0;
+            comboSelector2.Visible = true;
+
         }
 
         public MetamagicSelect(int[] indicies)
         {
             InitializeComponent();
-            Source = SetSource(indicies);
+            Source = SetSource();
+            comboSelector.DataSource = Source;
+            comboSelector.SelectedIndex = 0;
+            comboSelector2.Enabled = false;
+            comboSelector2.Visible = false;
+            foreach (int i in indicies)
+                txtCurrent.AppendText(Source[i]);
+
         }
 
         private List<string> SetSource()
         {
             List<string> bits = new List<string>();
-            string path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\MetaMagic\Metamagic.txt");
+            string path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\MetaMagic\Metamagic.txt");
             //string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
             string[] temp = new string[8];
             temp = File.ReadAllLines(path);
@@ -45,22 +59,6 @@ namespace DnDMasterGenerator.Professions.ClassFeatures.MetaMagic
 
         }
 
-        private List<string> SetSource(int[] indicies)
-        {
-            List<string> bits = new List<string>();
-            string path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\MetaMagic\Metamagic.txt");
-            //string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
-            string[] temp = new string[8];
-            temp = File.ReadAllLines(path);
-            foreach (string i in temp)
-            {
-                bits.Add(i);
-            }
-            int count = 0;
-            int[] indiciesremoved;
-            return bits;
-
-        }
 
 
 
@@ -71,10 +69,13 @@ namespace DnDMasterGenerator.Professions.ClassFeatures.MetaMagic
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            if (comboSelector2.Visible)
+            if (comboSelector2.Enabled)
             {
                 if (comboSelector.SelectedIndex != comboSelector2.SelectedIndex)
+                {
                     DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
         }
     }

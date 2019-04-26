@@ -50,7 +50,7 @@ namespace DnDMasterGenerator
         private List<string> setSource(string pro)
         {
             List<string> styles = new List<string>();
-            string path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\FightingStyles\FightingStyles.txt");
+            string path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\FightingStyles\FightingStyles.txt");
             //string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
             string[] temp = new string[6];
             temp = File.ReadAllLines(path);
