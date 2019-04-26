@@ -214,6 +214,7 @@
     <Content Include="Professions\ClassFeatures\RangerClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\RogueClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\SorcererClassFeatures.txt" />
+    <Content Include="Professions\ClassFeatures\WarlockClassFeatures.txt" />
     <Content Include="Races\Dragonborn.txt" />
     <Content Include="Races\Dwarf.txt" />
     <Content Include="Races\Elf.txt" />

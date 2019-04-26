@@ -56,7 +56,6 @@ namespace DnDClassesTest
             this._numProSkills = 2;
             this._proPath = path;
             this.Features = ClassFeatures();
-            Console.WriteLine("Level at construction == " + level);
         }
         public override bool[] ClassSkills()
         {
@@ -110,8 +109,6 @@ namespace DnDClassesTest
             if (this._level >= 15) unlock[10] = true;
             if (this._level >= 18) unlock[11] = true;
             if (this._level >= 20) unlock[12] = true;
-            foreach (bool i in unlock)
-                Console.WriteLine($"unlock at this place is " + i.ToString());
             return unlock;
         }
         public override List<string> CurrentFeatures()
@@ -124,7 +121,6 @@ namespace DnDClassesTest
                 if (unlock[i]) continue;
                 else break;
             }
-            Console.WriteLine("unlock index == " + i);
             if (i == 1) current = Features.GetRange(0, 3);
             else if (i == 3) current = Features.GetRange(0, 5);
             else if (i == 5) current = Features.GetRange(0, 6);
