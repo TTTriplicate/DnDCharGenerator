@@ -72,10 +72,10 @@
     <Compile Include="CharSheet.designer.cs">
       <DependentUpon>CharSheet.cs</DependentUpon>
     </Compile>
-    <Compile Include="FightingStyles.cs">
+    <Compile Include="Professions\ClassFeatures\FightingStyles\FightingStyles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FightingStyles.Designer.cs">
+    <Compile Include="Professions\ClassFeatures\FightingStyles\FightingStyles.Designer.cs">
       <DependentUpon>FightingStyles.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -98,6 +98,12 @@
     <Compile Include="PDF Filler.cs" />
     <Compile Include="Professions\Barbarian.cs" />
     <Compile Include="Professions\Bard.cs" />
+    <Compile Include="Professions\ClassFeatures\MetaMagic\MetamagicSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Professions\ClassFeatures\MetaMagic\MetamagicSelect.Designer.cs">
+      <DependentUpon>MetamagicSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="Professions\Cleric.cs" />
     <Compile Include="Professions\Druid.cs" />
     <Compile Include="Professions\Fighter.cs" />
@@ -139,7 +145,7 @@
     <EmbeddedResource Include="CharSheet.resx">
       <DependentUpon>CharSheet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FightingStyles.resx">
+    <EmbeddedResource Include="Professions\ClassFeatures\FightingStyles\FightingStyles.resx">
       <DependentUpon>FightingStyles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gear\GearForm.resx">
       <DependentUpon>GearForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Professions\ClassFeatures\MetaMagic\MetamagicSelect.resx">
+      <DependentUpon>MetamagicSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -219,6 +228,7 @@
     <Content Include="Professions\ClassFeatures\DruidClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\FighterClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\FightingStyles\FightingStyles.txt" />
+    <Content Include="Professions\ClassFeatures\MetaMagic\Metamagic.txt" />
     <Content Include="Professions\ClassFeatures\MonkClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\PaladinClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\RangerClassFeatures.txt" />
