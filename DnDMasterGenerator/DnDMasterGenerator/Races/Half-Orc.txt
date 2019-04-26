@@ -5,4 +5,4 @@ Choatic-Evil
 Medium
 30
 0 7
-Darkvision, Menacing, Relentless Endurance, Savage Attacks
+Darkvision(60ft), Menacing, Relentless Endurance, Savage Attacks

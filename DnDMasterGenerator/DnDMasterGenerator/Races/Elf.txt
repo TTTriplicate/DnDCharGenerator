@@ -13,7 +13,7 @@ Elf Weapon Training, Cantrip, +1 Language
 
 Wood
 000010
-Elf Weapon Training, Fleet of Foot, Mask of the Wild
+Elf Weapon Training, Mask of the Wild, Fleet of Foot
 
 Dark
 000001
