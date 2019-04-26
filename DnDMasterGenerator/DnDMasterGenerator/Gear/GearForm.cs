@@ -66,11 +66,7 @@ namespace DnDClassesTest
             {
                 Choice1.Show();
                 choice1b.Checked = true;
-                choice2b.Checked = true;
-                choice3b.Checked = true;
-                choice4b.Checked = true;
-                choice5b.Checked = true;
-                choice6b.Checked = true;
+               
                 if (gear.classType == "Ranger")
                 {
                     choice1a.Show();
@@ -99,6 +95,7 @@ namespace DnDClassesTest
                 
                 if(numItems >= 2)
                 {
+                    choice2b.Checked = true;
                     if (firstChoice[1] != null)
                     {
                         choice2a.Show();
@@ -111,6 +108,7 @@ namespace DnDClassesTest
 
                     if(numItems >= 3)
                     {
+                        choice3b.Checked = true;
                         if (firstChoice[2] != null)
                         {
                             choice3a.Show();
@@ -122,6 +120,7 @@ namespace DnDClassesTest
 
                         if(numItems >= 4)
                         {
+                            choice4b.Checked = true;
                             if (firstChoice[3] != null)
                             {
                                 choice4a.Show();
@@ -133,6 +132,7 @@ namespace DnDClassesTest
 
                             if(numItems >= 5)
                             {
+                                choice5b.Checked = true;
                                 if (firstChoice[4] != null)
                                 {
                                     choice5a.Show();
@@ -144,6 +144,7 @@ namespace DnDClassesTest
 
                                 if(numItems == 6)
                                 {
+                                    choice6b.Checked = true;
                                     if (firstChoice[5] != null)
                                     {
                                         choice6a.Show();
