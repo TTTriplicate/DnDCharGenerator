@@ -156,6 +156,11 @@ namespace DnDClassesTest
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            chooseLang();
+        }
+
         private void BackgroundForm_Load(object sender, EventArgs e)
         {
 
@@ -179,6 +184,7 @@ namespace DnDClassesTest
                     langList.Items.Add(allLanguages[i]);
                 }
             }
+            langList.Enabled = true;
         }
 
         public void setInfo(ref string Personality, ref string Ideal, ref string Flaw, ref string Bond)

@@ -106,37 +106,6 @@ namespace DnDClassesTest
                     save = "No";
                 pdfFormFields.SetField("Check Box "+i.ToString(), save);
             }
-            /*{
-            if (newChar.SavingThrows[1])
-                save = "Yes";
-            else
-                save = "No";
-            pdfFormFields.SetField("Check Box 18", save);
-
-            if (newChar.SavingThrows[2])
-                save = "Yes";
-            else
-                save = "No";
-            pdfFormFields.SetField("Check Box 19", save);
-
-            if (newChar.SavingThrows[3])
-                save = "Yes";
-            else
-                save = "No";
-            pdfFormFields.SetField("Check Box 20", save);
-
-            if (newChar.SavingThrows[4])
-                save = "Yes";
-            else
-                save = "No";
-            pdfFormFields.SetField("Check Box 21", save);
-
-            if (newChar.SavingThrows[5])
-                save = "Yes";
-            else
-                save = "No";
-            pdfFormFields.SetField("Check Box 22", save);
-            }*/
 
             //int[] abilfill = new int[12];
             string[] abils = { "ST Strength", "ST Dexterity", "ST Constitution", "ST Intelligence", "ST Wisdom", "ST Charisma" };
@@ -191,7 +160,7 @@ namespace DnDClassesTest
             string languages = "";
             foreach (string i in newChar.CharRace.getLanguages())
             {
-                if (languages == "")
+                if (languages != "")
                     languages += ", ";
                 languages += i;
             }
