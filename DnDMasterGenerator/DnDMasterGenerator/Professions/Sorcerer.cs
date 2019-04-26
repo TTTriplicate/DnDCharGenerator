@@ -72,7 +72,7 @@ namespace DnDClassesTest
             List<string> features = new List<string>();
             String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\SorcererClassFeatures.txt");
             //string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
-            string[] temp = new string[28];
+            string[] temp = new string[13];
             temp = File.ReadAllLines(path);
             foreach (string i in temp)
             {
@@ -106,8 +106,8 @@ namespace DnDClassesTest
             {
                 if (!unlock[i]) break;
             }
-            if (_proPath == 0) current = Features.GetRange(3, 4);
-            else current = Features.GetRange(9, 10);
+            if (_proPath == 0) current = Features.GetRange(3, 1);
+            else current = Features.GetRange(9, 1);
 
             if (i >= 1) current.Add(Features[0]);
             if (i >= 2) current.Add(Features[1]);
