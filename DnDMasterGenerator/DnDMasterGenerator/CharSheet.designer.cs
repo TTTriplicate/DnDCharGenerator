@@ -60,6 +60,7 @@
             this.lblSaves = new System.Windows.Forms.Label();
             this.lblAbilities = new System.Windows.Forms.Label();
             this.panelSaves = new System.Windows.Forms.Panel();
+            this.txtCHASave = new System.Windows.Forms.TextBox();
             this.txtWISSave = new System.Windows.Forms.TextBox();
             this.txtINTSave = new System.Windows.Forms.TextBox();
             this.txtCONSave = new System.Windows.Forms.TextBox();
@@ -84,7 +85,6 @@
             this.txtPlayerName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Attack = new System.Windows.Forms.Button();
-            this.txtCHASave = new System.Windows.Forms.TextBox();
             this.paneAbilities.SuspendLayout();
             this.panelSaves.SuspendLayout();
             this.SuspendLayout();
@@ -377,6 +377,15 @@
             this.panelSaves.Size = new System.Drawing.Size(40, 185);
             this.panelSaves.TabIndex = 31;
             // 
+            // txtCHASave
+            // 
+            this.txtCHASave.Location = new System.Drawing.Point(4, 154);
+            this.txtCHASave.Name = "txtCHASave";
+            this.txtCHASave.ReadOnly = true;
+            this.txtCHASave.Size = new System.Drawing.Size(27, 22);
+            this.txtCHASave.TabIndex = 53;
+            this.txtCHASave.TextChanged += new System.EventHandler(this.txtCHASave_TextChanged_1);
+            // 
             // txtWISSave
             // 
             this.txtWISSave.Location = new System.Drawing.Point(4, 124);
@@ -460,6 +469,7 @@
             this.txtMelee.ReadOnly = true;
             this.txtMelee.Size = new System.Drawing.Size(29, 22);
             this.txtMelee.TabIndex = 36;
+            this.txtMelee.TextChanged += new System.EventHandler(this.txtMelee_TextChanged);
             // 
             // txtRanged
             // 
@@ -586,15 +596,6 @@
             this.Attack.Text = "Attack Roll";
             this.Attack.UseVisualStyleBackColor = true;
             this.Attack.Click += new System.EventHandler(this.Attack_Click_1);
-            // 
-            // txtCHASave
-            // 
-            this.txtCHASave.Location = new System.Drawing.Point(4, 154);
-            this.txtCHASave.Name = "txtCHASave";
-            this.txtCHASave.ReadOnly = true;
-            this.txtCHASave.Size = new System.Drawing.Size(27, 22);
-            this.txtCHASave.TabIndex = 53;
-            this.txtCHASave.TextChanged += new System.EventHandler(this.txtCHASave_TextChanged_1);
             // 
             // CharSheet
             // 
