@@ -42,18 +42,18 @@ namespace DnDClassesTest
             this.Features = this.ClassFeatures();
         }
         public override bool[] ClassSkills()
-        {//history insight medicine persuasion religion
+        {
             bool[] SkillList = new bool[18];
-            /*Animal Handling, Athletics, Insight, Investigation, Nature, Perception,
-                Stealth, and Survival
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             bool[] = true;
-             bool[] = true;
-             bool[] = true;*/
+            //Animal Handling, Athletics, Insight, Investigation, Nature, Perception,
+              //  Stealth, and Survival
+             SkillList[1] = true;
+             SkillList[3] = true;
+             SkillList[6] = true;
+             SkillList[8] = true;
+             SkillList[10] = true;
+             SkillList[11] = true;
+             SkillList[16] = true;
+             SkillList[17] = true;
             return SkillList;
         }
 

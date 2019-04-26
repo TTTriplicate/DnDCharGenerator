@@ -53,13 +53,13 @@ namespace DnDClassesTest
         public override bool[] ClassSkills()
         {//Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion
             bool[] SkillList = new bool[18];
-            /*bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             bool[] = true;
-             bool[] = true;*/
+            SkillList[2] = true;
+            SkillList[4] = true;
+            SkillList[5] = true;
+            SkillList[7] = true;
+            SkillList[8] = true;
+            SkillList[10] = true;
+            SkillList[14] = true;
             return SkillList;
         }
 

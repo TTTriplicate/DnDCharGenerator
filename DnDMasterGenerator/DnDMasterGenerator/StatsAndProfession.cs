@@ -71,6 +71,16 @@ namespace DnDClassesTest
                     lblSubClass.Visible = true;
                     comboSubClass.DataSource = new List<string> { "Draconic", "Wild Magic" };
                     break;
+                case 10:
+                    lblSubClass.Text = "Choose a Patron:";
+                    lblSubClass.Visible = true;
+                    comboSubClass.DataSource = new List<string> { "Fiend", "Arch-Fey", "Great Old One" };
+                    break;
+                case 11:
+                    lblSubClass.Text = "Select a speciality:";
+                    lblSubClass.Visible = true;
+                    comboSubClass.DataSource = new List<string> { "Abjuration", "Conjuration", "Divination", "Enchantment", "Evocation", "Illusion", "Necromancy", "Transmutation" };
+                    break;
             }
 
         }

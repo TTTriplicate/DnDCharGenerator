@@ -44,17 +44,17 @@ namespace DnDClassesTest
         {//Acrobatics, Athletics, Deception. Insight, Intimidation, Investigation,
         //Perception, Performance.Persuasion, Sleight of Hand, Stealth
             bool[] SkillList = new bool[18];
-            /*bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             * bool[] = true;
-             bool[] = true;
-             bool[] = true;
-             bool[] = true;
-             bool[] = true;
-             bool[] = true;
-             bool[] = true;*/
+            SkillList[0] = true;
+            SkillList[2] = true;
+            SkillList[4] = true;
+            SkillList[6] = true;
+            SkillList[7] = true;
+            SkillList[8] = true;
+            SkillList[11] = true;
+            SkillList[12] = true;
+            SkillList[13] = true;
+            SkillList[15] = true;
+            SkillList[16] = true;
             return SkillList;
         }
 
