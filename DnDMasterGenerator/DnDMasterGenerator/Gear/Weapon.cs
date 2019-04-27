@@ -90,15 +90,41 @@ namespace DnDClassesTest
             return 0;
         }
 
-        public int calcATKBonus(Weapon a, DnDCharacter b)
+        public int calcATKBonus(DnDCharacter b)
         {
-            if (a.type == "ranged thrown" || a.type == "ranged fired")
+            if (type == "ranged thrown" || type == "ranged fired")
             {
-                return b.ProficiencyBonus() + b.AbilityModifiers()[0];
+                return b.ProficiencyBonus() + b.AbilityModifiers()[1];
             }
             else
             {
-                return (b.ProficiencyBonus() + b.AbilityModifiers()[1]);
+                return (b.ProficiencyBonus() + b.AbilityModifiers()[0]);
+            }
+        }
+
+        public string calcDamage(DnDCharacter b)
+        {
+            if (type == "melee")
+            {
+                if (b.AbilityModifiers()[0] > -1)
+                {
+                    return numDice + "d" + damageFactor + " +" + b.AbilityModifiers()[0];
+                }
+                else
+                {
+                    return numDice + "d" + damageFactor + " " + b.AbilityModifiers()[0];
+                }
+            }
+            else
+            {
+                if (b.AbilityModifiers()[1] > -1)
+                {
+                    return numDice + "d" + damageFactor + " +" + b.AbilityModifiers()[1];
+                }
+                else
+                {
+                    return numDice + "d" + damageFactor + " " + b.AbilityModifiers()[1];
+                }
             }
         }
     }
