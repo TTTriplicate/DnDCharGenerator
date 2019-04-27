@@ -143,6 +143,8 @@ namespace DnDClassesTest
         //mark which saves get proficiency bonus, get from CharClass
         public List<string> inventoryString = new List<string>();
         public List<Gear> inventory = new List<Gear>();
+        public List<int> attackBonus = new List<int>();
+        public List<string> attackBonusWeapons = new List<string>();
         public int ArmorClass = 0;
         public int gold = 0;
 
@@ -185,6 +187,16 @@ namespace DnDClassesTest
             inventory = gear.getInventory();
             ArmorClass = gear.getAC();
             gold = gear.getGP();
+            int count = 0;
+            for (int i = 0; count < 3; i++)
+            {
+                if (inventory[i].GetType().ToString() == "Weapon")
+                {
+                    attackBonus.Add(gear.getATKBonus((Weapon)inventory[i], this));
+                    attackBonusWeapons.Add(inventoryString[i]);
+                    count++;
+                }
+            }
         }
         /*   public DnDCharacter(int level, int p, int proPath)
            {
@@ -229,19 +241,30 @@ namespace DnDClassesTest
          this code would break badly*/
         //unnecessary this.SavingThrows = this.CharClass.SavingThrows();
         //}
-        public List<string> getInventoryString()
+        public List<string> getInventoryString() //passes string representation of the finalized inventory to charsheet and pdf filler, among other things
         {
             return inventoryString;
         }
-        public int getAC()
+        public int getAC() //passes the character's attack bonus to the pdf filler
         {
             return ArmorClass;
         }
 
-        public List<Gear> getInventory()
+        public List<Gear> getInventory() //passes the finalized inventory to charsheet and pdf filler
         {
             return inventory;
         }
+
+        public List<int> getATK()
+        {
+            return attackBonus;
+        }
+
+        public List<string> getAttackWeapons()
+        {
+            return attackBonusWeapons;
+        }
+
         public int ProficiencyBonus()
         {//passes the proficiency bonus to main function
             return 2 + (Level / 5);

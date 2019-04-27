@@ -90,9 +90,9 @@ namespace DnDClassesTest
             return 0;
         }
 
-        public int calcATKBonus(Weapon a, DnDCharacter b)
+        public int calcATKBonus(DnDCharacter b)
         {
-            if (a.type == "ranged thrown" || a.type == "ranged fired")
+            if (type == "ranged thrown" || type == "ranged fired")
             {
                 return b.ProficiencyBonus() + b.AbilityModifiers()[0];
             }
