@@ -21,6 +21,7 @@ namespace DnDClassesTest
         public List<Gear> inventory = new List<Gear>(); //List of inventory after choices are made
         public List<string> inventoryString = new List<string>(); //parallel list of inventory stored as strings
         public List<Gear> firstChoice = new List<Gear>();
+        public int AC;
 
         //Index values used to more easily populate lists of choices
         public const int startSimpleMelee = 0;
@@ -833,6 +834,19 @@ namespace DnDClassesTest
         public int getGP()
         {
             return gp;
+        }
+
+        public int getAC()
+        {
+            for(int i = 0; i < inventory.Count; i++)
+            {
+                AC += inventory[i].calcAC();
+            }
+            if(AC == 0)
+            {
+                AC += 10;
+            }
+            return AC;
         }
     }
 }
