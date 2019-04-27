@@ -71,10 +71,10 @@
             this.Choice2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice2.FormattingEnabled = true;
             this.Choice2.Location = new System.Drawing.Point(94, 193);
-            this.Choice2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Choice2.Margin = new System.Windows.Forms.Padding(2);
             this.Choice2.MaxDropDownItems = 20;
             this.Choice2.Name = "Choice2";
-            this.Choice2.Size = new System.Drawing.Size(687, 24);
+            this.Choice2.Size = new System.Drawing.Size(492, 24);
             this.Choice2.TabIndex = 1;
             this.Choice2.SelectedIndexChanged += new System.EventHandler(this.Choice2_SelectedIndexChanged);
             // 
@@ -83,10 +83,10 @@
             this.Choice3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice3.FormattingEnabled = true;
             this.Choice3.Location = new System.Drawing.Point(94, 280);
-            this.Choice3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Choice3.Margin = new System.Windows.Forms.Padding(2);
             this.Choice3.MaxDropDownItems = 20;
             this.Choice3.Name = "Choice3";
-            this.Choice3.Size = new System.Drawing.Size(687, 24);
+            this.Choice3.Size = new System.Drawing.Size(492, 24);
             this.Choice3.TabIndex = 2;
             this.Choice3.SelectedIndexChanged += new System.EventHandler(this.Choice3_SelectedIndexChanged);
             // 
@@ -95,10 +95,10 @@
             this.Choice4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice4.FormattingEnabled = true;
             this.Choice4.Location = new System.Drawing.Point(94, 370);
-            this.Choice4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Choice4.Margin = new System.Windows.Forms.Padding(2);
             this.Choice4.MaxDropDownItems = 20;
             this.Choice4.Name = "Choice4";
-            this.Choice4.Size = new System.Drawing.Size(687, 24);
+            this.Choice4.Size = new System.Drawing.Size(492, 24);
             this.Choice4.TabIndex = 3;
             this.Choice4.SelectedIndexChanged += new System.EventHandler(this.Choice4_SelectedIndexChanged);
             // 
@@ -107,10 +107,10 @@
             this.Choice5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice5.FormattingEnabled = true;
             this.Choice5.Location = new System.Drawing.Point(94, 465);
-            this.Choice5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Choice5.Margin = new System.Windows.Forms.Padding(2);
             this.Choice5.MaxDropDownItems = 20;
             this.Choice5.Name = "Choice5";
-            this.Choice5.Size = new System.Drawing.Size(687, 24);
+            this.Choice5.Size = new System.Drawing.Size(492, 24);
             this.Choice5.TabIndex = 4;
             this.Choice5.SelectedIndexChanged += new System.EventHandler(this.Choice5_SelectedIndexChanged);
             // 
@@ -119,10 +119,10 @@
             this.Choice6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice6.FormattingEnabled = true;
             this.Choice6.Location = new System.Drawing.Point(94, 559);
-            this.Choice6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Choice6.Margin = new System.Windows.Forms.Padding(2);
             this.Choice6.MaxDropDownItems = 20;
             this.Choice6.Name = "Choice6";
-            this.Choice6.Size = new System.Drawing.Size(687, 24);
+            this.Choice6.Size = new System.Drawing.Size(492, 24);
             this.Choice6.TabIndex = 5;
             this.Choice6.SelectedIndexChanged += new System.EventHandler(this.Choice6_SelectedIndexChanged);
             // 
@@ -131,17 +131,17 @@
             this.Choice1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice1.FormattingEnabled = true;
             this.Choice1.Location = new System.Drawing.Point(94, 116);
-            this.Choice1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Choice1.Margin = new System.Windows.Forms.Padding(2);
             this.Choice1.MaxDropDownItems = 20;
             this.Choice1.Name = "Choice1";
-            this.Choice1.Size = new System.Drawing.Size(687, 24);
+            this.Choice1.Size = new System.Drawing.Size(492, 24);
             this.Choice1.TabIndex = 6;
             this.Choice1.SelectedIndexChanged += new System.EventHandler(this.Choice1_SelectedIndexChanged);
             // 
             // Submit
             // 
             this.Submit.Location = new System.Drawing.Point(372, 639);
-            this.Submit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Submit.Margin = new System.Windows.Forms.Padding(2);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(117, 44);
             this.Submit.TabIndex = 7;
@@ -152,8 +152,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(839, 82);
+            this.label1.Location = new System.Drawing.Point(631, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(162, 25);
@@ -164,6 +165,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(50, 41);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -177,8 +179,8 @@
             // 
             this.Inventory.FormattingEnabled = true;
             this.Inventory.ItemHeight = 16;
-            this.Inventory.Location = new System.Drawing.Point(844, 109);
-            this.Inventory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Inventory.Location = new System.Drawing.Point(636, 69);
+            this.Inventory.Margin = new System.Windows.Forms.Padding(2);
             this.Inventory.Name = "Inventory";
             this.Inventory.Size = new System.Drawing.Size(335, 356);
             this.Inventory.TabIndex = 14;
@@ -302,6 +304,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.choice1a);
             this.panel1.Controls.Add(this.choice1b);
             this.panel1.Location = new System.Drawing.Point(10, 69);
@@ -333,6 +336,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.choice3a);
             this.panel2.Controls.Add(this.choice3b);
             this.panel2.Location = new System.Drawing.Point(31, 225);
@@ -342,6 +346,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.choice2a);
             this.panel3.Controls.Add(this.choice2b);
             this.panel3.Location = new System.Drawing.Point(52, 159);
@@ -351,6 +356,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.choice4a);
             this.panel4.Controls.Add(this.choice4b);
             this.panel4.Location = new System.Drawing.Point(39, 332);
@@ -360,6 +366,7 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.choice5a);
             this.panel5.Controls.Add(this.choice5b);
             this.panel5.Location = new System.Drawing.Point(39, 423);
@@ -369,6 +376,7 @@
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.choice6a);
             this.panel6.Controls.Add(this.choice6b);
             this.panel6.Location = new System.Drawing.Point(39, 518);
@@ -381,10 +389,10 @@
             this.twoMartial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.twoMartial.FormattingEnabled = true;
             this.twoMartial.Location = new System.Drawing.Point(94, 141);
-            this.twoMartial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.twoMartial.Margin = new System.Windows.Forms.Padding(2);
             this.twoMartial.MaxDropDownItems = 20;
             this.twoMartial.Name = "twoMartial";
-            this.twoMartial.Size = new System.Drawing.Size(687, 24);
+            this.twoMartial.Size = new System.Drawing.Size(492, 24);
             this.twoMartial.TabIndex = 38;
             this.twoMartial.SelectedIndexChanged += new System.EventHandler(this.twoMartial_SelectedIndexChanged);
             // 
@@ -393,10 +401,10 @@
             this.wackadooThingy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.wackadooThingy.FormattingEnabled = true;
             this.wackadooThingy.Location = new System.Drawing.Point(149, 85);
-            this.wackadooThingy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.wackadooThingy.Margin = new System.Windows.Forms.Padding(2);
             this.wackadooThingy.MaxDropDownItems = 20;
             this.wackadooThingy.Name = "wackadooThingy";
-            this.wackadooThingy.Size = new System.Drawing.Size(632, 24);
+            this.wackadooThingy.Size = new System.Drawing.Size(437, 24);
             this.wackadooThingy.TabIndex = 39;
             this.wackadooThingy.SelectedIndexChanged += new System.EventHandler(this.wackadooThingy_SelectedIndexChanged);
             // 
@@ -405,7 +413,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1220, 714);
+            this.ClientSize = new System.Drawing.Size(1040, 714);
             this.Controls.Add(this.wackadooThingy);
             this.Controls.Add(this.twoMartial);
             this.Controls.Add(this.Inventory);
@@ -419,12 +427,12 @@
             this.Controls.Add(this.Choice3);
             this.Controls.Add(this.Choice2);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GearForm";
             this.Text = "s";
             this.Load += new System.EventHandler(this.Form1_Load);
