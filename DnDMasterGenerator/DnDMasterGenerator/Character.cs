@@ -145,6 +145,7 @@ namespace DnDClassesTest
         public List<Gear> inventory = new List<Gear>();
         public List<int> attackBonus = new List<int>();
         public List<string> attackBonusWeapons = new List<string>();
+        public List<string> attackDamage = new List<string>();
         public int ArmorClass = 0;
         public int gold = 0;
 
@@ -188,12 +189,13 @@ namespace DnDClassesTest
             ArmorClass = gear.getAC();
             gold = gear.getGP();
             int count = 0;
-            for (int i = 0; count < 3; i++)
+            for (int i = 0; i < inventory.Count || count < 3; i++)
             {
                 if (inventory[i].GetType().ToString() == "Weapon")
                 {
-                    attackBonus.Add(gear.getATKBonus((Weapon)inventory[i], this));
+                    attackBonus.Add(((Weapon)inventory[i]).calcATKBonus(this));
                     attackBonusWeapons.Add(inventoryString[i]);
+                    attackDamage.Add(((Weapon)inventory[i]).calcDamage(this));
                     count++;
                 }
             }
