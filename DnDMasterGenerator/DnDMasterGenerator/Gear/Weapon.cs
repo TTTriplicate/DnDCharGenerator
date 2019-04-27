@@ -36,35 +36,35 @@ namespace DnDClassesTest
         public override string toString()
         {
             string temp =  name + "    " + numDice + "d" + damageFactor;
-            if (finesse)
-            {
-                temp += "    Finesse";
-            }
+            //if (finesse)
+            //{
+            //    temp += "    Finesse";
+            //}
 
-            if (twoHanded)
-            {
-                temp += "    Two Handed";
-            }
+            //if (twoHanded)
+            //{
+            //    temp += "    Two Handed";
+            //}
 
-            if (versatile)
-            {
-                temp += "    Versatile";
-            }
+            //if (versatile)
+            //{
+            //    temp += "    Versatile";
+            //}
 
-            if(loading)
-            {
-                temp += "    Loading";
-            }
+            //if(loading)
+            //{
+            //    temp += "    Loading";
+            //}
 
-            if(heavy)
-            {
-                temp += "    Heavy";
-            }
+            //if(heavy)
+            //{
+            //    temp += "    Heavy";
+            //}
 
-            if (special)
-            {
-                temp += "    Special";
-            }
+            //if (special)
+            //{
+            //    temp += "    Special";
+            //}
 
             return temp;
         }
