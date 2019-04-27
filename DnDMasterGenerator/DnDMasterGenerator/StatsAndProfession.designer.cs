@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatsAndProfession));
             this.lblSTR = new System.Windows.Forms.Label();
             this.lblDEX = new System.Windows.Forms.Label();
             this.lblCON = new System.Windows.Forms.Label();
@@ -64,6 +65,7 @@
             // lblSTR
             // 
             this.lblSTR.AutoSize = true;
+            this.lblSTR.BackColor = System.Drawing.Color.Transparent;
             this.lblSTR.Location = new System.Drawing.Point(16, 96);
             this.lblSTR.Name = "lblSTR";
             this.lblSTR.Size = new System.Drawing.Size(36, 17);
@@ -73,6 +75,7 @@
             // lblDEX
             // 
             this.lblDEX.AutoSize = true;
+            this.lblDEX.BackColor = System.Drawing.Color.Transparent;
             this.lblDEX.Location = new System.Drawing.Point(16, 119);
             this.lblDEX.Name = "lblDEX";
             this.lblDEX.Size = new System.Drawing.Size(36, 17);
@@ -82,6 +85,7 @@
             // lblCON
             // 
             this.lblCON.AutoSize = true;
+            this.lblCON.BackColor = System.Drawing.Color.Transparent;
             this.lblCON.Location = new System.Drawing.Point(14, 146);
             this.lblCON.Name = "lblCON";
             this.lblCON.Size = new System.Drawing.Size(38, 17);
@@ -91,6 +95,7 @@
             // lblINT
             // 
             this.lblINT.AutoSize = true;
+            this.lblINT.BackColor = System.Drawing.Color.Transparent;
             this.lblINT.Location = new System.Drawing.Point(19, 174);
             this.lblINT.Name = "lblINT";
             this.lblINT.Size = new System.Drawing.Size(30, 17);
@@ -100,6 +105,7 @@
             // lblWIS
             // 
             this.lblWIS.AutoSize = true;
+            this.lblWIS.BackColor = System.Drawing.Color.Transparent;
             this.lblWIS.Location = new System.Drawing.Point(16, 202);
             this.lblWIS.Name = "lblWIS";
             this.lblWIS.Size = new System.Drawing.Size(33, 17);
@@ -109,6 +115,7 @@
             // lblCHA
             // 
             this.lblCHA.AutoSize = true;
+            this.lblCHA.BackColor = System.Drawing.Color.Transparent;
             this.lblCHA.Location = new System.Drawing.Point(13, 228);
             this.lblCHA.Name = "lblCHA";
             this.lblCHA.Size = new System.Drawing.Size(36, 17);
@@ -280,6 +287,7 @@
             // lblClass
             // 
             this.lblClass.AutoSize = true;
+            this.lblClass.BackColor = System.Drawing.Color.Transparent;
             this.lblClass.Location = new System.Drawing.Point(258, 66);
             this.lblClass.Name = "lblClass";
             this.lblClass.Size = new System.Drawing.Size(101, 17);
@@ -289,6 +297,7 @@
             // lblSubClass
             // 
             this.lblSubClass.AutoSize = true;
+            this.lblSubClass.BackColor = System.Drawing.Color.Transparent;
             this.lblSubClass.Location = new System.Drawing.Point(444, 66);
             this.lblSubClass.Name = "lblSubClass";
             this.lblSubClass.Size = new System.Drawing.Size(46, 17);
@@ -298,12 +307,17 @@
             // 
             // btnNext
             // 
+            this.btnNext.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNext.Location = new System.Drawing.Point(447, 222);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 16;
             this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // numLevel
@@ -332,6 +346,7 @@
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
+            this.lblLevel.BackColor = System.Drawing.Color.Transparent;
             this.lblLevel.Location = new System.Drawing.Point(148, 65);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(71, 17);
@@ -340,17 +355,23 @@
             // 
             // btnRoll
             // 
+            this.btnRoll.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRoll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRoll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRoll.FlatAppearance.BorderSize = 0;
+            this.btnRoll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRoll.Location = new System.Drawing.Point(16, 65);
             this.btnRoll.Name = "btnRoll";
             this.btnRoll.Size = new System.Drawing.Size(75, 23);
             this.btnRoll.TabIndex = 19;
             this.btnRoll.Text = "Roll stats";
-            this.btnRoll.UseVisualStyleBackColor = true;
+            this.btnRoll.UseVisualStyleBackColor = false;
             this.btnRoll.Click += new System.EventHandler(this.btnRoll_Click);
             // 
             // lblCharName
             // 
             this.lblCharName.AutoSize = true;
+            this.lblCharName.BackColor = System.Drawing.Color.Transparent;
             this.lblCharName.Location = new System.Drawing.Point(148, 13);
             this.lblCharName.Name = "lblCharName";
             this.lblCharName.Size = new System.Drawing.Size(115, 17);
@@ -375,6 +396,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(362, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 17);
@@ -385,6 +407,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(684, 386);
             this.Controls.Add(this.playerNameBox);
             this.Controls.Add(this.label1);
@@ -410,6 +435,8 @@
             this.Controls.Add(this.lblCON);
             this.Controls.Add(this.lblDEX);
             this.Controls.Add(this.lblSTR);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "StatsAndProfession";
             this.Text = "StatsAndProfession";
             ((System.ComponentModel.ISupportInitialize)(this.numSTR)).EndInit();
