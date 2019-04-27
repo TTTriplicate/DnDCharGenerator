@@ -72,6 +72,7 @@
     <Compile Include="CharSheet.designer.cs">
       <DependentUpon>CharSheet.cs</DependentUpon>
     </Compile>
+    <Compile Include="loader.cs" />
     <Compile Include="Professions\FightingStyles\FightingStyles.cs">
       <SubType>Form</SubType>
     </Compile>

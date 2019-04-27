@@ -175,16 +175,15 @@ namespace DnDClassesTest
             return increase;
         }
 
-        public static SkillSelect skillInteractive(int numSkills, bool[] skillRestrictions)
-        {
-            SkillSelect form = new SkillSelect(numSkills, skillRestrictions);
-            DialogResult result = form.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                //return form.selected;
-                return form;
-            }
-            else return new SkillSelect(numSkills, skillRestrictions);
-        }
+        //public static SkillSelect skillInteractive(int numSkills, bool[] skillRestrictions)
+        //{
+        //    SkillSelect form = new SkillSelect(numSkills, skillRestrictions);
+        //    DialogResult result = form.ShowDialog();
+        //    if (result == DialogResult.OK)
+        //    {
+        //        return form.selected;
+        //    }
+        //    else return new SkillSelect(numSkills, skillRestrictions);
+        //}
     }
 }
