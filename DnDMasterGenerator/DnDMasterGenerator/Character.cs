@@ -180,7 +180,7 @@ namespace DnDClassesTest
                     CharRace.setLanguages(i);
                 }
             }
-            this._skills = DnDCharacter.SkillSelectInteractive(CharClass._numProSkills, CharClass.ClassSkills(), this.CharBackground.SkillProf);
+            this._skills = DnDCharacter.SkillSelectInteractive(2, CharClass.ClassSkills(), this.CharBackground.SkillProf);
 
 
             CharGear gear = new CharGear(this._class.ProfessionName(), CharBackground.Background , AbilityModifiers()[1]);
