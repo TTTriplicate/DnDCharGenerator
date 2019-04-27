@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Windows.Forms;
 
 namespace DnDClassesTest
 {
@@ -56,6 +57,7 @@ namespace DnDClassesTest
             this._numProSkills = 2;
             this._proPath = path;
             this.Features = ClassFeatures();
+
         }
         public override bool[] ClassSkills()
         {
@@ -76,7 +78,7 @@ namespace DnDClassesTest
             Saves[2] = true;
             return Saves;
         }
-        
+
         public override List<string> ClassFeatures()
         {
             List<string> features = new List<string>();
@@ -171,6 +173,18 @@ namespace DnDClassesTest
         {
             int[] increase = new int[6] { 4, 0, 4, 0, 0, 0 };
             return increase;
+        }
+
+        public static SkillSelect skillInteractive(int numSkills, bool[] skillRestrictions)
+        {
+            SkillSelect form = new SkillSelect(numSkills, skillRestrictions);
+            DialogResult result = form.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                //return form.selected;
+                return form;
+            }
+            else return new SkillSelect(numSkills, skillRestrictions);
         }
     }
 }
