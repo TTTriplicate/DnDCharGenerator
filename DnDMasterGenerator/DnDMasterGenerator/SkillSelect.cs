@@ -16,6 +16,8 @@ namespace DnDClassesTest
         public bool[] SkillsList { get; set; }
         protected bool[] PreCheck { get; set; }
 
+        public Barbarian selected { get; set; }
+
         public SkillSelect(int numSkills, bool[] classSkills)
         {
             InitializeComponent();
