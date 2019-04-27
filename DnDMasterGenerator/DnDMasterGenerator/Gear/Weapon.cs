@@ -10,13 +10,15 @@ namespace DnDClassesTest
     {
         public int damageFactor, numDice;
         public bool finesse, twoHanded, versatile, loading, heavy, special;
-        public Weapon(string name, int damageFactor, int numDice = 1)
+        public string type;
+        public Weapon(string name, int damageFactor, string type, int numDice = 1)
         {
             this.name = name;
             this.damageFactor = damageFactor;
             this.numDice = numDice;
+            this.type = type;
         }
-        public Weapon(string name, int damageFactor, bool finesse = false, bool twoHanded = false, bool versatile = false, bool loading = false, bool heavy = false, bool special = false, int numDice = 1)
+        public Weapon(string name, int damageFactor, string type, bool finesse = false, bool twoHanded = false, bool versatile = false, bool loading = false, bool heavy = false, bool special = false, int numDice = 1)
         {
             this.name = name;
             this.damageFactor = damageFactor;
@@ -27,6 +29,7 @@ namespace DnDClassesTest
             this.heavy = heavy;
             this.special = special;
             this.numDice = numDice;
+            this.type = type;
         }
 
         /**
@@ -85,6 +88,18 @@ namespace DnDClassesTest
         public override int calcAC()
         {
             return 0;
+        }
+
+        public int calcATKBonus(Weapon a, DnDCharacter b)
+        {
+            if (a.type == "ranged thrown" || a.type == "ranged fired")
+            {
+                return b.ProficiencyBonus() + b.AbilityModifiers()[0];
+            }
+            else
+            {
+                return (b.ProficiencyBonus() + b.AbilityModifiers()[1]);
+            }
         }
     }
 }
