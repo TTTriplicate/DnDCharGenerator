@@ -168,7 +168,6 @@ namespace DnDClassesTest
                 this._HP += DnDCharacter.RollHP(this._level - 1, this._class._hitDie, this._HP) + ((this._level - 1) * this.AbilityModifiers()[2]);
             //Background selector
             //Race selector
-            //this._skills = DnDCharacter.SkillSelectInteractive(CharClass._numProSkills, CharClass.ClassSkills()/*, Background_Class.FixedSkills = new bool[18]*/);
             //skills picker is broken....all individual checkboxes?
             //needs the remaining interactive constructor pieces
             //and I forgot to set the ability scores off that form....Chris
@@ -181,6 +180,7 @@ namespace DnDClassesTest
                     CharRace.setLanguages(i);
                 }
             }
+            this._skills = DnDCharacter.SkillSelectInteractive(CharClass._numProSkills, CharClass.ClassSkills(), this.CharBackground.SkillProf);
 
 
             CharGear gear = new CharGear(this._class.ProfessionName(), CharBackground.Background , AbilityModifiers()[1]);
@@ -321,6 +321,19 @@ namespace DnDClassesTest
             }
             return classSkills;
         }
+
+        private static bool[] SkillSelectInteractive(int numSkills, bool[] classSkills, bool[] backSkills)
+        {
+
+            var skills = new SkillSelect(numSkills, classSkills, backSkills);
+            var result = skills.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                classSkills = skills.SkillsList;
+            }
+            return classSkills;
+        }
+
         /*   public bool SetProfession(int c, int s, int level = 1)
            {
                try

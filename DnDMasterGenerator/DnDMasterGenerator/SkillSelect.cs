@@ -26,16 +26,25 @@ namespace DnDClassesTest
             //PreCheck = backSkills;
         }
 
+        public SkillSelect(int numSkills, bool[] classSkills, bool[] backSkills)
+        {
+            InitializeComponent();
+            numToSelect = numSkills;
+            SkillsList = classSkills;
+            PreCheck = backSkills;
+        }
+
+
         private void SkillSelect_Load(object sender, EventArgs e)
         {
 
- /*           for(int i = 0; i < 18; ++i)
+            for(int i = 0; i < 18; ++i)
             {
                 if (PreCheck[i])
                 {
                     checklistSkills.SetItemCheckState(i, CheckState.Indeterminate);
                 }
-            }*/
+            }
         }
 
         private void checklistSkills_SelectedIndexChanged(object sender, EventArgs e)
@@ -46,10 +55,10 @@ namespace DnDClassesTest
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            /*int adjust = 0;
+            int adjust = 0;
             foreach (bool i in PreCheck)
-                if (i) ++adjust;*/
-            if (checklistSkills.SelectedItems.Count == numToSelect /*+ adjust*/)
+                if (i) ++adjust;
+            if (checklistSkills.SelectedItems.Count == numToSelect + adjust)
             {
                 SkillsList = new bool[18];
                 foreach (int i in checklistSkills.SelectedIndices)
