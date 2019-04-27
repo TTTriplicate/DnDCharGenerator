@@ -20,10 +20,10 @@ namespace DnDClassesTest
         {
             string[] abils = { "ST Strength", "ST Dexterity", "ST Constitution", "ST Intelligence", "ST Wisdom", "ST Charisma" };
             //string[] skills = { "Athletics", "end", "end",  "end", "end", };
-            string[] dex = { "0", "Acrobatics", "15", "SleightofHand", "16", "Stealth" };
-            string[] intel = { "Arcana", "History", "Investigation", "Nature", "Religion" };
-            string[] wis = { "Animal", "Insight", "Medicine", "Perception", "Survival" };
-            string[] cha = { "Deception", "Intimidation", "Performance", "Persuasion" };
+            string[] dex = { "0", "Acrobatics", "15", "SleightofHand", "16", "Stealth ", "3", "Athletics" };
+            string[] intel = { "2", "Arcana", "5", "History ", "8" ,"Investigation ", "10" ,"Nature", "14" ,"Religion" };
+            string[] wis = { "1" ,"Animal", "6","Insight", "9" ,"Medicine", "11" ,"Perception ", "17" ,"Survival" };
+            string[] cha = { "4" ,"Deception ", "7", "Intimidation", "12", "Performance", "13" ,"Persuasion" };
             bool[] skillBoxes = new bool[18];
             string nameOfFile = newChar._name;
             string PDFFolder = Path.Combine(Environment.CurrentDirectory, @"..\..\PDFs");
@@ -97,6 +97,7 @@ namespace DnDClassesTest
             pdfFormFields.SetField("Hair", newChar.CharBackground.getHair());
             pdfFormFields.SetField("Initiative", newChar.AbilityModifiers()[1].ToString());
             pdfFormFields.SetField("Passive", newChar.AbilityModifiers()[4].ToString());
+            pdfFormFields.SetField("AC", newChar.getAC().ToString());
 
             string save;
             if (newChar.SavingThrows[0])
@@ -154,9 +155,11 @@ namespace DnDClassesTest
             //pdfFormFields.SetField(("Check Box 27_Yes"), "FillText156" );
             //MessageBox.Show((indexOne + 23).ToString() + " " + (indexTwo + 23).ToString());
             pdfFormFields.SetField("Check Box " + (indexOne + 23), "Yes");
-            pdfFormFields.SetField("Check Box " + (indexTwo + 23), "Yes");
+            pdfFormFields.SetField("Check Box " + (indexTwo + 23), "Yes");            
             skillBoxes[indexOne] = true;
             skillBoxes[indexTwo] = true;
+            MessageBox.Show(indexOne.ToString() + " " + skillBoxes[indexOne].ToString());
+            MessageBox.Show(indexTwo.ToString() + " " + skillBoxes[indexTwo].ToString());
             string indexNum = "0";
             foreach (string i in dex)
             {
@@ -166,12 +169,86 @@ namespace DnDClassesTest
                 }
                 else if (i.Length > 3)
                 {
-                    if (skillBoxes[int.Parse(indexNum)])
+                    if (i == "Athletics")
+                    {
+                        if (skillBoxes[int.Parse(indexNum)])
+                        {
+                            pdfFormFields.SetField(i, (newChar.AbilityModifiers()[0] + newChar.ProficiencyBonus()).ToString());
+                            //MessageBox.Show("bingo");
+                        }
+                        else
+                            pdfFormFields.SetField(i, newChar.AbilityModifiers()[0].ToString());
+                    }
+                    //MessageBox.Show((int.Parse(indexNum).ToString() + skillBoxes[int.Parse(indexNum)].ToString()));
+                    else if (skillBoxes[int.Parse(indexNum)])
+                    {
                         pdfFormFields.SetField(i, (newChar.AbilityModifiers()[1] + newChar.ProficiencyBonus()).ToString());
+                        //MessageBox.Show("bingo");
+                    }
                     else
                         pdfFormFields.SetField(i, newChar.AbilityModifiers()[1].ToString());
                 }
-                indexNum = "0";
+                //indexNum = "0";
+            }
+
+            foreach (string i in intel)
+            {
+                if (i.Length < 3)
+                {
+                    indexNum = i;
+                }
+                else if (i.Length > 3)
+                {
+                    //MessageBox.Show((int.Parse(indexNum).ToString() + skillBoxes[int.Parse(indexNum)].ToString()));
+                    if (skillBoxes[int.Parse(indexNum)])
+                    {
+                        pdfFormFields.SetField(i, (newChar.AbilityModifiers()[3] + newChar.ProficiencyBonus()).ToString());
+                        //MessageBox.Show("bingo");
+                    }
+                    else
+                        pdfFormFields.SetField(i, newChar.AbilityModifiers()[3].ToString());
+                }
+                //indexNum = "0";
+            }
+
+            foreach (string i in wis)
+            {
+                if (i.Length < 3)
+                {
+                    indexNum = i;
+                }
+                else if (i.Length > 3)
+                {
+                    //MessageBox.Show((int.Parse(indexNum).ToString() + skillBoxes[int.Parse(indexNum)].ToString()));
+                    if (skillBoxes[int.Parse(indexNum)])
+                    {
+                        pdfFormFields.SetField(i, (newChar.AbilityModifiers()[4] + newChar.ProficiencyBonus()).ToString());
+                        //MessageBox.Show("bingo");
+                    }
+                    else
+                        pdfFormFields.SetField(i, newChar.AbilityModifiers()[4].ToString());
+                }
+                //indexNum = "0";
+            }
+
+            foreach (string i in cha)
+            {
+                if (i.Length < 3)
+                {
+                    indexNum = i;
+                }
+                else if (i.Length > 3)
+                {
+                    //MessageBox.Show((int.Parse(indexNum).ToString() + skillBoxes[int.Parse(indexNum)].ToString()));
+                    if (skillBoxes[int.Parse(indexNum)])
+                    {
+                        pdfFormFields.SetField(i, (newChar.AbilityModifiers()[5] + newChar.ProficiencyBonus()).ToString());
+                        //MessageBox.Show("bingo");
+                    }
+                    else
+                        pdfFormFields.SetField(i, newChar.AbilityModifiers()[5].ToString());
+                }
+                //indexNum = "0";
             }
 
             //pdfFormFields.SetField("Equipment", "Test test test");
