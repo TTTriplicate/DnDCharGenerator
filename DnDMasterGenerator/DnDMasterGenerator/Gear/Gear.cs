@@ -22,6 +22,7 @@ namespace DnDClassesTest
 
         public abstract string getName();
         public abstract string toString();
+        public abstract int calcAC();
     }
 }
 

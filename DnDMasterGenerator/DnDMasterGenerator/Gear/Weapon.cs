@@ -82,6 +82,9 @@ namespace DnDClassesTest
         {
             return damageFactor;
         }
-
+        public override int calcAC()
+        {
+            return 0;
+        }
     }
 }

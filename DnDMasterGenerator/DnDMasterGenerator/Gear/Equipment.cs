@@ -30,7 +30,11 @@ namespace DnDClassesTest
         public override string getName()
         {
             return name;
+        }
 
+        public override int calcAC()
+        {
+            return 0;
         }
     }
 }

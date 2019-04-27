@@ -30,7 +30,6 @@ namespace DnDClassesTest
             this.disadvantage = disadvantage;
         }
 
-
         /**
          * Mutator method to calculate the armor class based on dexMod
          * @return the calculated armor class
