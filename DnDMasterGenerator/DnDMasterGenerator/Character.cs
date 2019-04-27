@@ -189,15 +189,22 @@ namespace DnDClassesTest
             ArmorClass = gear.getAC();
             gold = gear.getGP();
             int count = 0;
-            for (int i = 0; i < inventory.Count || count < 3; i++)
+            for (int i = 0; i < inventory.Count; i++)
             {
-                if (inventory[i].GetType().ToString() == "Weapon")
+                if (count >= 3)
                 {
-                    attackBonus.Add(((Weapon)inventory[i]).calcATKBonus(this));
-                    attackBonusWeapons.Add(inventoryString[i]);
-                    attackDamage.Add(((Weapon)inventory[i]).calcDamage(this));
-                    count++;
+                    break;
                 }
+                else
+                {
+                    if (inventory[i].GetType().ToString() == "Weapon")
+                    {
+                        attackBonus.Add(((Weapon)inventory[i]).calcATKBonus(this));
+                        attackBonusWeapons.Add(inventoryString[i]);
+                        attackDamage.Add(((Weapon)inventory[i]).calcDamage(this));
+                        count++;
+                    }
+                } 
             }
         }
         /*   public DnDCharacter(int level, int p, int proPath)
