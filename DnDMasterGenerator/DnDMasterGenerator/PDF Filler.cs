@@ -97,6 +97,7 @@ namespace DnDClassesTest
             pdfFormFields.SetField("Hair", newChar.CharBackground.getHair());
             pdfFormFields.SetField("Initiative", newChar.AbilityModifiers()[1].ToString());
             pdfFormFields.SetField("Passive", newChar.AbilityModifiers()[4].ToString());
+            pdfFormFields.SetField("AC", newChar.getAC().ToString());
 
             string save;
             if (newChar.SavingThrows[0])
