@@ -168,7 +168,4 @@ C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator
 C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Professions.ClassFeatures.MetaMagic.MetamagicSelect.resources
 C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.FightingStyles.resources
 C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Professions.ClassFeatures.MetaMagic.MetamagicSelect.resources
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csprojAssemblyReference.cache
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.CoreCompileInputs.cache
-C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csproj.CopyComplete
-C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csprojResolveAssemblyReference.cache
+C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.csprojResolveAssemblyReference.cache
