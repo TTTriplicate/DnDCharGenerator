@@ -75,7 +75,7 @@ namespace DnDClassesTest
             pdfFormFields.SetField("PlayerName", newChar._playerName);
             pdfFormFields.SetField("GP", newChar.gold.ToString());
             pdfFormFields.SetField("Alignment", newChar.CharRace.getAlignment());
-            pdfFormFields.SetField("ProfBonus", newChar.ProficiencyBonus().ToString();
+            pdfFormFields.SetField("ProfBonus", newChar.ProficiencyBonus().ToString());
             pdfFormFields.SetField("Age", newChar.CharBackground.getAge());
             pdfFormFields.SetField("CharacterName 2", newChar._name);
             pdfFormFields.SetField("Height", newChar.CharBackground.getHeight());
@@ -88,6 +88,10 @@ namespace DnDClassesTest
             pdfFormFields.SetField("AC", newChar.getAC().ToString());
             pdfFormFields.SetField("Speed", newChar.CharRace.getSpeed().ToString());
             pdfFormFields.SetField("Inspiration", 0.ToString());
+            pdfFormFields.SetField("CP", 0.ToString());
+            pdfFormFields.SetField("SP", 0.ToString());
+            pdfFormFields.SetField("EP", 0.ToString());
+            pdfFormFields.SetField("PP", 0.ToString());
 
             pdfFormFields.SetField("STR", newChar._abilities[0].ToString());
             pdfFormFields.SetField("STRmod", newChar.AbilityModifiers()[0].ToString());
