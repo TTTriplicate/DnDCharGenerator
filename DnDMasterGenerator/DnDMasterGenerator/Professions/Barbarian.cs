@@ -108,35 +108,44 @@ namespace DnDClassesTest
                 if (unlock[i]) continue;
                 else break;
             }
-            if (i == 1) current = Features.GetRange(0, 3);
-            else if (i == 3) current = Features.GetRange(0, 5);
-            else if (i == 5) current = Features.GetRange(0, 6);
-            else if (i == 6) current = Features.GetRange(0, 7);
-            else if (i == 8) current = Features.GetRange(0, 8);
-            else if (i == 10) current = Features.GetRange(0, 9);
-            else if (i == 11) current = Features.GetRange(0, 10);
-            else if (i == 12) current = Features.GetRange(0, 11);
+            current = Features.GetRange(0, 2);
+            if (i >= 1)
+            {
+                current.Add(Features[2]);
+                current.Add(Features[3]);
+            }
+            else if (i >= 3)
+            {
+                current.Add(Features[4]);
+                current.Add(Features[5]);
+            }
+            else if (i >= 5) current.Add(Features[6]);
+            else if (i >= 6) current.Add(Features[7]);
+            else if (i >= 8) current.Add(Features[8]);
+            else if (i >= 10) current.Add(Features[9]);
+            else if (i >= 11) current.Add(Features[10]);
+            else if (i >= 12) current.Add(Features[11]);
 
             if (_proPath == 0)
             {
                 if (i < 2) return current;
-                if (i > 2) current.Add(Features[12]);
-                if (i > 4) current.Add(Features[13]);
-                if (i > 7) current.Add(Features[14]);
-                if (i > 8) current.Add(Features[15]);
+                if (i >= 2) current.Add(Features[12]);
+                if (i >= 4) current.Add(Features[13]);
+                if (i >= 7) current.Add(Features[14]);
+                if (i >= 8) current.Add(Features[15]);
             }
             else if (_proPath == 1)
             {
                 if (i < 2) return current;
-                if (i > 2)
+                if (i >= 2)
                 {
                     current.Add(Features[16]);
                     current.Add(Features[17]);
                     current.Add(this.TotemChoice(Features.GetRange(18, 3)));
                 }
-                if (i > 4) current.Add(this.TotemChoice(Features.GetRange(21, 3)));
-                if (i > 7) current.Add(Features[24]);
-                if (i > 8) current.Add(this.TotemChoice(Features.GetRange(25, 3)));
+                if (i >= 4) current.Add(this.TotemChoice(Features.GetRange(21, 3)));
+                if (i >= 7) current.Add(Features[24]);
+                if (i >= 8) current.Add(this.TotemChoice(Features.GetRange(25, 3)));
 
             }
 
