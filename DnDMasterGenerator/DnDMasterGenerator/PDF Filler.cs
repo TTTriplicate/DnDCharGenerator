@@ -75,7 +75,7 @@ namespace DnDClassesTest
             pdfFormFields.SetField("PlayerName", newChar._playerName);
             pdfFormFields.SetField("GP", newChar.gold.ToString());
             pdfFormFields.SetField("Alignment", newChar.CharRace.getAlignment());
-            pdfFormFields.SetField("ProfBonus", newChar.ProficiencyBonus().ToString();
+            pdfFormFields.SetField("ProfBonus", newChar.ProficiencyBonus().ToString());
             pdfFormFields.SetField("Age", newChar.CharBackground.getAge());
             pdfFormFields.SetField("CharacterName 2", newChar._name);
             pdfFormFields.SetField("Height", newChar.CharBackground.getHeight());

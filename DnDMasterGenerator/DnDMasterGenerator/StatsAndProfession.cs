@@ -74,7 +74,7 @@ namespace DnDClassesTest
                 case 10:
                     lblSubClass.Text = "Choose a Patron:";
                     lblSubClass.Visible = true;
-                    comboSubClass.DataSource = new List<string> { "Fiend", "Arch-Fey", "Great Old One" };
+                    comboSubClass.DataSource = new List<string> {  "Arch-Fey", "Fiend", "Great Old One" };
                     break;
                 case 11:
                     lblSubClass.Text = "Select a speciality:";
