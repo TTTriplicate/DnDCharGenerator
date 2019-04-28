@@ -205,12 +205,12 @@ namespace DnDClassesTest
             if (this.Invocations.Any())
             {//if any int indicating selected invocations,
                 this.Invocations.Sort();//sort them
-                for(int i = 0; i < this.Invocations.Count(); ++i)
+            /*    for(int i = 0; i < this.Invocations.Count(); ++i)
                 {//adjust indicies for preceding items in list being removed
                     if (this.Invocations[i] > 0) this.Invocations[i] -= i;
                     if (this.Invocations[i] < 0) this.Invocations[i] = 0;
-                }//prevent indexoutofrange
-                //this.Invocations.Reverse();//swap List orientation
+                }//prevent indexoutofrange*/
+                this.Invocations.Reverse();//swap List orientation
                 //should do this OR offset, not both
 
                 //but neither, one, the other, AND both failed
