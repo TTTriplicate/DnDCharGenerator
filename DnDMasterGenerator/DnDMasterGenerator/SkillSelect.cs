@@ -16,6 +16,7 @@ namespace DnDClassesTest
         protected static int numToSelect { get; set; }
         public bool[] SkillsList { get; set; }
         protected bool[] PreCheck { get; set; }
+        //public int preCheckOne = -1, preCheckTwo;
 
         //public Barbarian selected { get; set; }
 
@@ -33,6 +34,7 @@ namespace DnDClassesTest
             numToSelect = numSkills;
             SkillsList = classSkills;
             PreCheck = backSkills;
+            SkillsList = new bool[18];
         }
 
 
@@ -41,32 +43,18 @@ namespace DnDClassesTest
             //bool[] skills = new bool[18];
             //foreach (string i in allSkillProfs)
             //{
-            //    checklistSkills.Items.Clear();
-            //    checklistSkills.Items.Add(i);
+            //    checkedlistSkills.Items.Clear();
+            //    checkedlistSkills.Items.Add(i);
             //}
             //int count = 0;
             for(int i = 0; i < 18; i++)
             {
                 if (PreCheck[i])
                 {
-                    //checklistSkills.SetItemCheckState(i, CheckState.Indeterminate);
-                    checklistSkills.SetItemChecked(i, true);
+                    checkedlistSkills.SetItemCheckState(i, CheckState.Indeterminate);
+                    //checkedlistSkills.SetItemChecked(i, true);
                 }
             }
-        }
-
-        private void checklistSkills_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //MessageBox.Show(numToSelect.ToString());
-            if (SkillsList[checklistSkills.SelectedIndex] == false)
-                checklistSkills.SetItemCheckState(checklistSkills.SelectedIndex, CheckState.Unchecked);
-
-            if (checklistSkills.SelectedItems.Count >= numToSelect)
-            {
-                checklistSkills.Enabled = false;
-                MessageBox.Show("Selected");
-            }
-            MessageBox.Show(checklistSkills.SelectedItems.Count.ToString());
         }
 
         private void btnDone_Click(object sender, EventArgs e)
@@ -74,18 +62,33 @@ namespace DnDClassesTest
             int adjust = 0;
             foreach (bool i in PreCheck)
                 if (i) ++adjust;
-            
-            //if (checklistSkills.SelectedItems.Count == numToSelect + adjust)
-            //{
-            //    SkillsList = new bool[17];
-            //    foreach (int i in checklistSkills.SelectedIndices)
-            //    {
-            //        SkillsList[i] = true;
-            //        Console.WriteLine(i);
-            //    }
-            //    DialogResult = DialogResult.OK;
-            //}
-            //else MessageBox.Show($"Please select {numToSelect - (checklistSkills.SelectedItems.Count)} more skills.", "Not enough Skills Selected");
+            //MessageBox.Show(checkedlistSkills.CheckedItems.Count.ToString());
+
+            if (checkedlistSkills.CheckedItems.Count == numToSelect + adjust)
+            {
+                
+                foreach (int i in checkedlistSkills.CheckedIndices)
+                {
+                    SkillsList[i] = true;
+                    Console.WriteLine(i);
+                }
+                DialogResult = DialogResult.OK;
+            }
+            else MessageBox.Show($"Please select {(numToSelect + adjust) - (checkedlistSkills.CheckedItems.Count)} more skills.", "Not enough Skills Selected");
+        }
+
+        private void checkedlistSkills_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show(numToSelect.ToString());
+            if (SkillsList[checkedlistSkills.SelectedIndex] == false)
+                checkedlistSkills.SetItemCheckState(checkedlistSkills.SelectedIndex, CheckState.Unchecked);
+
+            if (checkedlistSkills.CheckedItems.Count - 2 >= numToSelect)
+            { 
+                checkedlistSkills.Enabled = false;
+                MessageBox.Show("Maximum amount of skills selected");
+            }
+            //MessageBox.Show(checkedlistSkills.SelectedItems.Count.ToString());
         }
     }
 }
