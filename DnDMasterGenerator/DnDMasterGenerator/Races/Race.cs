@@ -29,7 +29,7 @@ namespace DnDClassesTest
         protected string[] specialAbilities = new string[15];
         protected string[] temp = new string[10];
         protected string race;
-        protected string subRace;
+        protected string subRace = "";
         protected string[] info;
         protected int moreLang;
 
@@ -180,6 +180,10 @@ namespace DnDClassesTest
                     return i;
             }
             return 0;
+        }
+        public string getsubRace()
+        {
+            return subRace;
         }
         public void setSubRace(string sr)
         {

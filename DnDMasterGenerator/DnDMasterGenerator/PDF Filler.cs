@@ -71,7 +71,7 @@ namespace DnDClassesTest
             pdfFormFields.SetField("Ideals", newChar.CharBackground.getIdeal());
             pdfFormFields.SetField("Bonds", newChar.CharBackground.getBond());
             pdfFormFields.SetField("Flaws", newChar.CharBackground.getFlaw());
-            pdfFormFields.SetField("Race ", newChar.CharRace.getRace());
+            pdfFormFields.SetField("Race ", newChar.CharRace.getsubRace() + " " + newChar.CharRace.getRace());
             pdfFormFields.SetField("PlayerName", newChar._playerName);
             pdfFormFields.SetField("GP", newChar.gold.ToString());
             pdfFormFields.SetField("Alignment", newChar.CharRace.getAlignment());
@@ -98,6 +98,7 @@ namespace DnDClassesTest
             pdfFormFields.SetField("Initiative", newChar.AbilityModifiers()[1].ToString());
             pdfFormFields.SetField("Passive", newChar.AbilityModifiers()[4].ToString());
             pdfFormFields.SetField("AC", newChar.getAC().ToString());
+            pdfFormFields.SetField("Speed", newChar.CharRace.getSpeed().ToString());
 
             string save;
             if (newChar.SavingThrows[0])
@@ -160,6 +161,17 @@ namespace DnDClassesTest
             skillBoxes[indexTwo] = true;
             MessageBox.Show(indexOne.ToString() + " " + skillBoxes[indexOne].ToString());
             MessageBox.Show(indexTwo.ToString() + " " + skillBoxes[indexTwo].ToString());
+            count = 0;
+            foreach (bool i in newChar._skills)
+            {
+                if (i == true)
+                {
+                    skillBoxes[count] = i;
+                    pdfFormFields.SetField("Check Box " + (count + 23), "Yes");
+                }
+                count++;
+            }
+            
             string indexNum = "0";
             foreach (string i in dex)
             {
@@ -250,6 +262,16 @@ namespace DnDClassesTest
                 }
                 //indexNum = "0";
             }
+            string featuresAndTraits = "";
+            foreach (string i in newChar.CharRace.getSA())
+            {
+                if (i == null)
+                    break;
+                if (i != newChar.CharRace.getSA()[0])
+                    featuresAndTraits += ", ";
+                featuresAndTraits += i;
+            }
+            pdfFormFields.SetField("Features and Traits", featuresAndTraits);
 
             //pdfFormFields.SetField("Equipment", "Test test test");
             string stringInventory = "";
