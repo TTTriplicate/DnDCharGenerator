@@ -110,6 +110,12 @@
     <Compile Include="Professions\Fighter.cs" />
     <Compile Include="Professions\Monk.cs" />
     <Compile Include="Professions\Paladin.cs" />
+    <Compile Include="Professions\PickOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Professions\PickOne.Designer.cs">
+      <DependentUpon>PickOne.cs</DependentUpon>
+    </Compile>
     <Compile Include="Professions\Profession.cs" />
     <Compile Include="Professions\Ranger.cs" />
     <Compile Include="Professions\Rogue.cs" />
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Professions\MetaMagic\MetamagicSelect.resx">
       <DependentUpon>MetamagicSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Professions\PickOne.resx">
+      <DependentUpon>PickOne.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

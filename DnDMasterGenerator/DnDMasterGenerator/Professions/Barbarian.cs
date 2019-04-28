@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using DnDMasterGenerator.Professions;
 
 namespace DnDClassesTest
 {
@@ -25,23 +26,7 @@ namespace DnDClassesTest
 
         protected override List<string> Features
         { get; set; }
-        private int[] Totem = new int[3] { 0, 0, 0 };//bear, eagle, wolf in order 0 1 2, for each use by index
-        private int GetTotem(int index)
-        {
-            return this.Totem[index];
-        }
-        private bool SetTotem(int index, int totem)
-        {
-            try
-            {
-                this.Totem[index] = totem;
-                return true;
-            }
-            catch (IndexOutOfRangeException)
-            {
-                return false;
-            }
-        }
+
         public Barbarian()
         {
             this._level = 1;
@@ -147,23 +132,12 @@ namespace DnDClassesTest
                 {
                     current.Add(Features[16]);
                     current.Add(Features[17]);
-                    if (this.GetTotem(0) == 0) current.Add(Features[18]);
-                    else if (this.GetTotem(0) == 1) current.Add(Features[19]);
-                    else current.Add(Features[20]);
+                    current.Add(this.TotemChoice(Features.GetRange(18, 3)));
                 }
-                if (i > 4)
-                {
-                    if (this.GetTotem(1) == 0) current.Add(Features[21]);
-                    else if (this.GetTotem(1) == 1) current.Add(Features[22]);
-                    else current.Add(Features[23]);
-                }
+                if (i > 4) current.Add(this.TotemChoice(Features.GetRange(21, 3)));
                 if (i > 7) current.Add(Features[24]);
-                if (i > 8)
-                {
-                    if (this.GetTotem(2) == 0) current.Add(Features[25]);
-                    else if (this.GetTotem(2) == 1) current.Add(Features[26]);
-                    else current.Add(Features[27]);
-                }
+                if (i > 8) current.Add(this.TotemChoice(Features.GetRange(25, 3)));
+
             }
 
             return current;
@@ -175,6 +149,17 @@ namespace DnDClassesTest
             return increase;
         }
 
+        private string TotemChoice(List<string> choices)
+        {
+            var sel = new PickOne(choices);
+            var result = sel.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                return sel.Choices[sel.Selected];
+            }
+            else
+                return this.TotemChoice(choices);
+        }
         //public static SkillSelect skillInteractive(int numSkills, bool[] skillRestrictions)
         //{
         //    SkillSelect form = new SkillSelect(numSkills, skillRestrictions);
