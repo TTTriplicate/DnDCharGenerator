@@ -75,19 +75,7 @@ namespace DnDClassesTest
             pdfFormFields.SetField("PlayerName", newChar._playerName);
             pdfFormFields.SetField("GP", newChar.gold.ToString());
             pdfFormFields.SetField("Alignment", newChar.CharRace.getAlignment());
-            pdfFormFields.SetField("ProfBonus", newChar.ProficiencyBonus().ToString());
-            pdfFormFields.SetField("STRmod", newChar._abilities[0].ToString());
-            pdfFormFields.SetField("STR", newChar.AbilityModifiers()[0].ToString());
-            pdfFormFields.SetField("DEXmod ", newChar._abilities[1].ToString());
-            pdfFormFields.SetField("DEX", newChar.AbilityModifiers()[1].ToString());
-            pdfFormFields.SetField("CONmod", newChar._abilities[2].ToString());
-            pdfFormFields.SetField("CON", newChar.AbilityModifiers()[2].ToString());
-            pdfFormFields.SetField("INTmod", newChar._abilities[3].ToString());
-            pdfFormFields.SetField("INT", newChar.AbilityModifiers()[3].ToString());
-            pdfFormFields.SetField("WISmod", newChar._abilities[4].ToString());
-            pdfFormFields.SetField("WIS", newChar.AbilityModifiers()[4].ToString());
-            pdfFormFields.SetField("CHamod", newChar._abilities[5].ToString());
-            pdfFormFields.SetField("CHA", newChar.AbilityModifiers()[5].ToString());
+            pdfFormFields.SetField("ProfBonus", newChar.ProficiencyBonus().ToString();
             pdfFormFields.SetField("Age", newChar.CharBackground.getAge());
             pdfFormFields.SetField("CharacterName 2", newChar._name);
             pdfFormFields.SetField("Height", newChar.CharBackground.getHeight());
@@ -99,6 +87,20 @@ namespace DnDClassesTest
             pdfFormFields.SetField("Passive", newChar.AbilityModifiers()[4].ToString());
             pdfFormFields.SetField("AC", newChar.getAC().ToString());
             pdfFormFields.SetField("Speed", newChar.CharRace.getSpeed().ToString());
+            pdfFormFields.SetField("Inspiration", 0.ToString());
+
+            pdfFormFields.SetField("STR", newChar._abilities[0].ToString());
+            pdfFormFields.SetField("STRmod", newChar.AbilityModifiers()[0].ToString());
+            pdfFormFields.SetField("DEX", newChar._abilities[1].ToString());
+            pdfFormFields.SetField("DEXmod ", newChar.AbilityModifiers()[1].ToString());
+            pdfFormFields.SetField("CON", newChar._abilities[2].ToString());
+            pdfFormFields.SetField("CONmod", newChar.AbilityModifiers()[2].ToString());
+            pdfFormFields.SetField("INT", newChar._abilities[3].ToString());
+            pdfFormFields.SetField("INTmod", newChar.AbilityModifiers()[3].ToString());
+            pdfFormFields.SetField("WIS", newChar._abilities[4].ToString());
+            pdfFormFields.SetField("WISmod", newChar.AbilityModifiers()[4].ToString());
+            pdfFormFields.SetField("CHA", newChar._abilities[5].ToString());
+            pdfFormFields.SetField("CHamod", newChar.AbilityModifiers()[5].ToString());
 
             string save;
             if (newChar.SavingThrows[0])
