@@ -21,6 +21,7 @@ namespace DnDClassesTest
         public List<Gear> inventory = new List<Gear>(); //List of inventory after choices are made
         public List<string> inventoryString = new List<string>(); //parallel list of inventory stored as strings
         public List<Gear> firstChoice = new List<Gear>();
+        public int AC;
 
         //Index values used to more easily populate lists of choices
         public const int startSimpleMelee = 0;
@@ -66,47 +67,47 @@ namespace DnDClassesTest
         public void populateGear()
         {
             //0-10 Simple Melee Weapons
-            allGear.Add(new Weapon("Club", 4, 1));
-            allGear.Add(new Weapon("Dagger", 4, true));
-            allGear.Add(new Weapon("Greatclub", 8, false, true));
-            allGear.Add(new Weapon("Handaxe", 6, 1));
-            allGear.Add(new Weapon("Javelin", 6, 1));
-            allGear.Add(new Weapon("Light hammer", 4, 1)); //5
-            allGear.Add(new Weapon("Mace", 6, 1));
-            allGear.Add(new Weapon("Quarterstaff", 6, false, false, true));
-            allGear.Add(new Weapon("Sickle", 4, 1));
-            allGear.Add(new Weapon("Spear", 6, false, false, true));
-            allGear.Add(new Weapon("Unarmed strike", 1, 1)); //10
+            allGear.Add(new Weapon("Club", 4, "melee", 1));
+            allGear.Add(new Weapon("Dagger", 4, "melee", true));
+            allGear.Add(new Weapon("Greatclub", 8, "melee", false, true));
+            allGear.Add(new Weapon("Handaxe", 6, "melee", 1));
+            allGear.Add(new Weapon("Javelin", 6, "ranged thrown", 1));
+            allGear.Add(new Weapon("Light hammer", 4, "melee", 1)); //5
+            allGear.Add(new Weapon("Mace", 6, "melee", 1));
+            allGear.Add(new Weapon("Quarterstaff", 6, "melee", false, false, true));
+            allGear.Add(new Weapon("Sickle", 4, "melee", 1));
+            allGear.Add(new Weapon("Spear", 6, "ranged thrown", false, false, true));
+            allGear.Add(new Weapon("Unarmed strike", 1, "melee", 1)); //10
             //11-14 Simple Ranged Weapons
-            allGear.Add(new Weapon("Crossbow, light", 8, false, true, false, true));
-            allGear.Add(new Weapon("Dart", 4, true));
-            allGear.Add(new Weapon("Shortbow", 6, false, true));
-            allGear.Add(new Weapon("Sling", 4, 1));
+            allGear.Add(new Weapon("Crossbow, light", 8, "ranged fired", false, true, false, true));
+            allGear.Add(new Weapon("Dart", 4, "ranged thrown", true));
+            allGear.Add(new Weapon("Shortbow", 6, "ranged fired", false, true));
+            allGear.Add(new Weapon("Sling", 4, "ranged fired", 1));
             //15-32 Martial Melee Weapons
-            allGear.Add(new Weapon("Battleax", 8, false, false, true)); //15
-            allGear.Add(new Weapon("Flail", 8, 1));
-            allGear.Add(new Weapon("Glaive", 10, false, true, false, false, true));
-            allGear.Add(new Weapon("Greatax", 12, false, true, false, false, true));
-            allGear.Add(new Weapon("Greatsword", 6, 2));
-            allGear.Add(new Weapon("Halberd", 10, false, true, false, false, true)); //20
-            allGear.Add(new Weapon("Lance", 12, false, false, false, false, true));
-            allGear.Add(new Weapon("Longsword", 8, false, false, true));
-            allGear.Add(new Weapon("Maul", 6, false, true, false, false, true, false, 2));
-            allGear.Add(new Weapon("Morningstar", 8, 1));
-            allGear.Add(new Weapon("Pike", 10, false, true, false, false, true));//25
-            allGear.Add(new Weapon("Rapier", 8, true));
-            allGear.Add(new Weapon("Scimitar", 6, true));
-            allGear.Add(new Weapon("Shortsword", 6, true));
-            allGear.Add(new Weapon("Trident", 6, false, false, true));
-            allGear.Add(new Weapon("War pick", 8, 1)); //30
-            allGear.Add(new Weapon("Warhammer", 8, false, false, true));
-            allGear.Add(new Weapon("Whip", 4, true));
+            allGear.Add(new Weapon("Battleax", 8, "melee", false, false, true)); //15
+            allGear.Add(new Weapon("Flail", 8, "melee", 1));
+            allGear.Add(new Weapon("Glaive", 10, "melee", false, true, false, false, true));
+            allGear.Add(new Weapon("Greatax", 12, "melee", false, true, false, false, true));
+            allGear.Add(new Weapon("Greatsword", 6, "melee", 2));
+            allGear.Add(new Weapon("Halberd", 10, "melee", false, true, false, false, true)); //20
+            allGear.Add(new Weapon("Lance", 12, "melee", false, false, false, false, true));
+            allGear.Add(new Weapon("Longsword", 8, "melee", false, false, true));
+            allGear.Add(new Weapon("Maul", 6, "melee", false, true, false, false, true, false, 2));
+            allGear.Add(new Weapon("Morningstar", 8, "melee", 1));
+            allGear.Add(new Weapon("Pike", 10, "melee", false, true, false, false, true));//25
+            allGear.Add(new Weapon("Rapier", 8, "melee", true));
+            allGear.Add(new Weapon("Scimitar", 6, "melee", true));
+            allGear.Add(new Weapon("Shortsword", 6, "melee", true));
+            allGear.Add(new Weapon("Trident", 6, "ranged thrown", false, false, true));
+            allGear.Add(new Weapon("War pick", 8, "melee", 1)); //30
+            allGear.Add(new Weapon("Warhammer", 8, "melee", false, false, true));
+            allGear.Add(new Weapon("Whip", 4, "melee", true));
             //33-37 Martial Ranged Weapons
-            allGear.Add(new Weapon("Blowgun", 1, false, false, false, true));
-            allGear.Add(new Weapon("Crossbow, hand", 6, false, false, false, true));
-            allGear.Add(new Weapon("Crossbow, heavy", 10, false, true, false, true, true)); //35
-            allGear.Add(new Weapon("Longbow", 8, false, true, false, false, true));
-            allGear.Add(new Weapon("Net", 0, false, false, false, false, false, true));
+            allGear.Add(new Weapon("Blowgun", 1, "ranged fired", false, false, false, true));
+            allGear.Add(new Weapon("Crossbow, hand", 6, "ranged fired", false, false, false, true));
+            allGear.Add(new Weapon("Crossbow, heavy", 10, "ranged fired", false, true, false, true, true)); //35
+            allGear.Add(new Weapon("Longbow", 8, "ranged fired", false, true, false, false, true));
+            allGear.Add(new Weapon("Net", 0, "ranged thrown", false, false, false, false, false, true));
             //38-42 Armor
             allGear.Add(new Armor("Leather armor", 11, dexMod));
             allGear.Add(new Armor("Chain shirt", 13, dexMod, 2));
@@ -166,8 +167,8 @@ namespace DnDClassesTest
             allGear.Add(new Equipment("Shawm"));
             allGear.Add(new Equipment("Viol"));
             //88-90 Formatting
-            allGear.Add(new Weapon("Light Crossbow and 20 bolts", 8, false, true, false, true));
-            allGear.Add(new Weapon("Shortbow and 20 arrows", 6, false, true));
+            allGear.Add(new Weapon("Light Crossbow and 20 bolts", 8, "ranged fired", false, true, false, true));
+            allGear.Add(new Weapon("Shortbow and 20 arrows", 6, "ranged fired", false, true));
             allGear.Add(new Equipment("Leather armor, longbow, and 20 arrows")); //90
             //other equipment
             allGear.Add(new Equipment("Arrows (x20)"));
@@ -197,10 +198,10 @@ namespace DnDClassesTest
             if (classType == "Barbarian")
             {
                 inventory.Add(new Equipment("Explorer's Pack"));
-                inventory.Add(new Weapon("Javelines (x4)", 6, 1));
+                inventory.Add(new Weapon("Javelines (x4)", 6, "ranged thrown", 1));
                 numChoices = 2;
                 this.options.Add(new List<Gear>());
-                firstChoice.Add(new Weapon("Handaxes (x2)", 6, 1));
+                firstChoice.Add(new Weapon("Handaxes (x2)", 6, "melee", 1));
                 for (i = startSimpleMelee; i < startMartialMelee; i++)
                 {
                     if (i != getIndex("Handaxe"))
@@ -276,7 +277,7 @@ namespace DnDClassesTest
                 firstChoice.Add(allGear[getIndex("Light Crossbow and 20 bolts")]);
                 for (i = startSimpleMelee; i < startMartialMelee; i++)
                 {
-                    options[0].Add(allGear[i]);
+                    options[2].Add(allGear[i]);
                 }
 
                 this.options.Add(new List<Gear>()); //priest's pack or explorer's pack
@@ -332,7 +333,7 @@ namespace DnDClassesTest
                 this.options.Add(new List<Gear>()); //light crossbow and 20 bolt or two handaxes
                 firstChoice.Add(null);
                 options[2].Add(allGear[getIndex("Light Crossbow and 20 bolts")]);
-                options[2].Add(new Weapon("Handaxes (x2)", 6, 1));
+                options[2].Add(new Weapon("Handaxes (x2)", 6, "melee", 1));
 
                 this.options.Add(new List<Gear>()); //dungeoneer's pack or an explorer's pack
                 firstChoice.Add(null);
@@ -342,7 +343,7 @@ namespace DnDClassesTest
             }
             else if (classType == "Monk")
             {
-                inventory.Add(new Weapon("Darts (x5)", 4, true));
+                inventory.Add(new Weapon("Darts (x5)", 4, "thrown ranged", true));
                 numChoices = 2;
                 //shortword or any simple weapon
                 this.options.Add(new List<Gear>());
@@ -368,7 +369,7 @@ namespace DnDClassesTest
                     options[0].Add(allGear[i]);
                 }
                 this.options.Add(new List<Gear>());//five javelins or any simple melee weapon
-                firstChoice.Add(new Weapon("Javelins (x5)", 6, 1));
+                firstChoice.Add(new Weapon("Javelins (x5)", 6, "ranged thrown", 1));
                 for (i = 0; i < 11; i++)
                 {
                     options[1].Add(allGear[i]);
@@ -378,14 +379,14 @@ namespace DnDClassesTest
                 options[2].Add(allGear[getIndex("Priest's Pack")]);
                 options[2].Add(allGear[getIndex("Explorer's Pack")]);
             }
-            else if (classType == "Ranger") //FIX_ME: Add two simple melee weapons
+            else if (classType == "Ranger")
             {
                 inventory.Add(allGear[getIndex("Longbow")]);
                 inventory.Add(new Equipment("Arrows (x20"));
                 numChoices = 3;
                 reformat = true;
                 this.options.Add(new List<Gear>());//two shortwords or two simple melee weapons
-                firstChoice.Add(new Weapon("Shortswords (x2)", 6, true));
+                firstChoice.Add(new Weapon("Shortswords (x2)", 6, "melee", true));
                 for (i = startSimpleMelee; i < startSimpleRanged; i++)
                 {
                     options[0].Add(allGear[i]);
@@ -404,7 +405,7 @@ namespace DnDClassesTest
             else if (classType == "Rogue")
             {
                 inventory.Add(allGear[getIndex("Leather armor")]);
-                inventory.Add(new Weapon("Daggers (x2)", 4, true));
+                inventory.Add(new Weapon("Daggers (x2)", 4, "melee", true));
                 inventory.Add(new Equipment("Thieves' Tools"));
                 numChoices = 3;
                 this.options.Add(new List<Gear>());//rapier or shortsword
@@ -417,14 +418,14 @@ namespace DnDClassesTest
                 options[1].Add(allGear[getIndex("Shortsword")]);
                 this.options.Add(new List<Gear>());//burglar's pack or a dungeoneer's pack or an explorer's pack
                 firstChoice.Add(null);
-                options[2].Add(allGear[getIndex("Burglar's Pack")]);
+                options[2].Add(new Equipment("Burglar's Pack"));
                 options[2].Add(allGear[getIndex("Dungeoneer's Pack")]);
                 options[2].Add(allGear[getIndex("Explorer's Pack")]);
 
             }
             else if (classType == "Sorcerer")
             {
-                inventory.Add(new Weapon("Daggers (x2)", 4, true));
+                inventory.Add(new Weapon("Daggers (x2)", 4, "melee", true));
                 numChoices = 3;
                 this.options.Add(new List<Gear>());//light crossbow and 20 bolts or any simple weapon
                 firstChoice.Add(new Equipment("Light Crossbow and 20 bolts"));
@@ -451,7 +452,7 @@ namespace DnDClassesTest
             else if (classType == "Warlock")
             {
                 inventory.Add(allGear[getIndex("Leather armor")]);
-                inventory.Add(new Weapon("Daggers (x2)", 4, true));
+                inventory.Add(new Weapon("Daggers (x2)", 4, "melee", true));
                 numChoices = 3;
                 this.options.Add(new List<Gear>());//light crossbow and 20 bolts or any simple weapon
                 firstChoice.Add(allGear[getIndex("Light Crossbow and 20 bolts")]);
@@ -833,6 +834,24 @@ namespace DnDClassesTest
         public int getGP()
         {
             return gp;
+        }
+
+        public int getAC()
+        {
+            for(int i = 0; i < inventory.Count; i++)
+            {
+                AC += inventory[i].calcAC();
+            }
+            if(AC == 0)
+            {
+                AC += 10;
+            }
+            return AC;
+        }
+
+        public int getATKBonus(Weapon a, DnDCharacter b)
+        {
+            return a.calcATKBonus(b);
         }
     }
 }

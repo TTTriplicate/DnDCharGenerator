@@ -143,6 +143,10 @@ namespace DnDClassesTest
         //mark which saves get proficiency bonus, get from CharClass
         public List<string> inventoryString = new List<string>();
         public List<Gear> inventory = new List<Gear>();
+        public List<int> attackBonus = new List<int>();
+        public List<string> attackBonusWeapons = new List<string>();
+        public List<string> attackDamage = new List<string>();
+        public int ArmorClass = 0;
         public int gold = 0;
 
         public DnDCharacter()
@@ -164,7 +168,6 @@ namespace DnDClassesTest
                 this._HP += DnDCharacter.RollHP(this._level - 1, this._class._hitDie, this._HP) + ((this._level - 1) * this.AbilityModifiers()[2]);
             //Background selector
             //Race selector
-            //this._skills = DnDCharacter.SkillSelectInteractive(CharClass._numProSkills, CharClass.ClassSkills()/*, Background_Class.FixedSkills = new bool[18]*/);
             //skills picker is broken....all individual checkboxes?
             //needs the remaining interactive constructor pieces
             //and I forgot to set the ability scores off that form....Chris
@@ -177,12 +180,32 @@ namespace DnDClassesTest
                     CharRace.setLanguages(i);
                 }
             }
+            this._skills = DnDCharacter.SkillSelectInteractive(CharClass._numProSkills, CharClass.ClassSkills(), this.CharBackground.SkillProf);
 
 
             CharGear gear = new CharGear(this._class.ProfessionName(), CharBackground.Background , AbilityModifiers()[1]);
             inventoryString = gear.getInventoryString();
             inventory = gear.getInventory();
+            ArmorClass = gear.getAC();
             gold = gear.getGP();
+            int count = 0;
+            for (int i = 0; i < inventory.Count; i++)
+            {
+                if (count >= 3)
+                {
+                    break;
+                }
+                else
+                {
+                    if (inventory[i].GetType().ToString() == "Weapon")
+                    {
+                        attackBonus.Add(((Weapon)inventory[i]).calcATKBonus(this));
+                        attackBonusWeapons.Add(inventoryString[i]);
+                        attackDamage.Add(((Weapon)inventory[i]).calcDamage(this));
+                        count++;
+                    }
+                } 
+            }
         }
         /*   public DnDCharacter(int level, int p, int proPath)
            {
@@ -227,15 +250,30 @@ namespace DnDClassesTest
          this code would break badly*/
         //unnecessary this.SavingThrows = this.CharClass.SavingThrows();
         //}
-        public List<string> getInventoryString()
+        public List<string> getInventoryString() //passes string representation of the finalized inventory to charsheet and pdf filler, among other things
         {
             return inventoryString;
         }
+        public int getAC() //passes the character's attack bonus to the pdf filler
+        {
+            return ArmorClass;
+        }
 
-        public List<Gear> getInventory()
+        public List<Gear> getInventory() //passes the finalized inventory to charsheet and pdf filler
         {
             return inventory;
         }
+
+        public List<int> getATK()
+        {
+            return attackBonus;
+        }
+
+        public List<string> getAttackWeapons()
+        {
+            return attackBonusWeapons;
+        }
+
         public int ProficiencyBonus()
         {//passes the proficiency bonus to main function
             return 2 + (Level / 5);
@@ -283,6 +321,19 @@ namespace DnDClassesTest
             }
             return classSkills;
         }
+
+        private static bool[] SkillSelectInteractive(int numSkills, bool[] classSkills, bool[] backSkills)
+        {
+
+            var skills = new SkillSelect(numSkills, classSkills, backSkills);
+            var result = skills.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                classSkills = skills.SkillsList;
+            }
+            return classSkills;
+        }
+
         /*   public bool SetProfession(int c, int s, int level = 1)
            {
                try

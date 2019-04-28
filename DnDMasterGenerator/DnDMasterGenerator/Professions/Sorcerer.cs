@@ -1,9 +1,11 @@
-﻿using System;
+﻿using DnDMasterGenerator.Professions.ClassFeatures.MetaMagic;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DnDClassesTest
 {
@@ -40,6 +42,7 @@ namespace DnDClassesTest
             this._proPath = path;
             this._numProSkills = 2;
             this.Features = this.ClassFeatures();
+            this.MetaSelect = new int[5] { -1, -1, -1, -1, -1 };
         }
         public override bool[] ClassSkills()
         {//Arcana, Deception, Insight, Intimidation, Persuasion, and Religion
@@ -61,6 +64,8 @@ namespace DnDClassesTest
             Saves[5] = true;
             return Saves;
         }
+
+        private int[] MetaSelect { get; set; }
 
         public int ProficiencyBonus()
         {//passes the proficiency bonus to main function
@@ -109,20 +114,42 @@ namespace DnDClassesTest
             if (_proPath == 0) current = Features.GetRange(3, 2);
             else current = Features.GetRange(9, 2);
 
-            if (i >= 1) current.Add(Features[0]);
+            if (i >= 1)
+            {
+                current.Add(Features[0]);
+                current.AddRange(SelectMetamagic());
+            }
+            
             if (i >= 2) current.Add(Features[1]);
             if (i >= 3 && _proPath == 0) current.Add(Features[5]);
             else if (i >= 3 && _proPath == 1) current.Add(Features[11]);
             if (i >= 4 && _proPath == 0) current.Add(Features[6]);
+            if(this._level >= 10) current.AddRange(SelectMetamagic());
             else if (i >= 4 && _proPath == 1) current.Add(Features[12]);
             if (i >= 5 && _proPath == 0) current.Add(Features[7]);
+            if(this._level >= 17) current.AddRange(SelectMetamagic());
             else if(i >= 5 && _proPath == 1)current.Add(Features[13]);
             if (i >= 6) current.Add(Features[2]);
-            else current.Add(Features[0]);
             return current;
         }
 
-        //insert class feature methods here
+        private List<string> SelectMetamagic()
+        {
+            int[] indicies = this.MetaSelect;
+            List<string> select = new List<string>();
+            var choose = new MetamagicSelect(indicies);
+            
+            var result = choose.ShowDialog();
+            if(result == DialogResult.OK)
+            {
+                foreach (int i in choose.Selected)
+                    select.Add(choose.Source[i]);
+                for (int i = 0; i < MetaSelect.Length; ++i)
+                    MetaSelect[i] = choose.Current[i];
+            }
+            
+            return select;
+        }
 
     }
 }

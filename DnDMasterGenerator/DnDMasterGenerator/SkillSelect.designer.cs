@@ -28,40 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checklistSkills = new System.Windows.Forms.CheckedListBox();
             this.lblSkills = new System.Windows.Forms.Label();
             this.btnDone = new System.Windows.Forms.Button();
+            this.checkedlistSkills = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
-            // 
-            // checklistSkills
-            // 
-            this.checklistSkills.CheckOnClick = true;
-            this.checklistSkills.FormattingEnabled = true;
-            this.checklistSkills.Items.AddRange(new object[] {
-            "Acrobatics",
-            "Animal Handling",
-            "Arcana",
-            "Athletics",
-            "Deception",
-            "History",
-            "Insight",
-            "Intimidation",
-            "Investigation",
-            "Medicine",
-            "Nature",
-            "Perception",
-            "Performance",
-            "Persuasion",
-            "Religion",
-            "Sleight of Hand",
-            "Stealth",
-            "Survival"});
-            this.checklistSkills.Location = new System.Drawing.Point(60, 103);
-            this.checklistSkills.MultiColumn = true;
-            this.checklistSkills.Name = "checklistSkills";
-            this.checklistSkills.Size = new System.Drawing.Size(312, 157);
-            this.checklistSkills.TabIndex = 0;
-            this.checklistSkills.SelectedIndexChanged += new System.EventHandler(this.checklistSkills_SelectedIndexChanged);
             // 
             // lblSkills
             // 
@@ -82,14 +52,43 @@
             this.btnDone.UseVisualStyleBackColor = true;
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
+            // checkedlistSkills
+            // 
+            this.checkedlistSkills.CheckOnClick = true;
+            this.checkedlistSkills.FormattingEnabled = true;
+            this.checkedlistSkills.Items.AddRange(new object[] {
+            "Acrobatics",
+            "Animal Handling",
+            "Arcana",
+            "Athletics",
+            "Deception",
+            "History",
+            "Insight",
+            "Intimidation",
+            "Investigation",
+            "Medicine",
+            "Nature",
+            "Perception",
+            "Performance",
+            "Persuasion",
+            "Religion",
+            "Sleight of Hand",
+            "Stealth",
+            "Survival"});
+            this.checkedlistSkills.Location = new System.Drawing.Point(60, 119);
+            this.checkedlistSkills.Name = "checkedlistSkills";
+            this.checkedlistSkills.Size = new System.Drawing.Size(298, 174);
+            this.checkedlistSkills.TabIndex = 3;
+            this.checkedlistSkills.SelectedIndexChanged += new System.EventHandler(this.checkedlistSkills_SelectedIndexChanged);
+            // 
             // SkillSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 380);
+            this.Controls.Add(this.checkedlistSkills);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.lblSkills);
-            this.Controls.Add(this.checklistSkills);
             this.Name = "SkillSelect";
             this.Text = "SkillSelect";
             this.Load += new System.EventHandler(this.SkillSelect_Load);
@@ -99,9 +98,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckedListBox checklistSkills;
         private System.Windows.Forms.Label lblSkills;
         private System.Windows.Forms.Button btnDone;
+        private System.Windows.Forms.CheckedListBox checkedlistSkills;
     }
 }

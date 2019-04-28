@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Windows.Forms;
+using DnDMasterGenerator.Professions;
 
 namespace DnDClassesTest
 {
@@ -24,23 +26,7 @@ namespace DnDClassesTest
 
         protected override List<string> Features
         { get; set; }
-        private int[] Totem = new int[3] { 0, 0, 0 };//bear, eagle, wolf in order 0 1 2, for each use by index
-        private int GetTotem(int index)
-        {
-            return this.Totem[index];
-        }
-        private bool SetTotem(int index, int totem)
-        {
-            try
-            {
-                this.Totem[index] = totem;
-                return true;
-            }
-            catch (IndexOutOfRangeException)
-            {
-                return false;
-            }
-        }
+
         public Barbarian()
         {
             this._level = 1;
@@ -56,6 +42,7 @@ namespace DnDClassesTest
             this._numProSkills = 2;
             this._proPath = path;
             this.Features = ClassFeatures();
+
         }
         public override bool[] ClassSkills()
         {
@@ -76,7 +63,7 @@ namespace DnDClassesTest
             Saves[2] = true;
             return Saves;
         }
-        
+
         public override List<string> ClassFeatures()
         {
             List<string> features = new List<string>();
@@ -121,47 +108,45 @@ namespace DnDClassesTest
                 if (unlock[i]) continue;
                 else break;
             }
-            if (i == 1) current = Features.GetRange(0, 3);
-            else if (i == 3) current = Features.GetRange(0, 5);
-            else if (i == 5) current = Features.GetRange(0, 6);
-            else if (i == 6) current = Features.GetRange(0, 7);
-            else if (i == 8) current = Features.GetRange(0, 8);
-            else if (i == 10) current = Features.GetRange(0, 9);
-            else if (i == 11) current = Features.GetRange(0, 10);
-            else if (i == 12) current = Features.GetRange(0, 11);
+            current = Features.GetRange(0, 2);
+            if (i >= 1)
+            {
+                current.Add(Features[2]);
+                current.Add(Features[3]);
+            }
+            else if (i >= 3)
+            {
+                current.Add(Features[4]);
+                current.Add(Features[5]);
+            }
+            else if (i >= 5) current.Add(Features[6]);
+            else if (i >= 6) current.Add(Features[7]);
+            else if (i >= 8) current.Add(Features[8]);
+            else if (i >= 10) current.Add(Features[9]);
+            else if (i >= 11) current.Add(Features[10]);
+            else if (i >= 12) current.Add(Features[11]);
 
             if (_proPath == 0)
             {
                 if (i < 2) return current;
-                if (i > 2) current.Add(Features[12]);
-                if (i > 4) current.Add(Features[13]);
-                if (i > 7) current.Add(Features[14]);
-                if (i > 8) current.Add(Features[15]);
+                if (i >= 2) current.Add(Features[12]);
+                if (i >= 4) current.Add(Features[13]);
+                if (i >= 7) current.Add(Features[14]);
+                if (i >= 8) current.Add(Features[15]);
             }
             else if (_proPath == 1)
             {
                 if (i < 2) return current;
-                if (i > 2)
+                if (i >= 2)
                 {
                     current.Add(Features[16]);
                     current.Add(Features[17]);
-                    if (this.GetTotem(0) == 0) current.Add(Features[18]);
-                    else if (this.GetTotem(0) == 1) current.Add(Features[19]);
-                    else current.Add(Features[20]);
+                    current.Add(this.TotemChoice(Features.GetRange(18, 3)));
                 }
-                if (i > 4)
-                {
-                    if (this.GetTotem(1) == 0) current.Add(Features[21]);
-                    else if (this.GetTotem(1) == 1) current.Add(Features[22]);
-                    else current.Add(Features[23]);
-                }
-                if (i > 7) current.Add(Features[24]);
-                if (i > 8)
-                {
-                    if (this.GetTotem(2) == 0) current.Add(Features[25]);
-                    else if (this.GetTotem(2) == 1) current.Add(Features[26]);
-                    else current.Add(Features[27]);
-                }
+                if (i >= 4) current.Add(this.TotemChoice(Features.GetRange(21, 3)));
+                if (i >= 7) current.Add(Features[24]);
+                if (i >= 8) current.Add(this.TotemChoice(Features.GetRange(25, 3)));
+
             }
 
             return current;
@@ -172,5 +157,27 @@ namespace DnDClassesTest
             int[] increase = new int[6] { 4, 0, 4, 0, 0, 0 };
             return increase;
         }
+
+        private string TotemChoice(List<string> choices)
+        {
+            var sel = new PickOne(choices);
+            var result = sel.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                return sel.Choices[sel.Selected];
+            }
+            else
+                return this.TotemChoice(choices);
+        }
+        //public static SkillSelect skillInteractive(int numSkills, bool[] skillRestrictions)
+        //{
+        //    SkillSelect form = new SkillSelect(numSkills, skillRestrictions);
+        //    DialogResult result = form.ShowDialog();
+        //    if (result == DialogResult.OK)
+        //    {
+        //        return form.selected;
+        //    }
+        //    else return new SkillSelect(numSkills, skillRestrictions);
+        //}
     }
 }

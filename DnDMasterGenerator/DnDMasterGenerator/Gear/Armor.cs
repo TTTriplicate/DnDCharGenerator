@@ -30,12 +30,11 @@ namespace DnDClassesTest
             this.disadvantage = disadvantage;
         }
 
-
         /**
          * Mutator method to calculate the armor class based on dexMod
          * @return the calculated armor class
          */
-        public int calcAC()
+        public override int calcAC()
         {
             if (dexMod >=2 && maxMod == 2)
             {
@@ -62,7 +61,7 @@ namespace DnDClassesTest
          */ 
         public override string toString()
         {
-            string temp = name + "    " + calcAC();
+            string temp = name;
             if (disadvantage)
             {
                 temp += "    disadvantage";

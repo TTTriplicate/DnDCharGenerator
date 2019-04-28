@@ -1,4 +1,5 @@
 ﻿using DnDMasterGenerator;
+using DnDMasterGenerator.Professions;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -41,6 +42,7 @@ namespace DnDClassesTest
             this._proPath = path;
             this.AbilityIncreaseLevels = new int[] { 4, 6, 8, 12, 14, 16, 19 };
             this.Features = ClassFeatures();
+            this.Manuevers = new List<int>();
         }
         public override bool[] ClassSkills()
         {
@@ -64,6 +66,7 @@ namespace DnDClassesTest
             return Saves;
         }
 
+        private List<int> Manuevers { get; set; }
 
         public int ProficiencyBonus()
         {//passes the proficiency bonus to main function
@@ -75,7 +78,7 @@ namespace DnDClassesTest
             List<string> features = new List<string>();
             String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\FighterClassFeatures.txt");
             //string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
-            string[] temp = new string[19];
+            string[] temp = new string[35];
             temp = File.ReadAllLines(path);
             foreach (string i in temp)
             {
@@ -114,8 +117,8 @@ namespace DnDClassesTest
             string[] fightStyles = new string[2];
             current.Add(this.ChooseFightingStyle(ref style));
             if (i >= 1) current.Add(Features[1]);
-            else if (i >= 2) current.Add(Features[2]);
-            else if (i >= 5) current.Add(Features[3]);
+            if (i >= 2) current.Add(Features[2]);
+            if (i >= 5) current.Add(Features[3]);
 
             if (_proPath == 0)
             {
@@ -129,32 +132,66 @@ namespace DnDClassesTest
                     if (i >= 7) current.Add(Features[7]);
                     if (i >= 8) current.Add(Features[8]);
                 }
-                else if (_proPath == 1)
+            }
+            else if (_proPath == 1)
+            {
+                if (i < 2) return current;
+                if (i >= 2)
                 {
-                    if (i < 2) return current;
-                    if (i >= 2)
+                    current.Add(Features[9]);
+                    current.Add(Features[10]);
+                    int j = 0;
+                    while (j < 3)
                     {
-                        current.Add(Features[9]);
-                        current.Add(Features[10]);
+                        current.Add(this.ChooseManeuver(Features.GetRange(19, 15)));
+                        ++j;
                     }
-                    if (i >= 4) current.Add(Features[11]);
-                    if (i >= 6) current.Add(Features[12]);
-                    if (i >= 7) current.Add(Features[13]);
                 }
-                else if (_proPath == 2)
+                if (i >= 4)
                 {
-                    if (i < 2) return current;
-                    if (i >= 2) current.Add(Features[14]);
-                    if (i >= 4) current.Add(Features[15]);
-                    if (i >= 6) current.Add(Features[16]);
-                    if (i >= 7) current.Add(Features[17]);
-                    if (i >= 8) current.Add(Features[18]);
-
+                    current.Add(Features[11]);
+                    int j = 0;
+                    while (j < 2)
+                    {
+                        current.Add(this.ChooseManeuver(Features.GetRange(19, 15)));
+                        ++j;
+                    }
                 }
+                if (i >= 6) {
+                    current.Add(Features[12]);
+                    int j = 0;
+                    while (j < 2)
+                    {
+                        current.Add(this.ChooseManeuver(Features.GetRange(19, 15)));
+                        ++j;
+                    }
+                }
+                if (i >= 7) {
+                    current.Add(Features[13]);
+                    int j = 0;
+                    while (j < 2)
+                    {
+                        current.Add(this.ChooseManeuver(Features.GetRange(19, 15)));
+                        ++j;
+                    }
+                }
+            }
+            else if (_proPath == 2)
+            {
+                if (i < 2) return current;
+                if (i >= 2) current.Add(Features[14]);
+                if (i >= 4) current.Add(Features[15]);
+                if (i >= 6) current.Add(Features[16]);
+                if (i >= 7) current.Add(Features[17]);
+                if (i >= 8) current.Add(Features[18]);
+
             }
             return current;
 
         }
+
+
+    
         private string ChooseFightingStyle(ref int style)
         {
             var picker = new FightingStyles(this.ProfessionName(), style);
@@ -167,9 +204,30 @@ namespace DnDClassesTest
 
             else
             {
-                style = -1;
-                return "";
+                
+                return ChooseFightingStyle(ref style);
             }
+        }
+        private string ChooseManeuver(List<string> maneuvers)
+        {
+            if (this.Manuevers.Any())
+            {
+                List<int> rem = this.Manuevers;
+                rem.Sort();
+                rem.Reverse();
+                foreach(int i in rem)
+                {
+                    maneuvers.RemoveAt(i);
+                }
+            }
+            var sel = new PickOne(maneuvers);
+            var result = sel.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                Manuevers.Add(sel.Selected);
+                return sel.Choices[sel.Selected];
+            }
+            else return ChooseManeuver(maneuvers);
         }
 
     }

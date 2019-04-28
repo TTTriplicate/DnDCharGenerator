@@ -1,4 +1,5 @@
 ﻿using DnDMasterGenerator;
+using DnDMasterGenerator.Professions;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -134,18 +135,18 @@ namespace DnDClassesTest
                 if (_proPath == 0)
                 {
                     if (i < 2) return current;
-                    else if (i >= 2) current.Add(Features[10]);
-                    if (i >= 4) current.Add(Features[11]);
-                    if (i >= 7) current.Add(Features[12]);
-                    if (i >= 8) current.Add(Features[13]);
+                    else if (i >= 2) current.Add(this.ChooseOne(Features.GetRange(10, 3)));
+                    if (i >= 4) current.Add(this.ChooseOne(Features.GetRange(13, 3)));
+                    if (i >= 7) current.Add(this.ChooseOne(Features.GetRange(16, 3)));
+                    if (i >= 8) current.Add(this.ChooseOne(Features.GetRange(18, 3)));
                 }
                 else if (_proPath == 1)
                 {
                     if (i < 2) return current;
-                    else if (i >= 2) current.Add(Features[14]);
-                    if (i >= 4) current.Add(Features[15]);
-                    if (i >= 7) current.Add(Features[16]);
-                    if (i >= 8) current.Add(Features[17]);
+                    else if (i >= 2) current.Add(Features[21]);
+                    if (i >= 4) current.Add(Features[22]);
+                    if (i >= 7) current.Add(Features[23]);
+                    if (i >= 8) current.Add(Features[24]);
                 }
             return current;
 
@@ -162,8 +163,19 @@ namespace DnDClassesTest
             else return "";
         }
 
+        private string ChooseOne(List<string> choices)
+        {
+            var sel = new PickOne(choices);
+            var result = sel.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                return sel.Choices[sel.Selected];
+            }
+            else
+                return this.ChooseOne(choices);
+        }
+
     }
-
-
 }
+
 
