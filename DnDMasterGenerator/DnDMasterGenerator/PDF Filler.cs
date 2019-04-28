@@ -88,6 +88,10 @@ namespace DnDClassesTest
             pdfFormFields.SetField("AC", newChar.getAC().ToString());
             pdfFormFields.SetField("Speed", newChar.CharRace.getSpeed().ToString());
             pdfFormFields.SetField("Inspiration", 0.ToString());
+            pdfFormFields.SetField("CP", 0.ToString());
+            pdfFormFields.SetField("SP", 0.ToString());
+            pdfFormFields.SetField("EP", 0.ToString());
+            pdfFormFields.SetField("PP", 0.ToString());
 
             pdfFormFields.SetField("STR", newChar._abilities[0].ToString());
             pdfFormFields.SetField("STRmod", newChar.AbilityModifiers()[0].ToString());
