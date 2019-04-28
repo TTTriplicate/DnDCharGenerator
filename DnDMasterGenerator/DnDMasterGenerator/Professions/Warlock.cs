@@ -172,47 +172,50 @@ namespace DnDClassesTest
         }
 
         private string InvocationSelect(int currLevel)
-        {
+        {//gets basic invocations to start with
             List<string> invocations = Features.GetRange(18, 14);
             if(currLevel >= 5)
-            {
+            {//adds level 5 invocations if applicable
                 foreach (string i in Features.GetRange(32, 3))
                     invocations.Add(i);
             }
             if(currLevel >= 7)
-            {
+            {//level 7
                 foreach (string i in Features.GetRange(35, 3))
                     invocations.Add(i);
             }
-            if (currLevel >= 9)
+            if (currLevel >= 9)//level 9, just removed brackets
                 foreach (string i in Features.GetRange(38, 4))
                     invocations.Add(i);
-            if (currLevel >= 15)
+            if (currLevel >= 15)//level 15s
                 foreach (string i in Features.GetRange(42, 2))
                     invocations.Add(i);
-            if(PactBoon == 0)
-            {
+            if(PactBoon == 0)//if pact of chains, adds first invocation
+            {//adds second if level requirement met
                 invocations.Add(Features[44]);
                 if (currLevel >= 15) invocations.Add(Features[45]);
             }
-            if(PactBoon == 1)
-            {
+            if(PactBoon == 1)//pact of the blade invocations
+            {//check level and add as appropriate
                 if (currLevel >= 5) invocations.Add(Features[46]);
                 if (currLevel >= 12) invocations.Add(Features[47]);
             }
             if (PactBoon == 2) invocations.Add(Features[48]);
-
+            //pact of the tome adds it's invocation
             if (this.Invocations.Any())
-            {
-                this.Invocations.Sort();
+            {//if any int indicating selected invocations,
+                this.Invocations.Sort();//sort them
                 for(int i = 0; i < this.Invocations.Count(); ++i)
-                {
+                {//adjust indicies for preceding items in list being removed
                     if (this.Invocations[i] > 0) this.Invocations[i] -= i;
                     if (this.Invocations[i] < 0) this.Invocations[i] = 0;
-                }
-                this.Invocations.Reverse();
+                }//prevent indexoutofrange
+                //this.Invocations.Reverse();//swap List orientation
+                //should do this OR offset, not both
+
+                //but neither, one, the other, AND both failed
                 foreach (int i in this.Invocations)
-                    invocations.RemoveAt(i);
+                    invocations.RemoveAt(i);//pull those indicies
             }
 
             var sel = new PickOne(invocations);
