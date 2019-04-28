@@ -205,6 +205,11 @@ namespace DnDClassesTest
             if (this.Invocations.Any())
             {
                 this.Invocations.Sort();
+                for(int i = 0; i < this.Invocations.Count(); ++i)
+                {
+                    if (this.Invocations[i] > 0) this.Invocations[i] -= i;
+                    if (this.Invocations[i] < 0) this.Invocations[i] = 0;
+                }
                 this.Invocations.Reverse();
                 foreach (int i in this.Invocations)
                     invocations.RemoveAt(i);
