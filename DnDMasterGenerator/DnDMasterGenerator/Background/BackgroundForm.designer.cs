@@ -160,7 +160,7 @@
             this.langList.MultiColumn = true;
             this.langList.Name = "langList";
             this.langList.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.langList.Size = new System.Drawing.Size(494, 104);
+            this.langList.Size = new System.Drawing.Size(494, 92);
             this.langList.TabIndex = 14;
             this.langList.Visible = false;
             this.langList.SelectedIndexChanged += new System.EventHandler(this.langList_SelectedIndexChanged);
@@ -474,7 +474,7 @@
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
+            this.button1.Font = new System.Drawing.Font("Baskerville Old Face", 9F);
             this.button1.Location = new System.Drawing.Point(446, 451);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);

@@ -38,14 +38,16 @@
             // 
             this.lblSkills.AutoSize = true;
             this.lblSkills.BackColor = System.Drawing.Color.Transparent;
+            this.lblSkills.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.lblSkills.Location = new System.Drawing.Point(57, 83);
             this.lblSkills.Name = "lblSkills";
-            this.lblSkills.Size = new System.Drawing.Size(202, 17);
+            this.lblSkills.Size = new System.Drawing.Size(255, 23);
             this.lblSkills.TabIndex = 1;
             this.lblSkills.Text = "Choose your skill proficiencies:";
             // 
             // btnDone
             // 
+            this.btnDone.Font = new System.Drawing.Font("Baskerville Old Face", 9F);
             this.btnDone.Location = new System.Drawing.Point(183, 308);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(75, 23);
@@ -57,6 +59,7 @@
             // checkedlistSkills
             // 
             this.checkedlistSkills.CheckOnClick = true;
+            this.checkedlistSkills.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedlistSkills.FormattingEnabled = true;
             this.checkedlistSkills.Items.AddRange(new object[] {
             "Acrobatics",

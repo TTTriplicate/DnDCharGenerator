@@ -94,7 +94,7 @@
             // btnNext
             // 
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNext.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
+            this.btnNext.Font = new System.Drawing.Font("Baskerville Old Face", 9F);
             this.btnNext.Location = new System.Drawing.Point(433, 785);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
@@ -153,11 +153,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Baskerville Old Face", 11F);
+            this.label2.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(203, 229);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 22);
+            this.label2.Size = new System.Drawing.Size(92, 23);
             this.label2.TabIndex = 39;
             this.label2.Text = "Alignment";
             // 
@@ -176,11 +176,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Baskerville Old Face", 11F);
+            this.label4.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(203, 308);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 22);
+            this.label4.Size = new System.Drawing.Size(92, 23);
             this.label4.TabIndex = 42;
             this.label4.Text = "Languages";
             // 
@@ -188,11 +188,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Baskerville Old Face", 11F);
+            this.label5.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(203, 438);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 22);
+            this.label5.Size = new System.Drawing.Size(136, 23);
             this.label5.TabIndex = 43;
             this.label5.Text = "Special Abilities";
             // 

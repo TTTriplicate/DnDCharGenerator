@@ -195,16 +195,16 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Baskerville Old Face", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 29);
+            this.label1.Size = new System.Drawing.Size(245, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dungeon and Dragons";
             // 
             // CharName
             // 
-            this.CharName.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CharName.Font = new System.Drawing.Font("Baskerville Old Face", 13F);
             this.CharName.Location = new System.Drawing.Point(12, 50);
             this.CharName.Name = "CharName";
             this.CharName.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -217,10 +217,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label2.Location = new System.Drawing.Point(12, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 27);
+            this.label2.Size = new System.Drawing.Size(141, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Character Name";
             // 
@@ -228,16 +228,16 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label3.Location = new System.Drawing.Point(336, 59);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 21);
+            this.label3.Size = new System.Drawing.Size(133, 23);
             this.label3.TabIndex = 4;
             this.label3.Text = "Class and Level";
             // 
             // ClassAndLevel
             // 
-            this.ClassAndLevel.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClassAndLevel.Font = new System.Drawing.Font("Baskerville Old Face", 13F);
             this.ClassAndLevel.Location = new System.Drawing.Point(336, 15);
             this.ClassAndLevel.Name = "ClassAndLevel";
             this.ClassAndLevel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -249,16 +249,16 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label4.Location = new System.Drawing.Point(532, 59);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 21);
+            this.label4.Size = new System.Drawing.Size(105, 23);
             this.label4.TabIndex = 6;
             this.label4.Text = "Background";
             // 
             // Background
             // 
-            this.Background.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Background.Font = new System.Drawing.Font("Baskerville Old Face", 13F);
             this.Background.Location = new System.Drawing.Point(532, 15);
             this.Background.Name = "Background";
             this.Background.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -270,16 +270,16 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label5.Location = new System.Drawing.Point(724, 59);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 21);
+            this.label5.Size = new System.Drawing.Size(114, 23);
             this.label5.TabIndex = 8;
             this.label5.Text = "Player Name";
             // 
             // PlayerName
             // 
-            this.PlayerName.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayerName.Font = new System.Drawing.Font("Baskerville Old Face", 13F);
             this.PlayerName.Location = new System.Drawing.Point(724, 15);
             this.PlayerName.Name = "PlayerName";
             this.PlayerName.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -291,16 +291,16 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label6.Location = new System.Drawing.Point(532, 144);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 21);
+            this.label6.Size = new System.Drawing.Size(92, 23);
             this.label6.TabIndex = 12;
             this.label6.Text = "Alignment";
             // 
             // Alignment
             // 
-            this.Alignment.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Alignment.Font = new System.Drawing.Font("Baskerville Old Face", 13F);
             this.Alignment.Location = new System.Drawing.Point(532, 100);
             this.Alignment.Name = "Alignment";
             this.Alignment.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -312,16 +312,16 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label7.Location = new System.Drawing.Point(336, 144);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 21);
+            this.label7.Size = new System.Drawing.Size(49, 23);
             this.label7.TabIndex = 10;
             this.label7.Text = "Race";
             // 
             // Race
             // 
-            this.Race.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Race.Font = new System.Drawing.Font("Baskerville Old Face", 13F);
             this.Race.Location = new System.Drawing.Point(336, 100);
             this.Race.Name = "Race";
             this.Race.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -333,21 +333,22 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 144);
+            this.label8.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
+            this.label8.Location = new System.Drawing.Point(28, 148);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 27);
+            this.label8.Size = new System.Drawing.Size(74, 23);
             this.label8.TabIndex = 14;
             this.label8.Text = "Strength";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 250);
+            this.label9.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
+            this.label9.Location = new System.Drawing.Point(28, 254);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 27);
+            this.label9.Size = new System.Drawing.Size(82, 23);
             this.label9.TabIndex = 16;
             this.label9.Text = "Dexterity";
             // 
@@ -355,10 +356,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 456);
+            this.label10.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
+            this.label10.Location = new System.Drawing.Point(25, 462);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(145, 27);
+            this.label10.Size = new System.Drawing.Size(100, 23);
             this.label10.TabIndex = 20;
             this.label10.Text = "Intelligence";
             // 
@@ -366,10 +367,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(12, 350);
+            this.label11.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
+            this.label11.Location = new System.Drawing.Point(21, 354);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(146, 27);
+            this.label11.Size = new System.Drawing.Size(105, 23);
             this.label11.TabIndex = 18;
             this.label11.Text = "Constitution";
             // 
@@ -377,10 +378,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(12, 660);
+            this.label12.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
+            this.label12.Location = new System.Drawing.Point(28, 664);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(119, 27);
+            this.label12.Size = new System.Drawing.Size(86, 23);
             this.label12.TabIndex = 24;
             this.label12.Text = "Charisma";
             // 
@@ -388,10 +389,10 @@
             // 
             this.Wisdom.AutoSize = true;
             this.Wisdom.BackColor = System.Drawing.Color.Transparent;
-            this.Wisdom.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Wisdom.Location = new System.Drawing.Point(12, 554);
+            this.Wisdom.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
+            this.Wisdom.Location = new System.Drawing.Point(28, 558);
             this.Wisdom.Name = "Wisdom";
-            this.Wisdom.Size = new System.Drawing.Size(104, 27);
+            this.Wisdom.Size = new System.Drawing.Size(79, 23);
             this.Wisdom.TabIndex = 22;
             this.Wisdom.Text = "Wisdom";
             // 
@@ -400,7 +401,7 @@
             this.CHA.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CHA.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CHA.Font = new System.Drawing.Font("Baskerville Old Face", 36F);
             this.CHA.Location = new System.Drawing.Point(28, 690);
             this.CHA.Name = "CHA";
             this.CHA.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -415,7 +416,7 @@
             this.WIS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.WIS.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WIS.Font = new System.Drawing.Font("Baskerville Old Face", 36F);
             this.WIS.Location = new System.Drawing.Point(28, 584);
             this.WIS.Name = "WIS";
             this.WIS.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -430,7 +431,7 @@
             this.INT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.INT.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.INT.Font = new System.Drawing.Font("Baskerville Old Face", 36F);
             this.INT.Location = new System.Drawing.Point(28, 486);
             this.INT.Name = "INT";
             this.INT.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -445,7 +446,7 @@
             this.CON.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CON.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CON.Font = new System.Drawing.Font("Baskerville Old Face", 36F);
             this.CON.Location = new System.Drawing.Point(28, 380);
             this.CON.Name = "CON";
             this.CON.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -460,7 +461,7 @@
             this.DEX.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DEX.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DEX.Font = new System.Drawing.Font("Baskerville Old Face", 36F);
             this.DEX.Location = new System.Drawing.Point(28, 280);
             this.DEX.Name = "DEX";
             this.DEX.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -475,7 +476,7 @@
             this.STR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.STR.Font = new System.Drawing.Font("Microsoft Sans Serif", 31.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STR.Font = new System.Drawing.Font("Baskerville Old Face", 36F);
             this.STR.Location = new System.Drawing.Point(28, 174);
             this.STR.Name = "STR";
             this.STR.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -490,7 +491,7 @@
             this.STSTR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.STSTR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STSTR.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.STSTR.Location = new System.Drawing.Point(370, 309);
             this.STSTR.Name = "STSTR";
             this.STSTR.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -503,10 +504,10 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(408, 309);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(87, 22);
+            this.label13.Size = new System.Drawing.Size(65, 19);
             this.label13.TabIndex = 38;
             this.label13.Text = "Strength";
             // 
@@ -514,10 +515,10 @@
             // 
             this.Dexterity.AutoSize = true;
             this.Dexterity.BackColor = System.Drawing.Color.Transparent;
-            this.Dexterity.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dexterity.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dexterity.Location = new System.Drawing.Point(408, 342);
             this.Dexterity.Name = "Dexterity";
-            this.Dexterity.Size = new System.Drawing.Size(95, 22);
+            this.Dexterity.Size = new System.Drawing.Size(71, 19);
             this.Dexterity.TabIndex = 40;
             this.Dexterity.Text = "Dexterity";
             // 
@@ -526,7 +527,7 @@
             this.STDEX.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.STDEX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STDEX.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.STDEX.Location = new System.Drawing.Point(370, 342);
             this.STDEX.Name = "STDEX";
             this.STDEX.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -539,10 +540,10 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(408, 408);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(118, 22);
+            this.label14.Size = new System.Drawing.Size(87, 19);
             this.label14.TabIndex = 44;
             this.label14.Text = "Intelligence";
             // 
@@ -551,7 +552,7 @@
             this.STINT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.STINT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STINT.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.STINT.Location = new System.Drawing.Point(370, 408);
             this.STINT.Name = "STINT";
             this.STINT.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -564,10 +565,10 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(408, 375);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(119, 22);
+            this.label15.Size = new System.Drawing.Size(91, 19);
             this.label15.TabIndex = 42;
             this.label15.Text = "Constitution";
             // 
@@ -576,7 +577,7 @@
             this.STCON.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.STCON.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STCON.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.STCON.Location = new System.Drawing.Point(370, 375);
             this.STCON.Name = "STCON";
             this.STCON.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -589,10 +590,10 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(408, 472);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(98, 22);
+            this.label16.Size = new System.Drawing.Size(73, 19);
             this.label16.TabIndex = 48;
             this.label16.Text = "Charisma";
             // 
@@ -601,7 +602,7 @@
             this.STCHA.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.STCHA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STCHA.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.STCHA.Location = new System.Drawing.Point(370, 472);
             this.STCHA.Name = "STCHA";
             this.STCHA.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -614,10 +615,10 @@
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(408, 439);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(86, 22);
+            this.label17.Size = new System.Drawing.Size(69, 19);
             this.label17.TabIndex = 46;
             this.label17.Text = "Wisdom";
             this.label17.Click += new System.EventHandler(this.label17_Click);
@@ -627,7 +628,7 @@
             this.STWIS.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.STWIS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STWIS.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.STWIS.Location = new System.Drawing.Point(370, 439);
             this.STWIS.Name = "STWIS";
             this.STWIS.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -640,10 +641,10 @@
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(220, 174);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(108, 22);
+            this.label18.Size = new System.Drawing.Size(80, 19);
             this.label18.TabIndex = 50;
             this.label18.Text = "Acrobatics";
             // 
@@ -652,7 +653,7 @@
             this.Acrobatics.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Acrobatics.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Acrobatics.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.Acrobatics.Location = new System.Drawing.Point(182, 174);
             this.Acrobatics.Name = "Acrobatics";
             this.Acrobatics.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -666,10 +667,10 @@
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(170, 142);
+            this.label19.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
+            this.label19.Location = new System.Drawing.Point(151, 143);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(59, 22);
+            this.label19.Size = new System.Drawing.Size(52, 23);
             this.label19.TabIndex = 51;
             this.label19.Text = "Skills";
             // 
@@ -697,10 +698,10 @@
             // 
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(220, 207);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(165, 22);
+            this.label20.Size = new System.Drawing.Size(126, 19);
             this.label20.TabIndex = 54;
             this.label20.Text = "Animal Handling";
             // 
@@ -709,7 +710,7 @@
             this.AnimalHandling.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.AnimalHandling.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnimalHandling.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.AnimalHandling.Location = new System.Drawing.Point(182, 207);
             this.AnimalHandling.Name = "AnimalHandling";
             this.AnimalHandling.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -732,10 +733,10 @@
             // 
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(220, 269);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(89, 22);
+            this.label21.Size = new System.Drawing.Size(67, 19);
             this.label21.TabIndex = 60;
             this.label21.Text = "Athletics";
             // 
@@ -744,7 +745,7 @@
             this.Athletics.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Athletics.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Athletics.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.Athletics.Location = new System.Drawing.Point(182, 269);
             this.Athletics.Name = "Athletics";
             this.Athletics.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -767,10 +768,10 @@
             // 
             this.Arca.AutoSize = true;
             this.Arca.BackColor = System.Drawing.Color.Transparent;
-            this.Arca.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Arca.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Arca.Location = new System.Drawing.Point(220, 236);
             this.Arca.Name = "Arca";
-            this.Arca.Size = new System.Drawing.Size(75, 22);
+            this.Arca.Size = new System.Drawing.Size(57, 19);
             this.Arca.TabIndex = 57;
             this.Arca.Text = "Arcana";
             // 
@@ -779,7 +780,7 @@
             this.Arcana.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Arcana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Arcana.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.Arcana.Location = new System.Drawing.Point(182, 236);
             this.Arcana.Name = "Arcana";
             this.Arcana.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -802,10 +803,10 @@
             // 
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(220, 397);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(120, 22);
+            this.label23.Size = new System.Drawing.Size(92, 19);
             this.label23.TabIndex = 72;
             this.label23.Text = "Intimidation";
             // 
@@ -814,7 +815,7 @@
             this.Intimidation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Intimidation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Intimidation.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.Intimidation.Location = new System.Drawing.Point(182, 397);
             this.Intimidation.Name = "Intimidation";
             this.Intimidation.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -837,10 +838,10 @@
             // 
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(220, 364);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(72, 22);
+            this.label24.Size = new System.Drawing.Size(54, 19);
             this.label24.TabIndex = 69;
             this.label24.Text = "Insight";
             // 
@@ -849,7 +850,7 @@
             this.Insight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Insight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Insight.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.Insight.Location = new System.Drawing.Point(182, 364);
             this.Insight.Name = "Insight";
             this.Insight.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -872,10 +873,10 @@
             // 
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(220, 335);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(75, 22);
+            this.label25.Size = new System.Drawing.Size(59, 19);
             this.label25.TabIndex = 66;
             this.label25.Text = "History";
             // 
@@ -884,7 +885,7 @@
             this.History.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.History.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.History.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.History.Location = new System.Drawing.Point(182, 335);
             this.History.Name = "History";
             this.History.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -907,10 +908,10 @@
             // 
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(220, 302);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(104, 22);
+            this.label26.Size = new System.Drawing.Size(80, 19);
             this.label26.TabIndex = 63;
             this.label26.Text = "Deception";
             // 
@@ -919,7 +920,7 @@
             this.Deception.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Deception.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Deception.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.Deception.Location = new System.Drawing.Point(182, 302);
             this.Deception.Name = "Deception";
             this.Deception.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -942,10 +943,10 @@
             // 
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.Location = new System.Drawing.Point(220, 654);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(150, 22);
+            this.label27.Size = new System.Drawing.Size(115, 19);
             this.label27.TabIndex = 96;
             this.label27.Text = "Sleight of Hand";
             // 
@@ -954,7 +955,7 @@
             this.SleightOfHand.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SleightOfHand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SleightOfHand.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.SleightOfHand.Location = new System.Drawing.Point(182, 654);
             this.SleightOfHand.Name = "SleightOfHand";
             this.SleightOfHand.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -977,10 +978,10 @@
             // 
             this.label28.AutoSize = true;
             this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.Location = new System.Drawing.Point(220, 621);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(86, 22);
+            this.label28.Size = new System.Drawing.Size(65, 19);
             this.label28.TabIndex = 93;
             this.label28.Text = "Religion";
             // 
@@ -989,7 +990,7 @@
             this.Religion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Religion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Religion.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.Religion.Location = new System.Drawing.Point(182, 621);
             this.Religion.Name = "Religion";
             this.Religion.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1012,10 +1013,10 @@
             // 
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.Location = new System.Drawing.Point(220, 592);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(108, 22);
+            this.label29.Size = new System.Drawing.Size(83, 19);
             this.label29.TabIndex = 90;
             this.label29.Text = "Persuasion";
             // 
@@ -1024,7 +1025,7 @@
             this.Persuasion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Persuasion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Persuasion.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.Persuasion.Location = new System.Drawing.Point(182, 592);
             this.Persuasion.Name = "Persuasion";
             this.Persuasion.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1047,10 +1048,10 @@
             // 
             this.label30.AutoSize = true;
             this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.Location = new System.Drawing.Point(220, 559);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(125, 22);
+            this.label30.Size = new System.Drawing.Size(98, 19);
             this.label30.TabIndex = 87;
             this.label30.Text = "Performance";
             // 
@@ -1059,7 +1060,7 @@
             this.Performance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Performance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Performance.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.Performance.Location = new System.Drawing.Point(182, 559);
             this.Performance.Name = "Performance";
             this.Performance.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1082,10 +1083,10 @@
             // 
             this.label31.AutoSize = true;
             this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(220, 526);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(108, 22);
+            this.label31.Size = new System.Drawing.Size(83, 19);
             this.label31.TabIndex = 84;
             this.label31.Text = "Perception";
             // 
@@ -1094,7 +1095,7 @@
             this.Perception.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Perception.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Perception.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.Perception.Location = new System.Drawing.Point(182, 526);
             this.Perception.Name = "Perception";
             this.Perception.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1117,10 +1118,10 @@
             // 
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(220, 493);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(71, 22);
+            this.label32.Size = new System.Drawing.Size(56, 19);
             this.label32.TabIndex = 81;
             this.label32.Text = "Nature";
             this.label32.Click += new System.EventHandler(this.label32_Click);
@@ -1130,7 +1131,7 @@
             this.Nature.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Nature.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nature.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.Nature.Location = new System.Drawing.Point(182, 493);
             this.Nature.Name = "Nature";
             this.Nature.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1153,10 +1154,10 @@
             // 
             this.label33.AutoSize = true;
             this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.Location = new System.Drawing.Point(220, 464);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(96, 22);
+            this.label33.Size = new System.Drawing.Size(73, 19);
             this.label33.TabIndex = 78;
             this.label33.Text = "Medicine";
             // 
@@ -1165,7 +1166,7 @@
             this.Medicine.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Medicine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Medicine.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.Medicine.Location = new System.Drawing.Point(182, 464);
             this.Medicine.Name = "Medicine";
             this.Medicine.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1188,10 +1189,10 @@
             // 
             this.label34.AutoSize = true;
             this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.Location = new System.Drawing.Point(220, 431);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(128, 22);
+            this.label34.Size = new System.Drawing.Size(93, 19);
             this.label34.TabIndex = 75;
             this.label34.Text = "Investigation";
             // 
@@ -1200,7 +1201,7 @@
             this.Investigation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Investigation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Investigation.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.Investigation.Location = new System.Drawing.Point(182, 431);
             this.Investigation.Name = "Investigation";
             this.Investigation.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1223,10 +1224,10 @@
             // 
             this.label35.AutoSize = true;
             this.label35.BackColor = System.Drawing.Color.Transparent;
-            this.label35.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(220, 720);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(85, 22);
+            this.label35.Size = new System.Drawing.Size(62, 19);
             this.label35.TabIndex = 102;
             this.label35.Text = "Survival";
             // 
@@ -1235,7 +1236,7 @@
             this.Survival.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Survival.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Survival.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.Survival.Location = new System.Drawing.Point(182, 720);
             this.Survival.Name = "Survival";
             this.Survival.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1258,10 +1259,10 @@
             // 
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Location = new System.Drawing.Point(220, 687);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(72, 22);
+            this.label36.Size = new System.Drawing.Size(54, 19);
             this.label36.TabIndex = 99;
             this.label36.Text = "Stealth";
             // 
@@ -1270,7 +1271,7 @@
             this.Stealth.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Stealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Stealth.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.Stealth.Location = new System.Drawing.Point(182, 687);
             this.Stealth.Name = "Stealth";
             this.Stealth.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1283,10 +1284,10 @@
             // 
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(370, 280);
+            this.label22.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
+            this.label22.Location = new System.Drawing.Point(370, 276);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(143, 22);
+            this.label22.Size = new System.Drawing.Size(125, 23);
             this.label22.TabIndex = 104;
             this.label22.Text = "Saving Throws";
             this.label22.Click += new System.EventHandler(this.label22_Click);
@@ -1295,10 +1296,10 @@
             // 
             this.label37.AutoSize = true;
             this.label37.BackColor = System.Drawing.Color.Transparent;
-            this.label37.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(388, 220);
+            this.label37.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
+            this.label37.Location = new System.Drawing.Point(379, 220);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(73, 44);
+            this.label37.Size = new System.Drawing.Size(69, 46);
             this.label37.TabIndex = 106;
             this.label37.Text = "Armor \r\n Class";
             // 
@@ -1307,7 +1308,7 @@
             this.ArmorClass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ArmorClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ArmorClass.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ArmorClass.Location = new System.Drawing.Point(402, 180);
             this.ArmorClass.Name = "ArmorClass";
             this.ArmorClass.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1320,10 +1321,10 @@
             // 
             this.label38.AutoSize = true;
             this.label38.BackColor = System.Drawing.Color.Transparent;
-            this.label38.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(470, 220);
+            this.label38.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
+            this.label38.Location = new System.Drawing.Point(474, 219);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(90, 22);
+            this.label38.Size = new System.Drawing.Size(78, 23);
             this.label38.TabIndex = 108;
             this.label38.Text = "Initiative";
             // 
@@ -1332,7 +1333,7 @@
             this.Initiative.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Initiative.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Initiative.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Initiative.Location = new System.Drawing.Point(494, 180);
             this.Initiative.Name = "Initiative";
             this.Initiative.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1345,10 +1346,10 @@
             // 
             this.label39.AutoSize = true;
             this.label39.BackColor = System.Drawing.Color.Transparent;
-            this.label39.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(566, 219);
+            this.label39.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
+            this.label39.Location = new System.Drawing.Point(571, 219);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(69, 22);
+            this.label39.Size = new System.Drawing.Size(58, 23);
             this.label39.TabIndex = 110;
             this.label39.Text = "Speed";
             // 
@@ -1357,7 +1358,7 @@
             this.Speed.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Speed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Speed.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Speed.Location = new System.Drawing.Point(583, 180);
             this.Speed.Name = "Speed";
             this.Speed.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1370,16 +1371,16 @@
             // 
             this.label40.AutoSize = true;
             this.label40.BackColor = System.Drawing.Color.Transparent;
-            this.label40.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label40.Location = new System.Drawing.Point(834, 278);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(106, 21);
+            this.label40.Size = new System.Drawing.Size(92, 23);
             this.label40.TabIndex = 112;
             this.label40.Text = "Languages";
             // 
             // languages
             // 
-            this.languages.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.languages.Font = new System.Drawing.Font("Baskerville Old Face", 11F);
             this.languages.Location = new System.Drawing.Point(838, 173);
             this.languages.Name = "languages";
             this.languages.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1391,16 +1392,16 @@
             // 
             this.label41.AutoSize = true;
             this.label41.BackColor = System.Drawing.Color.Transparent;
-            this.label41.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label41.Location = new System.Drawing.Point(724, 144);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(171, 21);
+            this.label41.Size = new System.Drawing.Size(152, 23);
             this.label41.TabIndex = 114;
             this.label41.Text = "Experience Points";
             // 
             // EXP
             // 
-            this.EXP.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EXP.Font = new System.Drawing.Font("Baskerville Old Face", 13F);
             this.EXP.Location = new System.Drawing.Point(724, 100);
             this.EXP.Name = "EXP";
             this.EXP.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1412,16 +1413,16 @@
             // 
             this.label42.AutoSize = true;
             this.label42.BackColor = System.Drawing.Color.Transparent;
-            this.label42.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label42.Location = new System.Drawing.Point(640, 278);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(179, 21);
+            this.label42.Size = new System.Drawing.Size(163, 23);
             this.label42.TabIndex = 116;
             this.label42.Text = "Features and Traits";
             // 
             // FeaturesAndTraits
             // 
-            this.FeaturesAndTraits.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeaturesAndTraits.Font = new System.Drawing.Font("Baskerville Old Face", 11F);
             this.FeaturesAndTraits.Location = new System.Drawing.Point(678, 173);
             this.FeaturesAndTraits.Name = "FeaturesAndTraits";
             this.FeaturesAndTraits.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1433,17 +1434,17 @@
             // 
             this.label43.AutoSize = true;
             this.label43.BackColor = System.Drawing.Color.Transparent;
-            this.label43.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label43.Location = new System.Drawing.Point(790, 486);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(107, 21);
+            this.label43.Size = new System.Drawing.Size(97, 23);
             this.label43.TabIndex = 118;
             this.label43.Text = "Equipment";
             this.label43.Click += new System.EventHandler(this.label43_Click);
             // 
             // Equipment
             // 
-            this.Equipment.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Equipment.Font = new System.Drawing.Font("Baskerville Old Face", 11F);
             this.Equipment.Location = new System.Drawing.Point(783, 315);
             this.Equipment.Name = "Equipment";
             this.Equipment.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1456,11 +1457,11 @@
             // 
             this.label44.AutoSize = true;
             this.label44.BackColor = System.Drawing.Color.Transparent;
-            this.label44.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.Location = new System.Drawing.Point(698, 444);
             this.label44.Name = "label44";
             this.label44.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label44.Size = new System.Drawing.Size(32, 22);
+            this.label44.Size = new System.Drawing.Size(29, 19);
             this.label44.TabIndex = 128;
             this.label44.Text = "PP";
             // 
@@ -1469,7 +1470,7 @@
             this.PP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PP.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.PP.Location = new System.Drawing.Point(741, 444);
             this.PP.Name = "PP";
             this.PP.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1482,11 +1483,11 @@
             // 
             this.label45.AutoSize = true;
             this.label45.BackColor = System.Drawing.Color.Transparent;
-            this.label45.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.Location = new System.Drawing.Point(698, 413);
             this.label45.Name = "label45";
             this.label45.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label45.Size = new System.Drawing.Size(37, 22);
+            this.label45.Size = new System.Drawing.Size(32, 19);
             this.label45.TabIndex = 126;
             this.label45.Text = "GP";
             // 
@@ -1495,7 +1496,7 @@
             this.GP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GP.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.GP.Location = new System.Drawing.Point(741, 413);
             this.GP.Name = "GP";
             this.GP.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1508,11 +1509,11 @@
             // 
             this.label46.AutoSize = true;
             this.label46.BackColor = System.Drawing.Color.Transparent;
-            this.label46.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.Location = new System.Drawing.Point(698, 380);
             this.label46.Name = "label46";
             this.label46.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label46.Size = new System.Drawing.Size(34, 22);
+            this.label46.Size = new System.Drawing.Size(30, 19);
             this.label46.TabIndex = 124;
             this.label46.Text = "EP";
             // 
@@ -1521,7 +1522,7 @@
             this.EP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EP.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.EP.Location = new System.Drawing.Point(741, 380);
             this.EP.Name = "EP";
             this.EP.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1534,11 +1535,11 @@
             // 
             this.label47.AutoSize = true;
             this.label47.BackColor = System.Drawing.Color.Transparent;
-            this.label47.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.Location = new System.Drawing.Point(698, 347);
             this.label47.Name = "label47";
             this.label47.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label47.Size = new System.Drawing.Size(32, 22);
+            this.label47.Size = new System.Drawing.Size(28, 19);
             this.label47.TabIndex = 122;
             this.label47.Text = "SP";
             // 
@@ -1547,7 +1548,7 @@
             this.SP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SP.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.SP.Location = new System.Drawing.Point(741, 347);
             this.SP.Name = "SP";
             this.SP.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1560,11 +1561,11 @@
             // 
             this.label48.AutoSize = true;
             this.label48.BackColor = System.Drawing.Color.Transparent;
-            this.label48.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.Location = new System.Drawing.Point(698, 314);
             this.label48.Name = "label48";
             this.label48.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label48.Size = new System.Drawing.Size(36, 22);
+            this.label48.Size = new System.Drawing.Size(30, 19);
             this.label48.TabIndex = 120;
             this.label48.Text = "CP";
             // 
@@ -1573,7 +1574,7 @@
             this.CP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CP.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.CP.Location = new System.Drawing.Point(741, 314);
             this.CP.Name = "CP";
             this.CP.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1586,16 +1587,16 @@
             // 
             this.label49.AutoSize = true;
             this.label49.BackColor = System.Drawing.Color.Transparent;
-            this.label49.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label49.Location = new System.Drawing.Point(402, 604);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(142, 21);
+            this.label49.Size = new System.Drawing.Size(131, 23);
             this.label49.TabIndex = 130;
             this.label49.Text = "Personal Traits";
             // 
             // PersonalTraits
             // 
-            this.PersonalTraits.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PersonalTraits.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
             this.PersonalTraits.Location = new System.Drawing.Point(402, 545);
             this.PersonalTraits.Name = "PersonalTraits";
             this.PersonalTraits.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1607,16 +1608,16 @@
             // 
             this.label50.AutoSize = true;
             this.label50.BackColor = System.Drawing.Color.Transparent;
-            this.label50.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label50.Location = new System.Drawing.Point(614, 605);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(64, 21);
+            this.label50.Size = new System.Drawing.Size(57, 23);
             this.label50.TabIndex = 132;
             this.label50.Text = "Ideals";
             // 
             // Ideals
             // 
-            this.Ideals.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ideals.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
             this.Ideals.Location = new System.Drawing.Point(614, 546);
             this.Ideals.Name = "Ideals";
             this.Ideals.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1628,16 +1629,16 @@
             // 
             this.label51.AutoSize = true;
             this.label51.BackColor = System.Drawing.Color.Transparent;
-            this.label51.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label51.Location = new System.Drawing.Point(614, 699);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(60, 21);
+            this.label51.Size = new System.Drawing.Size(54, 23);
             this.label51.TabIndex = 136;
             this.label51.Text = "Flaws";
             // 
             // Flaws
             // 
-            this.Flaws.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Flaws.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
             this.Flaws.Location = new System.Drawing.Point(614, 640);
             this.Flaws.Name = "Flaws";
             this.Flaws.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1649,16 +1650,16 @@
             // 
             this.label52.AutoSize = true;
             this.label52.BackColor = System.Drawing.Color.Transparent;
-            this.label52.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.label52.Location = new System.Drawing.Point(402, 698);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(64, 21);
+            this.label52.Size = new System.Drawing.Size(60, 23);
             this.label52.TabIndex = 134;
             this.label52.Text = "Bonds";
             // 
             // Bonds
             // 
-            this.Bonds.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bonds.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
             this.Bonds.Location = new System.Drawing.Point(402, 639);
             this.Bonds.Name = "Bonds";
             this.Bonds.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -1668,7 +1669,9 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.AcrobaticsButton);
+            this.panel1.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(151, 180);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(25, 24);
@@ -1676,7 +1679,9 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.AHButton);
+            this.panel2.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(151, 210);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(25, 24);
@@ -1684,7 +1689,9 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.ArcanaButton);
+            this.panel3.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(151, 240);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(25, 24);
@@ -1692,7 +1699,9 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.AthleticsButton);
+            this.panel4.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(151, 270);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(25, 24);
@@ -1700,7 +1709,9 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.DeceptionButton);
+            this.panel5.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel5.Location = new System.Drawing.Point(151, 302);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(25, 24);
@@ -1708,7 +1719,9 @@
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.HistoryButton);
+            this.panel6.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.Location = new System.Drawing.Point(151, 337);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(25, 24);
@@ -1716,7 +1729,9 @@
             // 
             // panel7
             // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.Controls.Add(this.InsightButton);
+            this.panel7.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel7.Location = new System.Drawing.Point(151, 367);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(25, 24);
@@ -1724,7 +1739,9 @@
             // 
             // panel8
             // 
+            this.panel8.BackColor = System.Drawing.Color.Transparent;
             this.panel8.Controls.Add(this.IntimidationButton);
+            this.panel8.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel8.Location = new System.Drawing.Point(151, 400);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(25, 24);
@@ -1732,7 +1749,9 @@
             // 
             // panel9
             // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
             this.panel9.Controls.Add(this.InvestigationButton);
+            this.panel9.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel9.Location = new System.Drawing.Point(151, 431);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(25, 24);
@@ -1740,7 +1759,9 @@
             // 
             // panel10
             // 
+            this.panel10.BackColor = System.Drawing.Color.Transparent;
             this.panel10.Controls.Add(this.MedicineButton);
+            this.panel10.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel10.Location = new System.Drawing.Point(151, 464);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(25, 24);
@@ -1748,7 +1769,9 @@
             // 
             // panel11
             // 
+            this.panel11.BackColor = System.Drawing.Color.Transparent;
             this.panel11.Controls.Add(this.NatureButton);
+            this.panel11.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel11.Location = new System.Drawing.Point(151, 499);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(25, 24);
@@ -1756,7 +1779,9 @@
             // 
             // panel12
             // 
+            this.panel12.BackColor = System.Drawing.Color.Transparent;
             this.panel12.Controls.Add(this.PerceptionButton);
+            this.panel12.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel12.Location = new System.Drawing.Point(151, 532);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(25, 24);
@@ -1764,7 +1789,9 @@
             // 
             // panel13
             // 
+            this.panel13.BackColor = System.Drawing.Color.Transparent;
             this.panel13.Controls.Add(this.PerformanceButton);
+            this.panel13.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel13.Location = new System.Drawing.Point(151, 562);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(25, 24);
@@ -1772,7 +1799,9 @@
             // 
             // panel14
             // 
+            this.panel14.BackColor = System.Drawing.Color.Transparent;
             this.panel14.Controls.Add(this.PersuasionButton);
+            this.panel14.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel14.Location = new System.Drawing.Point(151, 594);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(25, 24);
@@ -1780,7 +1809,9 @@
             // 
             // panel15
             // 
+            this.panel15.BackColor = System.Drawing.Color.Transparent;
             this.panel15.Controls.Add(this.ReligionButton);
+            this.panel15.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel15.Location = new System.Drawing.Point(151, 624);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(25, 24);
@@ -1788,7 +1819,9 @@
             // 
             // panel16
             // 
+            this.panel16.BackColor = System.Drawing.Color.Transparent;
             this.panel16.Controls.Add(this.SleightOfHandButton);
+            this.panel16.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel16.Location = new System.Drawing.Point(151, 654);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(25, 24);
@@ -1796,7 +1829,9 @@
             // 
             // panel17
             // 
+            this.panel17.BackColor = System.Drawing.Color.Transparent;
             this.panel17.Controls.Add(this.StealthButton);
+            this.panel17.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel17.Location = new System.Drawing.Point(151, 687);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(25, 24);
@@ -1804,7 +1839,9 @@
             // 
             // panel18
             // 
+            this.panel18.BackColor = System.Drawing.Color.Transparent;
             this.panel18.Controls.Add(this.SurvivalButton);
+            this.panel18.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel18.Location = new System.Drawing.Point(151, 720);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(25, 24);
@@ -1814,6 +1851,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(964, 789);
             this.Controls.Add(this.panel18);
             this.Controls.Add(this.panel17);
