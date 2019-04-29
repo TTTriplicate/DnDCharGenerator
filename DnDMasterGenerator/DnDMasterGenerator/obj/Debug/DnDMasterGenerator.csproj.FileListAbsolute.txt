@@ -172,3 +172,4 @@ C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDM
 C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Professions.PickOne.resources
 C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Professions.PickOne.resources
 C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.LoadForm.resources
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.LoadForm.resources

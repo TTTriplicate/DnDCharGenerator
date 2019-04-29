@@ -34,6 +34,9 @@ namespace DnDClassesTest
             this._caster = false;
             this._numProSkills = 2;
         }
+
+        public override List<string> CurrFeatures { get; set; }
+
         public Barbarian(int level, int path)
         {
             this._level = level;
@@ -41,7 +44,8 @@ namespace DnDClassesTest
             this._caster = false;
             this._numProSkills = 2;
             this._proPath = path;
-            this.Features = ClassFeatures();
+            this.Features = this.ClassFeatures();
+            this.CurrFeatures = this.CurrentFeatures();
 
         }
         public override bool[] ClassSkills()
@@ -64,7 +68,7 @@ namespace DnDClassesTest
             return Saves;
         }
 
-        public override List<string> ClassFeatures()
+        protected override List<string> ClassFeatures()
         {
             List<string> features = new List<string>();
             String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\BarbarianClassFeatures.txt");
@@ -79,7 +83,7 @@ namespace DnDClassesTest
             return features;
 
         }
-        public override bool[] Unlocked()
+        protected override bool[] Unlocked()
         {
             Console.WriteLine("this.level == " + this._level);
             bool[] unlock = new bool[13];
@@ -98,15 +102,18 @@ namespace DnDClassesTest
             if (this._level >= 20) unlock[12] = true;
             return unlock;
         }
-        public override List<string> CurrentFeatures()
+        protected override List<string> CurrentFeatures()
         {//word
             List<string> current = new List<string>();
             bool[] unlock = this.Unlocked();
             int i;
             for (i = 0; i <= 12; ++i)
             {
-                if (unlock[i]) continue;
-                else break;
+                if (!unlock[i])
+                {
+                    --i;
+                    break;
+                }
             }
             current = Features.GetRange(0, 2);
             if (i >= 1)

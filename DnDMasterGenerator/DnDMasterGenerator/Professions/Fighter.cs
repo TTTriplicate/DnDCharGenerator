@@ -26,6 +26,9 @@ namespace DnDClassesTest
         }
         protected override List<string> Features { get; set; }
 
+        public override List<string> CurrFeatures { get; set; }
+
+
         public Fighter()
         {
             this._level = 1;
@@ -41,7 +44,8 @@ namespace DnDClassesTest
             this._numProSkills = 2;
             this._proPath = path;
             this.AbilityIncreaseLevels = new int[] { 4, 6, 8, 12, 14, 16, 19 };
-            this.Features = ClassFeatures();
+            this.Features = this.ClassFeatures();
+            this.CurrFeatures = this.CurrentFeatures();
             this.Manuevers = new List<int>();
         }
         public override bool[] ClassSkills()
@@ -73,7 +77,7 @@ namespace DnDClassesTest
             return 2 + (this._level / 5);
         }
 
-        public override List<string> ClassFeatures()
+        protected override List<string> ClassFeatures()
         {
             List<string> features = new List<string>();
             String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\FighterClassFeatures.txt");
@@ -87,7 +91,7 @@ namespace DnDClassesTest
 
             return features;
         }
-        public override bool[] Unlocked()
+        protected override bool[] Unlocked()
         {//this might need jesus on this one...three classes in a trenchcoat....
             bool[] unlock = new bool[9];
             unlock[0] = true;
@@ -101,14 +105,18 @@ namespace DnDClassesTest
             if (this._level >= 18) unlock[8] = true;
             return unlock;
         }
-        public override List<string> CurrentFeatures()
+        protected override List<string> CurrentFeatures()
         {
             List<string> current = new List<string>();
             bool[] unlock = this.Unlocked();
             int i;
             for (i = 0; i <= 8; ++i)
             {
-                if (!unlock[i]) break;
+                if (!unlock[i])
+                {
+                    --i;
+                    break;
+                }
             }
             Console.WriteLine(i);
             current.Add(Features[0]);

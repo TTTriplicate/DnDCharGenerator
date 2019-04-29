@@ -23,6 +23,9 @@ namespace DnDClassesTest
         }
         protected override List<string> Features
         { get; set; }
+
+        public override List<string> CurrFeatures { get; set; }
+
         public Druid()
         {
             this._level = 1;
@@ -39,6 +42,7 @@ namespace DnDClassesTest
             this._proPath = path;
             this._numProSkills = 2;
             this.Features = this.ClassFeatures();
+            this.CurrFeatures = this.CurrentFeatures();
         }
         public override bool[] ClassSkills()
         {//history insight medicine persuasion religion
@@ -69,7 +73,7 @@ namespace DnDClassesTest
             return 2 + (this._level / 5);
         }
 
-        public override List<string> ClassFeatures()
+        protected override List<string> ClassFeatures()
         {
             List<string> features = new List<string>();
             String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\DruidClassFeatures.txt");
@@ -86,7 +90,7 @@ namespace DnDClassesTest
 
 
 
-        public override bool[] Unlocked()
+        protected override bool[] Unlocked()
         {
             bool[] unlocked = new bool[7]/*{ false, false, false, false, false, false, false, false }*/;
             unlocked[0] = true;         //false is the default, shouldn't need that
@@ -99,14 +103,18 @@ namespace DnDClassesTest
             return unlocked;
         }
 
-        public override List<string> CurrentFeatures()
+        protected override List<string> CurrentFeatures()
         {
             List<string> current = new List<string>();
             bool[] unlock = this.Unlocked();
             int i;
             for (i = 0; i <= 6; ++i)
             {
-                if (!unlock[i]) break;
+                if (!unlock[i])
+                {
+                    --i;
+                    break;
+                }
             }
             current.Add(Features[0]);
             if (i == 1) current = Features.GetRange(0, 1);
