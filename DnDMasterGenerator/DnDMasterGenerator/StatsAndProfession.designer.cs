@@ -256,6 +256,7 @@
             // 
             // comboClass
             // 
+            this.comboClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboClass.FormattingEnabled = true;
             this.comboClass.Items.AddRange(new object[] {
             "Barbarian",
@@ -278,6 +279,7 @@
             // 
             // comboSubClass
             // 
+            this.comboSubClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSubClass.FormattingEnabled = true;
             this.comboSubClass.Location = new System.Drawing.Point(447, 89);
             this.comboSubClass.Name = "comboSubClass";

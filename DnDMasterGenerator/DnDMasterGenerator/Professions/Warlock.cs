@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DnDClassesTest
 {
@@ -208,27 +209,27 @@ namespace DnDClassesTest
             //pact of the tome adds it's invocation
             if (this.IndexedInvocations.Any())
             {//if any int indicating selected invocations,
-                this.IndexedInvocations.Sort();//sort them
+            //    this.IndexedInvocations.Sort();//sort them
             /*    for(int i = 0; i < this.Invocations.Count(); ++i)
                 {//adjust indicies for preceding items in list being removed
                     if (this.Invocations[i] > 0) this.Invocations[i] -= i;
                     if (this.Invocations[i] < 0) this.Invocations[i] = 0;
                 }//prevent indexoutofrange*/
-                this.IndexedInvocations.Reverse();//swap List orientation
+       //         this.IndexedInvocations.Reverse();//swap List orientation
                 //should do this OR offset, not both
 
                 //but neither, one, the other, AND both failed
                 foreach (int i in this.IndexedInvocations)
                 {//works back to front due to reversed sorted ints
-                    Console.WriteLine(i);
-                    Console.WriteLine(invocations[i].Split(':'));
+   //                 Console.WriteLine(i);
+  //                  Console.WriteLine(invocations[i].Split(':'));
                     invocations.RemoveAt(i);//pull those indicies
                 }
             }
 
             var sel = new PickOne(invocations);
             var result = sel.ShowDialog();
-            if (result == System.Windows.Forms.DialogResult.OK)
+            if (result == DialogResult.OK)
             {
                 this.IndexedInvocations.Add(sel.Selected);
                     Console.WriteLine(sel.Selected);
