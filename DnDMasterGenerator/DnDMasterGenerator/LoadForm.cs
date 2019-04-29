@@ -58,6 +58,11 @@ namespace DnDClassesTest
             {
                 Equipment.Text += (leeroy.getInventoryString()[i]) + "\n";
             }
+            CP.Text = "0";
+            SP.Text = "0";
+            EP.Text = "0";
+            GP.Text = leeroy.gold.ToString();
+            PP.Text = "0";
 
             //Features and Traits
             foreach (string i in leeroy.CharRace.getSA())
@@ -94,50 +99,87 @@ namespace DnDClassesTest
 
             //Skills
             System.Windows.Forms.RichTextBox[] dex = { Acrobatics, SleightOfHand, Stealth, Athletics };
-            int[] dexIndexs = { 0, 15, 16, 3};
+            //int[] dexIndexs = { 0, 15, 16, 3};
             System.Windows.Forms.RichTextBox[] intel = { Arcana, History, Investigation, Nature, Religion };
-            int[] intelIndexs = { 2, 5, 8, 10, 14 };
+            //int[] intelIndexs = { 2, 5, 8, 10, 14 };
             System.Windows.Forms.RichTextBox[] wis = { AnimalHandling, Insight, Medicine, Perception, Survival };
-            int[] wisIndexs = { 1, 6, 9, 11, 17 };
+            //int[] wisIndexs = { 1, 6, 9, 11, 17 };
             System.Windows.Forms.RichTextBox[] cha = { Deception, Intimidation, Performance, Persuasion };
-            int[] chaIndexs = { 4, 7, 12, 13 };
+            //int[] chaIndexs = { 4, 7, 12, 13 };
 
-            string indexNum = "0";
+            count = 0;
             foreach (var i in dex)
             {
-                //Must do radio buttons first
+                if (i == Athletics)
+                    if (skills[count])
+                        i.Text = (leeroy.AbilityModifiers()[0] + leeroy.ProficiencyBonus()).ToString();
+                    else
+                        i.Text = leeroy.AbilityModifiers()[0].ToString();
+                if (skills[count])
+                    i.Text = (leeroy.AbilityModifiers()[1] + leeroy.ProficiencyBonus()).ToString();
+                else
+                    i.Text = leeroy.AbilityModifiers()[1].ToString();
+                count++;
             }
-            //foreach (string i in dex)
-            //{
-            //    if (i.Length < 3)
-            //    {
-            //        indexNum = i;
-            //    }
-            //    else if (i.Length > 3)
-            //    {
-            //        if (i == "Athletics")
-            //        {
-            //            if (skillBoxes[int.Parse(indexNum)])
-            //            {
-            //                pdfFormFields.SetField(i, (newChar.AbilityModifiers()[0] + newChar.ProficiencyBonus()).ToString());
-            //                //MessageBox.Show("bingo");
-            //            }
-            //            else
-            //                pdfFormFields.SetField(i, newChar.AbilityModifiers()[0].ToString());
-            //        }
-            //        //MessageBox.Show((int.Parse(indexNum).ToString() + skillBoxes[int.Parse(indexNum)].ToString()));
-            //        else if (skillBoxes[int.Parse(indexNum)])
-            //        {
-            //            pdfFormFields.SetField(i, (newChar.AbilityModifiers()[1] + newChar.ProficiencyBonus()).ToString());
-            //            //MessageBox.Show("bingo");
-            //        }
-            //        else
-            //            pdfFormFields.SetField(i, newChar.AbilityModifiers()[1].ToString());
-            //    }
-            //    //indexNum = "0";
-            //}
 
-            
+            foreach (var i in intel)
+            {
+                if (skills[count])
+                    i.Text = (leeroy.AbilityModifiers()[3] + leeroy.ProficiencyBonus()).ToString();
+                else
+                    i.Text = leeroy.AbilityModifiers()[3].ToString();
+                count++;
+            }
+
+            foreach (var i in wis)
+            {
+                if (skills[count])
+                    i.Text = (leeroy.AbilityModifiers()[4] + leeroy.ProficiencyBonus()).ToString();
+                else
+                    i.Text = leeroy.AbilityModifiers()[4].ToString();
+                count++;
+            }
+
+            foreach (var i in cha)
+            {
+                if (skills[count])
+                    i.Text = (leeroy.AbilityModifiers()[5] + leeroy.ProficiencyBonus()).ToString();
+                else
+                    i.Text = leeroy.AbilityModifiers()[5].ToString();
+                count++;
+            }
+
+            //Saving Throws
+            if (leeroy.SavingThrows[0])
+                STSTR.Text = (leeroy.AbilityModifiers()[0] + leeroy.ProficiencyBonus()).ToString();
+            else
+                STSTR.Text = leeroy.AbilityModifiers()[0].ToString();
+
+            if (leeroy.SavingThrows[1])
+                STDEX.Text = (leeroy.AbilityModifiers()[1] + leeroy.ProficiencyBonus()).ToString();
+            else
+                STDEX.Text = leeroy.AbilityModifiers()[1].ToString();
+
+            if (leeroy.SavingThrows[2])
+                STCON.Text = (leeroy.AbilityModifiers()[2] + leeroy.ProficiencyBonus()).ToString();
+            else
+                STCON.Text = leeroy.AbilityModifiers()[2].ToString();
+
+            if (leeroy.SavingThrows[3])
+                STINT.Text = (leeroy.AbilityModifiers()[3] + leeroy.ProficiencyBonus()).ToString();
+            else
+                STINT.Text = leeroy.AbilityModifiers()[3].ToString();
+
+            if (leeroy.SavingThrows[4])
+                STWIS.Text = (leeroy.AbilityModifiers()[4] + leeroy.ProficiencyBonus()).ToString();
+            else
+                STWIS.Text = leeroy.AbilityModifiers()[4].ToString();
+
+            if (leeroy.SavingThrows[5])
+                STCHA.Text = (leeroy.AbilityModifiers()[5] + leeroy.ProficiencyBonus()).ToString();
+            else
+                STCHA.Text = leeroy.AbilityModifiers()[5].ToString();
+
         }
         private void CharName_TextChanged(object sender, EventArgs e)
         {
@@ -214,6 +256,11 @@ namespace DnDClassesTest
             STR.SelectAll();
             STR.SelectionAlignment = HorizontalAlignment.Center;
             STR.DeselectAll();
+        }
+
+        private void Acrobatics_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
