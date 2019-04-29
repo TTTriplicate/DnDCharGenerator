@@ -45,8 +45,8 @@ namespace DnDClassesTest
             this._proPath = path;
             this.AbilityIncreaseLevels = new int[] { 4, 6, 8, 12, 14, 16, 19 };
             this.Features = this.ClassFeatures();
-            this.CurrFeatures = this.CurrentFeatures();
             this.Manuevers = new List<int>();
+            this.CurrFeatures = this.CurrentFeatures();
         }
         public override bool[] ClassSkills()
         {

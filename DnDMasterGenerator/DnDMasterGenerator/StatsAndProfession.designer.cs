@@ -66,10 +66,10 @@
             // 
             this.lblSTR.AutoSize = true;
             this.lblSTR.BackColor = System.Drawing.Color.Transparent;
-            this.lblSTR.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
+            this.lblSTR.Font = new System.Drawing.Font("Baskerville Old Face", 9F);
             this.lblSTR.Location = new System.Drawing.Point(16, 96);
             this.lblSTR.Name = "lblSTR";
-            this.lblSTR.Size = new System.Drawing.Size(41, 19);
+            this.lblSTR.Size = new System.Drawing.Size(36, 17);
             this.lblSTR.TabIndex = 0;
             this.lblSTR.Text = "STR";
             // 
@@ -77,10 +77,10 @@
             // 
             this.lblDEX.AutoSize = true;
             this.lblDEX.BackColor = System.Drawing.Color.Transparent;
-            this.lblDEX.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
+            this.lblDEX.Font = new System.Drawing.Font("Baskerville Old Face", 9F);
             this.lblDEX.Location = new System.Drawing.Point(16, 119);
             this.lblDEX.Name = "lblDEX";
-            this.lblDEX.Size = new System.Drawing.Size(45, 19);
+            this.lblDEX.Size = new System.Drawing.Size(40, 17);
             this.lblDEX.TabIndex = 1;
             this.lblDEX.Text = "DEX";
             // 
@@ -88,10 +88,10 @@
             // 
             this.lblCON.AutoSize = true;
             this.lblCON.BackColor = System.Drawing.Color.Transparent;
-            this.lblCON.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
+            this.lblCON.Font = new System.Drawing.Font("Baskerville Old Face", 9F);
             this.lblCON.Location = new System.Drawing.Point(14, 146);
             this.lblCON.Name = "lblCON";
-            this.lblCON.Size = new System.Drawing.Size(47, 19);
+            this.lblCON.Size = new System.Drawing.Size(41, 17);
             this.lblCON.TabIndex = 2;
             this.lblCON.Text = "CON";
             // 
@@ -99,10 +99,10 @@
             // 
             this.lblINT.AutoSize = true;
             this.lblINT.BackColor = System.Drawing.Color.Transparent;
-            this.lblINT.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
+            this.lblINT.Font = new System.Drawing.Font("Baskerville Old Face", 9F);
             this.lblINT.Location = new System.Drawing.Point(19, 174);
             this.lblINT.Name = "lblINT";
-            this.lblINT.Size = new System.Drawing.Size(40, 19);
+            this.lblINT.Size = new System.Drawing.Size(34, 17);
             this.lblINT.TabIndex = 3;
             this.lblINT.Text = "INT";
             // 
@@ -110,10 +110,10 @@
             // 
             this.lblWIS.AutoSize = true;
             this.lblWIS.BackColor = System.Drawing.Color.Transparent;
-            this.lblWIS.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
+            this.lblWIS.Font = new System.Drawing.Font("Baskerville Old Face", 9F);
             this.lblWIS.Location = new System.Drawing.Point(16, 202);
             this.lblWIS.Name = "lblWIS";
-            this.lblWIS.Size = new System.Drawing.Size(42, 19);
+            this.lblWIS.Size = new System.Drawing.Size(37, 17);
             this.lblWIS.TabIndex = 4;
             this.lblWIS.Text = "WIS";
             // 
@@ -121,10 +121,10 @@
             // 
             this.lblCHA.AutoSize = true;
             this.lblCHA.BackColor = System.Drawing.Color.Transparent;
-            this.lblCHA.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
+            this.lblCHA.Font = new System.Drawing.Font("Baskerville Old Face", 9F);
             this.lblCHA.Location = new System.Drawing.Point(13, 228);
             this.lblCHA.Name = "lblCHA";
-            this.lblCHA.Size = new System.Drawing.Size(46, 19);
+            this.lblCHA.Size = new System.Drawing.Size(40, 17);
             this.lblCHA.TabIndex = 5;
             this.lblCHA.Text = "CHA";
             // 
@@ -332,7 +332,7 @@
             this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.FlatAppearance.BorderSize = 0;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNext.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
+            this.btnNext.Font = new System.Drawing.Font("Baskerville Old Face", 9F);
             this.btnNext.Location = new System.Drawing.Point(447, 222);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
@@ -383,7 +383,7 @@
             this.btnRoll.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRoll.FlatAppearance.BorderSize = 0;
             this.btnRoll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRoll.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
+            this.btnRoll.Font = new System.Drawing.Font("Baskerville Old Face", 9F);
             this.btnRoll.Location = new System.Drawing.Point(16, 65);
             this.btnRoll.Name = "btnRoll";
             this.btnRoll.Size = new System.Drawing.Size(75, 23);

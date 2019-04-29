@@ -89,7 +89,7 @@ namespace DnDClassesTest
                 {
                     SkillButtons[count].Checked = true;
                     skills[count] = true;
-                    MessageBox.Show(SkillButtons[count].Name.ToString() + " " +SkillButtons[count].ToString());
+                    //MessageBox.Show(SkillButtons[count].Name.ToString() + " " +SkillButtons[count].ToString());
                     //SkillButtons[count].L = false;
                 }
                 else
@@ -259,6 +259,11 @@ namespace DnDClassesTest
         }
 
         private void Acrobatics_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }
