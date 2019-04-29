@@ -140,5 +140,10 @@ namespace DnDClassesTest
             CHA.SelectionAlignment = HorizontalAlignment.Center;
             CHA.DeselectAll();
         }
+
+        private void Equipment_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

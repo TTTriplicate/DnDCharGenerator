@@ -1412,6 +1412,7 @@
             this.Equipment.Size = new System.Drawing.Size(169, 166);
             this.Equipment.TabIndex = 117;
             this.Equipment.Text = "";
+            this.Equipment.TextChanged += new System.EventHandler(this.Equipment_TextChanged);
             // 
             // label44
             // 
