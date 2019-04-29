@@ -43,6 +43,8 @@ namespace DnDClassesTest
             this._numProSkills = 2;
             this.Features = this.ClassFeatures();
             this.CurrFeatures = this.CurrentFeatures();
+            this._abilityScoreIncrease = new int[5] { 4, 8, 12, 16, 19 };
+
 
         }
         public override bool[] ClassSkills()
@@ -118,7 +120,7 @@ namespace DnDClassesTest
 
             current.Add(Features[0]);
             if (i >= 5) current.Add(Features[1]);
-            if (i == 6) current.Add(Features[2]);
+            if (i >= 6) current.Add(Features[2]);
 
                 if (i < 1) return current;
                 if (i >= 1)
@@ -132,6 +134,7 @@ namespace DnDClassesTest
 
             return current;
         }
+         public override bool LevelUp(){return true;}
 
         //insert class feature methods here
 

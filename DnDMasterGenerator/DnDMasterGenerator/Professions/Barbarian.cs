@@ -46,6 +46,8 @@ namespace DnDClassesTest
             this._proPath = path;
             this.Features = this.ClassFeatures();
             this.CurrFeatures = this.CurrentFeatures();
+            this._abilityScoreIncrease = new int[5] { 4, 8, 12, 16, 19 };
+
 
         }
         public override bool[] ClassSkills()
@@ -159,7 +161,7 @@ namespace DnDClassesTest
             return current;
         }
 
-        public int[] PrimalChampion()
+        public static int[] PrimalChampion()
         {
             int[] increase = new int[6] { 4, 0, 4, 0, 0, 0 };
             return increase;
@@ -176,6 +178,11 @@ namespace DnDClassesTest
             else
                 return this.TotemChoice(choices);
         }
+         public override bool LevelUp(){
+
+            return true;
+        }
+
         //public static SkillSelect skillInteractive(int numSkills, bool[] skillRestrictions)
         //{
         //    SkillSelect form = new SkillSelect(numSkills, skillRestrictions);
