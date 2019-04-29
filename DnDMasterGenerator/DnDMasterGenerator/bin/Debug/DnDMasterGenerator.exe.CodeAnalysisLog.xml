@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio\2017\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="15.0">
+ <Targets>
+  <Target Name="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe">
+   <Modules>
+    <Module Name="dndmastergenerator.exe">
+     <Namespaces>
+      <Namespace Name="DnDClassesTest">
+       <Types>
+        <Type Name="Barbarian" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-04-29 15:45:50Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Barbarian.cs" Line="40">'Barbarian.Barbarian(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Barbarian..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Barbarian.cs" Line="40">'Barbarian.Barbarian(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Barbarian..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Barbarian.cs" Line="40">'Barbarian.Barbarian(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Barbarian..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Barbarian.cs" Line="40">'Barbarian.Barbarian(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Barbarian..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_CurrFeatures(List&lt;String&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Bard" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-04-29 15:45:50Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Bard.cs" Line="40">'Bard.Bard(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Bard..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.get__proPath():Int32&#xD;&#xA;Profession.get__level():Int32&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Bard.cs" Line="40">'Bard.Bard(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Bard..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.get__proPath():Int32&#xD;&#xA;Profession.get__level():Int32&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Bard.cs" Line="40">'Bard.Bard(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Bard..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.get__proPath():Int32&#xD;&#xA;Profession.get__level():Int32&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Bard.cs" Line="40">'Bard.Bard(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Bard..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.get__proPath():Int32&#xD;&#xA;Profession.get__level():Int32&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_CurrFeatures(List&lt;String&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Cleric" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-04-29 15:45:50Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Cleric.cs" Line="46">'Cleric.Cleric(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Cleric..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Cleric.cs" Line="46">'Cleric.Cleric(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Cleric..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Cleric.cs" Line="46">'Cleric.Cleric(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Cleric..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Cleric.cs" Line="46">'Cleric.Cleric(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Cleric..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_CurrFeatures(List&lt;String&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Druid" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-04-29 15:45:50Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Druid.cs" Line="37">'Druid.Druid(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Druid..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Druid.cs" Line="37">'Druid.Druid(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Druid..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Druid.cs" Line="37">'Druid.Druid(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Druid..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Druid.cs" Line="37">'Druid.Druid(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Druid..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_CurrFeatures(List&lt;String&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Fighter" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-04-29 15:45:50Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Fighter.cs" Line="39">'Fighter.Fighter(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Fighter..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Fighter.cs" Line="39">'Fighter.Fighter(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Fighter..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Fighter.cs" Line="39">'Fighter.Fighter(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Fighter..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Fighter.cs" Line="39">'Fighter.Fighter(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Fighter..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_CurrFeatures(List&lt;String&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Monk" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-04-29 15:45:50Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Monk.cs" Line="37">'Monk.Monk(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Monk..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Monk.cs" Line="37">'Monk.Monk(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Monk..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Monk.cs" Line="37">'Monk.Monk(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Monk..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Monk.cs" Line="37">'Monk.Monk(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Monk..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_CurrFeatures(List&lt;String&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Paladin" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-04-29 15:45:50Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Paladin.cs" Line="38">'Paladin.Paladin(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Paladin..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Paladin.cs" Line="38">'Paladin.Paladin(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Paladin..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Paladin.cs" Line="38">'Paladin.Paladin(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Paladin..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Paladin.cs" Line="38">'Paladin.Paladin(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Paladin..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_CurrFeatures(List&lt;String&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Ranger" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-04-29 15:45:50Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Ranger.cs" Line="40">'Ranger.Ranger(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Ranger..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Ranger.cs" Line="40">'Ranger.Ranger(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Ranger..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Ranger.cs" Line="40">'Ranger.Ranger(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Ranger..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Ranger.cs" Line="40">'Ranger.Ranger(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Ranger..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_CurrFeatures(List&lt;String&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Rogue" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-04-29 15:45:50Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Rogue.cs" Line="36">'Rogue.Rogue(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Rogue..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Rogue.cs" Line="36">'Rogue.Rogue(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Rogue..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Rogue.cs" Line="36">'Rogue.Rogue(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Rogue..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Rogue.cs" Line="36">'Rogue.Rogue(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Rogue..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_CurrFeatures(List&lt;String&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Sorcerer" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-04-29 15:45:50Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Sorcerer.cs" Line="39">'Sorcerer.Sorcerer(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Sorcerer..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Sorcerer.cs" Line="39">'Sorcerer.Sorcerer(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Sorcerer..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Sorcerer.cs" Line="39">'Sorcerer.Sorcerer(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Sorcerer..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Sorcerer.cs" Line="39">'Sorcerer.Sorcerer(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Sorcerer..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_CurrFeatures(List&lt;String&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Warlock" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-04-29 15:45:50Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Warlock.cs" Line="39">'Warlock.Warlock(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Warlock..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Warlock.cs" Line="39">'Warlock.Warlock(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Warlock..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Warlock.cs" Line="39">'Warlock.Warlock(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Warlock..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Warlock.cs" Line="39">'Warlock.Warlock(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Warlock..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_CurrFeatures(List&lt;String&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Wizard" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor(System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214" Status="Active" Created="2019-04-29 15:45:50Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Wizard.cs" Line="37">'Wizard.Wizard(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Wizard..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Wizard.cs" Line="37">'Wizard.Wizard(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Wizard..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Wizard.cs" Line="37">'Wizard.Wizard(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Wizard..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;</Issue>
+             <Issue Certainty="95" Level="CriticalWarning" Path="C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\Professions" File="Wizard.cs" Line="37">'Wizard.Wizard(int, int)' contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: &#xD;&#xA;&#xD;&#xA;Wizard..ctor(Int32, Int32)&#xD;&#xA;Profession.set__level(Int32):Void&#xD;&#xA;Profession.set__hitDie(Int32):Void&#xD;&#xA;Profession.set__caster(Boolean):Void&#xD;&#xA;Profession.set__proPath(Int32):Void&#xD;&#xA;Profession.set__numProSkills(Int32):Void&#xD;&#xA;Profession.ClassFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_Features(List&lt;String&gt;):Void&#xD;&#xA;Profession.CurrentFeatures():List&lt;String&gt;&#xD;&#xA;Profession.set_CurrFeatures(List&lt;String&gt;):Void</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="DnDMasterGenerator.Properties">
+       <Types>
+        <Type Name="Resources" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="ExcludedInSource" Created="2019-04-29 15:45:50Z" FixCategory="NonBreaking" LastSeen="0001-01-01 00:00:00Z" />
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+   <Name>Avoid uncalled private code</Name>
+   <Description>There is uncalled code that is not externally visible and is not a known runtime entry point. If this violation fires in error, please send a problem report to the Visual Studio Code Analysis team.</Description>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182264.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="15.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCallOverridableMethodsInConstructors" Category="Microsoft.Usage" CheckId="CA2214">
+   <Name>Do not call overridable methods in constructors</Name>
+   <Description>Virtual methods defined on the class should not be called from constructors. If a derived class has overridden the method, the derived class version will be called (before the derived class constructor is called).</Description>
+   <Resolution Name="Default">{0} contains a call chain that results in a call to a virtual method defined by the class. Review the following call stack for unintended consequences: {1}</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182331.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalWarning</MessageLevel>
+   <File Name="usagerules.dll" Version="15.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

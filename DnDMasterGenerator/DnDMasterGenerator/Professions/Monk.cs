@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnDMasterGenerator.Professions;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,8 @@ namespace DnDClassesTest
 
         public override List<string> CurrFeatures { get; set; }
 
+        private List<int> ElementSelect { get; set; }
+
 
         public Monk()
         {
@@ -41,6 +44,7 @@ namespace DnDClassesTest
             this._caster = false;
             this._proPath = path;
             this._numProSkills = 2;
+            this.ElementSelect = new List<int>();
             this.Features = this.ClassFeatures();
             this.CurrFeatures = this.CurrentFeatures();
 
@@ -124,17 +128,17 @@ namespace DnDClassesTest
                 }
             }
             current = Features.GetRange(0, 1);
-            if (i == 1) current = Features.GetRange(0, 6);
-            else if (i == 2) current = Features.GetRange(0, 7);
-            else if (i == 3) current = Features.GetRange(0, 8);
-            else if (i == 4) current = Features.GetRange(0, 10);
-            else if (i == 5) current = Features.GetRange(0, 11);
-            else if (i == 6) current = Features.GetRange(0, 13);
-            else if (i == 7) current = Features.GetRange(0, 14);
-            else if (i == 9) current = Features.GetRange(0, 15);
-            else if (i == 10) current = Features.GetRange(0, 16);
-            else if (i == 11) current = Features.GetRange(0, 17);
-            else if (i == 13) current = Features.GetRange(0, 18);
+            if (i >= 1) current = Features.GetRange(0, 6);
+            else if (i >= 2) current = Features.GetRange(0, 7);
+            else if (i >= 3) current = Features.GetRange(0, 8);
+            else if (i >= 4) current = Features.GetRange(0, 10);
+            else if (i >= 5) current = Features.GetRange(0, 11);
+            else if (i >= 6) current = Features.GetRange(0, 13);
+            else if (i >= 7) current = Features.GetRange(0, 14);
+            else if (i >= 9) current = Features.GetRange(0, 15);
+            else if (i >= 10) current = Features.GetRange(0, 16);
+            else if (i >= 11) current = Features.GetRange(0, 17);
+            else if (i >= 13) current = Features.GetRange(0, 18);
             else current = Features.GetRange(0, 19);
 
             if (_proPath == 0)
@@ -144,18 +148,45 @@ namespace DnDClassesTest
                 if (i >= 8) current.Add(Features[22]);
                 if (i >= 12) current.Add(Features[23]);
             }
-            if (_proPath == 1)
+            else if (_proPath == 1)
             {
                 if (i >= 2) current.Add(Features[24]);
                 if (i >= 5) current.Add(Features[25]);
                 if (i >= 8) current.Add(Features[26]);
                 if (i >= 12) current.Add(Features[27]);
             }
+            else if (_proPath == 2)
+            {
+                if (i >= 2)
+                {
+                    current.Add(Features[27]);
+                    current.Add(Features[28]);
+                    current.Add(ElementSelector(Features.GetRange(29, 8)));
+                }
+                if (i >= 5) current.Add(ElementSelector(Features.GetRange(29, 10)));
+                if (i >= 8) current.Add(ElementSelector(Features.GetRange(29, 13)));
+                if (i >= 12) current.Add(ElementSelector(Features.GetRange(29, 16)));
 
+            }
 
             return current;
         }
 
-        //insert class feature methods here
+        private string ElementSelector(List<string> options)
+        {
+            if (ElementSelect.Any())
+                foreach (int i in ElementSelect)
+                    options.RemoveAt(i);
+
+            var sel = new PickOne(options);
+            var result = sel.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                ElementSelect.Add(sel.Selected);
+                return sel.Choices[sel.Selected];
+            }
+            else return ElementSelector(options);
+            
+        }
     }
 }
