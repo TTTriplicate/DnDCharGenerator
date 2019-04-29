@@ -73,6 +73,12 @@
       <DependentUpon>CharSheet.cs</DependentUpon>
     </Compile>
     <Compile Include="loader.cs" />
+    <Compile Include="LoadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadForm.Designer.cs">
+      <DependentUpon>LoadForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Professions\FightingStyles\FightingStyles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CharSheet.resx">
       <DependentUpon>CharSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadForm.resx">
+      <DependentUpon>LoadForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Professions\FightingStyles\FightingStyles.resx">
       <DependentUpon>FightingStyles.cs</DependentUpon>

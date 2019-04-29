@@ -326,6 +326,7 @@
             this.txtBackground.ReadOnly = true;
             this.txtBackground.Size = new System.Drawing.Size(100, 22);
             this.txtBackground.TabIndex = 26;
+            this.txtBackground.TextChanged += new System.EventHandler(this.txtBackground_TextChanged);
             // 
             // lblTraits
             // 
