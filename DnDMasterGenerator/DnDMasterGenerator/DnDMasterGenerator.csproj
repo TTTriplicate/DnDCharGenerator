@@ -66,6 +66,12 @@
       <DependentUpon>BackgroundForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Character.cs" />
+    <Compile Include="loadChoicecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loadChoicecs.Designer.cs">
+      <DependentUpon>loadChoicecs.cs</DependentUpon>
+    </Compile>
     <Compile Include="loader.cs" />
     <Compile Include="LoadForm.cs">
       <SubType>Form</SubType>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Background\BackgroundForm.resx">
       <DependentUpon>BackgroundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loadChoicecs.resx">
+      <DependentUpon>loadChoicecs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoadForm.resx">
       <DependentUpon>LoadForm.cs</DependentUpon>

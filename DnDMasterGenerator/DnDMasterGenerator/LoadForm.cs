@@ -18,6 +18,8 @@ namespace DnDClassesTest
             InitializeComponent();
         }
 
+        //public
+
         public LoadForm(DnDCharacter leeroy)
         {
             //Top Fields
@@ -264,6 +266,11 @@ namespace DnDClassesTest
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadForm_Load(object sender, EventArgs e)
         {
 
         }

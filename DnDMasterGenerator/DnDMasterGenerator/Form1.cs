@@ -32,5 +32,10 @@ namespace DnDClassesTest
             string PDFFolder = Path.Combine(Environment.CurrentDirectory, @"..\..\PDFs");
             Process.Start(PDFFolder);
         }
+
+        private void LandingPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
