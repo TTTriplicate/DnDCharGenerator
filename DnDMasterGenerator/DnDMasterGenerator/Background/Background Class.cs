@@ -44,7 +44,7 @@ namespace DnDClassesTest
             Traits();
             SkillProfs(background);
             
-            //njnrunLanq();
+            //runLanq();
         }
 
         public Background_Class(string race, string background)

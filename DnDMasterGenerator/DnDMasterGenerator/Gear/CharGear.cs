@@ -22,6 +22,7 @@ namespace DnDClassesTest
         public List<string> inventoryString = new List<string>(); //parallel list of inventory stored as strings
         public List<Gear> firstChoice = new List<Gear>();
         public int AC;
+        public int clericIsStupid;
 
         //Index values used to more easily populate lists of choices
         public const int startSimpleMelee = 0;
@@ -47,6 +48,25 @@ namespace DnDClassesTest
             this.classType = classType;
             this.backgroundType = backgroundType;
             this.dexMod = dexMod;
+            populateGear();
+            popOptions();
+
+            GearForm f = new GearForm(this);
+            //f.Show();
+
+            DialogResult result = f.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                //return f;
+            }
+        }
+
+        public CharGear(string classType, string backgroundType, int dexMod, int clericIsStupid)
+        {
+            this.classType = classType;
+            this.backgroundType = backgroundType;
+            this.dexMod = dexMod;
+            this.clericIsStupid = clericIsStupid;
             populateGear();
             popOptions();
 
@@ -254,24 +274,21 @@ namespace DnDClassesTest
                 numChoices = 4;
                 this.options.Add(new List<Gear>()); //scale mail or leather armor or chainmail (if proficient)
                 firstChoice.Add(null);
-                
-                //Cleric.Proficiencies(n);
-                //bool[] proficiencies = Cleric.Proficiencies(leeroy._class._proPath);
-                //Profession cleric =
-                //if (DnDCharacter.getProPath() == 3 || DnDCharacter._class._proPath == 4 || DnDCharacter._class._proPath == 6)
-                //{
-                //    options[0].Add(allGear[getIndex("Chain mail")]);
-                //}
+
+                if (Cleric.Proficiencies(clericIsStupid)[2])
+                {
+                    options[0].Add(allGear[getIndex("Chain mail")]);
+                }
                 options[0].Add(allGear[getIndex("Scale mail")]);
                 options[0].Add(allGear[getIndex("Leather armor")]);
 
                 this.options.Add(new List<Gear>()); //mace or warhammer (if proficient)
                 firstChoice.Add(null);
                 options[1].Add(allGear[getIndex("Mace")]);
-                //if (DnDCharacter._proPath == 4 || DnDCharacter._proPath == 6)
-                //{
-                //    options[1].Add(allGear[getIndex("Warhammer")]);
-                //}
+                if (Cleric.Proficiencies(clericIsStupid)[5])
+                {
+                    options[1].Add(allGear[getIndex("Warhammer")]);
+                }
 
                 this.options.Add(new List<Gear>()); //light crossbow and 20 bolts or any simple weapon
                 firstChoice.Add(allGear[getIndex("Light Crossbow and 20 bolts")]);
