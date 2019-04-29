@@ -151,8 +151,6 @@ namespace DnDClassesTest
 
         public DnDCharacter()
         {
-            //CharGear gear = new CharGear("Barbarian", "Folk Hero", 2);
-            //List<string> inventory = gear.getInventoryString();
             int[] a = new int[6];
             string charName, playName;
             this.CharClass = Profession.InteractiveChoice(out a, out charName, out playName);
@@ -182,8 +180,15 @@ namespace DnDClassesTest
             }
             this._skills = DnDCharacter.SkillSelectInteractive(CharClass._numProSkills, CharClass.ClassSkills(), this.CharBackground.SkillProf);
 
-
-            CharGear gear = new CharGear(this._class.ProfessionName(), CharBackground.Background , AbilityModifiers()[1]);
+            if (this._class.ProfessionName() == "Cleric")
+            {
+                CharGear gear = new CharGear(this._class.ProfessionName(), CharBackground.Background, AbilityModifiers()[1], this._class._proPath);
+            }
+            else
+            {
+                CharGear gear = new CharGear(this._class.ProfessionName(), CharBackground.Background, AbilityModifiers()[1]);
+            }
+            
             inventoryString = gear.getInventoryString();
             inventory = gear.getInventory();
             ArmorClass = gear.getAC();
