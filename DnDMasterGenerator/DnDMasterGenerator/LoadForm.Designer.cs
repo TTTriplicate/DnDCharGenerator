@@ -66,18 +66,18 @@
             this.label17 = new System.Windows.Forms.Label();
             this.STWIS = new System.Windows.Forms.RichTextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.Acro = new System.Windows.Forms.RichTextBox();
+            this.Acrobatics = new System.Windows.Forms.RichTextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.AcroButton = new System.Windows.Forms.RadioButton();
+            this.AcrobaticsButton = new System.Windows.Forms.RadioButton();
             this.AHButton = new System.Windows.Forms.RadioButton();
             this.label20 = new System.Windows.Forms.Label();
-            this.AH = new System.Windows.Forms.RichTextBox();
-            this.AthButton = new System.Windows.Forms.RadioButton();
+            this.AnimalHandling = new System.Windows.Forms.RichTextBox();
+            this.AthleticsButton = new System.Windows.Forms.RadioButton();
             this.label21 = new System.Windows.Forms.Label();
-            this.Ath = new System.Windows.Forms.RichTextBox();
-            this.ARCButton = new System.Windows.Forms.RadioButton();
-            this.Arcana = new System.Windows.Forms.Label();
-            this.Arc = new System.Windows.Forms.RichTextBox();
+            this.Athletics = new System.Windows.Forms.RichTextBox();
+            this.ArcanaButton = new System.Windows.Forms.RadioButton();
+            this.Arca = new System.Windows.Forms.Label();
+            this.Arcana = new System.Windows.Forms.RichTextBox();
             this.IntimidationButton = new System.Windows.Forms.RadioButton();
             this.label23 = new System.Windows.Forms.Label();
             this.Intimidation = new System.Windows.Forms.RichTextBox();
@@ -153,6 +153,8 @@
             this.Flaws = new System.Windows.Forms.RichTextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.Bonds = new System.Windows.Forms.RichTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -447,6 +449,7 @@
             this.STR.Size = new System.Drawing.Size(80, 73);
             this.STR.TabIndex = 31;
             this.STR.Text = "";
+            this.STR.TextChanged += new System.EventHandler(this.STR_TextChanged);
             // 
             // STSTR
             // 
@@ -610,19 +613,19 @@
             this.label18.TabIndex = 50;
             this.label18.Text = "Acrobatics";
             // 
-            // Acro
+            // Acrobatics
             // 
-            this.Acro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Acrobatics.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Acro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Acro.Location = new System.Drawing.Point(182, 174);
-            this.Acro.Name = "Acro";
-            this.Acro.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Acro.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.Acro.Size = new System.Drawing.Size(32, 30);
-            this.Acro.TabIndex = 49;
-            this.Acro.Text = "";
+            this.Acrobatics.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Acrobatics.Location = new System.Drawing.Point(182, 174);
+            this.Acrobatics.Name = "Acrobatics";
+            this.Acrobatics.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Acrobatics.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Acrobatics.Size = new System.Drawing.Size(32, 30);
+            this.Acrobatics.TabIndex = 49;
+            this.Acrobatics.Text = "";
             // 
             // label19
             // 
@@ -635,15 +638,15 @@
             this.label19.TabIndex = 51;
             this.label19.Text = "Skills";
             // 
-            // AcroButton
+            // AcrobaticsButton
             // 
-            this.AcroButton.AutoSize = true;
-            this.AcroButton.Location = new System.Drawing.Point(159, 180);
-            this.AcroButton.Name = "AcroButton";
-            this.AcroButton.Size = new System.Drawing.Size(17, 16);
-            this.AcroButton.TabIndex = 52;
-            this.AcroButton.TabStop = true;
-            this.AcroButton.UseVisualStyleBackColor = true;
+            this.AcrobaticsButton.AutoSize = true;
+            this.AcrobaticsButton.Location = new System.Drawing.Point(5, 5);
+            this.AcrobaticsButton.Name = "AcrobaticsButton";
+            this.AcrobaticsButton.Size = new System.Drawing.Size(17, 16);
+            this.AcrobaticsButton.TabIndex = 52;
+            this.AcrobaticsButton.TabStop = true;
+            this.AcrobaticsButton.UseVisualStyleBackColor = true;
             // 
             // AHButton
             // 
@@ -666,29 +669,29 @@
             this.label20.TabIndex = 54;
             this.label20.Text = "Animal Handling";
             // 
-            // AH
+            // AnimalHandling
             // 
-            this.AH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.AnimalHandling.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.AH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AH.Location = new System.Drawing.Point(182, 207);
-            this.AH.Name = "AH";
-            this.AH.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.AH.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.AH.Size = new System.Drawing.Size(32, 30);
-            this.AH.TabIndex = 53;
-            this.AH.Text = "";
+            this.AnimalHandling.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnimalHandling.Location = new System.Drawing.Point(182, 207);
+            this.AnimalHandling.Name = "AnimalHandling";
+            this.AnimalHandling.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.AnimalHandling.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.AnimalHandling.Size = new System.Drawing.Size(32, 30);
+            this.AnimalHandling.TabIndex = 53;
+            this.AnimalHandling.Text = "";
             // 
-            // AthButton
+            // AthleticsButton
             // 
-            this.AthButton.AutoSize = true;
-            this.AthButton.Location = new System.Drawing.Point(159, 275);
-            this.AthButton.Name = "AthButton";
-            this.AthButton.Size = new System.Drawing.Size(17, 16);
-            this.AthButton.TabIndex = 61;
-            this.AthButton.TabStop = true;
-            this.AthButton.UseVisualStyleBackColor = true;
+            this.AthleticsButton.AutoSize = true;
+            this.AthleticsButton.Location = new System.Drawing.Point(159, 275);
+            this.AthleticsButton.Name = "AthleticsButton";
+            this.AthleticsButton.Size = new System.Drawing.Size(17, 16);
+            this.AthleticsButton.TabIndex = 61;
+            this.AthleticsButton.TabStop = true;
+            this.AthleticsButton.UseVisualStyleBackColor = true;
             // 
             // label21
             // 
@@ -701,54 +704,54 @@
             this.label21.TabIndex = 60;
             this.label21.Text = "Athletics";
             // 
-            // Ath
+            // Athletics
             // 
-            this.Ath.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Athletics.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Ath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ath.Location = new System.Drawing.Point(182, 269);
-            this.Ath.Name = "Ath";
-            this.Ath.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Ath.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.Ath.Size = new System.Drawing.Size(32, 30);
-            this.Ath.TabIndex = 59;
-            this.Ath.Text = "";
+            this.Athletics.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Athletics.Location = new System.Drawing.Point(182, 269);
+            this.Athletics.Name = "Athletics";
+            this.Athletics.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Athletics.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Athletics.Size = new System.Drawing.Size(32, 30);
+            this.Athletics.TabIndex = 59;
+            this.Athletics.Text = "";
             // 
-            // ARCButton
+            // ArcanaButton
             // 
-            this.ARCButton.AutoSize = true;
-            this.ARCButton.Location = new System.Drawing.Point(159, 242);
-            this.ARCButton.Name = "ARCButton";
-            this.ARCButton.Size = new System.Drawing.Size(17, 16);
-            this.ARCButton.TabIndex = 58;
-            this.ARCButton.TabStop = true;
-            this.ARCButton.UseVisualStyleBackColor = true;
+            this.ArcanaButton.AutoSize = true;
+            this.ArcanaButton.Location = new System.Drawing.Point(159, 242);
+            this.ArcanaButton.Name = "ArcanaButton";
+            this.ArcanaButton.Size = new System.Drawing.Size(17, 16);
+            this.ArcanaButton.TabIndex = 58;
+            this.ArcanaButton.TabStop = true;
+            this.ArcanaButton.UseVisualStyleBackColor = true;
+            // 
+            // Arca
+            // 
+            this.Arca.AutoSize = true;
+            this.Arca.BackColor = System.Drawing.Color.Transparent;
+            this.Arca.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Arca.Location = new System.Drawing.Point(220, 236);
+            this.Arca.Name = "Arca";
+            this.Arca.Size = new System.Drawing.Size(75, 22);
+            this.Arca.TabIndex = 57;
+            this.Arca.Text = "Arcana";
             // 
             // Arcana
             // 
-            this.Arcana.AutoSize = true;
-            this.Arcana.BackColor = System.Drawing.Color.Transparent;
-            this.Arcana.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Arcana.Location = new System.Drawing.Point(220, 236);
-            this.Arcana.Name = "Arcana";
-            this.Arcana.Size = new System.Drawing.Size(75, 22);
-            this.Arcana.TabIndex = 57;
-            this.Arcana.Text = "Arcana";
-            // 
-            // Arc
-            // 
-            this.Arc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Arcana.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Arc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Arc.Location = new System.Drawing.Point(182, 236);
-            this.Arc.Name = "Arc";
-            this.Arc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Arc.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.Arc.Size = new System.Drawing.Size(32, 30);
-            this.Arc.TabIndex = 56;
-            this.Arc.Text = "";
+            this.Arcana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Arcana.Location = new System.Drawing.Point(182, 236);
+            this.Arcana.Name = "Arcana";
+            this.Arcana.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Arcana.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Arcana.Size = new System.Drawing.Size(32, 30);
+            this.Arcana.TabIndex = 56;
+            this.Arcana.Text = "";
             // 
             // IntimidationButton
             // 
@@ -1628,11 +1631,20 @@
             this.Bonds.TabIndex = 133;
             this.Bonds.Text = "";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.AcrobaticsButton);
+            this.panel1.Location = new System.Drawing.Point(151, 180);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(25, 24);
+            this.panel1.TabIndex = 137;
+            // 
             // LoadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(964, 789);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label51);
             this.Controls.Add(this.Flaws);
             this.Controls.Add(this.label52);
@@ -1708,19 +1720,18 @@
             this.Controls.Add(this.DeceptionButton);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.Deception);
-            this.Controls.Add(this.AthButton);
+            this.Controls.Add(this.AthleticsButton);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.Ath);
-            this.Controls.Add(this.ARCButton);
+            this.Controls.Add(this.Athletics);
+            this.Controls.Add(this.ArcanaButton);
+            this.Controls.Add(this.Arca);
             this.Controls.Add(this.Arcana);
-            this.Controls.Add(this.Arc);
             this.Controls.Add(this.AHButton);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.AH);
-            this.Controls.Add(this.AcroButton);
+            this.Controls.Add(this.AnimalHandling);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.Acro);
+            this.Controls.Add(this.Acrobatics);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.STCHA);
             this.Controls.Add(this.label17);
@@ -1762,6 +1773,8 @@
             this.Name = "LoadForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "LoadForm";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1807,18 +1820,18 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.RichTextBox STWIS;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.RichTextBox Acro;
+        private System.Windows.Forms.RichTextBox Acrobatics;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.RadioButton AcroButton;
+        private System.Windows.Forms.RadioButton AcrobaticsButton;
         private System.Windows.Forms.RadioButton AHButton;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.RichTextBox AH;
-        private System.Windows.Forms.RadioButton AthButton;
+        private System.Windows.Forms.RichTextBox AnimalHandling;
+        private System.Windows.Forms.RadioButton AthleticsButton;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.RichTextBox Ath;
-        private System.Windows.Forms.RadioButton ARCButton;
-        private System.Windows.Forms.Label Arcana;
-        private System.Windows.Forms.RichTextBox Arc;
+        private System.Windows.Forms.RichTextBox Athletics;
+        private System.Windows.Forms.RadioButton ArcanaButton;
+        private System.Windows.Forms.Label Arca;
+        private System.Windows.Forms.RichTextBox Arcana;
         private System.Windows.Forms.RadioButton IntimidationButton;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.RichTextBox Intimidation;
@@ -1894,5 +1907,6 @@
         private System.Windows.Forms.RichTextBox Flaws;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.RichTextBox Bonds;
+        private System.Windows.Forms.Panel panel1;
     }
 }
