@@ -185,6 +185,7 @@
             // choice1a
             // 
             this.choice1a.AutoSize = true;
+            this.choice1a.Cursor = System.Windows.Forms.Cursors.Hand;
             this.choice1a.Location = new System.Drawing.Point(54, 25);
             this.choice1a.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice1a.Name = "choice1a";
@@ -198,6 +199,7 @@
             // choice3a
             // 
             this.choice3a.AutoSize = true;
+            this.choice3a.Cursor = System.Windows.Forms.Cursors.Hand;
             this.choice3a.Location = new System.Drawing.Point(39, 45);
             this.choice3a.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice3a.Name = "choice3a";
@@ -211,6 +213,7 @@
             // choice3b
             // 
             this.choice3b.AutoSize = true;
+            this.choice3b.Cursor = System.Windows.Forms.Cursors.Hand;
             this.choice3b.Location = new System.Drawing.Point(39, 88);
             this.choice3b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice3b.Name = "choice3b";
@@ -223,6 +226,7 @@
             // choice4a
             // 
             this.choice4a.AutoSize = true;
+            this.choice4a.Cursor = System.Windows.Forms.Cursors.Hand;
             this.choice4a.Location = new System.Drawing.Point(22, 16);
             this.choice4a.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice4a.Name = "choice4a";
@@ -236,6 +240,7 @@
             // choice4b
             // 
             this.choice4b.AutoSize = true;
+            this.choice4b.Cursor = System.Windows.Forms.Cursors.Hand;
             this.choice4b.Location = new System.Drawing.Point(22, 61);
             this.choice4b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice4b.Name = "choice4b";
@@ -248,6 +253,7 @@
             // choice5a
             // 
             this.choice5a.AutoSize = true;
+            this.choice5a.Cursor = System.Windows.Forms.Cursors.Hand;
             this.choice5a.Location = new System.Drawing.Point(26, 20);
             this.choice5a.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice5a.Name = "choice5a";
@@ -261,6 +267,7 @@
             // choice5b
             // 
             this.choice5b.AutoSize = true;
+            this.choice5b.Cursor = System.Windows.Forms.Cursors.Hand;
             this.choice5b.Location = new System.Drawing.Point(26, 67);
             this.choice5b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice5b.Name = "choice5b";
@@ -273,6 +280,7 @@
             // choice6b
             // 
             this.choice6b.AutoSize = true;
+            this.choice6b.Cursor = System.Windows.Forms.Cursors.Hand;
             this.choice6b.Location = new System.Drawing.Point(20, 67);
             this.choice6b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice6b.Name = "choice6b";
@@ -285,6 +293,7 @@
             // choice2a
             // 
             this.choice2a.AutoSize = true;
+            this.choice2a.Cursor = System.Windows.Forms.Cursors.Hand;
             this.choice2a.Location = new System.Drawing.Point(4, 14);
             this.choice2a.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice2a.Name = "choice2a";
@@ -298,6 +307,7 @@
             // choice6a
             // 
             this.choice6a.AutoSize = true;
+            this.choice6a.Cursor = System.Windows.Forms.Cursors.Hand;
             this.choice6a.Location = new System.Drawing.Point(20, 20);
             this.choice6a.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice6a.Name = "choice6a";
@@ -322,6 +332,7 @@
             // choice1b
             // 
             this.choice1b.AutoSize = true;
+            this.choice1b.Cursor = System.Windows.Forms.Cursors.Hand;
             this.choice1b.Location = new System.Drawing.Point(54, 67);
             this.choice1b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice1b.Name = "choice1b";
@@ -334,6 +345,7 @@
             // choice2b
             // 
             this.choice2b.AutoSize = true;
+            this.choice2b.Cursor = System.Windows.Forms.Cursors.Hand;
             this.choice2b.Location = new System.Drawing.Point(4, 56);
             this.choice2b.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.choice2b.Name = "choice2b";
