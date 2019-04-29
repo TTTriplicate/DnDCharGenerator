@@ -182,11 +182,11 @@ namespace DnDClassesTest
 
             if (this._class.ProfessionName() == "Cleric")
             {
-                CharGear gear = new CharGear(this._class.ProfessionName(), CharBackground.Background, AbilityModifiers()[1], this._class._proPath);
+                this.gear = new CharGear(this._class.ProfessionName(), CharBackground.Background, AbilityModifiers()[1], this._class._proPath);
             }
             else
             {
-                CharGear gear = new CharGear(this._class.ProfessionName(), CharBackground.Background, AbilityModifiers()[1]);
+                this.gear = new CharGear(this._class.ProfessionName(), CharBackground.Background, AbilityModifiers()[1]);
             }
             
             inventoryString = gear.getInventoryString();

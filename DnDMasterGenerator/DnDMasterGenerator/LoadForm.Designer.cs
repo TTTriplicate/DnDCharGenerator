@@ -154,7 +154,41 @@
             this.label52 = new System.Windows.Forms.Label();
             this.Bonds = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel18.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -626,6 +660,7 @@
             this.Acrobatics.Size = new System.Drawing.Size(32, 30);
             this.Acrobatics.TabIndex = 49;
             this.Acrobatics.Text = "";
+            this.Acrobatics.TextChanged += new System.EventHandler(this.Acrobatics_TextChanged);
             // 
             // label19
             // 
@@ -651,7 +686,7 @@
             // AHButton
             // 
             this.AHButton.AutoSize = true;
-            this.AHButton.Location = new System.Drawing.Point(159, 213);
+            this.AHButton.Location = new System.Drawing.Point(5, 5);
             this.AHButton.Name = "AHButton";
             this.AHButton.Size = new System.Drawing.Size(17, 16);
             this.AHButton.TabIndex = 55;
@@ -686,7 +721,7 @@
             // AthleticsButton
             // 
             this.AthleticsButton.AutoSize = true;
-            this.AthleticsButton.Location = new System.Drawing.Point(159, 275);
+            this.AthleticsButton.Location = new System.Drawing.Point(5, 5);
             this.AthleticsButton.Name = "AthleticsButton";
             this.AthleticsButton.Size = new System.Drawing.Size(17, 16);
             this.AthleticsButton.TabIndex = 61;
@@ -721,7 +756,7 @@
             // ArcanaButton
             // 
             this.ArcanaButton.AutoSize = true;
-            this.ArcanaButton.Location = new System.Drawing.Point(159, 242);
+            this.ArcanaButton.Location = new System.Drawing.Point(5, 5);
             this.ArcanaButton.Name = "ArcanaButton";
             this.ArcanaButton.Size = new System.Drawing.Size(17, 16);
             this.ArcanaButton.TabIndex = 58;
@@ -756,7 +791,7 @@
             // IntimidationButton
             // 
             this.IntimidationButton.AutoSize = true;
-            this.IntimidationButton.Location = new System.Drawing.Point(159, 403);
+            this.IntimidationButton.Location = new System.Drawing.Point(5, 5);
             this.IntimidationButton.Name = "IntimidationButton";
             this.IntimidationButton.Size = new System.Drawing.Size(17, 16);
             this.IntimidationButton.TabIndex = 73;
@@ -791,7 +826,7 @@
             // InsightButton
             // 
             this.InsightButton.AutoSize = true;
-            this.InsightButton.Location = new System.Drawing.Point(159, 370);
+            this.InsightButton.Location = new System.Drawing.Point(3, 5);
             this.InsightButton.Name = "InsightButton";
             this.InsightButton.Size = new System.Drawing.Size(17, 16);
             this.InsightButton.TabIndex = 70;
@@ -826,7 +861,7 @@
             // HistoryButton
             // 
             this.HistoryButton.AutoSize = true;
-            this.HistoryButton.Location = new System.Drawing.Point(159, 341);
+            this.HistoryButton.Location = new System.Drawing.Point(5, 5);
             this.HistoryButton.Name = "HistoryButton";
             this.HistoryButton.Size = new System.Drawing.Size(17, 16);
             this.HistoryButton.TabIndex = 67;
@@ -861,7 +896,7 @@
             // DeceptionButton
             // 
             this.DeceptionButton.AutoSize = true;
-            this.DeceptionButton.Location = new System.Drawing.Point(159, 308);
+            this.DeceptionButton.Location = new System.Drawing.Point(5, 5);
             this.DeceptionButton.Name = "DeceptionButton";
             this.DeceptionButton.Size = new System.Drawing.Size(17, 16);
             this.DeceptionButton.TabIndex = 64;
@@ -896,7 +931,7 @@
             // SleightOfHandButton
             // 
             this.SleightOfHandButton.AutoSize = true;
-            this.SleightOfHandButton.Location = new System.Drawing.Point(159, 660);
+            this.SleightOfHandButton.Location = new System.Drawing.Point(5, 5);
             this.SleightOfHandButton.Name = "SleightOfHandButton";
             this.SleightOfHandButton.Size = new System.Drawing.Size(17, 16);
             this.SleightOfHandButton.TabIndex = 97;
@@ -931,7 +966,7 @@
             // ReligionButton
             // 
             this.ReligionButton.AutoSize = true;
-            this.ReligionButton.Location = new System.Drawing.Point(159, 627);
+            this.ReligionButton.Location = new System.Drawing.Point(5, 5);
             this.ReligionButton.Name = "ReligionButton";
             this.ReligionButton.Size = new System.Drawing.Size(17, 16);
             this.ReligionButton.TabIndex = 94;
@@ -966,7 +1001,7 @@
             // PersuasionButton
             // 
             this.PersuasionButton.AutoSize = true;
-            this.PersuasionButton.Location = new System.Drawing.Point(159, 598);
+            this.PersuasionButton.Location = new System.Drawing.Point(5, 4);
             this.PersuasionButton.Name = "PersuasionButton";
             this.PersuasionButton.Size = new System.Drawing.Size(17, 16);
             this.PersuasionButton.TabIndex = 91;
@@ -1001,7 +1036,7 @@
             // PerformanceButton
             // 
             this.PerformanceButton.AutoSize = true;
-            this.PerformanceButton.Location = new System.Drawing.Point(159, 565);
+            this.PerformanceButton.Location = new System.Drawing.Point(5, 5);
             this.PerformanceButton.Name = "PerformanceButton";
             this.PerformanceButton.Size = new System.Drawing.Size(17, 16);
             this.PerformanceButton.TabIndex = 88;
@@ -1036,7 +1071,7 @@
             // PerceptionButton
             // 
             this.PerceptionButton.AutoSize = true;
-            this.PerceptionButton.Location = new System.Drawing.Point(159, 532);
+            this.PerceptionButton.Location = new System.Drawing.Point(5, 5);
             this.PerceptionButton.Name = "PerceptionButton";
             this.PerceptionButton.Size = new System.Drawing.Size(17, 16);
             this.PerceptionButton.TabIndex = 85;
@@ -1071,7 +1106,7 @@
             // NatureButton
             // 
             this.NatureButton.AutoSize = true;
-            this.NatureButton.Location = new System.Drawing.Point(159, 499);
+            this.NatureButton.Location = new System.Drawing.Point(5, 4);
             this.NatureButton.Name = "NatureButton";
             this.NatureButton.Size = new System.Drawing.Size(17, 16);
             this.NatureButton.TabIndex = 82;
@@ -1107,7 +1142,7 @@
             // MedicineButton
             // 
             this.MedicineButton.AutoSize = true;
-            this.MedicineButton.Location = new System.Drawing.Point(159, 470);
+            this.MedicineButton.Location = new System.Drawing.Point(3, 5);
             this.MedicineButton.Name = "MedicineButton";
             this.MedicineButton.Size = new System.Drawing.Size(17, 16);
             this.MedicineButton.TabIndex = 79;
@@ -1142,7 +1177,7 @@
             // InvestigationButton
             // 
             this.InvestigationButton.AutoSize = true;
-            this.InvestigationButton.Location = new System.Drawing.Point(159, 437);
+            this.InvestigationButton.Location = new System.Drawing.Point(5, 5);
             this.InvestigationButton.Name = "InvestigationButton";
             this.InvestigationButton.Size = new System.Drawing.Size(17, 16);
             this.InvestigationButton.TabIndex = 76;
@@ -1177,7 +1212,7 @@
             // SurvivalButton
             // 
             this.SurvivalButton.AutoSize = true;
-            this.SurvivalButton.Location = new System.Drawing.Point(159, 726);
+            this.SurvivalButton.Location = new System.Drawing.Point(5, 5);
             this.SurvivalButton.Name = "SurvivalButton";
             this.SurvivalButton.Size = new System.Drawing.Size(17, 16);
             this.SurvivalButton.TabIndex = 103;
@@ -1212,7 +1247,7 @@
             // StealthButton
             // 
             this.StealthButton.AutoSize = true;
-            this.StealthButton.Location = new System.Drawing.Point(159, 693);
+            this.StealthButton.Location = new System.Drawing.Point(5, 5);
             this.StealthButton.Name = "StealthButton";
             this.StealthButton.Size = new System.Drawing.Size(17, 16);
             this.StealthButton.TabIndex = 100;
@@ -1639,11 +1674,164 @@
             this.panel1.Size = new System.Drawing.Size(25, 24);
             this.panel1.TabIndex = 137;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.AHButton);
+            this.panel2.Location = new System.Drawing.Point(151, 210);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(25, 24);
+            this.panel2.TabIndex = 138;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.ArcanaButton);
+            this.panel3.Location = new System.Drawing.Point(151, 240);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(25, 24);
+            this.panel3.TabIndex = 139;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.AthleticsButton);
+            this.panel4.Location = new System.Drawing.Point(151, 270);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(25, 24);
+            this.panel4.TabIndex = 140;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.DeceptionButton);
+            this.panel5.Location = new System.Drawing.Point(151, 302);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(25, 24);
+            this.panel5.TabIndex = 141;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.HistoryButton);
+            this.panel6.Location = new System.Drawing.Point(151, 337);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(25, 24);
+            this.panel6.TabIndex = 142;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.InsightButton);
+            this.panel7.Location = new System.Drawing.Point(151, 367);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(25, 24);
+            this.panel7.TabIndex = 143;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.IntimidationButton);
+            this.panel8.Location = new System.Drawing.Point(151, 400);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(25, 24);
+            this.panel8.TabIndex = 144;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.InvestigationButton);
+            this.panel9.Location = new System.Drawing.Point(151, 431);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(25, 24);
+            this.panel9.TabIndex = 145;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.MedicineButton);
+            this.panel10.Location = new System.Drawing.Point(151, 464);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(25, 24);
+            this.panel10.TabIndex = 146;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.NatureButton);
+            this.panel11.Location = new System.Drawing.Point(151, 499);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(25, 24);
+            this.panel11.TabIndex = 147;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.PerceptionButton);
+            this.panel12.Location = new System.Drawing.Point(151, 532);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(25, 24);
+            this.panel12.TabIndex = 148;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.PerformanceButton);
+            this.panel13.Location = new System.Drawing.Point(151, 562);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(25, 24);
+            this.panel13.TabIndex = 149;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.PersuasionButton);
+            this.panel14.Location = new System.Drawing.Point(151, 594);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(25, 24);
+            this.panel14.TabIndex = 150;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.ReligionButton);
+            this.panel15.Location = new System.Drawing.Point(151, 624);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(25, 24);
+            this.panel15.TabIndex = 151;
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.SleightOfHandButton);
+            this.panel16.Location = new System.Drawing.Point(151, 654);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(25, 24);
+            this.panel16.TabIndex = 152;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.StealthButton);
+            this.panel17.Location = new System.Drawing.Point(151, 687);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(25, 24);
+            this.panel17.TabIndex = 153;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.SurvivalButton);
+            this.panel18.Location = new System.Drawing.Point(151, 720);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(25, 24);
+            this.panel18.TabIndex = 154;
+            // 
             // LoadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(964, 789);
+            this.Controls.Add(this.panel18);
+            this.Controls.Add(this.panel17);
+            this.Controls.Add(this.panel16);
+            this.Controls.Add(this.panel15);
+            this.Controls.Add(this.panel14);
+            this.Controls.Add(this.panel13);
+            this.Controls.Add(this.panel12);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label51);
             this.Controls.Add(this.Flaws);
@@ -1678,55 +1866,38 @@
             this.Controls.Add(this.label37);
             this.Controls.Add(this.ArmorClass);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.SurvivalButton);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.Survival);
-            this.Controls.Add(this.StealthButton);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.Stealth);
-            this.Controls.Add(this.SleightOfHandButton);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.SleightOfHand);
-            this.Controls.Add(this.ReligionButton);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.Religion);
-            this.Controls.Add(this.PersuasionButton);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.Persuasion);
-            this.Controls.Add(this.PerformanceButton);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.Performance);
-            this.Controls.Add(this.PerceptionButton);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.Perception);
-            this.Controls.Add(this.NatureButton);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.Nature);
-            this.Controls.Add(this.MedicineButton);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.Medicine);
-            this.Controls.Add(this.InvestigationButton);
             this.Controls.Add(this.label34);
             this.Controls.Add(this.Investigation);
-            this.Controls.Add(this.IntimidationButton);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.Intimidation);
-            this.Controls.Add(this.InsightButton);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.Insight);
-            this.Controls.Add(this.HistoryButton);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.History);
-            this.Controls.Add(this.DeceptionButton);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.Deception);
-            this.Controls.Add(this.AthleticsButton);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.Athletics);
-            this.Controls.Add(this.ArcanaButton);
             this.Controls.Add(this.Arca);
             this.Controls.Add(this.Arcana);
-            this.Controls.Add(this.AHButton);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.AnimalHandling);
             this.Controls.Add(this.label19);
@@ -1775,6 +1946,40 @@
             this.Text = "LoadForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1908,5 +2113,22 @@
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.RichTextBox Bonds;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel18;
     }
 }
