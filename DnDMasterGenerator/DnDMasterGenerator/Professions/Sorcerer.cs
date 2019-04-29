@@ -26,6 +26,8 @@ namespace DnDClassesTest
         protected override List<string> Features
         {            get; set;        }
 
+        public override List<string> CurrFeatures { get; set; }
+
         public Sorcerer()
         {
             this._level = 1;
@@ -42,6 +44,7 @@ namespace DnDClassesTest
             this._proPath = path;
             this._numProSkills = 2;
             this.Features = this.ClassFeatures();
+            this.CurrFeatures = this.CurrentFeatures();
             this.MetaSelect = new int[5] { -1, -1, -1, -1, -1 };
         }
         public override bool[] ClassSkills()
@@ -72,7 +75,7 @@ namespace DnDClassesTest
             return 2 + (this._level / 5);
         }
 
-        public override List<string> ClassFeatures()
+        protected override List<string> ClassFeatures()
         {
             List<string> features = new List<string>();
             String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\SorcererClassFeatures.txt");
@@ -89,7 +92,7 @@ namespace DnDClassesTest
 
 
 
-        public override bool[] Unlocked()
+        protected override bool[] Unlocked()
         {
             bool[] unlocked = new bool[7]/*{ false, false, false, false, false, false, false, false }*/;
             unlocked[0] = true;         //false is the default, shouldn't need that
@@ -102,14 +105,18 @@ namespace DnDClassesTest
             return unlocked;
         }
 
-        public override List<string> CurrentFeatures()
+        protected override List<string> CurrentFeatures()
         {
             List<string> current = new List<string>();
             bool[] unlock = this.Unlocked();
             int i;
             for (i = 0; i < 7; ++i)
             {
-                if (!unlock[i]) break;
+                if (!unlock[i])
+                {
+                    --i;
+                    break;
+                }
             }
             if (_proPath == 0) current = Features.GetRange(3, 2);
             else current = Features.GetRange(9, 2);

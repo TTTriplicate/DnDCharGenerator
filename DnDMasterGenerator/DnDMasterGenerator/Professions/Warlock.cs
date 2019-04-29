@@ -25,7 +25,7 @@ namespace DnDClassesTest
         }
         protected override List<string> Features
         { get; set; }
-        
+
         //add patron? int(0-2) to pick between the three
         public Warlock()
         {
@@ -44,6 +44,7 @@ namespace DnDClassesTest
             this._proPath = path;
             this._numProSkills = 2;
             this.Features = this.ClassFeatures();
+            this.CurrFeatures = this.CurrentFeatures();
             this.IndexedInvocations = new List<int>();
             this.PactBoon = -1;
         }
@@ -78,7 +79,7 @@ namespace DnDClassesTest
             return 2 + (this._level / 5);
         }
 
-        public override List<string> ClassFeatures()
+        protected override List<string> ClassFeatures()
         {
             List<string> features = new List<string>();
             String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\WarlockClassFeatures.txt");
@@ -93,9 +94,11 @@ namespace DnDClassesTest
             return features;
         }
 
+        public override List<string> CurrFeatures { get; set; }
 
 
-        public override bool[] Unlocked()
+
+        protected override bool[] Unlocked()
         {
             bool[] unlocked = new bool[8]/*{ false, false, false, false, false, false, false, false }*/;
             unlocked[0] = true;         //false is the default, shouldn't need that
@@ -109,7 +112,7 @@ namespace DnDClassesTest
             return unlocked;
         }
 
-        public override List<string> CurrentFeatures()
+        protected override List<string> CurrentFeatures()
         {
             List<string> current = new List<string>();
             bool[] unlock = this.Unlocked();

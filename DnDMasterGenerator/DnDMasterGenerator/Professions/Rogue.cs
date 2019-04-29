@@ -23,6 +23,8 @@ namespace DnDClassesTest
         }
         protected override List<string> Features { get; set; }
 
+        public override List<string> CurrFeatures { get; set; }
+
         public Rogue()
         {
             this._level = 1;
@@ -39,6 +41,8 @@ namespace DnDClassesTest
             this._caster = (path == 2) ? true : false;
             this._numProSkills = 4;
             this.Features = this.ClassFeatures();
+            this.CurrFeatures = this.CurrentFeatures();
+
         }
         public override bool[] ClassSkills()
         {//Acrobatics, Athletics, Deception. Insight, Intimidation, Investigation,
@@ -72,7 +76,7 @@ namespace DnDClassesTest
             return 2 + (this._level / 5);
         }
 
-        public override List<string> ClassFeatures()
+        protected override List<string> ClassFeatures()
         {
             List<string> features = new List<string>();
             String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\RogueClassFeatures.txt");
@@ -90,7 +94,7 @@ namespace DnDClassesTest
 
 
 
-        public override bool[] Unlocked()
+        protected override bool[] Unlocked()
         {
             bool[] unlocked = new bool[12]/*{ false, false, false, false, false, false, false, false }*/;
             unlocked[0] = true;         //false is the default, shouldn't need that
@@ -109,14 +113,18 @@ namespace DnDClassesTest
             return unlocked;
         }
 
-        public override List<string> CurrentFeatures()
+        protected override List<string> CurrentFeatures()
         {
             List<string> current = new List<string>();
             bool[] unlock = this.Unlocked();
             int i;
             for (i = 1; i <= 12; ++i)
             {
-                if (!unlock[i]) break;
+                if (!unlock[i])
+                {
+                    --i;
+                    break;
+                }
             }
             current = Features.GetRange(0, 2);
             if (i == 1) current = Features.GetRange(0, 3);

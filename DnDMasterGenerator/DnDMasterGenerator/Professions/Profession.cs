@@ -82,15 +82,17 @@ namespace DnDClassesTest
         }
         protected abstract List<string> Features { get; set; }
 
-        public abstract List<string> CurrentFeatures();
+        public abstract List<string> CurrFeatures { get; set; }
+
+        protected abstract List<string> CurrentFeatures();
 
         public abstract bool[] ClassSkills();
 
-        public abstract bool[] Unlocked();
+        protected abstract bool[] Unlocked();
 
         public abstract bool[] SavingThrows();
 
-        public abstract List<string> ClassFeatures();
+        protected abstract List<string> ClassFeatures();
 
         public static Profession InteractiveChoice(out int[] abilities, out string name, out string playerName)
         {
