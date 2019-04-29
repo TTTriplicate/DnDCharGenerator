@@ -66,8 +66,8 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.BackColor = System.Drawing.Color.Transparent;
-            this.lblWelcome.Font = new System.Drawing.Font("Baskerville Old Face", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(10, 54);
+            this.lblWelcome.Font = new System.Drawing.Font("Baskerville Old Face", 11F);
+            this.lblWelcome.Location = new System.Drawing.Point(3, 53);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(488, 22);
             this.lblWelcome.TabIndex = 2;
