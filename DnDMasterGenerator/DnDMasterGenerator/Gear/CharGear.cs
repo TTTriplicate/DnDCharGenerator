@@ -848,10 +848,5 @@ namespace DnDClassesTest
             }
             return AC;
         }
-
-        public int getATKBonus(Weapon a, DnDCharacter b)
-        {
-            return a.calcATKBonus(b);
-        }
     }
 }

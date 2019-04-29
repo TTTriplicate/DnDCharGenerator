@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DnDClassesTest
 {
@@ -32,7 +33,7 @@ namespace DnDClassesTest
             this._hitDie = 8;
             this._caster = true;
             this._numProSkills = 2;
-            this.Invocations = new List<int>();
+            this.IndexedInvocations = new List<int>();
         }
 
         public Warlock(int level, int path)
@@ -43,7 +44,7 @@ namespace DnDClassesTest
             this._proPath = path;
             this._numProSkills = 2;
             this.Features = this.ClassFeatures();
-            this.Invocations = new List<int>();
+            this.IndexedInvocations = new List<int>();
             this.PactBoon = -1;
         }
         public override bool[] ClassSkills()
@@ -70,7 +71,7 @@ namespace DnDClassesTest
 
         private int PactBoon { get; set; }
 
-        private List<int> Invocations { get; set; }
+        private List<int> IndexedInvocations { get; set; }
 
         public int ProficiencyBonus()
         {//passes the proficiency bonus to main function
@@ -115,7 +116,11 @@ namespace DnDClassesTest
             int i;
             for (i = 0; i < 8; ++i)
             {
-                if (!unlock[i]) break;
+                if (!unlock[i])
+                {
+                    --i;
+                    break;
+                }
             }
             if (i >= 1)
             {
@@ -202,27 +207,32 @@ namespace DnDClassesTest
             }
             if (PactBoon == 2) invocations.Add(Features[48]);
             //pact of the tome adds it's invocation
-            if (this.Invocations.Any())
+            if (this.IndexedInvocations.Any())
             {//if any int indicating selected invocations,
-                this.Invocations.Sort();//sort them
+            //    this.IndexedInvocations.Sort();//sort them
             /*    for(int i = 0; i < this.Invocations.Count(); ++i)
                 {//adjust indicies for preceding items in list being removed
                     if (this.Invocations[i] > 0) this.Invocations[i] -= i;
                     if (this.Invocations[i] < 0) this.Invocations[i] = 0;
                 }//prevent indexoutofrange*/
-                this.Invocations.Reverse();//swap List orientation
+       //         this.IndexedInvocations.Reverse();//swap List orientation
                 //should do this OR offset, not both
 
                 //but neither, one, the other, AND both failed
-                foreach (int i in this.Invocations)
+                foreach (int i in this.IndexedInvocations)
+                {//works back to front due to reversed sorted ints
+   //                 Console.WriteLine(i);
+  //                  Console.WriteLine(invocations[i].Split(':'));
                     invocations.RemoveAt(i);//pull those indicies
+                }
             }
 
             var sel = new PickOne(invocations);
             var result = sel.ShowDialog();
-            if (result == System.Windows.Forms.DialogResult.OK)
+            if (result == DialogResult.OK)
             {
-                this.Invocations.Add(sel.Selected);
+                this.IndexedInvocations.Add(sel.Selected);
+                    Console.WriteLine(sel.Selected);
                 return sel.Choices[sel.Selected];
             }
             else return InvocationSelect(currLevel);
