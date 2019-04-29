@@ -145,5 +145,10 @@ namespace DnDClassesTest
         {
 
         }
+
+        private void txtBackground_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

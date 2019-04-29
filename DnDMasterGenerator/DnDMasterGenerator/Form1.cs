@@ -21,7 +21,8 @@ namespace DnDClassesTest
         {
             this.Hide();
             DnDCharacter NewChar = new DnDCharacter();
-            var sheet = new CharSheet(NewChar);
+            //var sheet = new CharSheet(NewChar);
+            var sheet = new LoadForm(NewChar);
             sheet.ShowDialog();
             this.Close();
         }
