@@ -49,7 +49,7 @@ namespace DnDClassesTest
                 case 5:
                     lblSubClass.Text = "Choose a Discipline";
                     lblSubClass.Visible = true;
-                    comboSubClass.DataSource = new List<string> { "Way of the Open Hand", "Way of Shadows" };
+                    comboSubClass.DataSource = new List<string> { "Way of the Open Hand", "Way of Shadows", "Way of Four Elements" };
                     break;
                 case 6:
                     lblSubClass.Text = "Select an Oath:";

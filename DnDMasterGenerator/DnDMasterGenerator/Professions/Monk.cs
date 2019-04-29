@@ -44,9 +44,9 @@ namespace DnDClassesTest
             this._caster = false;
             this._proPath = path;
             this._numProSkills = 2;
+            this.ElementSelect = new List<int>();
             this.Features = this.ClassFeatures();
             this.CurrFeatures = this.CurrentFeatures();
-            this.ElementSelect = new List<int>();
 
         }
         public override bool[] ClassSkills()
@@ -163,9 +163,9 @@ namespace DnDClassesTest
                     current.Add(Features[28]);
                     current.Add(ElementSelector(Features.GetRange(29, 8)));
                 }
-                if (i >= 5) current.Add(Features[25]);
-                if (i >= 8) current.Add(Features[26]);
-                if (i >= 12) current.Add(Features[27]);
+                if (i >= 5) current.Add(ElementSelector(Features.GetRange(29, 10)));
+                if (i >= 8) current.Add(ElementSelector(Features.GetRange(29, 13)));
+                if (i >= 12) current.Add(ElementSelector(Features.GetRange(29, 16)));
 
             }
 
