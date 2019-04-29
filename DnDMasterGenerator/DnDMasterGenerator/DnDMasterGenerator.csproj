@@ -66,12 +66,6 @@
       <DependentUpon>BackgroundForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Character.cs" />
-    <Compile Include="CharSheet.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CharSheet.designer.cs">
-      <DependentUpon>CharSheet.cs</DependentUpon>
-    </Compile>
     <Compile Include="loader.cs" />
     <Compile Include="LoadForm.cs">
       <SubType>Form</SubType>
@@ -154,9 +148,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Background\BackgroundForm.resx">
       <DependentUpon>BackgroundForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CharSheet.resx">
-      <DependentUpon>CharSheet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoadForm.resx">
       <DependentUpon>LoadForm.cs</DependentUpon>
