@@ -1994,6 +1994,7 @@
             this.Name = "LoadForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "LoadForm";
+            this.Load += new System.EventHandler(this.LoadForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

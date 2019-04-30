@@ -18,6 +18,8 @@ namespace DnDClassesTest
             InitializeComponent();
         }
 
+        //public
+
         public LoadForm(DnDCharacter leeroy)
         {
             //Top Fields
@@ -279,6 +281,10 @@ namespace DnDClassesTest
             }
             else if (DisplayChar._level == 20)
                 MessageBox.Show("Your character is already at the highest level!", "Max Level");
+        }
+            private void LoadForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
