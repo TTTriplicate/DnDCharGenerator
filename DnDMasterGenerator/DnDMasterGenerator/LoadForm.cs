@@ -291,7 +291,19 @@ namespace DnDClassesTest
 
         }
 
-        private void LoadForm_Load(object sender, EventArgs e)
+        private void btnLevelUp_Click(object sender, EventArgs e)
+        {
+            if (DisplayChar.LevelUp())
+            {
+                var updated = new LoadForm(DisplayChar);
+                this.Hide();
+                updated.ShowDialog();
+                this.Close();
+            }
+            else if (DisplayChar._level == 20)
+                MessageBox.Show("Your character is already at the highest level!", "Max Level");
+        }
+            private void LoadForm_Load(object sender, EventArgs e)
         {
 
         }

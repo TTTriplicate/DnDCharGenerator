@@ -45,6 +45,7 @@ namespace DnDClassesTest
             this._numProSkills = 2;
             this.Features = this.ClassFeatures();
             this.CurrFeatures = this.CurrentFeatures();
+            this._abilityScoreIncrease = new int[5] { 4, 8, 12, 16, 19 };
             this.IndexedInvocations = new List<int>();
             this.PactBoon = -1;
         }
@@ -212,20 +213,8 @@ namespace DnDClassesTest
             //pact of the tome adds it's invocation
             if (this.IndexedInvocations.Any())
             {//if any int indicating selected invocations,
-            //    this.IndexedInvocations.Sort();//sort them
-            /*    for(int i = 0; i < this.Invocations.Count(); ++i)
-                {//adjust indicies for preceding items in list being removed
-                    if (this.Invocations[i] > 0) this.Invocations[i] -= i;
-                    if (this.Invocations[i] < 0) this.Invocations[i] = 0;
-                }//prevent indexoutofrange*/
-       //         this.IndexedInvocations.Reverse();//swap List orientation
-                //should do this OR offset, not both
-
-                //but neither, one, the other, AND both failed
                 foreach (int i in this.IndexedInvocations)
-                {//works back to front due to reversed sorted ints
-   //                 Console.WriteLine(i);
-  //                  Console.WriteLine(invocations[i].Split(':'));
+                {
                     invocations.RemoveAt(i);//pull those indicies
                 }
             }
@@ -241,7 +230,7 @@ namespace DnDClassesTest
             else return InvocationSelect(currLevel);
             
         }
-        //insert class feature methods here
+         public override bool LevelUp(){return true;}
 
     }
 }

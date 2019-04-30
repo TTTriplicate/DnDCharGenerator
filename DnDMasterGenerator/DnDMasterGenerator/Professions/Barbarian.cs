@@ -46,6 +46,8 @@ namespace DnDClassesTest
             this._proPath = path;
             this.Features = this.ClassFeatures();
             this.CurrFeatures = this.CurrentFeatures();
+            this._abilityScoreIncrease = new int[5] { 4, 8, 12, 16, 19 };
+
 
         }
         public override bool[] ClassSkills()
@@ -159,7 +161,7 @@ namespace DnDClassesTest
             return current;
         }
 
-        public int[] PrimalChampion()
+        public static int[] PrimalChampion()
         {
             int[] increase = new int[6] { 4, 0, 4, 0, 0, 0 };
             return increase;
@@ -176,6 +178,66 @@ namespace DnDClassesTest
             else
                 return this.TotemChoice(choices);
         }
+
+        public override bool LevelUp()
+        {
+            ++this._level;
+            if (this._level < 21)
+            {
+                bool[] check = this.Unlocked();
+                int i = 0;
+                for (i = 0; i < check.Length; ++i)
+                {
+                    if (!check[i])
+                    {
+                        --i;
+                        break;
+                    }
+                }
+                if (i == 1)
+                {
+                    this.CurrFeatures.Add(Features[2]);
+                    this.CurrFeatures.Add(Features[3]);
+                }
+                else if (i == 3)
+                {
+                    this.CurrFeatures.Add(Features[4]);
+                    this.CurrFeatures.Add(Features[5]);
+                }
+                else if (i == 5) this.CurrFeatures.Add(Features[6]);
+                else if (i == 6) this.CurrFeatures.Add(Features[7]);
+                else if (i == 8) this.CurrFeatures.Add(Features[8]);
+                else if (i == 10) this.CurrFeatures.Add(Features[9]);
+                else if (i == 11) this.CurrFeatures.Add(Features[10]);
+                else if (i == 12) this.CurrFeatures.Add(Features[11]);
+
+                if (_proPath == 0)
+                {
+                    if (i == 2) this.CurrFeatures.Add(Features[12]);
+                    if (i == 4) this.CurrFeatures.Add(Features[13]);
+                    if (i == 7) this.CurrFeatures.Add(Features[14]);
+                    if (i == 8) this.CurrFeatures.Add(Features[15]);
+                }
+                else if (_proPath == 1)
+                {
+                    if (i == 2)
+                    {
+                        this.CurrFeatures.Add(Features[16]);
+                        this.CurrFeatures.Add(Features[17]);
+                        this.CurrFeatures.Add(this.TotemChoice(Features.GetRange(18, 3)));
+                    }
+                    if (i == 4) this.CurrFeatures.Add(this.TotemChoice(Features.GetRange(21, 3)));
+                    if (i == 7) this.CurrFeatures.Add(Features[24]);
+                    if (i == 8) this.CurrFeatures.Add(this.TotemChoice(Features.GetRange(25, 3)));
+
+                }
+
+                return true;
+            }
+            else return false;
+            }
+        }
+
         //public static SkillSelect skillInteractive(int numSkills, bool[] skillRestrictions)
         //{
         //    SkillSelect form = new SkillSelect(numSkills, skillRestrictions);
@@ -187,4 +249,3 @@ namespace DnDClassesTest
         //    else return new SkillSelect(numSkills, skillRestrictions);
         //}
     }
-}

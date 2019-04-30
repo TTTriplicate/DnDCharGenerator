@@ -45,6 +45,7 @@ namespace DnDClassesTest
             this._proPath = path;
             this._numProSkills =(_proPath == 0 && _level >= 3)? 6 : 3;
             this.Features = this.ClassFeatures();
+            this._abilityScoreIncrease = new int[5] { 4, 8, 12, 16, 19 };
             this.CurrFeatures = this.CurrentFeatures();
         }
         public override bool[] ClassSkills()
@@ -120,24 +121,24 @@ namespace DnDClassesTest
             if (_proPath == 0)
             {
                 if (i < 2) return current;
-                if (i > 2)
+                if (i >= 2)
                 {
                     current.Add(Features[8]);
                     current.Add(Features[9]);
                 }
-                if (i > 4) current.Add(Features[10]);
-                if (i > 6) current.Add(Features[11]);
+                if (i >= 4) current.Add(Features[10]);
+                if (i >= 6) current.Add(Features[11]);
             }
             else if (_proPath == 1)
             {
                 if (i < 2) return current;
-                if (i > 2)
+                if (i >= 2)
                 {
                     current.Add(Features[12]);
                     current.Add(Features[13]);
                 }
-                if (i > 4) current.Add(Features[14]);
-                if (i > 6) current.Add(Features[15]);
+                if (i >= 4) current.Add(Features[14]);
+                if (i >= 6) current.Add(Features[15]);
             }
             return current;
         }
@@ -154,7 +155,54 @@ namespace DnDClassesTest
             }
             return nonPro;
         }
-        
+
+         public override bool LevelUp()
+        {
+            if (this._level < 20)
+            {
+                bool[] check = this.Unlocked();
+                int i;
+                for (i = 0; i < check.Length; ++i)
+                {
+                    if (!check[i])
+                    {
+                        --i;
+                        break;
+                    }
+                }
+                if (i == 1) CurrFeatures.Add(Features[2]);
+                else if (i == 2) CurrFeatures.Add(Features[3]);
+                else if (i == 3) CurrFeatures.Add(Features[4]);
+                else if (i == 4) CurrFeatures.Add(Features[5]);
+                else if (i == 5) CurrFeatures.Add(Features[6]);
+                else if (i == 7) CurrFeatures.Add(Features[7]);
+
+                if (_proPath == 0)
+                {
+                    if (i == 2)
+                    {
+                        CurrFeatures.Add(Features[8]);
+                        CurrFeatures.Add(Features[9]);
+                    }
+                    if (i == 4) CurrFeatures.Add(Features[10]);
+                    if (i == 6) CurrFeatures.Add(Features[11]);
+                }
+                else if (_proPath == 1)
+                {
+                    if (i == 2)
+                    {
+                        CurrFeatures.Add(Features[12]);
+                        CurrFeatures.Add(Features[13]);
+                    }
+                    if (i == 4) CurrFeatures.Add(Features[14]);
+                    if (i == 6) CurrFeatures.Add(Features[15]);
+                }
+                return true;
+            }
+
+            else return false;
+        }
+
         /*need to fill with all the crunch
          * stats and description for class features
          * IOT read against ClassFeatures bool[]
