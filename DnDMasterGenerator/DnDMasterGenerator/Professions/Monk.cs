@@ -190,7 +190,84 @@ namespace DnDClassesTest
             else return ElementSelector(options);
             
         }
-         public override bool LevelUp(){return true;}
+         public override bool LevelUp()
+        {
+            ++this._level;
+            if (this._level < 21)
+            {
+                bool[] check = this.Unlocked();
+                int i;
+                for (i = 0; i < check.Length; ++i)
+                {
+                    if (!check[i])
+                    {
+                        --i;
+                        break;
+                    }
+                }
+                if (i == 1)
+                {
+                    CurrFeatures.Add(Features[2]);
+                    CurrFeatures.Add(Features[3]);
+                    CurrFeatures.Add(Features[4]);
+                    CurrFeatures.Add(Features[5]);
+                    CurrFeatures.Add(Features[6]);
+                }
+                else if (i == 2) CurrFeatures.Add(Features[7]);
+                else if (i == 3) CurrFeatures.Add(Features[8]);
+                else if (i == 4)
+                {
+                    CurrFeatures.Add(Features[9]);
+                    CurrFeatures.Add(Features[10]);
+                }
+                else if (i == 5) CurrFeatures.Add(Features[11]);
+                else if (i == 6)
+                {
+                    CurrFeatures.Add(Features[12]);
+                    CurrFeatures.Add(Features[13]);
+                }
+                else if (i == 7) CurrFeatures.Add(Features[14]);
+                else if (i == 9) CurrFeatures.Add(Features[15]);
+                else if (i == 10) CurrFeatures.Add(Features[16]);
+                else if (i == 11) CurrFeatures.Add(Features[17]);
+                else if (i == 13) CurrFeatures.Add(Features[18]);
+                else if (i == 14) CurrFeatures.Add(Features[19]);
+
+                if (_proPath == 0)
+                {
+                    if (i == 2) CurrFeatures.Add(Features[20]);
+                    if (i == 5) CurrFeatures.Add(Features[21]);
+                    if (i == 8) CurrFeatures.Add(Features[22]);
+                    if (i == 12) CurrFeatures.Add(Features[23]);
+                }
+                else if (_proPath == 1)
+                {
+                    if (i == 2) CurrFeatures.Add(Features[24]);
+                    if (i == 5) CurrFeatures.Add(Features[25]);
+                    if (i == 8) CurrFeatures.Add(Features[26]);
+                    if (i == 12) CurrFeatures.Add(Features[27]);
+                }
+                else if (_proPath == 2)
+                {
+                    if (i == 2)
+                    {
+                        CurrFeatures.Add(Features[27]);
+                        CurrFeatures.Add(Features[28]);
+                        CurrFeatures.Add(ElementSelector(Features.GetRange(29, 8)));
+                    }
+                    if (i == 5) CurrFeatures.Add(ElementSelector(Features.GetRange(29, 10)));
+                    if (i == 8) CurrFeatures.Add(ElementSelector(Features.GetRange(29, 13)));
+                    if (i == 12) CurrFeatures.Add(ElementSelector(Features.GetRange(29, 16)));
+
+                }
+                return true;
+            }
+            else
+            {
+                --this._level;
+                return false;
+            }
+        }
 
     }
 }
