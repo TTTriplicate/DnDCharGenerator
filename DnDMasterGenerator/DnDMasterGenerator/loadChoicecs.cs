@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-namespace DnDMasterGenerator
+
+namespace DnDClassesTest
 {
     public partial class loadChoicecs : Form
     {
@@ -27,17 +28,21 @@ namespace DnDMasterGenerator
         private void button1_Click(object sender, EventArgs e)
         {
             string name = "";
-            bool exists = false;
-            string locationOfPdf = Path.Combine(Environment.CurrentDirectory, @"..\..\PDFs\" + name + ".txt");
-
             name = CharName.Text;
+            string locationOfPdf = Path.Combine(Environment.CurrentDirectory, @"..\..\PDFs\" + name + ".pdf");
 
             if (name == "")
                 Error.Visible = true;
-            else if (File.Exists(name))
-                exists = true;
+            else if (File.Exists(locationOfPdf))
+            {
+                Error.Visible = false;
+                LoadForm load = new LoadForm(name);
+                load.ShowDialog();
+            }
             else
-                exists = false;
+            {
+                Error.Visible = true;
+            }
         }
     }
 }
