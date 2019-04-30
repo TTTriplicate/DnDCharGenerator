@@ -162,14 +162,16 @@ namespace DnDClassesTest
         }
         private string ChooseFightingStyle()
         {
-            var picker = new FightingStyles(this.ProfessionName());
+            var picker = new PickOne(this.ProfessionName());
             var result = picker.ShowDialog();
             if (result == DialogResult.OK)
             {
-                return picker.Source[picker.Index];
+                return picker.Choices[picker.Selected];
             }
-
-            else return "";
+            else
+            {
+                return ChooseFightingStyle();
+            }
         }
 
         private string ChooseOne(List<string> choices)
@@ -183,7 +185,58 @@ namespace DnDClassesTest
             else
                 return this.ChooseOne(choices);
         }
-         public override bool LevelUp(){return true;}
+         public override bool LevelUp()
+        {
+            ++this._level;
+            if (this._level < 21)
+            {
+                bool[] check = this.Unlocked();
+                int i;
+                for (i = 0; i < check.Length; ++i)
+                {
+                    if (!check[i])
+                    {
+                        --i;
+                        break;
+                    }
+                }
+                if (i == 1)
+                {
+                    CurrFeatures.Add(Features[2]);
+                    CurrFeatures.Add(this.ChooseFightingStyle());
+                }
+                else if (i == 2) CurrFeatures.Add(Features[3]);
+                else if (i == 3) CurrFeatures.Add(Features[4]);
+                else if (i == 5) CurrFeatures.Add(Features[5]);
+                else if (i == 6) CurrFeatures.Add(Features[6]);
+                else if (i == 8) CurrFeatures.Add(Features[7]);
+                else if (i == 10) CurrFeatures.Add(Features[8]);
+                else if (i == 11) CurrFeatures.Add(Features[9]);
+
+                if (_proPath == 0)
+                {
+                    
+                    if (i == 2) CurrFeatures.Add(this.ChooseOne(Features.GetRange(10, 3)));
+                    if (i == 4) CurrFeatures.Add(this.ChooseOne(Features.GetRange(13, 3)));
+                    if (i == 7) CurrFeatures.Add(this.ChooseOne(Features.GetRange(16, 3)));
+                    if (i == 8) CurrFeatures.Add(this.ChooseOne(Features.GetRange(18, 3)));
+                }
+                else if (_proPath == 1)
+                {
+                    if (i == 2) CurrFeatures.Add(Features[21]);
+                    if (i == 4) CurrFeatures.Add(Features[22]);
+                    if (i == 7) CurrFeatures.Add(Features[23]);
+                    if (i == 8) CurrFeatures.Add(Features[24]);
+                }
+                return true;
+            }
+            else
+            {
+                --this._level;
+                return false;
+            }
+        }
+
 
     }
 }
