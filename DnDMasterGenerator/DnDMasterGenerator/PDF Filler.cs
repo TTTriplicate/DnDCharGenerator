@@ -107,6 +107,13 @@ namespace DnDClassesTest
             pdfFormFields.SetField("CHA", newChar._abilities[5].ToString());
             pdfFormFields.SetField("CHamod", newChar.AbilityModifiers()[5].ToString());
 
+            //pdfFormFields.SetField("Wpn Name", newChar.getAttackWeapons()[0]);
+            //pdfFormFields.SetField("Wpn Name 2", newChar.getAttackWeapons()[1]);
+            //pdfFormFields.SetField("Wpn Name 3", newChar.getAttackWeapons()[2]);
+            //pdfFormFields.SetField("Wpn1 AtkBonus", newChar.getATK()[0].ToString());
+            //pdfFormFields.SetField("Wpn2 AtkBonus", newChar.getATK()[1].ToString());
+            //pdfFormFields.SetField("Wpn3 AtkBonus", newChar.getATK()[2].ToString());
+
             string save;
             if (newChar.SavingThrows[0])
                 save = "Yes";
