@@ -57,7 +57,7 @@
             // 
             // specialsBox
             // 
-            this.specialsBox.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
+            this.specialsBox.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.specialsBox.Location = new System.Drawing.Point(208, 465);
             this.specialsBox.Name = "specialsBox";
             this.specialsBox.ReadOnly = true;
@@ -82,7 +82,7 @@
             // 
             // langBox
             // 
-            this.langBox.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
+            this.langBox.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.langBox.Location = new System.Drawing.Point(208, 336);
             this.langBox.Name = "langBox";
             this.langBox.ReadOnly = true;
@@ -163,7 +163,7 @@
             // 
             // saasBox
             // 
-            this.saasBox.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
+            this.saasBox.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.saasBox.Location = new System.Drawing.Point(208, 589);
             this.saasBox.Name = "saasBox";
             this.saasBox.ReadOnly = true;
