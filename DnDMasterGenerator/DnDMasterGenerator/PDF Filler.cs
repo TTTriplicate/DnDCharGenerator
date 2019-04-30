@@ -298,6 +298,7 @@ namespace DnDClassesTest
 
             pdfStamper.FormFlattening = false;
             pdfStamper.Close();
+            pdfReader.Close();
         }
     }
 }

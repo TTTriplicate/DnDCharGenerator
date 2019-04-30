@@ -45,7 +45,9 @@ namespace DnDClassesTest
             this._numProSkills = 2;
             this.Features = this.ClassFeatures();
             this.CurrFeatures = this.CurrentFeatures();
-            this.MetaSelect = new int[5] { -1, -1, -1, -1, -1 };
+            this.MetaSelect = new List<int>();
+            this._abilityScoreIncrease = new int[5] { 4, 8, 12, 16, 19 };
+
         }
         public override bool[] ClassSkills()
         {//Arcana, Deception, Insight, Intimidation, Persuasion, and Religion
@@ -68,7 +70,7 @@ namespace DnDClassesTest
             return Saves;
         }
 
-        private int[] MetaSelect { get; set; }
+        private List<int> MetaSelect { get; set; }
 
         public int ProficiencyBonus()
         {//passes the proficiency bonus to main function
@@ -142,9 +144,9 @@ namespace DnDClassesTest
 
         private List<string> SelectMetamagic()
         {
-            int[] indicies = this.MetaSelect;
+ //           int[] indicies = this.MetaSelect;
             List<string> select = new List<string>();
-            var choose = new MetamagicSelect(indicies);
+   /*         var choose = new MetamagicSelect(indicies);
             
             var result = choose.ShowDialog();
             if(result == DialogResult.OK)
@@ -154,9 +156,10 @@ namespace DnDClassesTest
                 for (int i = 0; i < MetaSelect.Length; ++i)
                     MetaSelect[i] = choose.Current[i];
             }
-            
+            */
             return select;
         }
+         public override bool LevelUp(){return true;}
 
     }
 }

@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace DnDClassesTest
 {
@@ -17,8 +21,25 @@ namespace DnDClassesTest
         {
             InitializeComponent();
         }
+        
+        public LoadForm(string nameOfCharacter)
+        {
+            string nameOfFile = nameOfCharacter;
+            string PDFFolder = Path.Combine(Environment.CurrentDirectory, @"..\..\PDFs");
+            string pdfTemplate = PDFFolder + @"\" + nameOfCharacter + ".pdf";
+            string newFile = PDFFolder + @"\" + nameOfFile + ".pdf";
 
-        //public
+            //PdfReader pdfReader = new PdfReader(pdfTemplate);
+            //PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
+            //AcroFields pdfFormFields = pdfStamper.AcroFields;
+            var pdfReader = new PdfReader(pdfTemplate);
+            var pdfFormFields = pdfReader.AcroFields;
+
+            CharName.Text = pdfFormFields.GetField("CharacterName");
+            PlayerName.Text = pdfFormFields.GetField("PlayerName");
+
+            pdfReader.Close();
+        }
 
         public LoadForm(DnDCharacter leeroy)
         {
@@ -270,7 +291,19 @@ namespace DnDClassesTest
 
         }
 
-        private void LoadForm_Load(object sender, EventArgs e)
+        private void btnLevelUp_Click(object sender, EventArgs e)
+        {
+            if (DisplayChar.LevelUp())
+            {
+                var updated = new LoadForm(DisplayChar);
+                this.Hide();
+                updated.ShowDialog();
+                this.Close();
+            }
+            else if (DisplayChar._level == 20)
+                MessageBox.Show("Your character is already at the highest level!", "Max Level");
+        }
+            private void LoadForm_Load(object sender, EventArgs e)
         {
 
         }

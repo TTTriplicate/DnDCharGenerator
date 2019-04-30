@@ -52,6 +52,8 @@ namespace DnDClassesTest
             this._numProSkills = 2;
             this.Features = this.ClassFeatures();
             this.CurrFeatures = this.CurrentFeatures();
+            this._abilityScoreIncrease = new int[5] { 4, 8, 12, 16, 19 };
+
         }
         public override bool[] ClassSkills()
         {//history insight medicine persuasion religion
@@ -182,6 +184,78 @@ namespace DnDClassesTest
 
             }
             return current;
+        }
+        public override bool LevelUp()
+        {
+            ++this._level;
+            if (this._level < 21)
+            {
+                bool[] check = this.Unlocked();
+                int i;
+                for (i = 0; i < check.Length; ++i)
+                {
+                    if (!check[i])
+                    {
+                        --i;
+                        break;
+                    }
+                }
+                if (i == 1) CurrFeatures.Add(Features[1]);
+                else if (i == 2) CurrFeatures.Add(Features[2]);
+                else if (i == 5) CurrFeatures.Add(Features[3]);
+
+                if (_proPath == 0)
+                {
+                    if (i == 1) CurrFeatures.Add(Features[4]);
+                    if (i == 2) CurrFeatures.Add(Features[5]);
+                    if (i == 4) CurrFeatures.Add(Features[6]);
+                    if (i == 6) CurrFeatures.Add(Features[7]);
+                }
+                else if (_proPath == 1)
+                {
+                    CurrFeatures.Add(Features[8]);
+                    if (i == 1) CurrFeatures.Add(Features[9]);
+                    if (i == 2) CurrFeatures.Add(Features[10]);
+                    if (i == 4) CurrFeatures.Add(Features[11]);
+                    if (i == 6) CurrFeatures.Add(Features[12]);
+                }
+                else if (_proPath == 2)
+                {
+                    if (i == 1) CurrFeatures.Add(Features[15]);
+                    if (i == 2) CurrFeatures.Add(Features[16]);
+                    if (i == 4) CurrFeatures.Add(Features[17]);
+                    if (i == 6) CurrFeatures.Add(Features[18]);
+
+                }
+                else if (_proPath == 3)
+                {
+                    if (i == 1) CurrFeatures.Add(Features[19]);
+                    if (i == 2) CurrFeatures.Add(Features[20]);
+                    if (i == 4) CurrFeatures.Add(Features[21]);
+                    if (i == 6) CurrFeatures.Add(Features[22]);
+                }
+                else if (_proPath == 4)
+                {
+                    if (i == 1) CurrFeatures.Add(Features[24]);
+                    if (i == 2) CurrFeatures.Add(Features[25]);
+                    if (i == 4) CurrFeatures.Add(Features[26]);
+                    if (i == 6) CurrFeatures.Add(Features[27]);
+                }
+                else if (_proPath == 5)
+                {
+                    if (i == 1) CurrFeatures.Add(Features[29]);
+                    if (i == 2) CurrFeatures.Add(Features[30]);
+                    if (i == 4) CurrFeatures.Add(Features[31]);
+                    if (i == 6) CurrFeatures.Add(Features[32]);
+
+                }
+                return true;
+            }
+            else
+            {
+                --this._level;
+                return false;
+            }
         }
 
         //insert class feature methods here
