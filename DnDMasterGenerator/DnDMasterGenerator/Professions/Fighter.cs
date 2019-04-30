@@ -124,8 +124,6 @@ namespace DnDClassesTest
             Console.WriteLine(i);
             current.Add(Features[0]);
 
-            int style = -1;
-            string[] fightStyles = new string[2];
             current.Add(this.ChooseFightingStyle());
             if (i >= 1) current.Add(Features[1]);
             if (i >= 2) current.Add(Features[2]);
