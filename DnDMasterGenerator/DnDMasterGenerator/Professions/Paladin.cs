@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using DnDMasterGenerator;
 using System.Windows.Forms;
+using DnDMasterGenerator.Professions;
 
 namespace DnDClassesTest
 {
@@ -162,16 +163,76 @@ namespace DnDClassesTest
         }
         private string ChooseFightingStyle()
         {
-            var picker = new FightingStyles(this.ProfessionName());
+            var picker = new PickOne(this.ProfessionName());
             var result = picker.ShowDialog();
             if (result == DialogResult.OK)
             {
-                return picker.Source[picker.Index];
+                return picker.Choices[picker.Selected];
             }
 
-            else return "";
+            else
+            {
+
+                return ChooseFightingStyle();
+            }
         }
-         public override bool LevelUp(){return true;}
+        public override bool LevelUp()
+        {
+            ++this._level;
+            if (this._level < 21)
+            {
+                bool[] check = this.Unlocked();
+                int i;
+                for (i = 0; i < check.Length; ++i)
+                {
+                    if (!check[i])
+                    {
+                        --i;
+                        break;
+                    }
+                }
+                if (i == 1)
+                {
+                    CurrFeatures = Features.GetRange(0, 3);
+                    CurrFeatures.Add(this.ChooseFightingStyle());
+                }
+                else if (i == 2) CurrFeatures.Add(Features[4]);
+                else if (i == 3) CurrFeatures.Add(Features[5]);
+                else if (i == 4) CurrFeatures.Add(Features[6]);
+                else if (i == 6) CurrFeatures.Add(Features[7]);
+                else if (i == 7) CurrFeatures.Add(Features[8]);
+                else if (i == 8) CurrFeatures.Add(Features[9]);
+
+                if (_proPath == 0)
+                {
+                    if (i == 2) CurrFeatures.Add(Features[10]);
+                    if (i == 5) CurrFeatures.Add(Features[11]);
+                    if (i == 8) CurrFeatures.Add(Features[12]);
+                    if (i == 10) CurrFeatures.Add(Features[13]);
+                }
+                else if (_proPath == 1)
+                {
+                    if (i == 2) CurrFeatures.Add(Features[14]);
+                    if (i == 5) CurrFeatures.Add(Features[15]);
+                    if (i == 8) CurrFeatures.Add(Features[16]);
+                    if (i == 10) CurrFeatures.Add(Features[17]);
+                }
+                else if (_proPath == 2)
+                {
+                    if (i == 2) CurrFeatures.Add(Features[18]);
+                    if (i == 5) CurrFeatures.Add(Features[19]);
+                    if (i == 8) CurrFeatures.Add(Features[20]);
+                    if (i == 10) CurrFeatures.Add(Features[21]);
+                }
+                return true;
+            }
+            else
+            {
+                --this._level;
+                return false;
+            }
+        }
+
 
         //insert class feature methods here
 
