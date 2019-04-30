@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbilityIncrease.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbilityIncrease.Designer.cs">
+      <DependentUpon>AbilityIncrease.cs</DependentUpon>
+    </Compile>
     <Compile Include="AttackRoll.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,12 @@
       <DependentUpon>BackgroundForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Character.cs" />
+    <Compile Include="loadChoicecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loadChoicecs.Designer.cs">
+      <DependentUpon>loadChoicecs.cs</DependentUpon>
+    </Compile>
     <Compile Include="loader.cs" />
     <Compile Include="LoadForm.cs">
       <SubType>Form</SubType>
@@ -143,11 +155,17 @@
     <Compile Include="StatsAndProfession.designer.cs">
       <DependentUpon>StatsAndProfession.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AbilityIncrease.resx">
+      <DependentUpon>AbilityIncrease.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AttackRoll.resx">
       <DependentUpon>AttackRoll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Background\BackgroundForm.resx">
       <DependentUpon>BackgroundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loadChoicecs.resx">
+      <DependentUpon>loadChoicecs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoadForm.resx">
       <DependentUpon>LoadForm.cs</DependentUpon>

@@ -237,6 +237,7 @@ namespace DnDClassesTest
             }
             else return ChooseManeuver(maneuvers);
         }
+         public override bool LevelUp(){return true;}
 
     }
 }

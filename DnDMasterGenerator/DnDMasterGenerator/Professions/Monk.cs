@@ -47,6 +47,8 @@ namespace DnDClassesTest
             this.ElementSelect = new List<int>();
             this.Features = this.ClassFeatures();
             this.CurrFeatures = this.CurrentFeatures();
+            this._abilityScoreIncrease = new int[5] { 4, 8, 12, 16, 19 };
+
 
         }
         public override bool[] ClassSkills()
@@ -188,5 +190,7 @@ namespace DnDClassesTest
             else return ElementSelector(options);
             
         }
+         public override bool LevelUp(){return true;}
+
     }
 }

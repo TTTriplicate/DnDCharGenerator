@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace DnDClassesTest
 {
@@ -17,11 +21,132 @@ namespace DnDClassesTest
         {
             InitializeComponent();
         }
+        
+        public LoadForm(string nameOfCharacter)
+        {
+            InitializeComponent();
+            btnLevelUp.Show();
+            string[] abils = { "ST Strength", "ST Dexterity", "ST Constitution", "ST Intelligence", "ST Wisdom", "ST Charisma" };
+
+            string nameOfFile = nameOfCharacter;
+            string PDFFolder = Path.Combine(Environment.CurrentDirectory, @"..\..\PDFs");
+            string pdfTemplate = PDFFolder + @"\" + nameOfCharacter + ".pdf";
+            string newFile = PDFFolder + @"\" + nameOfFile + ".pdf";
+
+            PdfReader pdfReader = new PdfReader(pdfTemplate);
+            //PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
+            //AcroFields pdfFormFields = pdfStamper.AcroFields;
+            //var pdfReader = new PdfReader(pdfTemplate);
+            //AcroFields pdfFormFields = new AcroFields(pdfReader);
+            AcroFields pdfFormFields = pdfReader.AcroFields;
+            
+            //TopFields
+            CharName.Text = pdfFormFields.GetField("CharacterName");
+            PlayerName.Text = pdfFormFields.GetField("PlayerName");
+            ClassAndLevel.Text = pdfFormFields.GetField("ClassLevel");
+            Background.Text = pdfFormFields.GetField("Background");
+            Race.Text = pdfFormFields.GetField("Race ");
+            Alignment.Text = pdfFormFields.GetField("Alignment");
+
+            //Abilities
+            int count = 0;
+            System.Windows.Forms.RichTextBox[] Abilities = { STR, DEX, CON, INT, WIS, CHA };
+            foreach (System.Windows.Forms.RichTextBox i in Abilities)
+            {
+                i.Text = pdfFormFields.GetField(abils[count]);
+                count++;
+            }
+
+            //Background Stuff
+            PersonalTraits.Text = pdfFormFields.GetField("PersonalityTraits ");
+            Ideals.Text = pdfFormFields.GetField("Ideals");
+            Bonds.Text = pdfFormFields.GetField("Bonds");
+            Flaws.Text = pdfFormFields.GetField("Bonds");
+
+            //Big Boxes
+            languages.Text = pdfFormFields.GetField("ProficienciesLang");
+            Equipment.Text = pdfFormFields.GetField("Equipment");
+            FeaturesAndTraits.Text = pdfFormFields.GetField("Features and Traits");
+            CP.Text = "0";
+            SP.Text = "0";
+            EP.Text = "0";
+            GP.Text = pdfFormFields.GetField("GP");
+            PP.Text = "0";
+
+            //Small Boxes at Top
+            ArmorClass.Text = pdfFormFields.GetField("AC");
+            Initiative.Text = pdfFormFields.GetField("Initiative");
+            Speed.Text = pdfFormFields.GetField("Speed");
+
+            //RadioButtons
+            count = 0;
+            System.Windows.Forms.RadioButton[] SkillButtons = { AcrobaticsButton, AHButton, ArcanaButton, AthleticsButton, DeceptionButton, HistoryButton, InsightButton, IntimidationButton, InvestigationButton, MedicineButton, NatureButton, PerceptionButton, PerformanceButton, PersuasionButton, ReligionButton, SleightOfHandButton, StealthButton, SurvivalButton };
+            foreach(var i in SkillButtons)
+            {
+                if (pdfFormFields.GetField("Check Box " + (count + 23)) == "Yes")
+                {
+                    i.Checked = true;
+                }
+                else
+                    i.Checked = false;
+                count++;
+            }
+
+            //Skills
+            System.Windows.Forms.RichTextBox[] dex = { Acrobatics, SleightOfHand, Stealth, Athletics };
+            System.Windows.Forms.RichTextBox[] intel = { Arcana, History, Investigation, Nature, Religion };
+            System.Windows.Forms.RichTextBox[] wis = { AnimalHandling, Insight, Medicine, Perception, Survival };
+            System.Windows.Forms.RichTextBox[] cha = { Deception, Intimidation, Performance, Persuasion };
+            string[] dexpdf = { "Acrobatics", "SleightofHand", "Stealth ", "Athletics" };
+            string[] intelpdf = { "Arcana", "History ", "Investigation ", "Nature", "Religion" };
+            string[] wispdf = { "Animal", "Insight", "Medicine", "Perception ", "Survival" };
+            string[] chapdf = { "Deception ", "Intimidation", "Performance", "Persuasion" };
+            count = 0;
+            foreach (var i in dexpdf)
+            {
+                dex[count].Text = pdfFormFields.GetField(i);
+                count++;
+            }
+
+            count = 0;
+            foreach (var i in intelpdf)
+            {
+                intel[count].Text = pdfFormFields.GetField(i);
+                count++;
+            }
+
+            count = 0;
+            foreach (var i in wispdf)
+            {
+                wis[count].Text = pdfFormFields.GetField(i);
+                count++;
+            }
+
+            count = 0;
+            foreach (var i in chapdf)
+            {
+                cha[count].Text = pdfFormFields.GetField(i);
+                count++;
+            }
+
+            //Saving Throws
+            count = 0;
+            System.Windows.Forms.RichTextBox[] saves = { STSTR, STDEX, STWIS, STCON, STINT, STCHA };
+            string[] abilities = { "ST Strength", "ST Dexterity", "ST Constitution", "ST Intelligence", "ST Wisdom", "ST Charisma" };
+            foreach (var i in saves)
+            {
+                i.Text = pdfFormFields.GetField(abilities[count]);
+                count++;
+            }
+
+            pdfReader.Close();
+        }
 
         public LoadForm(DnDCharacter leeroy)
         {
             //Top Fields
             InitializeComponent();
+            btnLevelUp.Hide();
             DisplayChar = leeroy;
             CharName.Text = leeroy._name;
             PlayerName.Text = leeroy._playerName;
@@ -180,6 +305,8 @@ namespace DnDClassesTest
             else
                 STCHA.Text = leeroy.AbilityModifiers()[5].ToString();
 
+
+            PDF_Filler fhsduf = new PDF_Filler(leeroy);
         }
         private void CharName_TextChanged(object sender, EventArgs e)
         {
@@ -264,6 +391,23 @@ namespace DnDClassesTest
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLevelUp_Click(object sender, EventArgs e)
+        {
+            if (DisplayChar.LevelUp())
+            {
+                var updated = new LoadForm(DisplayChar);
+                this.Hide();
+                updated.ShowDialog();
+                this.Close();
+            }
+            else if (DisplayChar._level == 20)
+                MessageBox.Show("Your character is already at the highest level!", "Max Level");
+        }
+        private void LoadForm_Load(object sender, EventArgs e)
         {
 
         }

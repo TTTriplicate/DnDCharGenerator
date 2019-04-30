@@ -716,15 +716,6 @@ namespace DnDClassesTest
 
         /**
          * Getter method
-         * @return reformat the number of times an option needs to be reformatting
-         */
-        public bool getReformat()
-        {
-            return reformat;
-        }
-
-        /**
-         * Getter method
          * @param find a string to be searched for in allGear
          * @return the index of find
          */

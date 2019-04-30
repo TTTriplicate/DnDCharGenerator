@@ -44,6 +44,8 @@ namespace DnDClassesTest
             this._numProSkills = 2;
             this.Features = this.ClassFeatures();
             this.CurrFeatures = this.CurrentFeatures();
+            this._abilityScoreIncrease = new int[5] { 4, 8, 12, 16, 19 };
+
         }
         public override bool[] ClassSkills()
         {//Athletics, Insight, Intimidation, Medicine, Persuasion, and Religion
@@ -169,6 +171,7 @@ namespace DnDClassesTest
 
             else return "";
         }
+         public override bool LevelUp(){return true;}
 
         //insert class feature methods here
 

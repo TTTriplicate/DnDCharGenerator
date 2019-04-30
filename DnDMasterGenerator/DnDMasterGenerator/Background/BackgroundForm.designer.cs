@@ -47,20 +47,21 @@
             this.FlawDropDown = new System.Windows.Forms.ComboBox();
             this.BondDropDown = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.Hair = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.Skin = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.Eyes = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.Age = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.Weight = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.Height = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.Gender = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.HairMasked = new System.Windows.Forms.MaskedTextBox();
+            this.SkinMasked = new System.Windows.Forms.MaskedTextBox();
+            this.EyesMasked = new System.Windows.Forms.MaskedTextBox();
+            this.GenderMasked = new System.Windows.Forms.MaskedTextBox();
+            this.HeightMasked = new System.Windows.Forms.MaskedTextBox();
+            this.AgeMasked = new System.Windows.Forms.MaskedTextBox();
+            this.WeightMasked = new System.Windows.Forms.MaskedTextBox();
+            this.ageValid = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BOND
@@ -347,14 +348,6 @@
             this.label6.TabIndex = 25;
             this.label6.Text = "Hair:";
             // 
-            // Hair
-            // 
-            this.Hair.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
-            this.Hair.Location = new System.Drawing.Point(30, 510);
-            this.Hair.Name = "Hair";
-            this.Hair.Size = new System.Drawing.Size(129, 27);
-            this.Hair.TabIndex = 24;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -367,15 +360,6 @@
             this.label7.Text = "Skin:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // Skin
-            // 
-            this.Skin.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
-            this.Skin.Location = new System.Drawing.Point(202, 510);
-            this.Skin.Name = "Skin";
-            this.Skin.Size = new System.Drawing.Size(143, 27);
-            this.Skin.TabIndex = 26;
-            this.Skin.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -386,14 +370,6 @@
             this.label8.Size = new System.Drawing.Size(45, 19);
             this.label8.TabIndex = 29;
             this.label8.Text = "Eyes:";
-            // 
-            // Eyes
-            // 
-            this.Eyes.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
-            this.Eyes.Location = new System.Drawing.Point(392, 510);
-            this.Eyes.Name = "Eyes";
-            this.Eyes.Size = new System.Drawing.Size(129, 27);
-            this.Eyes.TabIndex = 28;
             // 
             // label9
             // 
@@ -406,14 +382,6 @@
             this.label9.TabIndex = 35;
             this.label9.Text = "Age:";
             // 
-            // Age
-            // 
-            this.Age.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
-            this.Age.Location = new System.Drawing.Point(392, 574);
-            this.Age.Name = "Age";
-            this.Age.Size = new System.Drawing.Size(129, 27);
-            this.Age.TabIndex = 34;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -424,14 +392,6 @@
             this.label10.Size = new System.Drawing.Size(63, 19);
             this.label10.TabIndex = 33;
             this.label10.Text = "Weight:";
-            // 
-            // Weight
-            // 
-            this.Weight.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
-            this.Weight.Location = new System.Drawing.Point(202, 574);
-            this.Weight.Name = "Weight";
-            this.Weight.Size = new System.Drawing.Size(143, 27);
-            this.Weight.TabIndex = 32;
             // 
             // label11
             // 
@@ -444,14 +404,6 @@
             this.label11.TabIndex = 31;
             this.label11.Text = "Height:";
             // 
-            // Height
-            // 
-            this.Height.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
-            this.Height.Location = new System.Drawing.Point(30, 574);
-            this.Height.Name = "Height";
-            this.Height.Size = new System.Drawing.Size(129, 27);
-            this.Height.TabIndex = 30;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -463,25 +415,105 @@
             this.label12.TabIndex = 37;
             this.label12.Text = "Gender:";
             // 
-            // Gender
-            // 
-            this.Gender.Font = new System.Drawing.Font("Baskerville Old Face", 10F);
-            this.Gender.Location = new System.Drawing.Point(202, 636);
-            this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(143, 27);
-            this.Gender.TabIndex = 36;
-            // 
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Baskerville Old Face", 9F);
-            this.button1.Location = new System.Drawing.Point(446, 451);
+            this.button1.Location = new System.Drawing.Point(446, 439);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 38;
             this.button1.Text = "Reset";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // HairMasked
+            // 
+            this.HairMasked.BeepOnError = true;
+            this.HairMasked.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HairMasked.Location = new System.Drawing.Point(26, 509);
+            this.HairMasked.Mask = "L?????????????????????????????????????????????";
+            this.HairMasked.Name = "HairMasked";
+            this.HairMasked.Size = new System.Drawing.Size(135, 27);
+            this.HairMasked.TabIndex = 40;
+            this.HairMasked.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.HairMasked_MaskInputRejected);
+            // 
+            // SkinMasked
+            // 
+            this.SkinMasked.BeepOnError = true;
+            this.SkinMasked.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SkinMasked.Location = new System.Drawing.Point(202, 509);
+            this.SkinMasked.Mask = "L?????????????????????????????????????????????";
+            this.SkinMasked.Name = "SkinMasked";
+            this.SkinMasked.Size = new System.Drawing.Size(135, 27);
+            this.SkinMasked.TabIndex = 41;
+            this.SkinMasked.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.SkinMasked_MaskInputRejected);
+            // 
+            // EyesMasked
+            // 
+            this.EyesMasked.BeepOnError = true;
+            this.EyesMasked.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EyesMasked.Location = new System.Drawing.Point(387, 509);
+            this.EyesMasked.Mask = "L?????????????????????????????????????????????";
+            this.EyesMasked.Name = "EyesMasked";
+            this.EyesMasked.Size = new System.Drawing.Size(135, 27);
+            this.EyesMasked.TabIndex = 42;
+            this.EyesMasked.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.EyesMasked_MaskInputRejected);
+            // 
+            // GenderMasked
+            // 
+            this.GenderMasked.BeepOnError = true;
+            this.GenderMasked.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GenderMasked.Location = new System.Drawing.Point(202, 635);
+            this.GenderMasked.Mask = "L?????????????????????????????????????????????";
+            this.GenderMasked.Name = "GenderMasked";
+            this.GenderMasked.Size = new System.Drawing.Size(135, 27);
+            this.GenderMasked.TabIndex = 43;
+            this.GenderMasked.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.GenderMasked_MaskInputRejected);
+            // 
+            // HeightMasked
+            // 
+            this.HeightMasked.BeepOnError = true;
+            this.HeightMasked.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeightMasked.Location = new System.Drawing.Point(26, 573);
+            this.HeightMasked.Mask = "0\'##\"";
+            this.HeightMasked.Name = "HeightMasked";
+            this.HeightMasked.Size = new System.Drawing.Size(135, 27);
+            this.HeightMasked.TabIndex = 44;
+            this.HeightMasked.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.HeightMasked_MaskInputRejected);
+            // 
+            // AgeMasked
+            // 
+            this.AgeMasked.BeepOnError = true;
+            this.AgeMasked.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgeMasked.Location = new System.Drawing.Point(387, 573);
+            this.AgeMasked.Mask = "##0";
+            this.AgeMasked.Name = "AgeMasked";
+            this.AgeMasked.Size = new System.Drawing.Size(135, 27);
+            this.AgeMasked.TabIndex = 45;
+            this.AgeMasked.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.AgeMasked_MaskInputRejected);
+            // 
+            // WeightMasked
+            // 
+            this.WeightMasked.BeepOnError = true;
+            this.WeightMasked.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WeightMasked.Location = new System.Drawing.Point(202, 573);
+            this.WeightMasked.Mask = "###0 lbs";
+            this.WeightMasked.Name = "WeightMasked";
+            this.WeightMasked.Size = new System.Drawing.Size(135, 27);
+            this.WeightMasked.TabIndex = 46;
+            this.WeightMasked.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.WeightMasked_MaskInputRejected);
+            // 
+            // ageValid
+            // 
+            this.ageValid.AutoSize = true;
+            this.ageValid.BackColor = System.Drawing.Color.Transparent;
+            this.ageValid.ForeColor = System.Drawing.Color.Red;
+            this.ageValid.Location = new System.Drawing.Point(384, 603);
+            this.ageValid.Name = "ageValid";
+            this.ageValid.Size = new System.Drawing.Size(129, 17);
+            this.ageValid.TabIndex = 47;
+            this.ageValid.Text = "Choose a valid age";
             // 
             // BackgroundForm
             // 
@@ -490,21 +522,22 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(537, 743);
+            this.Controls.Add(this.ageValid);
+            this.Controls.Add(this.WeightMasked);
+            this.Controls.Add(this.AgeMasked);
+            this.Controls.Add(this.HeightMasked);
+            this.Controls.Add(this.GenderMasked);
+            this.Controls.Add(this.EyesMasked);
+            this.Controls.Add(this.SkinMasked);
+            this.Controls.Add(this.HairMasked);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.Gender);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.Age);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.Weight);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.Height);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.Eyes);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.Skin);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.Hair);
             this.Controls.Add(this.BondDropDown);
             this.Controls.Add(this.FlawDropDown);
             this.Controls.Add(this.IdealDropDown);
@@ -551,19 +584,20 @@
         private System.Windows.Forms.ComboBox FlawDropDown;
         private System.Windows.Forms.ComboBox BondDropDown;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox Hair;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox Skin;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox Eyes;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox Age;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox Weight;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox Height;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox Gender;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MaskedTextBox HairMasked;
+        private System.Windows.Forms.MaskedTextBox SkinMasked;
+        private System.Windows.Forms.MaskedTextBox EyesMasked;
+        private System.Windows.Forms.MaskedTextBox GenderMasked;
+        private System.Windows.Forms.MaskedTextBox HeightMasked;
+        private System.Windows.Forms.MaskedTextBox AgeMasked;
+        private System.Windows.Forms.MaskedTextBox WeightMasked;
+        private System.Windows.Forms.Label ageValid;
     }
 }

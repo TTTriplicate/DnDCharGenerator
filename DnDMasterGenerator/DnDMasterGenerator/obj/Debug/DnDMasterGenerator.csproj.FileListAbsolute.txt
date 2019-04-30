@@ -178,3 +178,5 @@ C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator
 C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Professions.PickOne.resources
 C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe.CodeAnalysisLog.xml
 C:\Users\john.canducci\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\bin\Debug\DnDMasterGenerator.exe.lastcodeanalysissucceeded
+C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.AbilityIncrease.resources
+C:\Users\catherine.gallaher\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.loadChoicecs.resources

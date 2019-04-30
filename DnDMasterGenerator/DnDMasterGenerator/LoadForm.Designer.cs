@@ -171,6 +171,7 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
+            this.btnLevelUp = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -1847,12 +1848,23 @@
             this.panel18.Size = new System.Drawing.Size(25, 24);
             this.panel18.TabIndex = 154;
             // 
+            // btnLevelUp
+            // 
+            this.btnLevelUp.Location = new System.Drawing.Point(838, 654);
+            this.btnLevelUp.Name = "btnLevelUp";
+            this.btnLevelUp.Size = new System.Drawing.Size(84, 40);
+            this.btnLevelUp.TabIndex = 155;
+            this.btnLevelUp.Text = "Level Up";
+            this.btnLevelUp.UseVisualStyleBackColor = true;
+            this.btnLevelUp.Click += new System.EventHandler(this.btnLevelUp_Click);
+            // 
             // LoadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(964, 789);
+            this.Controls.Add(this.btnLevelUp);
             this.Controls.Add(this.panel18);
             this.Controls.Add(this.panel17);
             this.Controls.Add(this.panel16);
@@ -1982,6 +1994,7 @@
             this.Name = "LoadForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "LoadForm";
+            this.Load += new System.EventHandler(this.LoadForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -2168,5 +2181,6 @@
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Button btnLevelUp;
     }
 }

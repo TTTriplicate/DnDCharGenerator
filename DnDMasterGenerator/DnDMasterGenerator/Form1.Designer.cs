@@ -87,6 +87,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "LandingPage";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LandingPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

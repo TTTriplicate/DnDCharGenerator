@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnDMasterGenerator;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -163,7 +164,24 @@ namespace DnDClassesTest
             this._HP = this._class._hitDie;
             this._HP += AbilityModifiers()[2];
             if (this._level > 1)
-                this._HP += DnDCharacter.RollHP(this._level - 1, this._class._hitDie, this._HP) + ((this._level - 1) * this.AbilityModifiers()[2]);
+            {
+                for (int l = 0; l < this._level; ++l)
+                {
+                    if(this._class.ProfessionName() == "Barbarian" && l == 19)
+                    {
+                        for (int h = 0; h < 6; ++h)
+                            this.Abilities[h] += Barbarian.PrimalChampion()[h];
+                    }
+                    for(int i = 0; i < 5; ++i)
+                        if (l == this._class._abilityScoreIncrease[i])
+                        {
+                            this.AbilityScoreIncrease();
+                        }
+                    this._HP += DnDCharacter.RollHP(this._class._hitDie) + this.AbilityModifiers()[2];
+                }
+            }
+                //has to change to account for level adjusted ability scores
+                //                this._HP += DnDCharacter.RollHP(this._level - 1, this._class._hitDie, this._HP) + ((this._level - 1) * this.AbilityModifiers()[2]);
             //Background selector
             //Race selector
             //skills picker is broken....all individual checkboxes?
@@ -212,49 +230,83 @@ namespace DnDClassesTest
                 } 
             }
         }
-        /*   public DnDCharacter(int level, int p, int proPath)
-           {
-               switch (p)
+        public bool LevelUp()
+        {
+            if (this._level == 20) return false;
+            else
+            {
+                ++this._level;
+                if (this._class.LevelUp())
+                {
+                    foreach (int i in this._class._abilityScoreIncrease)
+                    {
+                        if (i == this._level)
+                        {
+                            this.AbilityScoreIncrease();
+                            break;
+                        }
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void AbilityScoreIncrease()
+        {
+            var sel = new AbilityIncrease(this.Abilities);
+            var result = sel.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                for (int j = 0; j < 6; ++j)
+                    this.Abilities[j] += sel.Adjust[j];
+            }
+            else AbilityScoreIncrease();
+
+        }
+            /*   public DnDCharacter(int level, int p, int proPath)
                {
-                   case 0:
-                       this.CharClass = new Barbarian(level, proPath);
-                       break;
-                   case 1:
-                       this.CharClass = new Bard(level, proPath);
-                       break;
-                   case 2:
-                       this.CharClass = new Cleric(level, proPath);
-                       break;
-                   case 3:
-                       this.CharClass = new Druid(level, proPath);
-                       break;
-                   case 4:
-                       this.CharClass = new Fighter(level, proPath);
-                       break;
-                   case 5:
-                       this.CharClass = new Monk(level, proPath);
-                       break;
-                   case 6:
-                       this.CharClass = new Paladin(level, proPath);
-                       break;
-                   case 7:
-                       this.CharClass = new Ranger(level, proPath);
-                       break;
-                   case 8:
-                       this.CharClass = new Rogue(level, proPath);
-                       break;
-                   case 9:
-                       this.CharClass = new Sorcerer(level, proPath);
-                       break;
-                   case 10:
-                       break;
-               }*/
-        /* this.CharClass = new ;
-         this.CharClass._level = level;
-         this.CharClass._proPath = proPath;
-         this code would break badly*/
-        //unnecessary this.SavingThrows = this.CharClass.SavingThrows();
-        //}
+                   switch (p)
+                   {
+                       case 0:
+                           this.CharClass = new Barbarian(level, proPath);
+                           break;
+                       case 1:
+                           this.CharClass = new Bard(level, proPath);
+                           break;
+                       case 2:
+                           this.CharClass = new Cleric(level, proPath);
+                           break;
+                       case 3:
+                           this.CharClass = new Druid(level, proPath);
+                           break;
+                       case 4:
+                           this.CharClass = new Fighter(level, proPath);
+                           break;
+                       case 5:
+                           this.CharClass = new Monk(level, proPath);
+                           break;
+                       case 6:
+                           this.CharClass = new Paladin(level, proPath);
+                           break;
+                       case 7:
+                           this.CharClass = new Ranger(level, proPath);
+                           break;
+                       case 8:
+                           this.CharClass = new Rogue(level, proPath);
+                           break;
+                       case 9:
+                           this.CharClass = new Sorcerer(level, proPath);
+                           break;
+                       case 10:
+                           break;
+                   }*/
+            /* this.CharClass = new ;
+             this.CharClass._level = level;
+             this.CharClass._proPath = proPath;
+             this code would break badly*/
+            //unnecessary this.SavingThrows = this.CharClass.SavingThrows();
+            //}
         public List<string> getInventoryString() //passes string representation of the finalized inventory to charsheet and pdf filler, among other things
         {
             return inventoryString;
@@ -291,18 +343,11 @@ namespace DnDClassesTest
             }
             return toadd;
         }
-        private static int RollHP(int l, int d, int hp)
+        private static int RollHP(int d)
         {
             Random hitdie = new Random();
-            if (l == 1)
-            {
+            
                 return hitdie.Next(1, d);
-            }
-            else
-            {
-                hp += RollHP(l - 1, d, hp);
-            }
-            return hp;
         }
         public int[] AbilityModifiers()
         {//pass ability modifiers to main so they can be accessed there

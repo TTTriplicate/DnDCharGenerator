@@ -77,8 +77,9 @@ namespace DnDClassesTest
             }
             set
             {
-                AbilityIncreaseLevels = new int[5] { 4, 8, 12, 16, 19 };
+                AbilityIncreaseLevels = value;
             }
+            
         }
         protected abstract List<string> Features { get; set; }
 
@@ -161,16 +162,8 @@ namespace DnDClassesTest
             return CharClass;
         }
 
-        public bool LevelUp()
-        {
-            if (this._level < 20)
-            {
-                ++this._level;
-                this.Features = this.ClassFeatures();
-                return true;
-            }
-            else return false;
-        }
+        public abstract bool LevelUp();
+
         public string ProfessionName()
         {
             return this.GetType().Name;

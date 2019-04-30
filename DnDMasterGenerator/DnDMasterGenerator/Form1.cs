@@ -29,8 +29,14 @@ namespace DnDClassesTest
 
         private void btnLoadCharacter_Click(object sender, EventArgs e)
         {
-            string PDFFolder = Path.Combine(Environment.CurrentDirectory, @"..\..\PDFs");
-            Process.Start(PDFFolder);
+            loadChoicecs load = new loadChoicecs();
+            load.ShowDialog();
+            this.Close();
+        }
+
+        private void LandingPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
