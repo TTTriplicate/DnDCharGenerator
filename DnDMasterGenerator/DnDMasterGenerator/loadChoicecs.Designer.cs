@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loadChoicecs));
             this.label2 = new System.Windows.Forms.Label();
             this.CharName = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,7 +66,7 @@
             this.label1.Font = new System.Drawing.Font("Baskerville Old Face", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(103, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(346, 39);
+            this.label1.Size = new System.Drawing.Size(332, 38);
             this.label1.TabIndex = 3;
             this.label1.Text = "Dungeon and Dragons";
             // 
@@ -106,7 +107,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(568, 384);
             this.Controls.Add(this.Error);
             this.Controls.Add(this.button1);
@@ -114,6 +116,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CharName);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "loadChoicecs";
             this.Text = "loadChoicecs";
             this.ResumeLayout(false);

@@ -78,7 +78,6 @@
     <Compile Include="loadChoicecs.Designer.cs">
       <DependentUpon>loadChoicecs.cs</DependentUpon>
     </Compile>
-    <Compile Include="loader.cs" />
     <Compile Include="LoadForm.cs">
       <SubType>Form</SubType>
     </Compile>
