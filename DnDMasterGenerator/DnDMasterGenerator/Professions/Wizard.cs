@@ -134,7 +134,42 @@ namespace DnDClassesTest
 
             return current;
         }
-         public override bool LevelUp(){return true;}
+         public override bool LevelUp()
+        {
+            ++this._level;
+            if (this._level < 21)
+            {
+                bool[] check = this.Unlocked();
+                int i;
+                for (i = 0; i < check.Length; ++i)
+                {
+                    if (!check[i])
+                    {
+                        --i;
+                        break;
+                    }
+                }
+                if (i >= 5) CurrFeatures.Add(Features[1]);
+                if (i >= 6) CurrFeatures.Add(Features[2]);
+
+                if (i >= 1)
+                {
+                    CurrFeatures.Add(Features[3 + (_proPath * 5)]);
+                    CurrFeatures.Add(Features[4 + (_proPath * 5)]);
+                }
+                if (i >= 2) CurrFeatures.Add(Features[5 + (_proPath * 5)]);
+                if (i >= 3) CurrFeatures.Add(Features[6 + (_proPath * 5)]);
+                if (i >= 4) CurrFeatures.Add(Features[7 + (_proPath * 5)]);
+
+                return true;
+            }
+            else
+            {
+                --this._level;
+                return false;
+            }
+        }
+
 
         //insert class feature methods here
 
