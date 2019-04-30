@@ -212,6 +212,15 @@ namespace DnDClassesTest
             ArmorClass = gear.getAC();
             gold = gear.getGP();
             int count = 0;
+            attackBonus.Add(0);
+            attackBonus.Add(0);
+            attackBonus.Add(0);
+            attackBonusWeapons.Add("");
+            attackBonusWeapons.Add("");
+            attackBonusWeapons.Add("");
+            attackDamage.Add("");
+            attackDamage.Add("");
+            attackDamage.Add("");
             for (int i = 0; i < inventory.Count; i++)
             {
                 if (count >= 3)
@@ -220,11 +229,11 @@ namespace DnDClassesTest
                 }
                 else
                 {
-                    if (inventory[i].GetType().ToString() == "Weapon")
+                    if (inventory[i].GetType().ToString() == "DnDClassesTest.Weapon")
                     {
-                        attackBonus.Add(((Weapon)inventory[i]).calcATKBonus(this));
-                        attackBonusWeapons.Add(inventoryString[i]);
-                        attackDamage.Add(((Weapon)inventory[i]).calcDamage(this));
+                        attackBonus[count] = (((Weapon)inventory[i]).calcATKBonus(this));
+                        attackBonusWeapons[count] = (inventory[i].name);
+                        attackDamage[count] = (((Weapon)inventory[i]).calcDamage(this));
                         count++;
                     }
                 } 
@@ -250,6 +259,56 @@ namespace DnDClassesTest
                 }
             }
             return false;
+        }
+
+        public int ExperiencePoints(int lvl)
+        {
+            switch(lvl)
+            {
+                case 1:
+                    return 0;
+                case 2:
+                    return 300;
+                case 3:
+                    return 900;
+                case 4:
+                    return 2700;
+                case 5:
+                    return 6500;
+                case 6:
+                    return 14000;
+                case 7:
+                    return 23000;
+                case 8:
+                    return 34000;
+                case 9:
+                    return 48000;
+                case 10:
+                    return 64000;
+                case 11:
+                    return 85000;
+                case 12:
+                    return 100000;
+                case 13:
+                    return 120000;
+                case 14:
+                    return 140000;
+                case 15:
+                    return 165000;
+                case 16:
+                    return 195000;
+                case 17:
+                    return 225000;
+                case 18:
+                    return 265000;
+                case 19:
+                    return 305000;
+                case 20:
+                    return 355000;
+                default:
+                    return 0;
+
+            }
         }
 
         private void AbilityScoreIncrease()
@@ -329,6 +388,11 @@ namespace DnDClassesTest
         public List<string> getAttackWeapons()
         {
             return attackBonusWeapons;
+        }
+
+        public List<string> getDamage()
+        {
+            return attackDamage;
         }
 
         public int ProficiencyBonus()

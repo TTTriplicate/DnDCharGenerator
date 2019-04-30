@@ -47,6 +47,7 @@ namespace DnDClassesTest
             Background.Text = pdfFormFields.GetField("Background");
             Race.Text = pdfFormFields.GetField("Race ");
             Alignment.Text = pdfFormFields.GetField("Alignment");
+            EXP.Text = pdfFormFields.GetField("XP");
 
             //Abilities
             int count = 0;
@@ -154,6 +155,7 @@ namespace DnDClassesTest
             Background.Text = leeroy.CharBackground.getBackground();
             Race.Text = leeroy.CharRace.getRace();
             Alignment.Text = leeroy.CharRace.getAlignment();
+            EXP.Text = leeroy.ExperiencePoints(leeroy._level).ToString();
 
             //Abilities
             int count = 0;
@@ -408,6 +410,11 @@ namespace DnDClassesTest
                 MessageBox.Show("Your character is already at the highest level!", "Max Level");
         }
         private void LoadForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EXP_TextChanged(object sender, EventArgs e)
         {
 
         }

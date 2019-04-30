@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadForm));
             this.label1 = new System.Windows.Forms.Label();
             this.CharName = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -1409,6 +1410,7 @@
             this.EXP.Size = new System.Drawing.Size(173, 41);
             this.EXP.TabIndex = 113;
             this.EXP.Text = "";
+            this.EXP.TextChanged += new System.EventHandler(this.EXP_TextChanged);
             // 
             // label42
             // 
@@ -1850,6 +1852,7 @@
             // 
             // btnLevelUp
             // 
+            this.btnLevelUp.Font = new System.Drawing.Font("Baskerville Old Face", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLevelUp.Location = new System.Drawing.Point(838, 654);
             this.btnLevelUp.Name = "btnLevelUp";
             this.btnLevelUp.Size = new System.Drawing.Size(84, 40);
@@ -1862,6 +1865,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(964, 789);
             this.Controls.Add(this.btnLevelUp);

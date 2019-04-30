@@ -93,6 +93,7 @@ namespace DnDClassesTest
             pdfFormFields.SetField("SP", 0.ToString());
             pdfFormFields.SetField("EP", 0.ToString());
             pdfFormFields.SetField("PP", 0.ToString());
+            pdfFormFields.SetField("XP", newChar.ExperiencePoints(newChar._level).ToString());
 
             pdfFormFields.SetField("STR", newChar._abilities[0].ToString());
             pdfFormFields.SetField("STRmod", newChar.AbilityModifiers()[0].ToString());
@@ -107,12 +108,26 @@ namespace DnDClassesTest
             pdfFormFields.SetField("CHA", newChar._abilities[5].ToString());
             pdfFormFields.SetField("CHamod", newChar.AbilityModifiers()[5].ToString());
 
-            //pdfFormFields.SetField("Wpn Name", newChar.getAttackWeapons()[0]);
-            //pdfFormFields.SetField("Wpn Name 2", newChar.getAttackWeapons()[1]);
-            //pdfFormFields.SetField("Wpn Name 3", newChar.getAttackWeapons()[2]);
-            //pdfFormFields.SetField("Wpn1 AtkBonus", newChar.getATK()[0].ToString());
-            //pdfFormFields.SetField("Wpn2 AtkBonus", newChar.getATK()[1].ToString());
-            //pdfFormFields.SetField("Wpn3 AtkBonus", newChar.getATK()[2].ToString());
+            pdfFormFields.SetField("Wpn Name", newChar.getAttackWeapons()[0]);
+            pdfFormFields.SetField("Wpn Name 2", newChar.getAttackWeapons()[1]);
+            pdfFormFields.SetField("Wpn Name 3", newChar.getAttackWeapons()[2]);
+            
+            if (newChar.getATK()[0] != 0)
+            {
+                pdfFormFields.SetField("Wpn1 AtkBonus", newChar.getATK()[0].ToString());
+            }
+            if (newChar.getATK()[1] != 0)
+            {
+                pdfFormFields.SetField("Wpn2 AtkBonus ", newChar.getATK()[1].ToString());
+            }
+            if (newChar.getATK()[2] != 0)
+            {
+                pdfFormFields.SetField("Wpn3 AtkBonus  ", newChar.getATK()[2].ToString());
+            }
+
+            pdfFormFields.SetField("Wpn1 Damage", newChar.getDamage()[0]);
+            pdfFormFields.SetField("Wpn2 Damage ", newChar.getDamage()[1]);
+            pdfFormFields.SetField("Wpn3 Damage ", newChar.getDamage()[2]);
 
             string save;
             if (newChar.SavingThrows[0])
