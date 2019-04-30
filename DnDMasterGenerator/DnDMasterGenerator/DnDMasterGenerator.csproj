@@ -78,17 +78,12 @@
     <Compile Include="loadChoicecs.Designer.cs">
       <DependentUpon>loadChoicecs.cs</DependentUpon>
     </Compile>
+    <Compile Include="loader.cs" />
     <Compile Include="LoadForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoadForm.Designer.cs">
       <DependentUpon>LoadForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Professions\FightingStyles\FightingStyles.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Professions\FightingStyles\FightingStyles.Designer.cs">
-      <DependentUpon>FightingStyles.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -110,12 +105,6 @@
     <Compile Include="PDF Filler.cs" />
     <Compile Include="Professions\Barbarian.cs" />
     <Compile Include="Professions\Bard.cs" />
-    <Compile Include="Professions\MetaMagic\MetamagicSelect.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Professions\MetaMagic\MetamagicSelect.Designer.cs">
-      <DependentUpon>MetamagicSelect.cs</DependentUpon>
-    </Compile>
     <Compile Include="Professions\Cleric.cs" />
     <Compile Include="Professions\Druid.cs" />
     <Compile Include="Professions\Fighter.cs" />
@@ -169,17 +158,11 @@
     <EmbeddedResource Include="LoadForm.resx">
       <DependentUpon>LoadForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Professions\FightingStyles\FightingStyles.resx">
-      <DependentUpon>FightingStyles.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gear\GearForm.resx">
       <DependentUpon>GearForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Professions\MetaMagic\MetamagicSelect.resx">
-      <DependentUpon>MetamagicSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Professions\PickOne.resx">
       <DependentUpon>PickOne.cs</DependentUpon>
@@ -255,7 +238,6 @@
     <Content Include="Professions\ClassFeatures\DruidClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\FighterClassFeatures.txt" />
     <Content Include="Professions\FightingStyles\FightingStyles.txt" />
-    <Content Include="Professions\MetaMagic\Metamagic.txt" />
     <Content Include="Professions\ClassFeatures\MonkClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\PaladinClassFeatures.txt" />
     <Content Include="Professions\ClassFeatures\RangerClassFeatures.txt" />

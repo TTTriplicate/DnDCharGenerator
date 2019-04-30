@@ -1,5 +1,4 @@
 ﻿using DnDMasterGenerator.Professions;
-using DnDMasterGenerator.Professions.ClassFeatures.MetaMagic;
 using System;
 using System.Collections.Generic;
 using System.IO;
