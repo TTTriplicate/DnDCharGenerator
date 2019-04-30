@@ -46,6 +46,7 @@
             // subRaceBox
             // 
             this.subRaceBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.subRaceBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.subRaceBox.Font = new System.Drawing.Font("Baskerville Old Face", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subRaceBox.FormattingEnabled = true;
             this.subRaceBox.Location = new System.Drawing.Point(456, 175);
@@ -106,13 +107,13 @@
             // chooser
             // 
             this.chooser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chooser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.chooser.Font = new System.Drawing.Font("Baskerville Old Face", 19.8F);
             this.chooser.FormattingEnabled = true;
             this.chooser.Location = new System.Drawing.Point(208, 175);
             this.chooser.Name = "chooser";
             this.chooser.Size = new System.Drawing.Size(490, 46);
             this.chooser.TabIndex = 32;
-            this.chooser.Text = " (Choose One)";
             this.chooser.SelectedIndexChanged += new System.EventHandler(this.chooser_SelectedIndexChanged);
             // 
             // label1
@@ -130,6 +131,7 @@
             // alignmentBox
             // 
             this.alignmentBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alignmentBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.alignmentBox.Font = new System.Drawing.Font("Baskerville Old Face", 20F);
             this.alignmentBox.FormattingEnabled = true;
             this.alignmentBox.Items.AddRange(new object[] {
@@ -146,7 +148,6 @@
             this.alignmentBox.Name = "alignmentBox";
             this.alignmentBox.Size = new System.Drawing.Size(490, 46);
             this.alignmentBox.TabIndex = 38;
-            this.alignmentBox.Text = "(Choose One)";
             this.alignmentBox.SelectedIndexChanged += new System.EventHandler(this.alignmentBox_SelectedIndexChanged);
             // 
             // label2

@@ -101,7 +101,7 @@ namespace DnDClassesTest
         
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (alignmentBox.Text == "(Choose One)" || chooser.Text == "(Choose One)" || (subRaceBox.Text == "(Choose One)" && subRaceBox.Visible))
+            if (alignmentBox.Text == "" || chooser.Text == "" || (subRaceBox.Text == "" && subRaceBox.Visible))
                 error.Visible = true;
             else
             {
