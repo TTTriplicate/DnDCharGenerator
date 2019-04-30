@@ -31,6 +31,7 @@ namespace DnDClassesTest
         {
             loadChoicecs load = new loadChoicecs();
             load.ShowDialog();
+            this.Close();
         }
 
         private void LandingPage_Load(object sender, EventArgs e)

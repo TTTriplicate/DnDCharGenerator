@@ -9,6 +9,7 @@ using iTextSharp;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.Windows.Forms;
+using System.IO;
 
 namespace DnDClassesTest
 {
@@ -165,8 +166,8 @@ namespace DnDClassesTest
             pdfFormFields.SetField("Check Box " + (indexTwo + 23), "Yes");            
             skillBoxes[indexOne] = true;
             skillBoxes[indexTwo] = true;
-            MessageBox.Show(indexOne.ToString() + " " + skillBoxes[indexOne].ToString());
-            MessageBox.Show(indexTwo.ToString() + " " + skillBoxes[indexTwo].ToString());
+            //MessageBox.Show(indexOne.ToString() + " " + skillBoxes[indexOne].ToString());
+            //MessageBox.Show(indexTwo.ToString() + " " + skillBoxes[indexTwo].ToString());
             count = 0;
             foreach (bool i in newChar._skills)
             {
@@ -296,9 +297,9 @@ namespace DnDClassesTest
             }
             pdfFormFields.SetField("ProficienciesLang", languages);
 
+            //MessageBox.Show("All done");
             pdfStamper.FormFlattening = false;
             pdfStamper.Close();
-            pdfReader.Close();
         }
     }
 }
