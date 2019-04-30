@@ -168,6 +168,7 @@ namespace DnDClassesTest
 
             return current;
         }
+
         private string PactSelect()
         {
             var pact = new PickOne(Features.GetRange(15, 3));
@@ -230,7 +231,71 @@ namespace DnDClassesTest
             else return InvocationSelect(currLevel);
             
         }
-         public override bool LevelUp(){return true;}
+         public override bool LevelUp()
+        {
+            ++this._level;
+            if (this._level < 21)
+            {
+                bool[] check = this.Unlocked();
+                int i;
+                for (i = 0; i < check.Length; ++i)
+                {
+                    if (!check[i])
+                    {
+                        --i;
+                        break;
+                    }
+                }
+                if (i == 1)
+                {
+                    CurrFeatures.Add(Features[0]);
+                    CurrFeatures.Add(InvocationSelect(2));
+                    CurrFeatures.Add(InvocationSelect(2));
+                }
+                if (i == 2) CurrFeatures.Add(PactSelect());
+                if (this._level == 5) CurrFeatures.Add(InvocationSelect(5));
+                if (this._level == 7) CurrFeatures.Add(InvocationSelect(7));
+                if (this._level == 9) CurrFeatures.Add(InvocationSelect(9));
+                if (i == 5) CurrFeatures.Add(Features[1]);
+                if (this._level == 12) CurrFeatures.Add(InvocationSelect(12));
+                if (this._level == 15) CurrFeatures.Add(InvocationSelect(15));
+                if (this._level == 18) CurrFeatures.Add(InvocationSelect(18));
+                if (i == 7) CurrFeatures.Add(Features[2]);
+
+                if (this._proPath == 0)
+                {
+                    CurrFeatures.Add(Features[3]);
+                    if (i == 2) CurrFeatures.Add(Features[4]);
+                    if (i == 5) CurrFeatures.Add(Features[5]);
+                    if (i == 7) CurrFeatures.Add(Features[6]);
+                }
+
+                if (this._proPath == 1)
+                {
+                    CurrFeatures.Add(Features[7]);
+                    if (i == 2) CurrFeatures.Add(Features[8]);
+                    if (i == 5) CurrFeatures.Add(Features[9]);
+                    if (i == 7) CurrFeatures.Add(Features[10]);
+                }
+
+                if (this._proPath == 2)
+                {
+                    CurrFeatures.Add(Features[11]);
+                    if (i == 2) CurrFeatures.Add(Features[12]);
+                    if (i == 5) CurrFeatures.Add(Features[13]);
+                    if (i == 7) CurrFeatures.Add(Features[14]);
+                }
+
+                return true;
+            }
+            else
+            {
+                --this._level;
+                return false;
+            }
+        }
+
+
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using DnDMasterGenerator.Professions.ClassFeatures.MetaMagic;
+﻿using DnDMasterGenerator.Professions;
+using DnDMasterGenerator.Professions.ClassFeatures.MetaMagic;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -82,7 +83,7 @@ namespace DnDClassesTest
             List<string> features = new List<string>();
             String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Professions\ClassFeatures\SorcererClassFeatures.txt");
             //string path = @"C:\Users\csous\source\repos\DnDClassesTest\DnDClassesTest\Professions\ClassFeatures\BarbarianClassFeatures.txt";
-            string[] temp = new string[13];
+            string[] temp = new string[20];
             temp = File.ReadAllLines(path);
             foreach (string i in temp)
             {
@@ -126,40 +127,81 @@ namespace DnDClassesTest
             if (i >= 1)
             {
                 current.Add(Features[0]);
-                current.AddRange(SelectMetamagic());
+                current.Add(SelectMetamagic());
             }
             
             if (i >= 2) current.Add(Features[1]);
             if (i >= 3 && _proPath == 0) current.Add(Features[5]);
             else if (i >= 3 && _proPath == 1) current.Add(Features[11]);
             if (i >= 4 && _proPath == 0) current.Add(Features[6]);
-            if(this._level >= 10) current.AddRange(SelectMetamagic());
+            if(this._level >= 10) current.Add(SelectMetamagic());
             else if (i >= 4 && _proPath == 1) current.Add(Features[12]);
             if (i >= 5 && _proPath == 0) current.Add(Features[7]);
-            if(this._level >= 17) current.AddRange(SelectMetamagic());
+            if(this._level >= 17) current.Add(SelectMetamagic());
             else if(i >= 5 && _proPath == 1)current.Add(Features[13]);
             if (i >= 6) current.Add(Features[2]);
             return current;
         }
 
-        private List<string> SelectMetamagic()
+        private string SelectMetamagic()
         {
- //           int[] indicies = this.MetaSelect;
-            List<string> select = new List<string>();
-   /*         var choose = new MetamagicSelect(indicies);
-            
-            var result = choose.ShowDialog();
-            if(result == DialogResult.OK)
+            List<string> options = Features.GetRange(13, 9);
+            if (this.MetaSelect.Any())
+                foreach (int i in MetaSelect)
+                    options.RemoveAt(i);
+
+            var sel = new PickOne(options);
+            var result = sel.ShowDialog();
+            if (result == DialogResult.OK)
             {
-                foreach (int i in choose.Selected)
-                    select.Add(choose.Source[i]);
-                for (int i = 0; i < MetaSelect.Length; ++i)
-                    MetaSelect[i] = choose.Current[i];
+                MetaSelect.Add(sel.Selected);
+                return sel.Choices[sel.Selected];
             }
-            */
-            return select;
+            else return SelectMetamagic();
+
         }
-         public override bool LevelUp(){return true;}
+         public override bool LevelUp()
+        {
+            ++this._level;
+            if (this._level < 21)
+            {
+                bool[] check = this.Unlocked();
+                int i;
+                for (i = 0; i < check.Length; ++i)
+                {
+                    if (!check[i])
+                    {
+                        --i;
+                        break;
+                    }
+                }
+                if (i >= 1)
+                {
+                    CurrFeatures.Add(Features[0]);
+                    CurrFeatures.Add(SelectMetamagic());
+                }
+
+                if (i >= 2) CurrFeatures.Add(Features[1]);
+                if (i >= 3 && _proPath == 0) CurrFeatures.Add(Features[5]);
+                else if (i >= 3 && _proPath == 1) CurrFeatures.Add(Features[11]);
+                if (i >= 4 && _proPath == 0) CurrFeatures.Add(Features[6]);
+                if (this._level >= 10) CurrFeatures.Add(SelectMetamagic());
+                else if (i >= 4 && _proPath == 1) CurrFeatures.Add(Features[12]);
+                if (i >= 5 && _proPath == 0) CurrFeatures.Add(Features[7]);
+                if (this._level >= 17) CurrFeatures.Add(SelectMetamagic());
+                else if (i >= 5 && _proPath == 1) CurrFeatures.Add(Features[13]);
+                if (i >= 6) CurrFeatures.Add(Features[2]);
+            
+
+            return true;
+            }
+            else
+            {
+                --this._level;
+                return false;
+            }
+        }
+
 
     }
 }
