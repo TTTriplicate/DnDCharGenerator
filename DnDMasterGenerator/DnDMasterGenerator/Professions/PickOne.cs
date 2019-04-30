@@ -83,4 +83,4 @@ namespace DnDMasterGenerator.Professions
         }
     }
 }
-}
+

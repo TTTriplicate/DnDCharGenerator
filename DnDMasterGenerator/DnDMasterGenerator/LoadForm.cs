@@ -25,7 +25,7 @@ namespace DnDClassesTest
         public LoadForm(string nameOfCharacter)
         {
             InitializeComponent();
-            btnLevelUp.Show();
+            btnLevelUp.Hide();
             string[] abils = { "ST Strength", "ST Dexterity", "ST Constitution", "ST Intelligence", "ST Wisdom", "ST Charisma" };
 
             string nameOfFile = nameOfCharacter;
@@ -147,7 +147,7 @@ namespace DnDClassesTest
         {
             //Top Fields
             InitializeComponent();
-            btnLevelUp.Hide();
+            //btnLevelUp.Hide();
             DisplayChar = leeroy;
             CharName.Text = leeroy._name;
             PlayerName.Text = leeroy._playerName;
@@ -406,7 +406,7 @@ namespace DnDClassesTest
                 updated.ShowDialog();
                 this.Close();
             }
-            else if (DisplayChar._level == 20)
+            else
                 MessageBox.Show("Your character is already at the highest level!", "Max Level");
         }
         private void LoadForm_Load(object sender, EventArgs e)
