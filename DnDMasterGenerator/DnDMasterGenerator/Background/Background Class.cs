@@ -11,57 +11,44 @@ namespace DnDClassesTest
     public class Background_Class
     {
         public bool[] SkillProf = new bool[18];
-        //public bool[] ToolProf = new bool[9];
-        public String[] BACKGROUNDS = { "Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin" };
+        public bool[] backlanguage = new bool[16];
         public string[] lines;
-        //public string background;
         protected int numLang;
         protected string[] info; 
-        public bool[] backlanguage = new bool[16];
+        public String[] BACKGROUNDS = { "Acolyte", "Charlatan", "Criminal", "Entertainer", "Folk Hero", "Guild Artisan", "Hermit", "Noble", "Outlander", "Sage", "Sailor", "Soldier", "Urchin" };
         public String[] allSkillProfs = { "Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Preformance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival" };
-        //public String[] allToolProfs = { "Artisan’s Tools", "Disguise Kit", "Forgery Kit", "Gaming Set", "Herbalism Kit", "Musical Instrument", "Navigator’s Tools", "Poisoner’s Kit", "Thieves’ Tools" };
-        public string[] personalities = { "f", "f", "f", "f", "f", "f", "f", "f" };
-        public string[] ideals = { "f", "f", "f", "f", "f", "f" };
-        public string[] flaws = { "f", "f", "f", "f", "f", "f" };
-        public string[] bonds = { "f", "f", "f", "f", "f", "f" };
+        public string[] personalities = new string[8];
+        public string[] ideals = new string[6];
+        public string[] flaws = new string[6];
+        public string[] bonds = new string[6];
 
         public string Personality, Ideal, Flaw, Bond, Background, SkillProfOne, SkillProfTwo, Race, Hair, Skin, Eyes, Weight, Height, Age, Gender;
 
-        public Background_Class()//string background)
+        public Background_Class()
         {
-            //setBackground(background);
-            //BackgroundForm form = new BackgroundForm(this);
-            //setBackground(background);
-            //string[] lines;
-            //lines = File.ReadAllLines(path);
-            //this.test = lines[0].Split()[1];
+            //Nothingness
         }
 
-        public Background_Class(string background)
+        public Background_Class(string background) //basic constructor
         {
             this.Background = background;
             loadFile(background);
             Traits();
             SkillProfs(background);
-            
-            //runLanq();
         }
 
-        public Background_Class(string race, string background)
+        public Background_Class(string race, string background) //custom made for race
         {
             this.Race = race;
         }
 
-        public void loadFile(string background)
+        public void loadFile(string background) //loads files
         {
-            //string choice = "";
-            //this.background = background;
             String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Background\" + background + ".txt");
             lines = File.ReadAllLines(path);
-            //choice = background;
         }
 
-        public int RanNumGen(int sides)
+        public int RanNumGen(int sides) //returns a random number
         {
             int randNum;
 
@@ -72,7 +59,7 @@ namespace DnDClassesTest
             return randNum;
         }
 
-        public void SkillProfs(string bg)
+        public void SkillProfs(string bg) //Sets the appropriate skill proficiency for the background
         {
             switch (bg)
             {
@@ -186,10 +173,8 @@ namespace DnDClassesTest
                 }
             }
         }
-
-        //public void SkillProfs(ref string skillOne)
         
-        public void loadShit()
+        public void loadShit() //loads everything in properly
         {
             loadFile(Background);
             for (int i = 0; i < 8; i++)
@@ -202,9 +187,8 @@ namespace DnDClassesTest
                 bonds[i] = lines[(31 + i)].Split(':')[1];
         }
 
-        public void Traits()
+        public void Traits() //sets traits for personality, ideals, flaws, and bond
         {
-            //string[] finalTraits = { "f", "f", "f", "f" };
 
             loadShit();
 
@@ -221,13 +205,13 @@ namespace DnDClassesTest
         }
 
 
-        public void getLang()
+        public void getLang() 
         {
             String path = Path.Combine(Environment.CurrentDirectory, @"..\..\Background\Languages" + ".txt");
             info = System.IO.File.ReadAllLines(path);
         }
 
-        public void setFluff(string[] backgroundAddOns)
+        public void setFluff(string[] backgroundAddOns) //sets all the bs fluff stuff for the weebs
         {
             this.Hair = backgroundAddOns[0];
             this.Skin = backgroundAddOns[1];
@@ -324,12 +308,7 @@ namespace DnDClassesTest
             return Background;
         }
 
-        public void setBackground(string background)
-        {
-            //this.background = background;
-        }
-
-        public static Background_Class InteractiveChoice(Race r)
+        public static Background_Class InteractiveChoice(Race r) //made for calling the class
         {
             BackgroundForm form = new BackgroundForm(r);
             DialogResult result = form.ShowDialog();

@@ -1850,9 +1850,9 @@
             // 
             // btnLevelUp
             // 
-            this.btnLevelUp.Location = new System.Drawing.Point(838, 671);
+            this.btnLevelUp.Location = new System.Drawing.Point(838, 654);
             this.btnLevelUp.Name = "btnLevelUp";
-            this.btnLevelUp.Size = new System.Drawing.Size(75, 23);
+            this.btnLevelUp.Size = new System.Drawing.Size(84, 40);
             this.btnLevelUp.TabIndex = 155;
             this.btnLevelUp.Text = "Level Up";
             this.btnLevelUp.UseVisualStyleBackColor = true;

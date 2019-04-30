@@ -38,6 +38,7 @@ namespace DnDClassesTest
                 Error.Visible = false;
                 LoadForm load = new LoadForm(name);
                 load.ShowDialog();
+                this.Hide();
             }
             else
             {

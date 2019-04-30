@@ -12,7 +12,6 @@ namespace DnDClassesTest
 {
     public partial class BackgroundForm : Form
     {
-        //public Background_Class Character = new Background_Class();
         public Race race = new DnDClassesTest.Race();
 
         public string Personality, Ideal, Bond, Flaw, Race;
@@ -20,24 +19,12 @@ namespace DnDClassesTest
         string[] allLanguages = { "Common", "Dwarvish", "Elvish", "Giant", "Gnomish", "Goblin", "Halfling", "Orc", "Abyssal", "Celestial", "Draconic", "Deep Speech", "Infernal", "Primordial", "Sylvan", "Undercommon" };
         public bool[] bl = new bool[16];
 
-        public BackgroundForm(ref string Personality, ref string Ideal, ref string Bond, ref string Flaw)
-        {
-            InitializeComponent();
-            setInfo(ref Personality, ref Ideal, ref Flaw, ref Bond);
-        }
-
-        public BackgroundForm(ref string Background)
-        {
-            InitializeComponent();
-            Background = BGChoice.Text;
-        }
-
         public BackgroundForm()
         {
             InitializeComponent();
         }
 
-        public BackgroundForm(Race race)
+        public BackgroundForm(Race race) //Runs backgroundForm properly
         {
             InitializeComponent();
             this.race = race;
@@ -49,14 +36,39 @@ namespace DnDClassesTest
             ageValid.Hide();
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
+        private void btnNext_Click(object sender, EventArgs e) //Activates when press done
         {
             int num = 0;
             string[] backgroundAddOns = new string[7];
             
 
             string[] ages = race.getAge().Split('-');
-            if (int.Parse(AgeMasked.Text) < int.Parse(ages[0]))
+            if (AgeMasked.Text == "")
+            {
+                ageValid.Hide();
+                for (int i = 0; i < 8; i++)
+                {
+                    if (num < langList.CheckedItems.Count && langList.CheckedItems[num].ToString() == allLanguages[i])
+                    {
+                        bl[i] = true;
+                        num++;
+                    }
+                }
+                //sets stuff in array to send back to Background_Class
+                backgroundAddOns[0] = HairMasked.Text;
+                backgroundAddOns[1] = SkinMasked.Text;
+                backgroundAddOns[2] = EyesMasked.Text;
+                backgroundAddOns[3] = HeightMasked.Text;
+                backgroundAddOns[4] = WeightMasked.Text;
+                backgroundAddOns[5] = AgeMasked.Text;
+                backgroundAddOns[6] = GenderMasked.Text;
+
+                selected.setBackLang(bl);
+                selected.setFluff(backgroundAddOns);
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else if (int.Parse(AgeMasked.Text) < int.Parse(ages[0])) //verifies age
             {
                 ageValid.Text = "Please choose an age \nbetween " + ages[0] + " and " + ages[1];
                 ageValid.Show();
@@ -77,6 +89,7 @@ namespace DnDClassesTest
                         num++;
                     }
                 }
+                //sets stuff in array to send back to Background_Class
                 backgroundAddOns[0] = HairMasked.Text;
                 backgroundAddOns[1] = SkinMasked.Text;
                 backgroundAddOns[2] = EyesMasked.Text;
@@ -93,7 +106,7 @@ namespace DnDClassesTest
        
         }
 
-        private void langList_SelectedIndexChanged(object sender, EventArgs e)
+        private void langList_SelectedIndexChanged(object sender, EventArgs e) //updates languages box
         {
             if (langList.CheckedItems.Count == selected.getNumLang())
                 langList.Enabled = false;
@@ -106,7 +119,7 @@ namespace DnDClassesTest
 
         public Background_Class selected { get; set; }
 
-        private void BGChoice_SelectedIndexChanged(object sender, EventArgs e)
+        private void BGChoice_SelectedIndexChanged(object sender, EventArgs e) 
         {
             selected = new Background_Class(BGChoice.SelectedItem.ToString());
 
