@@ -1,4 +1,4 @@
-﻿namespace DnDMasterGenerator
+﻿namespace DnDClassesTest
 {
     partial class loadChoicecs
     {

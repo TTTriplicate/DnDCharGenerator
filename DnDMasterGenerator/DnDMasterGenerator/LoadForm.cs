@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace DnDClassesTest
 {
@@ -17,8 +21,25 @@ namespace DnDClassesTest
         {
             InitializeComponent();
         }
+        
+        public LoadForm(string nameOfCharacter)
+        {
+            string nameOfFile = nameOfCharacter;
+            string PDFFolder = Path.Combine(Environment.CurrentDirectory, @"..\..\PDFs");
+            string pdfTemplate = PDFFolder + @"\" + nameOfCharacter + ".pdf";
+            string newFile = PDFFolder + @"\" + nameOfFile + ".pdf";
 
-        //public
+            //PdfReader pdfReader = new PdfReader(pdfTemplate);
+            //PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
+            //AcroFields pdfFormFields = pdfStamper.AcroFields;
+            var pdfReader = new PdfReader(pdfTemplate);
+            var pdfFormFields = pdfReader.AcroFields;
+
+            CharName.Text = pdfFormFields.GetField("CharacterName");
+            PlayerName.Text = pdfFormFields.GetField("PlayerName");
+
+            pdfReader.Close();
+        }
 
         public LoadForm(DnDCharacter leeroy)
         {
