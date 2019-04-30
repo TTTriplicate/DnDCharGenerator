@@ -307,7 +307,7 @@ namespace DnDClassesTest
              this code would break badly*/
             //unnecessary this.SavingThrows = this.CharClass.SavingThrows();
             //}
-            public List<string> getInventoryString() //passes string representation of the finalized inventory to charsheet and pdf filler, among other things
+        public List<string> getInventoryString() //passes string representation of the finalized inventory to charsheet and pdf filler, among other things
         {
             return inventoryString;
         }
