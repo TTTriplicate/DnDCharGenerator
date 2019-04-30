@@ -175,7 +175,70 @@ namespace DnDClassesTest
 
             return current;
         }
-         public override bool LevelUp(){return true;}
+         public override bool LevelUp()
+        {
+            ++this._level;
+            if (this._level < 21)
+            {
+                bool[] check = this.Unlocked();
+                int i;
+                for (i = 0; i < check.Length; ++i)
+                {
+                    if (!check[i])
+                    {
+                        --i;
+                        break;
+                    }
+                }
+                if (i == 1) CurrFeatures.Add(Features[3]);
+                else if (i == 3) CurrFeatures.Add(Features[4]);
+                else if (i == 4) CurrFeatures.Add(Features[5]);
+                else if (i == 6) CurrFeatures.Add(Features[6]);
+                else if (i == 8) CurrFeatures.Add(Features[7]);
+                else if (i == 9) CurrFeatures.Add(Features[8]);
+                else if (i == 11) CurrFeatures.Add(Features[9]);
+                else if (i == 12) CurrFeatures.Add(Features[10]);
+
+                if (_proPath == 0)
+                {
+                    if (i == 2)
+                    {
+                        CurrFeatures.Add(Features[11]);
+                        CurrFeatures.Add(Features[12]);
+                    }
+                    else if (i == 5) CurrFeatures.Add(Features[13]);
+                    else if (i == 7) CurrFeatures.Add(Features[14]);
+                    else if (i == 10) CurrFeatures.Add(Features[15]);
+                }
+
+                else if (_proPath == 1)
+                {
+                    if (i == 2)
+                    {
+                        CurrFeatures.Add(Features[16]);
+                        CurrFeatures.Add(Features[17]);
+                    }
+                    else if (i == 5) CurrFeatures.Add(Features[18]);
+                    else if (i == 7) CurrFeatures.Add(Features[19]);
+                    else if (i == 10) CurrFeatures.Add(Features[20]);
+                }
+
+                else if (_proPath == 2)
+                {
+                    if (i == 2) CurrFeatures.Add(Features[21]);
+                    else if (i == 5) CurrFeatures.Add(Features[22]);
+                    else if (i == 7) CurrFeatures.Add(Features[23]);
+                    else if (i == 10) CurrFeatures.Add(Features[24]);
+                }
+                return true;
+            }
+            else
+            {
+                --this._level;
+                return false;
+            }
+        }
+
 
         //insert class feature methods here
     }
