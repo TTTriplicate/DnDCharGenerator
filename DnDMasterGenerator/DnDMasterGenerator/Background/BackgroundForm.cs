@@ -46,33 +46,51 @@ namespace DnDClassesTest
             FlawDropDown.Visible = false;
             BondDropDown.Visible = false;
             ChooseTraits.Visible = false;
+            ageValid.Hide();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
             int num = 0;
             string[] backgroundAddOns = new string[7];
-            for (int i = 0; i< 8; i++)
+            
+
+            string[] ages = race.getAge().Split('-');
+            if (int.Parse(AgeMasked.Text) < int.Parse(ages[0]))
             {
-                if (num < langList.CheckedItems.Count && langList.CheckedItems[num].ToString() == allLanguages[i])
-                {
-                    bl[i] = true;
-                    num++;
-                }
+                ageValid.Text = "Please choose an age \nbetween " + ages[0] + " and " + ages[1];
+                ageValid.Show();
             }
+            else if (int.Parse(AgeMasked.Text) > int.Parse(ages[1]))
+            {
+                ageValid.Text = "Please choose an age \nbetween " + ages[0] + " and " + ages[1];
+                ageValid.Show();
+            }
+            else
+            {
+                ageValid.Hide();
+                for (int i = 0; i < 8; i++)
+                {
+                    if (num < langList.CheckedItems.Count && langList.CheckedItems[num].ToString() == allLanguages[i])
+                    {
+                        bl[i] = true;
+                        num++;
+                    }
+                }
+                backgroundAddOns[0] = HairMasked.Text;
+                backgroundAddOns[1] = SkinMasked.Text;
+                backgroundAddOns[2] = EyesMasked.Text;
+                backgroundAddOns[3] = HeightMasked.Text;
+                backgroundAddOns[4] = WeightMasked.Text;
+                backgroundAddOns[5] = AgeMasked.Text;
+                backgroundAddOns[6] = GenderMasked.Text;
 
-            backgroundAddOns[0] = Hair.Text;
-            backgroundAddOns[1] = Skin.Text;
-            backgroundAddOns[2] = Eyes.Text;
-            backgroundAddOns[3] = Height.Text;
-            backgroundAddOns[4] = Weight.Text;
-            backgroundAddOns[5] = Age.Text;
-            backgroundAddOns[6] = Gender.Text;
-
-            selected.setBackLang(bl);
-            selected.setFluff(backgroundAddOns);
-            DialogResult = DialogResult.OK;
-            this.Close();
+                selected.setBackLang(bl);
+                selected.setFluff(backgroundAddOns);
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+       
         }
 
         private void langList_SelectedIndexChanged(object sender, EventArgs e)
@@ -163,6 +181,42 @@ namespace DnDClassesTest
         private void button1_Click(object sender, EventArgs e)
         {
             chooseLang();
+        }
+
+
+        private void HairMasked_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void EyesMasked_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void AgeMasked_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void WeightMasked_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void GenderMasked_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void SkinMasked_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void HeightMasked_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
 
         private void BackgroundForm_Load(object sender, EventArgs e)
