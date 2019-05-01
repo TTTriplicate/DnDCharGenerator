@@ -47,7 +47,7 @@ namespace DnDClassesTest
             Choice4.Hide();
             Choice5.Hide();
             Choice6.Hide();
-            twoMartial.Hide(); //Literally only for fighter, paladin, and ranger.  The name is misleading because ranger uses two simple melee weapons instead of two martial weapons but I don't give a fuck
+            twoMartial.Hide(); //Literally only for fighter, paladin, and ranger.  The name is misleading because ranger uses two simple melee weapons instead of two martial weapons but I don't give a.
             choice1a.Hide();
             choice1b.Hide();
             choice2a.Hide();
@@ -60,7 +60,7 @@ namespace DnDClassesTest
             choice5b.Hide();
             choice6a.Hide();
             choice6b.Hide();
-            wackadooThingy.Hide(); //Literally only for fighter because fighter is a whole bitch.  Oh wait, also for paladin
+            wackadooThingy.Hide(); //Literally only for fighter because fighter is a whole mess.  Oh wait, also for paladin
 
             if(numItems >= 1)
             {

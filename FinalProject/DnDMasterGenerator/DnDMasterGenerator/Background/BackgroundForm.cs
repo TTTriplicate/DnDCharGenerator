@@ -164,7 +164,7 @@ namespace DnDClassesTest
         {
             if (ChooseTraits.Checked == true)
             {
-                selected.loadShit();
+                selected.loadstuff();
                 PersonalityDropDown.DataSource = selected.personalities;
                 PersonalityDropDown.Visible = true;
                 IdealDropDown.DataSource = selected.ideals;

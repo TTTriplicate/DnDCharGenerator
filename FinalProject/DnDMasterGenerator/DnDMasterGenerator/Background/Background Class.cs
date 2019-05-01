@@ -174,7 +174,7 @@ namespace DnDClassesTest
             }
         }
         
-        public void loadShit() //loads everything in properly
+        public void loadstuff() //loads everything in properly
         {
             loadFile(Background);
             for (int i = 0; i < 8; i++)
@@ -190,7 +190,7 @@ namespace DnDClassesTest
         public void Traits() //sets traits for personality, ideals, flaws, and bond
         {
 
-            loadShit();
+            loadstuff();
 
             this.Personality = personalities[RanNumGen(8)];
             this.Ideal = ideals[RanNumGen(6)];

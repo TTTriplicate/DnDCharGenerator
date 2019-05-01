@@ -50,6 +50,7 @@
             this.choice2a = new System.Windows.Forms.RadioButton();
             this.choice6a = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.wackadooThingy = new System.Windows.Forms.ComboBox();
             this.choice1b = new System.Windows.Forms.RadioButton();
             this.choice2b = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -58,7 +59,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.twoMartial = new System.Windows.Forms.ComboBox();
-            this.wackadooThingy = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -142,7 +142,7 @@
             this.Choice1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice1.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Choice1.FormattingEnabled = true;
-            this.Choice1.Location = new System.Drawing.Point(94, 155);
+            this.Choice1.Location = new System.Drawing.Point(61, 66);
             this.Choice1.Margin = new System.Windows.Forms.Padding(2);
             this.Choice1.MaxDropDownItems = 20;
             this.Choice1.Name = "Choice1";
@@ -329,20 +329,36 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.twoMartial);
             this.panel1.Controls.Add(this.wackadooThingy);
             this.panel1.Controls.Add(this.choice1a);
             this.panel1.Controls.Add(this.choice1b);
+            this.panel1.Controls.Add(this.Choice1);
             this.panel1.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(16, 69);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(581, 123);
             this.panel1.TabIndex = 32;
             // 
+            // wackadooThingy
+            // 
+            this.wackadooThingy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.wackadooThingy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.wackadooThingy.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wackadooThingy.FormattingEnabled = true;
+            this.wackadooThingy.Location = new System.Drawing.Point(78, 35);
+            this.wackadooThingy.Margin = new System.Windows.Forms.Padding(2);
+            this.wackadooThingy.MaxDropDownItems = 20;
+            this.wackadooThingy.Name = "wackadooThingy";
+            this.wackadooThingy.Size = new System.Drawing.Size(475, 27);
+            this.wackadooThingy.TabIndex = 39;
+            this.wackadooThingy.SelectedIndexChanged += new System.EventHandler(this.wackadooThingy_SelectedIndexChanged);
+            // 
             // choice1b
             // 
             this.choice1b.AutoSize = true;
             this.choice1b.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.choice1b.Location = new System.Drawing.Point(36, 86);
+            this.choice1b.Location = new System.Drawing.Point(39, 66);
             this.choice1b.Name = "choice1b";
             this.choice1b.Size = new System.Drawing.Size(17, 16);
             this.choice1b.TabIndex = 19;
@@ -423,27 +439,13 @@
             this.twoMartial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.twoMartial.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.twoMartial.FormattingEnabled = true;
-            this.twoMartial.Location = new System.Drawing.Point(94, 180);
+            this.twoMartial.Location = new System.Drawing.Point(61, 91);
             this.twoMartial.Margin = new System.Windows.Forms.Padding(2);
             this.twoMartial.MaxDropDownItems = 20;
             this.twoMartial.Name = "twoMartial";
             this.twoMartial.Size = new System.Drawing.Size(492, 27);
             this.twoMartial.TabIndex = 38;
             this.twoMartial.SelectedIndexChanged += new System.EventHandler(this.twoMartial_SelectedIndexChanged);
-            // 
-            // wackadooThingy
-            // 
-            this.wackadooThingy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.wackadooThingy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.wackadooThingy.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wackadooThingy.FormattingEnabled = true;
-            this.wackadooThingy.Location = new System.Drawing.Point(78, 44);
-            this.wackadooThingy.Margin = new System.Windows.Forms.Padding(2);
-            this.wackadooThingy.MaxDropDownItems = 20;
-            this.wackadooThingy.Name = "wackadooThingy";
-            this.wackadooThingy.Size = new System.Drawing.Size(498, 27);
-            this.wackadooThingy.TabIndex = 39;
-            this.wackadooThingy.SelectedIndexChanged += new System.EventHandler(this.wackadooThingy_SelectedIndexChanged);
             // 
             // GearForm
             // 
@@ -453,12 +455,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1040, 714);
-            this.Controls.Add(this.twoMartial);
             this.Controls.Add(this.Inventory);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Submit);
-            this.Controls.Add(this.Choice1);
             this.Controls.Add(this.Choice6);
             this.Controls.Add(this.Choice5);
             this.Controls.Add(this.Choice4);
