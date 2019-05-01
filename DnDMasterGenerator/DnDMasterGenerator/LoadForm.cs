@@ -11,6 +11,7 @@ using iTextSharp;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using DnDMasterGenerator;
 
 namespace DnDClassesTest
 {
@@ -416,10 +417,19 @@ namespace DnDClassesTest
         }
         private void LoadForm_Load(object sender, EventArgs e)
         {
-
+            if (DisplayChar != null)
+            {
+                var display = new DisplayForm(DisplayChar);
+                display.Show();
+            }
         }
 
         private void EXP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadForm_FormClosed(object sender, FormClosedEventArgs e)
         {
 
         }
