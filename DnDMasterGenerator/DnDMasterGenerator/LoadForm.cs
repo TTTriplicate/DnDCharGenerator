@@ -82,7 +82,7 @@ namespace DnDClassesTest
             ArmorClass.Text = pdfFormFields.GetField("AC");
             Initiative.Text = pdfFormFields.GetField("Initiative");
             Speed.Text = pdfFormFields.GetField("Speed");
-            txtHP.Text = pdfFormFields.GetField("HP");
+            txtHP.Text = pdfFormFields.GetField("HPMax");
 
             //RadioButtons
             count = 0;
