@@ -34,6 +34,7 @@ namespace DnDClassesTest
             BondDropDown.Visible = false;
             ChooseTraits.Visible = false;
             ageValid.Hide();
+            HeightError.Hide();
         }
 
         private void btnNext_Click(object sender, EventArgs e) //Activates when press done
@@ -46,6 +47,7 @@ namespace DnDClassesTest
             if (AgeMasked.Text == "")
             {
                 ageValid.Hide();
+                HeightError.Hide();
                 for (int i = 0; i < 8; i++)
                 {
                     if (num < langList.CheckedItems.Count && langList.CheckedItems[num].ToString() == allLanguages[i])
@@ -68,15 +70,20 @@ namespace DnDClassesTest
                 DialogResult = DialogResult.OK;
                 this.Close();
             }
-            else if (int.Parse(AgeMasked.Text) < int.Parse(ages[0])) //verifies age
+            else if (int.Parse(AgeMasked.Text) < 0) //verifies age
             {
-                ageValid.Text = "Please choose an age \nbetween " + ages[0] + " and " + ages[1];
+                ageValid.Text = "Please choose an age \nbetween " + 0.ToString() + " and " + ages[1];
                 ageValid.Show();
             }
             else if (int.Parse(AgeMasked.Text) > int.Parse(ages[1]))
             {
-                ageValid.Text = "Please choose an age \nbetween " + ages[0] + " and " + ages[1];
+                ageValid.Text = "Please choose an age \nbetween " + 0.ToString() + " and " + ages[1];
                 ageValid.Show();
+            }
+            else if (int.Parse(HeightMasked.Text) - (int.Parse(HeightMasked.Text) % 100) > 12)
+            {
+                HeightError.Text = "Please have less than 12 inches";
+                HeightError.Show();
             }
             else
             {

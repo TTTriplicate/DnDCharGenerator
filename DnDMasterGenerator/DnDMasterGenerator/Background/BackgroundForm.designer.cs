@@ -62,6 +62,7 @@
             this.AgeMasked = new System.Windows.Forms.MaskedTextBox();
             this.WeightMasked = new System.Windows.Forms.MaskedTextBox();
             this.ageValid = new System.Windows.Forms.Label();
+            this.HeightError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BOND
@@ -476,7 +477,7 @@
             this.HeightMasked.BeepOnError = true;
             this.HeightMasked.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HeightMasked.Location = new System.Drawing.Point(26, 573);
-            this.HeightMasked.Mask = "0\'##\"";
+            this.HeightMasked.Mask = "0\'00\"";
             this.HeightMasked.Name = "HeightMasked";
             this.HeightMasked.Size = new System.Drawing.Size(135, 27);
             this.HeightMasked.TabIndex = 44;
@@ -515,6 +516,17 @@
             this.ageValid.TabIndex = 47;
             this.ageValid.Text = "Choose a valid age";
             // 
+            // HeightError
+            // 
+            this.HeightError.AutoSize = true;
+            this.HeightError.BackColor = System.Drawing.Color.Transparent;
+            this.HeightError.ForeColor = System.Drawing.Color.Red;
+            this.HeightError.Location = new System.Drawing.Point(24, 603);
+            this.HeightError.Name = "HeightError";
+            this.HeightError.Size = new System.Drawing.Size(144, 17);
+            this.HeightError.TabIndex = 48;
+            this.HeightError.Text = "Choose a valid height";
+            // 
             // BackgroundForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -522,6 +534,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(537, 743);
+            this.Controls.Add(this.HeightError);
             this.Controls.Add(this.ageValid);
             this.Controls.Add(this.WeightMasked);
             this.Controls.Add(this.AgeMasked);
@@ -599,5 +612,6 @@
         private System.Windows.Forms.MaskedTextBox AgeMasked;
         private System.Windows.Forms.MaskedTextBox WeightMasked;
         private System.Windows.Forms.Label ageValid;
+        private System.Windows.Forms.Label HeightError;
     }
 }
