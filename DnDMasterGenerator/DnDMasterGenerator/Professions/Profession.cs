@@ -115,6 +115,7 @@ namespace DnDClassesTest
                     name = first.Name;
                     playerName = first.PlayerName;
                 }
+                else return Profession.InteractiveChoice(out abilities, out name, out playerName);
                 switch (p)
                 {
                     case 0:
