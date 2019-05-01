@@ -165,7 +165,7 @@ namespace DnDClassesTest
             this._HP += AbilityModifiers()[2];
             if (this._level > 1)
             {
-                for (int l = 0; l < this._level; ++l)
+                for (int l = 1; l < this._level; ++l)
                 {
                     if(this._class.ProfessionName() == "Barbarian" && l == 19)
                     {

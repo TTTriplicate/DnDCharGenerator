@@ -173,6 +173,8 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.btnLevelUp = new System.Windows.Forms.Button();
+            this.txtHP = new System.Windows.Forms.RichTextBox();
+            this.lblHP = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -1299,7 +1301,7 @@
             this.label37.AutoSize = true;
             this.label37.BackColor = System.Drawing.Color.Transparent;
             this.label37.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
-            this.label37.Location = new System.Drawing.Point(379, 220);
+            this.label37.Location = new System.Drawing.Point(412, 212);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(69, 46);
             this.label37.TabIndex = 106;
@@ -1311,7 +1313,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ArmorClass.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ArmorClass.Location = new System.Drawing.Point(402, 180);
+            this.ArmorClass.Location = new System.Drawing.Point(431, 173);
             this.ArmorClass.Name = "ArmorClass";
             this.ArmorClass.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ArmorClass.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -1324,7 +1326,7 @@
             this.label38.AutoSize = true;
             this.label38.BackColor = System.Drawing.Color.Transparent;
             this.label38.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
-            this.label38.Location = new System.Drawing.Point(474, 219);
+            this.label38.Location = new System.Drawing.Point(503, 212);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(78, 23);
             this.label38.TabIndex = 108;
@@ -1336,7 +1338,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Initiative.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Initiative.Location = new System.Drawing.Point(494, 180);
+            this.Initiative.Location = new System.Drawing.Point(523, 173);
             this.Initiative.Name = "Initiative";
             this.Initiative.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Initiative.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -1349,7 +1351,7 @@
             this.label39.AutoSize = true;
             this.label39.BackColor = System.Drawing.Color.Transparent;
             this.label39.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
-            this.label39.Location = new System.Drawing.Point(571, 219);
+            this.label39.Location = new System.Drawing.Point(600, 212);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(58, 23);
             this.label39.TabIndex = 110;
@@ -1361,7 +1363,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Speed.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Speed.Location = new System.Drawing.Point(583, 180);
+            this.Speed.Location = new System.Drawing.Point(612, 173);
             this.Speed.Name = "Speed";
             this.Speed.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Speed.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -1861,6 +1863,31 @@
             this.btnLevelUp.UseVisualStyleBackColor = true;
             this.btnLevelUp.Click += new System.EventHandler(this.btnLevelUp_Click);
             // 
+            // txtHP
+            // 
+            this.txtHP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtHP.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHP.Location = new System.Drawing.Point(352, 173);
+            this.txtHP.Name = "txtHP";
+            this.txtHP.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtHP.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.txtHP.Size = new System.Drawing.Size(42, 36);
+            this.txtHP.TabIndex = 156;
+            this.txtHP.Text = "";
+            // 
+            // lblHP
+            // 
+            this.lblHP.AutoSize = true;
+            this.lblHP.BackColor = System.Drawing.Color.Transparent;
+            this.lblHP.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHP.Location = new System.Drawing.Point(352, 214);
+            this.lblHP.Name = "lblHP";
+            this.lblHP.Size = new System.Drawing.Size(38, 23);
+            this.lblHP.TabIndex = 157;
+            this.lblHP.Text = "HP";
+            // 
             // LoadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1868,6 +1895,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(964, 789);
+            this.Controls.Add(this.lblHP);
+            this.Controls.Add(this.txtHP);
             this.Controls.Add(this.btnLevelUp);
             this.Controls.Add(this.panel18);
             this.Controls.Add(this.panel17);
@@ -2187,5 +2216,7 @@
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Button btnLevelUp;
+        private System.Windows.Forms.RichTextBox txtHP;
+        private System.Windows.Forms.Label lblHP;
     }
 }
