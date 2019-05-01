@@ -43,10 +43,10 @@ namespace DnDClassesTest
             this._caster = true;
             this._proPath = path;
             this._numProSkills = 2;
+            this.IndexedInvocations = new List<int>();
             this.Features = this.ClassFeatures();
             this.CurrFeatures = this.CurrentFeatures();
             this._abilityScoreIncrease = new int[5] { 4, 8, 12, 16, 19 };
-            this.IndexedInvocations = new List<int>();
             this.PactBoon = -1;
         }
         public override bool[] ClassSkills()
