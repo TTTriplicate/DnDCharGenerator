@@ -28,6 +28,7 @@ namespace DnDClassesTest
             InitializeComponent();
             btnLevelUp.Hide();
             string[] abils = { "ST Strength", "ST Dexterity", "ST Constitution", "ST Intelligence", "ST Wisdom", "ST Charisma" };
+            //string[] abilities = { };
 
             string nameOfFile = nameOfCharacter;
             string PDFFolder = Path.Combine(Environment.CurrentDirectory, @"..\..\PDFs");
@@ -55,7 +56,7 @@ namespace DnDClassesTest
             System.Windows.Forms.RichTextBox[] Abilities = { STR, DEX, CON, INT, WIS, CHA };
             foreach (System.Windows.Forms.RichTextBox i in Abilities)
             {
-                i.Text = pdfFormFields.GetField(abils[count]);
+                i.Text = pdfFormFields.GetField(Abilities[count].Name);
                 count++;
             }
 
@@ -69,6 +70,8 @@ namespace DnDClassesTest
             languages.Text = pdfFormFields.GetField("ProficienciesLang");
             Equipment.Text = pdfFormFields.GetField("Equipment");
             FeaturesAndTraits.Text = pdfFormFields.GetField("Features and Traits");
+            if (FeaturesAndTraits.Text == "")
+                FeaturesAndTraits.Text = "None";
             CP.Text = "0";
             SP.Text = "0";
             EP.Text = "0";
@@ -201,6 +204,8 @@ namespace DnDClassesTest
                     FeaturesAndTraits.Text += ", ";
                 FeaturesAndTraits.Text += i;
             }
+            if (FeaturesAndTraits.Text == "")
+                FeaturesAndTraits.Text = "None";
 
             //Small Boxes at Top
             ArmorClass.Text = leeroy.getAC().ToString();
