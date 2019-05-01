@@ -1998,6 +1998,7 @@
             this.Name = "LoadForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "LoadForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoadForm_FormClosed);
             this.Load += new System.EventHandler(this.LoadForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

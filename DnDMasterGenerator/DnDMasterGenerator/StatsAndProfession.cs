@@ -87,14 +87,17 @@ namespace DnDClassesTest
 
         private void btnNext_Click(object sender, System.EventArgs e)
         {
-            p = comboClass.SelectedIndex;
-            proPath = comboSubClass.SelectedIndex;
-            level = (int)numLevel.Value;
-            Name = txtName.Text;
-            PlayerName = playerNameBox.Text;
-            Abilities = new int[6] { (int)numSTR.Value, (int)numDEX.Value, (int)numCON.Value, (int)numINT.Value, (int)numWIS.Value, (int)numCHA.Value };
-            DialogResult = DialogResult.OK;
-            this.Close();
+            if (comboClass.Text != "" && comboSubClass.Text != "")
+            {
+                p = comboClass.SelectedIndex;
+                proPath = comboSubClass.SelectedIndex;
+                level = (int)numLevel.Value;
+                Name = txtName.Text;
+                PlayerName = playerNameBox.Text;
+                Abilities = new int[6] { (int)numSTR.Value, (int)numDEX.Value, (int)numCON.Value, (int)numINT.Value, (int)numWIS.Value, (int)numCHA.Value };
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
         private Random dice = new Random();
         public int RanNumGen()

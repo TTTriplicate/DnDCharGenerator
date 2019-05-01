@@ -183,3 +183,4 @@ C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMa
 C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.loadChoicecs.resources
 C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDClassesTest.LoadForm.resources
 C:\Users\dylan.bryant\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.Professions.PickOne.resources
+C:\Users\csous\OneDrive\Documents\GitHub\DnDCharGenerator\DnDMasterGenerator\DnDMasterGenerator\obj\Debug\DnDMasterGenerator.DisplayForm.resources
