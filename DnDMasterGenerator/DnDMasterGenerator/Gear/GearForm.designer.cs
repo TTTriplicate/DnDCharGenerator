@@ -73,7 +73,7 @@
             this.Choice2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice2.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Choice2.FormattingEnabled = true;
-            this.Choice2.Location = new System.Drawing.Point(94, 193);
+            this.Choice2.Location = new System.Drawing.Point(94, 232);
             this.Choice2.Margin = new System.Windows.Forms.Padding(2);
             this.Choice2.MaxDropDownItems = 20;
             this.Choice2.Name = "Choice2";
@@ -87,7 +87,7 @@
             this.Choice3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice3.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Choice3.FormattingEnabled = true;
-            this.Choice3.Location = new System.Drawing.Point(94, 280);
+            this.Choice3.Location = new System.Drawing.Point(94, 319);
             this.Choice3.Margin = new System.Windows.Forms.Padding(2);
             this.Choice3.MaxDropDownItems = 20;
             this.Choice3.Name = "Choice3";
@@ -101,7 +101,7 @@
             this.Choice4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice4.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Choice4.FormattingEnabled = true;
-            this.Choice4.Location = new System.Drawing.Point(94, 370);
+            this.Choice4.Location = new System.Drawing.Point(94, 409);
             this.Choice4.Margin = new System.Windows.Forms.Padding(2);
             this.Choice4.MaxDropDownItems = 20;
             this.Choice4.Name = "Choice4";
@@ -115,7 +115,7 @@
             this.Choice5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice5.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Choice5.FormattingEnabled = true;
-            this.Choice5.Location = new System.Drawing.Point(94, 465);
+            this.Choice5.Location = new System.Drawing.Point(94, 504);
             this.Choice5.Margin = new System.Windows.Forms.Padding(2);
             this.Choice5.MaxDropDownItems = 20;
             this.Choice5.Name = "Choice5";
@@ -128,7 +128,7 @@
             this.Choice6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice6.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Choice6.FormattingEnabled = true;
-            this.Choice6.Location = new System.Drawing.Point(94, 559);
+            this.Choice6.Location = new System.Drawing.Point(94, 598);
             this.Choice6.Margin = new System.Windows.Forms.Padding(2);
             this.Choice6.MaxDropDownItems = 20;
             this.Choice6.Name = "Choice6";
@@ -142,7 +142,7 @@
             this.Choice1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Choice1.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Choice1.FormattingEnabled = true;
-            this.Choice1.Location = new System.Drawing.Point(94, 116);
+            this.Choice1.Location = new System.Drawing.Point(94, 155);
             this.Choice1.Margin = new System.Windows.Forms.Padding(2);
             this.Choice1.MaxDropDownItems = 20;
             this.Choice1.Name = "Choice1";
@@ -329,19 +329,20 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.wackadooThingy);
             this.panel1.Controls.Add(this.choice1a);
             this.panel1.Controls.Add(this.choice1b);
             this.panel1.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(10, 69);
+            this.panel1.Location = new System.Drawing.Point(16, 69);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(157, 75);
+            this.panel1.Size = new System.Drawing.Size(581, 123);
             this.panel1.TabIndex = 32;
             // 
             // choice1b
             // 
             this.choice1b.AutoSize = true;
             this.choice1b.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.choice1b.Location = new System.Drawing.Point(36, 43);
+            this.choice1b.Location = new System.Drawing.Point(36, 86);
             this.choice1b.Name = "choice1b";
             this.choice1b.Size = new System.Drawing.Size(17, 16);
             this.choice1b.TabIndex = 19;
@@ -367,9 +368,9 @@
             this.panel2.Controls.Add(this.choice3a);
             this.panel2.Controls.Add(this.choice3b);
             this.panel2.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(31, 225);
+            this.panel2.Location = new System.Drawing.Point(31, 264);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(160, 79);
+            this.panel2.Size = new System.Drawing.Size(566, 79);
             this.panel2.TabIndex = 33;
             // 
             // panel3
@@ -378,9 +379,9 @@
             this.panel3.Controls.Add(this.choice2a);
             this.panel3.Controls.Add(this.choice2b);
             this.panel3.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(52, 159);
+            this.panel3.Location = new System.Drawing.Point(52, 198);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(134, 68);
+            this.panel3.Size = new System.Drawing.Size(545, 68);
             this.panel3.TabIndex = 34;
             // 
             // panel4
@@ -389,9 +390,9 @@
             this.panel4.Controls.Add(this.choice4a);
             this.panel4.Controls.Add(this.choice4b);
             this.panel4.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(39, 332);
+            this.panel4.Location = new System.Drawing.Point(39, 371);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(169, 77);
+            this.panel4.Size = new System.Drawing.Size(558, 77);
             this.panel4.TabIndex = 35;
             // 
             // panel5
@@ -400,9 +401,9 @@
             this.panel5.Controls.Add(this.choice5a);
             this.panel5.Controls.Add(this.choice5b);
             this.panel5.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(39, 423);
+            this.panel5.Location = new System.Drawing.Point(39, 462);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(152, 74);
+            this.panel5.Size = new System.Drawing.Size(558, 74);
             this.panel5.TabIndex = 36;
             // 
             // panel6
@@ -411,9 +412,9 @@
             this.panel6.Controls.Add(this.choice6a);
             this.panel6.Controls.Add(this.choice6b);
             this.panel6.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel6.Location = new System.Drawing.Point(39, 518);
+            this.panel6.Location = new System.Drawing.Point(39, 557);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(152, 74);
+            this.panel6.Size = new System.Drawing.Size(558, 74);
             this.panel6.TabIndex = 37;
             // 
             // twoMartial
@@ -422,7 +423,7 @@
             this.twoMartial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.twoMartial.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.twoMartial.FormattingEnabled = true;
-            this.twoMartial.Location = new System.Drawing.Point(94, 141);
+            this.twoMartial.Location = new System.Drawing.Point(94, 180);
             this.twoMartial.Margin = new System.Windows.Forms.Padding(2);
             this.twoMartial.MaxDropDownItems = 20;
             this.twoMartial.Name = "twoMartial";
@@ -436,11 +437,11 @@
             this.wackadooThingy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.wackadooThingy.Font = new System.Drawing.Font("Baskerville Old Face", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wackadooThingy.FormattingEnabled = true;
-            this.wackadooThingy.Location = new System.Drawing.Point(172, 85);
+            this.wackadooThingy.Location = new System.Drawing.Point(78, 44);
             this.wackadooThingy.Margin = new System.Windows.Forms.Padding(2);
             this.wackadooThingy.MaxDropDownItems = 20;
             this.wackadooThingy.Name = "wackadooThingy";
-            this.wackadooThingy.Size = new System.Drawing.Size(414, 27);
+            this.wackadooThingy.Size = new System.Drawing.Size(498, 27);
             this.wackadooThingy.TabIndex = 39;
             this.wackadooThingy.SelectedIndexChanged += new System.EventHandler(this.wackadooThingy_SelectedIndexChanged);
             // 
@@ -469,7 +470,6 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.wackadooThingy);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "GearForm";

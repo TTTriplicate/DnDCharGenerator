@@ -15,21 +15,25 @@ namespace DnDMasterGenerator
     {
         public DisplayForm()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
         public DisplayForm(DnDCharacter leeroy)
         {
-            InitializeComponent();
-            foreach (string s in leeroy.CharRace.getSA())
-            {
-                if (s == null) continue;
-                else richTextBox1.AppendText(s + "\n");
-            }
-            foreach (string s in leeroy._class.CurrFeatures)
-                richTextBox1.AppendText(s+"\n");
+            //InitializeComponent();
+            //foreach (string s in leeroy.CharRace.getSA())
+            //{
+            //    if (s == null) continue;
+            //    else richTextBox1.AppendText(s + "\n");
+            //}
+            //foreach (string s in leeroy._class.CurrFeatures)
+            //    richTextBox1.AppendText(s+"\n");
 
         }
 
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
