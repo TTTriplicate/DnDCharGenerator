@@ -1,0 +1,8 @@
+This is Tiefling
+000102
+18-103
+Chaotic Evil
+Medium
+30
+0 12
+Darkvision(60ft), Hellish Resistance, Infernal Legacy

@@ -1,0 +1,20 @@
+This is Elf
+020000
+100-750
+Chaotic-Good
+Medium
+30
+0 2
+Darkvision(60ft), Keen Senses, Fey Ancestry, Trance
+
+High
+000100
+Elf Weapon Training, Cantrip, +1 Language
+
+Wood
+000010
+Elf Weapon Training, Mask of the Wild, Fleet of Foot
+
+Dark
+000001
+Superior Darkvision(120), Sunlight Sensitivity, Drow Magic, Drow Weapon Training

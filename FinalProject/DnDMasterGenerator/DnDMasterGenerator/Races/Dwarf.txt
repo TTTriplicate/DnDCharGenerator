@@ -1,0 +1,16 @@
+This is Dwarf
+002000
+50-350
+Lawful Neutral
+Medium
+25
+0 1
+Darkvision(60ft), Dwarven Resilience, Dwarven Combat Training, Tool Proficiency, Stonecunning
+
+Hill
+000010
+Dwarven Toughness
+
+Mountain
+200000
+Dwarven Armor Training
