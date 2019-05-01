@@ -257,7 +257,7 @@ namespace DnDClassesTest
                             break;
                         }
                     }
-                    this._HP += this.AbilityModifiers()[3];
+                    this._HP += this.AbilityModifiers()[2];
                     return true;
                 }
             }
