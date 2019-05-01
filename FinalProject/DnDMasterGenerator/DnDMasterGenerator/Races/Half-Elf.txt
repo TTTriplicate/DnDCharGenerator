@@ -1,0 +1,8 @@
+This is Half-Elf
+000002++
+20-180
+Chaotic-Neutral
+Medium
+30
+0 2 +
+Darkvision(60ft), Fey Ancestry, Skill Versatility

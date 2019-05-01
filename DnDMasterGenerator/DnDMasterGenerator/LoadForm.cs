@@ -79,6 +79,7 @@ namespace DnDClassesTest
             ArmorClass.Text = pdfFormFields.GetField("AC");
             Initiative.Text = pdfFormFields.GetField("Initiative");
             Speed.Text = pdfFormFields.GetField("Speed");
+            txtHP.Text = pdfFormFields.GetField("HPMax");
 
             //RadioButtons
             count = 0;
@@ -206,6 +207,7 @@ namespace DnDClassesTest
             ArmorClass.Text = leeroy.getAC().ToString();
             Initiative.Text = leeroy.AbilityModifiers()[1].ToString();
             Speed.Text = leeroy.CharRace.getSpeed().ToString();
+            txtHP.Text = leeroy._HP.ToString();
 
             //SkillRadioButtons
             count = 0;
