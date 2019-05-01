@@ -161,7 +161,7 @@ namespace DnDClassesTest
             this._level = this.CharClass._level;
             this.CharRace = Race.InteractiveChoice();
             raceAdditions();
-            this._HP = this._class._hitDie;
+            this._HP += this._class._hitDie;
             this._HP += AbilityModifiers()[2];
             if (this._level > 1)
             {
@@ -178,6 +178,7 @@ namespace DnDClassesTest
                             this.AbilityScoreIncrease();
                         }
                     this._HP += DnDCharacter.RollHP(this._class._hitDie) + this.AbilityModifiers()[2];
+                    Console.WriteLine(this._HP);
                 }
             }
                 //has to change to account for level adjusted ability scores
@@ -241,10 +242,11 @@ namespace DnDClassesTest
         }
         public bool LevelUp()
         {
-            if (this._level == 20) return false;
+            if (this._level >= 20) return false;
             else
             {
                 ++this._level;
+                this._HP += DnDCharacter.RollHP(this._class._hitDie);
                 if (this._class.LevelUp())
                 {
                     foreach (int i in this._class._abilityScoreIncrease)
@@ -255,6 +257,7 @@ namespace DnDClassesTest
                             break;
                         }
                     }
+                    this._HP += this.AbilityModifiers()[3];
                     return true;
                 }
             }
