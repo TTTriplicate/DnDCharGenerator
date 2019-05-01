@@ -419,11 +419,11 @@ namespace DnDClassesTest
         }
         private void LoadForm_Load(object sender, EventArgs e)
         {
-            if (DisplayChar != null)
+         /*   if (DisplayChar != null)
             {
                 var display = new DisplayForm(DisplayChar);
                 display.Show();
-            }
+            }*/
         }
 
         private void EXP_TextChanged(object sender, EventArgs e)
