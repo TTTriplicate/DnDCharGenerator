@@ -55,7 +55,7 @@ namespace DnDClassesTest
             System.Windows.Forms.RichTextBox[] Abilities = { STR, DEX, CON, INT, WIS, CHA };
             foreach (System.Windows.Forms.RichTextBox i in Abilities)
             {
-                i.Text = pdfFormFields.GetField(abils[count]);
+                i.Text = pdfFormFields.GetField(Abilities[count].Name);
                 count++;
             }
 
@@ -414,11 +414,11 @@ namespace DnDClassesTest
         }
         private void LoadForm_Load(object sender, EventArgs e)
         {
-            if (DisplayChar != null)
+          /*  if (DisplayChar != null)
             {
                 var display = new DisplayForm(DisplayChar);
                 display.Show();
-            }
+            }*/
         }
 
         private void EXP_TextChanged(object sender, EventArgs e)
